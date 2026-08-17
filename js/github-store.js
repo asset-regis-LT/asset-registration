@@ -30,7 +30,15 @@ const GithubStore = (() => {
     const token = getToken();
     const headers = { "Accept": "application/vnd.github+json", ...(options.headers || {}) };
     if (token) headers["Authorization"] = `Bearer ${token}`;
-    return fetch(`https://api.github.com${path}`, { ...options, headers });
+    try {
+      return await fetch(`https://api.github.com${path}`, { ...options, headers });
+    } catch (err) {
+      throw new Error(
+        "Tidak bisa terhubung ke api.github.com. Periksa koneksi internet perangkat ini, " +
+        "dan jika berada di jaringan kantor/lokasi kerja, pastikan domain api.github.com " +
+        "tidak diblokir oleh firewall/proxy."
+      );
+    }
   }
 
   function rawUrl(path) {
