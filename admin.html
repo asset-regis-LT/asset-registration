@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Rubrik Penilaian Kondisi Aset</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script src="js/github-store.js"></script>
+<style>
+  :root{
+    --ink:#14171a;
+    --paper:#f6f5f2;
+    --panel:#ffffff;
+    --line:#d8d5cd;
+    --accent:#c9622a;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--sans);background:var(--paper);color:var(--ink);padding-bottom:40px;}
+  header.bar{background:var(--ink);color:#fff;padding:18px 16px;text-align:center;letter-spacing:0.06em;position:relative;}
+  header.bar h1{margin:0;font-size:15px;font-weight:700;text-transform:uppercase;}
+  header.bar a.back-link{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#cfcac0;font-size:11px;text-decoration:none;border:1px solid #45494d;border-radius:4px;padding:5px 8px;}
+  .wrap{max-width:640px;margin:0 auto;padding:16px;}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;margin-bottom:16px;}
+  section h2{margin:0 0 6px;font-size:14px;text-transform:uppercase;letter-spacing:0.04em;}
+  section p.desc{margin:0 0 14px;font-size:13px;color:#5a564c;line-height:1.5;}
+  label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:#5a564c;margin-bottom:6px;}
+  input[type=password], input[type=text]{
+    width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;font-family:var(--mono);background:#fff;
+  }
+  .row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+  button{border:none;border-radius:4px;padding:12px 16px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;}
+  .btn-primary{background:var(--accent);color:#fff;flex:1;}
+  .btn-secondary{background:#e4e1d8;color:var(--ink);}
+  .btn-primary:disabled, .btn-secondary:disabled{opacity:0.5;cursor:not-allowed;}
+  .status{margin-top:10px;font-size:12px;padding:8px 10px;border-radius:4px;}
+  .status.ok{background:#e5f2e7;color:#2f7a3e;}
+  .status.warn{background:#fff4e8;color:#8a5a1f;}
+  .status.err{background:#f8e4e2;color:#9e3028;}
+  .progress-log{margin-top:12px;font-family:var(--mono);font-size:12px;background:#14171a;color:#c8f0c8;padding:10px;border-radius:6px;max-height:180px;overflow:auto;white-space:pre-wrap;display:none;}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="back-link" href="index.html">Form</a>
+  <h1>Admin</h1>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>1. Token GitHub</h2>
+    <p class="desc">
+      Diperlukan untuk menyimpan inspeksi baru dari perangkat ini (token tidak diperlukan hanya untuk melihat hasil lewat QR).
+      Buat token di GitHub &rarr; Settings &rarr; Developer settings &rarr; Fine-grained tokens, dibatasi ke repo
+      <strong>asset-registration</strong> ini saja, dengan izin <strong>Contents: Read and write</strong>.
+      Token disimpan hanya di penyimpanan lokal browser ini, tidak dikirim ke tempat lain selain GitHub.
+    </p>
+    <label for="tokenInput">Fine-grained Personal Access Token</label>
+    <input type="password" id="tokenInput" placeholder="github_pat_…" autocomplete="off">
+    <div class="row">
+      <button class="btn-primary" id="saveTokenBtn">Simpan Token</button>
+      <button class="btn-secondary" id="clearTokenBtn">Hapus Token</button>
+      <button class="btn-secondary" id="toggleTokenBtn">Lihat</button>
+    </div>
+    <div class="status" id="tokenStatus"></div>
+  </section>
+
+  <section>
+    <h2>2. Export Semua Inspeksi</h2>
+    <p class="desc">
+      Mengumpulkan semua inspeksi yang sudah tersimpan di branch <code>data</code> pada repo ini, lalu membuat satu file
+      .xlsx dengan seluruh data terisi, foto inspeksi, dan QR code sebagai gambar yang tertanam di tiap baris.
+      Proses berjalan di browser ini, bisa memakan waktu beberapa menit tergantung jumlah data.
+    </p>
+    <div class="row">
+      <button class="btn-primary" id="exportBtn">Export ke Excel</button>
+    </div>
+    <div class="status" id="exportStatus"></div>
+    <div class="progress-log" id="progressLog"></div>
+  </section>
+
+</div>
+
+<script>
+const tokenInput = document.getElementById("tokenInput");
+const tokenStatus = document.getElementById("tokenStatus");
+const toggleTokenBtn = document.getElementById("toggleTokenBtn");
+const exportStatus = document.getElementById("exportStatus");
+const exportBtn = document.getElementById("exportBtn");
+const progressLog = document.getElementById("progressLog");
+
+function maskToken(token) {
+  if (!token) return "";
+  return token.length <= 6 ? "•".repeat(token.length) : `${token.slice(0, 6)}…${token.slice(-4)}`;
+}
+
+function refreshTokenStatus() {
+  const token = GithubStore.getToken();
+  if (token) {
+    tokenStatus.className = "status ok";
+    tokenStatus.textContent = `Token aktif: ${maskToken(token)}`;
+    tokenInput.value = token;
+  } else {
+    tokenStatus.className = "status warn";
+    tokenStatus.textContent = "Belum ada token tersimpan di perangkat ini.";
+    tokenInput.value = "";
+  }
+}
+refreshTokenStatus();
+
+document.getElementById("saveTokenBtn").addEventListener("click", () => {
+  const value = tokenInput.value.trim();
+  if (!value) {
+    alert("Isi token terlebih dahulu.");
+    return;
+  }
+  GithubStore.setToken(value);
+  refreshTokenStatus();
+});
+
+document.getElementById("clearTokenBtn").addEventListener("click", () => {
+  if (!confirm("Hapus token dari perangkat ini? Anda tidak akan bisa menyimpan inspeksi baru sampai token diisi ulang.")) return;
+  GithubStore.clearToken();
+  refreshTokenStatus();
+});
+
+toggleTokenBtn.addEventListener("click", () => {
+  const isPassword = tokenInput.type === "password";
+  tokenInput.type = isPassword ? "text" : "password";
+  toggleTokenBtn.textContent = isPassword ? "Sembunyikan" : "Lihat";
+});
+
+function log(msg) {
+  progressLog.style.display = "block";
+  progressLog.textContent += msg + "\n";
+  progressLog.scrollTop = progressLog.scrollHeight;
+}
+
+async function fetchInspectionRecord(tag) {
+  const res = await fetch(GithubStore.rawUrl(`data/inspections/${encodeURIComponent(tag)}.json`), { cache: "no-store" });
+  if (!res.ok) throw new Error(`Gagal memuat data untuk ${tag} (HTTP ${res.status})`);
+  return res.json();
+}
+
+async function fetchPhotoBase64(fotoPath) {
+  const res = await fetch(GithubStore.rawUrl(fotoPath), { cache: "no-store" });
+  if (!res.ok) return null;
+  const blob = await res.blob();
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("Gagal membaca foto."));
+    reader.onload = () => resolve(reader.result.split(",")[1]);
+    reader.readAsDataURL(blob);
+  });
+}
+
+function generateQrBase64(tagNo) {
+  return new Promise((resolve, reject) => {
+    const holder = document.createElement("div");
+    holder.style.display = "none";
+    document.body.appendChild(holder);
+    const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(tagNo);
+    // eslint-disable-next-line no-undef
+    if (typeof QRCode === "undefined") { holder.remove(); resolve(null); return; }
+    new QRCode(holder, { text: qrUrl, width: 160, height: 160 });
+    setTimeout(() => {
+      const img = holder.querySelector("img");
+      const canvasEl = holder.querySelector("canvas");
+      try {
+        if (canvasEl) {
+          resolve(canvasEl.toDataURL("image/png").split(",")[1]);
+        } else if (img) {
+          const c = document.createElement("canvas");
+          c.width = 160; c.height = 160;
+          c.getContext("2d").drawImage(img, 0, 0, 160, 160);
+          resolve(c.toDataURL("image/png").split(",")[1]);
+        } else {
+          resolve(null);
+        }
+      } catch (e) {
+        resolve(null);
+      } finally {
+        holder.remove();
+      }
+    }, 150);
+  });
+}
+
+exportBtn.addEventListener("click", async () => {
+  progressLog.textContent = "";
+  exportStatus.className = "status warn";
+  exportStatus.textContent = "Memproses…";
+  exportBtn.disabled = true;
+  try {
+    if (!GithubStore.hasToken()) throw new Error("Token GitHub belum diatur. Isi token di bagian atas terlebih dahulu.");
+    if (typeof ExcelJS === "undefined") throw new Error("Library Excel belum siap. Periksa koneksi internet lalu coba lagi.");
+
+    log("Membaca daftar inspeksi dari branch data…");
+    const tags = await GithubStore.listInspectionTags();
+    log(`Ditemukan ${tags.length} inspeksi.`);
+    if (!tags.length) {
+      exportStatus.className = "status warn";
+      exportStatus.textContent = "Belum ada inspeksi tersimpan untuk diexport.";
+      return;
+    }
+
+    const workbook = new ExcelJS.Workbook();
+    const sheet = workbook.addWorksheet("Inspeksi");
+    sheet.columns = [
+      { header: "Tag No.", key: "tagNo", width: 16 },
+      { header: "Inspection ID", key: "inspectionId", width: 22 },
+      { header: "Nomor PBS", key: "nomorPBS", width: 12 },
+      { header: "Subsistem", key: "subsistem", width: 18 },
+      { header: "Nama Aset", key: "namaAset", width: 22 },
+      { header: "Lokasi", key: "lokasi", width: 14 },
+      { header: "PIC / Inspector", key: "picInspector", width: 18 },
+      { header: "Tanggal Inspeksi", key: "tanggalInspeksi", width: 14 },
+      { header: "Overall Decision", key: "overallDecision", width: 14 },
+      { header: "Sub Komponen", key: "komponenRingkas", width: 40 },
+      { header: "Foto", key: "foto", width: 18 },
+      { header: "QR Code", key: "qr", width: 18 }
+    ];
+    sheet.getRow(1).font = { bold: true };
+
+    for (let i = 0; i < tags.length; i++) {
+      const tag = tags[i];
+      log(`(${i + 1}/${tags.length}) Memuat ${tag}…`);
+      let record;
+      try {
+        record = await fetchInspectionRecord(tag);
+      } catch (e) {
+        log(`  Gagal: ${e.message}`);
+        continue;
+      }
+
+      const komponenRingkas = (record.komponen || [])
+        .map(k => `${k.nama}: ${k.kondisiTeknis} / ${k.keputusanTeknis}${k.catatan ? " — " + k.catatan : ""}`)
+        .join("\n");
+
+      const rowIndex = sheet.rowCount + 1;
+      sheet.addRow({
+        tagNo: record.tagNo,
+        inspectionId: record.inspectionId,
+        nomorPBS: record.nomorPBS,
+        subsistem: record.subsistem,
+        namaAset: record.namaAset,
+        lokasi: record.lokasi,
+        picInspector: record.picInspector,
+        tanggalInspeksi: record.tanggalInspeksi,
+        overallDecision: record.overallDecision,
+        komponenRingkas
+      });
+      sheet.getRow(rowIndex).alignment = { wrapText: true, vertical: "top" };
+      sheet.getRow(rowIndex).height = 90;
+
+      const photoBase64 = record.fotoPath ? await fetchPhotoBase64(record.fotoPath) : null;
+      if (photoBase64) {
+        const imgId = workbook.addImage({ base64: `data:image/jpeg;base64,${photoBase64}`, extension: "jpeg" });
+        sheet.addImage(imgId, { tl: { col: 10, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+      }
+
+      const qrBase64 = await generateQrBase64(record.tagNo);
+      if (qrBase64) {
+        const qrId = workbook.addImage({ base64: `data:image/png;base64,${qrBase64}`, extension: "png" });
+        sheet.addImage(qrId, { tl: { col: 11, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+      }
+    }
+
+    log("Membuat file .xlsx…");
+    const buffer = await workbook.xlsx.writeBuffer();
+    const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `Export-Inspeksi-Aset-${new Date().toISOString().slice(0, 10)}.xlsx`;
+    link.click();
+    URL.revokeObjectURL(url);
+
+    log("Selesai.");
+    exportStatus.className = "status ok";
+    exportStatus.textContent = `Berhasil export ${tags.length} inspeksi.`;
+  } catch (err) {
+    exportStatus.className = "status err";
+    exportStatus.textContent = err.message || "Gagal melakukan export.";
+    log(`Error: ${err.message}`);
+  } finally {
+    exportBtn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>

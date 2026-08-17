@@ -1,0 +1,55 @@
+[
+  {
+    "nomorPBS": "PBS-001",
+    "subsistem": "Material Handling",
+    "namaAset": "Conveyor Belt A",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      { "nama": "Motor Penggerak" },
+      { "nama": "Roller Idler" },
+      { "nama": "Belt" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-002",
+    "subsistem": "Material Handling",
+    "namaAset": "Overhead Crane XSY",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      { "nama": "Hoist Motor" },
+      { "nama": "Wire Rope" },
+      { "nama": "Hook Block" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-003",
+    "subsistem": "Cooling System",
+    "namaAset": "Cooling Fan Unit",
+    "lokasi": "Smelter B",
+    "subKomponen": [
+      { "nama": "Fan Blade Assembly" },
+      { "nama": "Bearing Housing" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-004",
+    "subsistem": "Hydraulic System",
+    "namaAset": "Hydraulic Press Unit",
+    "lokasi": "Smelter B",
+    "subKomponen": [
+      { "nama": "Hydraulic Pump" },
+      { "nama": "Cylinder Ram" },
+      { "nama": "Pressure Relief Valve" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-005",
+    "subsistem": "Ventilation System",
+    "namaAset": "Exhaust Blower",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      { "nama": "Blower Motor" },
+      { "nama": "Impeller" }
+    ]
+  }
+]

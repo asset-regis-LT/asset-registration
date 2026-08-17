@@ -4,45 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-document.getElementById("backToFormBtn").addEventListener("click", () => {
-  const assetId = new URLSearchParams(window.location.search).get("asset");
-  const asset = assetId ? findAssetById(assetId) : null;
-  document.getElementById("resultView").style.display = "none";
-  document.getElementById("trialNote").style.display = "block";
-  document.querySelector(".wrap").style.display = "block";
-  if (asset) {
-    currentAsset = asset;
-    namaAsetInput.value = asset.namaAset;
-    nomorPBSInput.value = asset.nomorPBS;
-    lokasiInput.value = asset.lokasi;
-    tagManuallyEdited = false;
-    metaBlock.style.display = "block";
-    emptyState.style.display = "none";
-    searchHint.textContent = `Ditemukan: ${asset.nomorPBS} — ${asset.lokasi}`;
-    refreshTagSuggestion();
-    renderComponents(asset);
-  }
-});
-
-document.getElementById("downloadResultBtn").addEventListener("click", async () => {
-  if (typeof html2canvas === "undefined") {
-    alert("Fitur gambar belum siap. Periksa koneksi internet lalu coba lagi.");
-    return;
-  }
-  const canvas = await html2canvas(document.getElementById("resultCapture"), {
-    backgroundColor: "#ffffff", scale: 2, useCORS: true
-  });
-  const tag = (document.getElementById("resultTag").textContent || "asset")
-    .replace(/[^a-zA-Z0-9_-]+/g, "-");
-  const link = document.createElement("a");
-  link.download = `Hasil-Inspeksi-${tag}.png`;
-  link.href = canvas.toDataURL("image/png");
-  link.click();
-});
-
-</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/github-store.js"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -72,12 +36,26 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     padding:18px 16px;
     text-align:center;
     letter-spacing:0.06em;
+    position:relative;
   }
   header.bar h1{
     margin:0;
     font-size:15px;
     font-weight:700;
     text-transform:uppercase;
+  }
+  header.bar a.admin-link{
+    position:absolute;
+    right:14px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#cfcac0;
+    font-size:11px;
+    text-decoration:none;
+    letter-spacing:0.04em;
+    border:1px solid #45494d;
+    border-radius:4px;
+    padding:5px 8px;
   }
   .wrap{
     max-width:900px;
@@ -126,6 +104,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     letter-spacing:0;
   }
   .meta-cell.suggested input{font-family:var(--mono);}
+  .meta-cell .hint{margin-top:4px;}
   .search-box{
     padding:14px;
     background:var(--panel);
@@ -140,15 +119,17 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     color:#5a564c;
     margin-bottom:6px;
   }
-  .search-box input{
+  .search-box input, .search-box select{
     width:100%;
     padding:12px 12px;
     font-size:16px;
     border:1px solid var(--line);
     border-radius:4px;
     font-family:var(--sans);
+    background:#fff;
+    color:var(--ink);
   }
-  .search-box input:focus{outline:2px solid var(--accent);border-color:var(--accent);}
+  .search-box input:focus, .search-box select:focus{outline:2px solid var(--accent);border-color:var(--accent);}
   .hint{
     font-size:12px;
     color:#8a8578;
@@ -260,6 +241,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     cursor:pointer;
   }
   footer.actions .save-btn:active{background:var(--accent);}
+  footer.actions .save-btn:disabled{background:#a8a49a;cursor:not-allowed;}
   .disabled-note{
     background:#fff4e8;
     border:1px solid #e8c9a3;
@@ -267,6 +249,32 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     font-size:12px;
     padding:10px 14px;
     text-align:center;
+  }
+  .disabled-note a{color:#8a5a1f;}
+  .token-input-row{
+    display:none;
+    gap:8px;
+    margin-top:8px;
+  }
+  .token-input-row input{
+    flex:1;
+    min-width:0;
+    padding:9px 10px;
+    font-size:13px;
+    font-family:var(--mono);
+    border:1px solid var(--line);
+    border-radius:4px;
+  }
+  .token-input-row button{
+    border:none;
+    border-radius:4px;
+    background:var(--ink);
+    color:#fff;
+    padding:9px 14px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    cursor:pointer;
   }
   #previewOverlay{
     display:none;
@@ -308,6 +316,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     font-size:13px;
     cursor:pointer;
   }
+  .qr-btn:disabled{background:#d8ab8c;cursor:not-allowed;}
   .close-btn{
     display:block;
     width:100%;
@@ -343,10 +352,11 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
   .result-field label{display:block;font-size:10px;font-weight:800;color:#5a564c;text-transform:uppercase;margin-bottom:4px;}
   .result-inspection-photo{padding:14px;border-bottom:1px solid var(--line);}
   .result-inspection-photo img{width:100%;max-height:360px;object-fit:contain;background:#f6f5f2;border:1px solid var(--line);border-radius:4px;}
-  .result-actions{padding:14px;display:flex;gap:10px;position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);}
-  .result-actions button{flex:1;border:none;border-radius:4px;padding:13px;font-size:13px;font-weight:800;cursor:pointer;}
-  .result-actions .download-result{background:var(--accent);color:#fff;}
-  .result-actions .back-form{background:var(--ink);color:#fff;}
+  .result-actions{padding:14px;display:flex;flex-wrap:wrap;gap:10px;position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);}
+  .result-actions button{flex:1 1 45%;border:none;border-radius:4px;padding:13px;font-size:13px;font-weight:800;cursor:pointer;}
+  .result-actions .download-result{background:var(--ink);color:#fff;}
+  .result-actions .download-qr{background:var(--accent);color:#fff;}
+  .result-actions .back-form{flex:1 1 100%;order:3;background:#e4e1d8;color:var(--ink);}
   @media(max-width:560px){.result-meta,.result-grid{grid-template-columns:1fr;}.result-meta .cell{border-right:none;}.result-field.full{grid-column:auto;}}
 </style>
 </head>
@@ -354,15 +364,31 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
 
 <header class="bar">
   <h1>Rubrik Penilaian Kondisi Aset / Komponen</h1>
+  <a class="admin-link" href="admin.html">Admin</a>
 </header>
 
-<div class="wrap">
+<div class="wrap" id="formView">
 
   <div class="search-box">
-    <label for="namaAsetInput">Nama Aset / Komponen</label>
+    <label for="namaAsetInput">1. Nama Aset / Komponen</label>
     <input type="text" id="namaAsetInput" list="namaAsetList" placeholder="Ketik atau pilih nama aset…" autocomplete="off">
     <datalist id="namaAsetList"></datalist>
-    <div class="hint" id="searchHint">Belum ada aset dipilih. Mulai ketik nama aset di atas.</div>
+    <div class="hint" id="namaAsetHint">Mulai ketik atau pilih nama aset di atas.</div>
+  </div>
+
+  <div class="search-box" id="subsistemBox" style="display:none;">
+    <label for="subsistemSelect">2. Subsistem</label>
+    <select id="subsistemSelect"></select>
+  </div>
+
+  <div class="search-box" id="lokasiBox" style="display:none;">
+    <label for="lokasiSelect">3. Nama Smelter / Lokasi</label>
+    <select id="lokasiSelect"></select>
+  </div>
+
+  <div class="search-box" id="pbsDisambigBox" style="display:none;">
+    <label for="pbsDisambigSelect">Nomor PBS (lebih dari satu cocok, pilih salah satu)</label>
+    <select id="pbsDisambigSelect"></select>
   </div>
 
   <div class="meta" id="metaBlock" style="display:none;">
@@ -371,33 +397,37 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
         <label>Nomor PBS</label>
         <input type="text" id="nomorPBS" readonly>
       </div>
-      <div class="meta-cell suggested">
-        <label>Tag No. / Asset ID</label>
-        <input type="text" id="tagNo" placeholder="SMELTER-PBS-URUTAN">
+      <div class="meta-cell readonly">
+        <label>Subsistem</label>
+        <input type="text" id="subsistemDisplay" readonly>
       </div>
     </div>
     <div class="meta-row">
-      <div class="meta-cell">
+      <div class="meta-cell readonly">
         <label>Nama Smelter / Lokasi</label>
-        <input type="text" id="lokasi" placeholder="Nama smelter / lokasi">
+        <input type="text" id="lokasiDisplay" readonly>
       </div>
+      <div class="meta-cell suggested">
+        <label>Tag No. / Asset ID</label>
+        <input type="text" id="tagNo" placeholder="SMELTER-PBS-URUTAN">
+        <div class="hint" id="tagHint"></div>
+      </div>
+    </div>
+    <div class="meta-row">
       <div class="meta-cell">
         <label>PIC / Inspector</label>
         <input type="text" id="picInspector" placeholder="Nama Anda">
       </div>
-    </div>
-    <div class="meta-row">
       <div class="meta-cell">
         <label>Tanggal Inspeksi</label>
         <input type="date" id="tanggalInspeksi">
       </div>
-      <div class="meta-cell"></div>
     </div>
   </div>
 
   <div id="componentsArea"></div>
 
-  <div class="comp-card" id="inspectionPhotoCard">
+  <div class="comp-card" id="inspectionPhotoCard" style="display:none;">
     <div class="field" style="margin-bottom:0;">
       <label>Foto Inspeksi</label>
       <div class="photo-row">
@@ -407,7 +437,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
         </label>
         <img class="photo-preview" id="inspectionPhotoPreview" alt="Pratinjau foto inspeksi">
       </div>
-      <div class="hint">Satu foto untuk setiap inspeksi.</div>
+      <div class="hint">Satu foto untuk seluruh form inspeksi ini. Wajib diisi.</div>
     </div>
   </div>
 
@@ -426,6 +456,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
     </div>
     <div class="result-meta">
       <div class="cell"><label>Nomor PBS</label><div id="resultPBS"></div></div>
+      <div class="cell"><label>Subsistem</label><div id="resultSubsistem"></div></div>
       <div class="cell"><label>Tag No. / Asset ID</label><div id="resultTag"></div></div>
       <div class="cell"><label>Lokasi</label><div id="resultLocation"></div></div>
       <div class="cell"><label>PIC / Inspector</label><div id="resultInspector"></div></div>
@@ -438,41 +469,45 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
   </div>
   <div class="result-actions">
     <button class="download-result" id="downloadResultBtn">Unduh Hasil sebagai Gambar</button>
-    <button class="back-form" id="backToFormBtn">Kembali ke Form</button>
+    <button class="download-qr" id="downloadQrBtn">Unduh QR Label</button>
+    <button class="back-form" id="backToFormBtn">Isi Inspeksi Baru</button>
   </div>
 </div>
 
-<div class="disabled-note" id="trialNote">
-  Versi uji coba — data contoh tersimpan di master-assets.json. Penyimpanan inspeksi lintas perangkat belum tersambung.
+<div id="notFoundView" class="empty-state" style="display:none;">
+  <p>Data inspeksi untuk Tag No. "<strong id="notFoundTag"></strong>" tidak ditemukan.</p>
+  <button class="save-btn" id="notFoundBackBtn" style="max-width:280px;margin:12px auto 0;">Ke Form Inspeksi Baru</button>
 </div>
 
-<footer class="actions">
+<div class="disabled-note" id="tokenNote">
+  <div id="tokenStatusLine"></div>
+  <div class="token-input-row" id="tokenInputRow">
+    <input type="password" id="tokenInlineInput" placeholder="github_pat_…" autocomplete="off">
+    <button type="button" id="tokenInlineSaveBtn">Simpan</button>
+  </div>
+</div>
+
+<footer class="actions" id="saveFooter">
   <button class="save-btn" id="saveBtn">Simpan Inspeksi</button>
 </footer>
 
 <div id="previewOverlay">
   <div id="previewSheet">
-    <h2>Pratinjau Data Inspeksi</h2>
+    <h2>Konfirmasi Data Inspeksi</h2>
     <pre id="previewJson"></pre>
-    <button class="qr-btn" id="downloadQrBtn">Unduh QR untuk Cetak (Niimbot)</button>
-    <button class="close-btn" id="closePreview">Tutup</button>
+    <button class="qr-btn" id="confirmSaveBtn">Konfirmasi &amp; Simpan</button>
+    <button class="close-btn" id="closePreview">Batal</button>
   </div>
 </div>
 
 <div id="qrHidden" style="display:none;"></div>
 
 <script>
-// ---------------------------------------------------------------------
-// IMPORTANT: once this is live on GitHub Pages, update SITE_BASE_URL
-// below to your real Pages URL, e.g.
-// "https://yourusername.github.io/asset-inspection/"
-// The QR code encodes SITE_BASE_URL + "?asset=<TagNo>"
-// ---------------------------------------------------------------------
-const SITE_BASE_URL = "https://asset-regis-lt.github.io/asset-registration/";
-
-// ---- Sample master asset list (stand-in for the real 200-item list) ----
-// In the GitHub-connected version, this will be loaded from data/master-assets.json
-let MASTER_ASSETS = [];
+let MASTER_CATALOG = [];
+let currentAsset = null; // resolved catalog row {nomorPBS, subsistem, namaAset, lokasi, subKomponen}
+let tagManuallyEdited = false;
+let pendingRecord = null;
+let lastRecord = null;
 
 const KONDISI_OPTIONS = [
   "Siap Operasi (100%)",
@@ -489,67 +524,89 @@ const KEPUTUSAN_OPTIONS = [
   { value: "No Go", cls: "nogo" }
 ];
 
-// ---- Load master assets from /data/master-assets.json ----
+const DECISION_PRECEDENCE = ["No Go", "Hold", "Conditional Go", "Go"];
+
 const namaAsetList = document.getElementById("namaAsetList");
-
-async function loadMasterAssets() {
-  try {
-    const response = await fetch("./data/master-assets.json", { cache: "no-store" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    MASTER_ASSETS = await response.json();
-    if (!Array.isArray(MASTER_ASSETS)) {
-      throw new Error("master-assets.json harus berupa array.");
-    }
-
-    namaAsetList.innerHTML = "";
-    MASTER_ASSETS.forEach(a => {
-      const opt = document.createElement("option");
-      opt.value = a.namaAset;
-      namaAsetList.appendChild(opt);
-    });
-
-    return true;
-  } catch (error) {
-    console.error("Gagal memuat master-assets.json:", error);
-    document.getElementById("searchHint").textContent =
-      "Gagal memuat master data aset. Periksa /data/master-assets.json.";
-    return false;
-  }
-}
-
-// default date = today
-document.getElementById("tanggalInspeksi").valueAsDate = new Date();
-
 const namaAsetInput = document.getElementById("namaAsetInput");
-const searchHint = document.getElementById("searchHint");
+const namaAsetHint = document.getElementById("namaAsetHint");
+const subsistemBox = document.getElementById("subsistemBox");
+const subsistemSelect = document.getElementById("subsistemSelect");
+const lokasiBox = document.getElementById("lokasiBox");
+const lokasiSelect = document.getElementById("lokasiSelect");
+const pbsDisambigBox = document.getElementById("pbsDisambigBox");
+const pbsDisambigSelect = document.getElementById("pbsDisambigSelect");
 const metaBlock = document.getElementById("metaBlock");
 const componentsArea = document.getElementById("componentsArea");
 const emptyState = document.getElementById("emptyState");
-const lokasiInput = document.getElementById("lokasi");
+const inspectionPhotoCard = document.getElementById("inspectionPhotoCard");
 const tagNoInput = document.getElementById("tagNo");
-const nomorPBSInput = document.getElementById("nomorPBS");
+const tagHint = document.getElementById("tagHint");
+const picInspectorInput = document.getElementById("picInspector");
+const tanggalInspeksiInput = document.getElementById("tanggalInspeksi");
+const inspectionPhotoInput = document.getElementById("inspectionPhotoInput");
+const inspectionPhotoPreview = document.getElementById("inspectionPhotoPreview");
+const tokenNote = document.getElementById("tokenNote");
+const tokenStatusLine = document.getElementById("tokenStatusLine");
+const tokenInputRow = document.getElementById("tokenInputRow");
+const tokenInlineInput = document.getElementById("tokenInlineInput");
+const tokenInlineSaveBtn = document.getElementById("tokenInlineSaveBtn");
+const saveFooter = document.getElementById("saveFooter");
+const saveBtn = document.getElementById("saveBtn");
 
-let currentAsset = null;
-let tagManuallyEdited = false;
+tanggalInspeksiInput.valueAsDate = new Date();
 
-function findAssetByName(name) {
-  const q = name.trim().toLowerCase();
-  return MASTER_ASSETS.find(a => a.namaAset.toLowerCase() === q);
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[ch]));
 }
 
-function findAssetById(assetId) {
-  const q = (assetId || "").trim().toLowerCase();
-  return MASTER_ASSETS.find(a =>
-    String(a.assetId || a.tagNo || "").trim().toLowerCase() === q
-  );
+function distinctValues(rows, key) {
+  return [...new Set(rows.map(r => r[key]))];
+}
+
+function populateSelect(selectEl, values, placeholder) {
+  selectEl.innerHTML = `<option value="">${escapeHtml(placeholder)}</option>` +
+    values.map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join("");
+}
+
+function rowsForNamaAset(nama) {
+  const q = (nama || "").trim().toLowerCase();
+  if (!q) return [];
+  return MASTER_CATALOG.filter(r => r.namaAset.toLowerCase() === q);
+}
+function rowsForNamaAsetSubsistem(nama, subsistem) {
+  return rowsForNamaAset(nama).filter(r => r.subsistem === subsistem);
+}
+function rowsForFull(nama, subsistem, lokasi) {
+  return rowsForNamaAsetSubsistem(nama, subsistem).filter(r => r.lokasi === lokasi);
+}
+
+async function loadMasterCatalog() {
+  try {
+    const response = await fetch("./data/master-catalog.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    MASTER_CATALOG = await response.json();
+    if (!Array.isArray(MASTER_CATALOG)) throw new Error("master-catalog.json harus berupa array.");
+    namaAsetList.innerHTML = "";
+    distinctValues(MASTER_CATALOG, "namaAset").forEach(nama => {
+      const opt = document.createElement("option");
+      opt.value = nama;
+      namaAsetList.appendChild(opt);
+    });
+    return true;
+  } catch (error) {
+    console.error("Gagal memuat master-catalog.json:", error);
+    namaAsetHint.textContent = "Gagal memuat data katalog aset. Periksa /data/master-catalog.json.";
+    return false;
+  }
 }
 
 // ---- Tag No. suggestion: SMELTER-PBSNUMBER-URUTAN, e.g. A-001-A ----
 function smelterCode(lokasiStr) {
   if (!lokasiStr) return "";
   const trimmed = lokasiStr.trim();
-  const m = trimmed.match(/([A-Za-z0-9]+)\s*$/); // trailing token, e.g. "Smelter A" -> "A"
+  const m = trimmed.match(/([A-Za-z0-9]+)\s*$/);
   return m ? m[1].toUpperCase() : trimmed.charAt(0).toUpperCase();
 }
 function pbsDigits(pbsStr) {
@@ -557,13 +614,34 @@ function pbsDigits(pbsStr) {
   const m = pbsStr.match(/(\d+)/);
   return m ? m[1] : pbsStr;
 }
-function suggestTagNo(lokasiStr, pbsStr, urutan) {
-  return [smelterCode(lokasiStr), pbsDigits(pbsStr), urutan || "A"].filter(Boolean).join("-");
+function tagPrefix(row) {
+  return `${smelterCode(row.lokasi)}-${pbsDigits(row.nomorPBS)}`;
 }
-function refreshTagSuggestion() {
+
+async function refreshTagSuggestion() {
   if (!currentAsset || tagManuallyEdited) return;
-  tagNoInput.value = suggestTagNo(lokasiInput.value, currentAsset.nomorPBS, "A");
+  const prefix = tagPrefix(currentAsset);
+  tagNoInput.value = `${prefix}-A`;
+  tagHint.textContent = "Memeriksa Tag No. yang sudah dipakai…";
+  if (!GithubStore.hasToken()) {
+    tagHint.textContent = "Token belum diatur — pastikan Tag No. unik secara manual.";
+    return;
+  }
+  try {
+    const tags = await GithubStore.listInspectionTags();
+    if (tagManuallyEdited || !currentAsset) return;
+    const suffix = GithubStore.nextTagSuffix(tags, prefix);
+    tagNoInput.value = `${prefix}-${suffix}`;
+    tagHint.textContent = "Saran otomatis — bisa diubah.";
+  } catch (e) {
+    tagHint.textContent = "Gagal memeriksa Tag No. yang sudah dipakai. Periksa manual sebelum menyimpan.";
+  }
 }
+
+tagNoInput.addEventListener("input", () => {
+  tagManuallyEdited = true;
+  tagHint.textContent = "Diisi manual.";
+});
 
 function renderComponents(asset) {
   componentsArea.innerHTML = "";
@@ -576,11 +654,11 @@ function renderComponents(asset) {
     const card = document.createElement("div");
     card.className = "comp-card";
     card.innerHTML = `
-      <div class="comp-name">${comp.nama}</div>
+      <div class="comp-name">${escapeHtml(comp.nama)}</div>
 
       <div class="field">
-        <label>Spesifikasi Teknis (dapat disesuaikan saat inspeksi)</label>
-        <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" value="${comp.spesifikasi.replace(/"/g,'&quot;')}">
+        <label>Spesifikasi Teknis</label>
+        <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" placeholder="Isi spesifikasi teknis…">
       </div>
 
       <div class="row2">
@@ -613,98 +691,245 @@ function renderComponents(asset) {
       sel.className = "keputusan " + (sel.selectedOptions[0]?.dataset.cls || "");
     });
   });
-
-  componentsArea.querySelectorAll('input[type=file]').forEach(inp => {
-    inp.addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      const idx = e.target.dataset.idx;
-      const img = componentsArea.querySelector(`.photo-preview[data-idx="${idx}"]`);
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = ev => {
-          img.src = ev.target.result;
-          img.style.display = "block";
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  });
 }
 
-const inspectionPhotoInput = document.getElementById("inspectionPhotoInput");
-const inspectionPhotoPreview = document.getElementById("inspectionPhotoPreview");
-
-inspectionPhotoInput.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    inspectionPhotoPreview.src = ev.target.result;
-    inspectionPhotoPreview.style.display = "block";
-  };
-  reader.readAsDataURL(file);
-});
-
-function loadAsset(name) {
-  const asset = findAssetByName(name);
-  if (!asset) {
-    metaBlock.style.display = "none";
-    componentsArea.innerHTML = "";
-    emptyState.style.display = "block";
-    emptyState.textContent = name.trim()
-      ? `Aset "${name}" tidak ditemukan di daftar master.`
-      : "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
-    currentAsset = null;
-    return;
-  }
-  currentAsset = asset;
+function resolveAsset(row) {
+  currentAsset = row;
   tagManuallyEdited = false;
-  nomorPBSInput.value = asset.nomorPBS;
-  lokasiInput.value = asset.lokasi;
+  document.getElementById("nomorPBS").value = row.nomorPBS;
+  document.getElementById("subsistemDisplay").value = row.subsistem;
+  document.getElementById("lokasiDisplay").value = row.lokasi;
   metaBlock.style.display = "block";
   emptyState.style.display = "none";
-  searchHint.textContent = `Ditemukan: ${asset.nomorPBS} — ${asset.lokasi}`;
+  inspectionPhotoCard.style.display = "block";
+  renderComponents(row);
   refreshTagSuggestion();
-  renderComponents(asset);
 }
 
-function escapeHtml(value) {
-  return String(value ?? "").replace(/[&<>"']/g, ch => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
-  }[ch]));
+function resetDownstream(fullReset) {
+  subsistemBox.style.display = "none";
+  lokasiBox.style.display = "none";
+  pbsDisambigBox.style.display = "none";
+  metaBlock.style.display = "none";
+  componentsArea.innerHTML = "";
+  inspectionPhotoCard.style.display = "none";
+  currentAsset = null;
+  tagManuallyEdited = false;
+  emptyState.style.display = "block";
+  emptyState.textContent = "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
+  if (fullReset) {
+    subsistemSelect.innerHTML = "";
+    lokasiSelect.innerHTML = "";
+    pbsDisambigSelect.innerHTML = "";
+  }
 }
 
-function renderInspectionResult(asset, inspection) {
-  document.querySelector(".wrap").style.display = "none";
-  document.getElementById("trialNote").style.display = "none";
+function onNamaAsetChange() {
+  resetDownstream(true);
+  const rows = rowsForNamaAset(namaAsetInput.value);
+  if (!rows.length) {
+    namaAsetHint.textContent = namaAsetInput.value.trim()
+      ? `Aset "${namaAsetInput.value}" tidak ditemukan di katalog.`
+      : "Mulai ketik atau pilih nama aset di atas.";
+    return;
+  }
+  namaAsetHint.textContent = `Ditemukan ${rows.length} entri katalog. Pilih subsistem.`;
+  populateSelect(subsistemSelect, distinctValues(rows, "subsistem"), "Pilih subsistem…");
+  subsistemBox.style.display = "block";
+}
+namaAsetInput.addEventListener("input", onNamaAsetChange);
+namaAsetInput.addEventListener("change", onNamaAsetChange);
+
+subsistemSelect.addEventListener("change", () => {
+  lokasiBox.style.display = "none";
+  pbsDisambigBox.style.display = "none";
+  metaBlock.style.display = "none";
+  componentsArea.innerHTML = "";
+  inspectionPhotoCard.style.display = "none";
+  currentAsset = null;
+  if (!subsistemSelect.value) return;
+  const rows = rowsForNamaAsetSubsistem(namaAsetInput.value, subsistemSelect.value);
+  populateSelect(lokasiSelect, distinctValues(rows, "lokasi"), "Pilih lokasi…");
+  lokasiBox.style.display = "block";
+});
+
+lokasiSelect.addEventListener("change", () => {
+  pbsDisambigBox.style.display = "none";
+  metaBlock.style.display = "none";
+  componentsArea.innerHTML = "";
+  inspectionPhotoCard.style.display = "none";
+  currentAsset = null;
+  if (!lokasiSelect.value) return;
+  const rows = rowsForFull(namaAsetInput.value, subsistemSelect.value, lokasiSelect.value);
+  if (rows.length === 1) {
+    resolveAsset(rows[0]);
+  } else if (rows.length > 1) {
+    populateSelect(pbsDisambigSelect, distinctValues(rows, "nomorPBS"), "Pilih Nomor PBS…");
+    pbsDisambigBox.style.display = "block";
+  } else {
+    emptyState.textContent = "Kombinasi aset/subsistem/lokasi tidak ditemukan di katalog.";
+  }
+});
+
+pbsDisambigSelect.addEventListener("change", () => {
+  if (!pbsDisambigSelect.value) return;
+  const rows = rowsForFull(namaAsetInput.value, subsistemSelect.value, lokasiSelect.value)
+    .filter(r => r.nomorPBS === pbsDisambigSelect.value);
+  if (rows.length) resolveAsset(rows[0]);
+});
+
+inspectionPhotoInput.addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const { dataUrl, base64 } = await GithubStore.compressImage(file);
+    inspectionPhotoPreview.src = dataUrl;
+    inspectionPhotoPreview.style.display = "block";
+    inspectionPhotoPreview.dataset.base64 = base64;
+  } catch (err) {
+    alert(err.message || "Gagal memproses foto.");
+  }
+});
+
+function computeOverallDecision(komponenData) {
+  for (const level of DECISION_PRECEDENCE) {
+    if (komponenData.some(k => k.keputusanTeknis === level)) return level;
+  }
+  return "";
+}
+
+function validateForm() {
+  const errors = [];
+  if (!currentAsset) errors.push("Pilih Nama Aset, Subsistem, dan Lokasi terlebih dahulu.");
+  if (!tagNoInput.value.trim()) errors.push("Tag No. wajib diisi.");
+  if (!picInspectorInput.value.trim()) errors.push("PIC/Inspector wajib diisi.");
+  if (!tanggalInspeksiInput.value) errors.push("Tanggal Inspeksi wajib diisi.");
+  if (!inspectionPhotoPreview.dataset.base64) errors.push("Foto inspeksi wajib diunggah.");
+  if (currentAsset) {
+    currentAsset.subKomponen.forEach((comp, idx) => {
+      const spesifikasi = componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim();
+      const kondisi = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value;
+      const keputusan = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value;
+      if (!spesifikasi) errors.push(`Spesifikasi Teknis untuk "${comp.nama}" wajib diisi.`);
+      if (!kondisi) errors.push(`Kondisi Teknis untuk "${comp.nama}" wajib dipilih.`);
+      if (!keputusan) errors.push(`Keputusan Teknis untuk "${comp.nama}" wajib dipilih.`);
+    });
+  }
+  return errors;
+}
+
+function buildRecord() {
+  const komponenData = currentAsset.subKomponen.map((comp, idx) => ({
+    nama: comp.nama,
+    spesifikasiTeknis: componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
+    kondisiTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
+    keputusanTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
+    catatan: componentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
+  }));
+  const tagNo = tagNoInput.value.trim();
+  const tanggal = tanggalInspeksiInput.value;
+  return {
+    tagNo,
+    inspectionId: `INS-${tanggal.replace(/-/g, "")}-${tagNo}`,
+    nomorPBS: currentAsset.nomorPBS,
+    subsistem: currentAsset.subsistem,
+    namaAset: currentAsset.namaAset,
+    lokasi: currentAsset.lokasi,
+    picInspector: picInspectorInput.value.trim(),
+    tanggalInspeksi: tanggal,
+    fotoPath: `data/inspections/photos/${tagNo}.jpg`,
+    overallDecision: computeOverallDecision(komponenData),
+    komponen: komponenData
+  };
+}
+
+saveBtn.addEventListener("click", () => {
+  const errors = validateForm();
+  if (errors.length) {
+    alert(errors.join("\n"));
+    return;
+  }
+  pendingRecord = buildRecord();
+  document.getElementById("previewJson").textContent = JSON.stringify(pendingRecord, null, 2);
+  document.getElementById("previewOverlay").classList.add("open");
+});
+
+document.getElementById("closePreview").addEventListener("click", () => {
+  document.getElementById("previewOverlay").classList.remove("open");
+});
+
+document.getElementById("confirmSaveBtn").addEventListener("click", async () => {
+  if (!pendingRecord) return;
+  const confirmBtn = document.getElementById("confirmSaveBtn");
+  confirmBtn.disabled = true;
+  confirmBtn.textContent = "Menyimpan…";
+  try {
+    if (!GithubStore.hasToken()) {
+      throw new Error("Token GitHub belum diatur di perangkat ini. Tutup jendela ini, isi token pada bagian bawah halaman, lalu coba simpan lagi.");
+    }
+    await GithubStore.ensureDataBranch();
+    const existingTags = await GithubStore.listInspectionTags();
+    if (existingTags.includes(pendingRecord.tagNo)) {
+      const err = new Error(`Tag No. "${pendingRecord.tagNo}" sudah pernah didaftarkan dan tidak bisa dipakai lagi.`);
+      err.code = "DUPLICATE";
+      throw err;
+    }
+    const photoBase64 = inspectionPhotoPreview.dataset.base64;
+    await GithubStore.createFile(pendingRecord.fotoPath, photoBase64, `Foto inspeksi ${pendingRecord.tagNo}`);
+    await GithubStore.createFile(
+      `data/inspections/${pendingRecord.tagNo}.json`,
+      GithubStore.toBase64(JSON.stringify(pendingRecord, null, 2)),
+      `Inspeksi ${pendingRecord.tagNo}`
+    );
+    document.getElementById("previewOverlay").classList.remove("open");
+    renderInspectionResult(pendingRecord, inspectionPhotoPreview.src);
+    pendingRecord = null;
+  } catch (err) {
+    if (err.code === "DUPLICATE") {
+      alert(err.message + " Tag No. akan disegarkan otomatis.");
+      tagManuallyEdited = false;
+      await refreshTagSuggestion();
+    } else {
+      alert(err.message || "Gagal menyimpan inspeksi.");
+    }
+  } finally {
+    confirmBtn.disabled = false;
+    confirmBtn.textContent = "Konfirmasi & Simpan";
+  }
+});
+
+function renderInspectionResult(record, photoSrcOverride) {
+  document.getElementById("formView").style.display = "none";
+  document.getElementById("notFoundView").style.display = "none";
+  saveFooter.style.display = "none";
+  tokenNote.style.display = "none";
   document.getElementById("resultView").style.display = "block";
 
-  document.getElementById("resultAssetName").textContent = asset.namaAset;
-  document.getElementById("resultPBS").textContent = asset.nomorPBS || "";
-  document.getElementById("resultTag").textContent = inspection.tagNo || "";
-  document.getElementById("resultLocation").textContent = asset.lokasi || "";
-  document.getElementById("resultInspector").textContent = inspection.picInspector || "";
-  document.getElementById("resultDate").textContent = inspection.tanggalInspeksi || "";
-  document.getElementById("resultInspectionId").textContent = inspection.inspectionId || "";
+  document.getElementById("resultAssetName").textContent = record.namaAset || "";
+  document.getElementById("resultPBS").textContent = record.nomorPBS || "";
+  document.getElementById("resultSubsistem").textContent = record.subsistem || "";
+  document.getElementById("resultTag").textContent = record.tagNo || "";
+  document.getElementById("resultLocation").textContent = record.lokasi || "";
+  document.getElementById("resultInspector").textContent = record.picInspector || "";
+  document.getElementById("resultDate").textContent = record.tanggalInspeksi || "";
+  document.getElementById("resultInspectionId").textContent = record.inspectionId || "";
 
-  const decision = inspection.overallDecision || "";
+  const decision = record.overallDecision || "";
   const decisionClass = {"Go":"go","Conditional Go":"cgo","Hold":"hold","No Go":"nogo"}[decision] || "";
   document.getElementById("resultDecision").innerHTML =
     `<span class="result-status ${decisionClass}">${escapeHtml(decision || "Hasil inspeksi")}</span>`;
 
-  const photoArea = document.getElementById("resultPhotoArea");
-  photoArea.innerHTML = inspection.foto
-    ? `<div class="result-inspection-photo"><div class="field"><label>Foto Inspeksi</label><img src="${escapeHtml(inspection.foto)}" alt="Foto inspeksi"></div></div>`
-    : "";
+  const photoSrc = photoSrcOverride || GithubStore.rawUrl(record.fotoPath);
+  document.getElementById("resultPhotoArea").innerHTML =
+    `<div class="result-inspection-photo"><div class="field"><label>Foto Inspeksi</label><img src="${escapeHtml(photoSrc)}" alt="Foto inspeksi" onerror="this.replaceWith(document.createTextNode('Foto tidak dapat dimuat.'))"></div></div>`;
 
   const container = document.getElementById("resultComponents");
   container.innerHTML = "";
-
-  (inspection.komponen || []).forEach(item => {
+  (record.komponen || []).forEach(item => {
     const card = document.createElement("div");
     card.className = "result-component";
     card.innerHTML = `
-      <h3>${escapeHtml(item.subKomponen || "")}</h3>
+      <h3>${escapeHtml(item.nama || "")}</h3>
       <div class="result-grid">
         <div class="result-field full">
           <label>Spesifikasi Teknis</label>
@@ -725,116 +950,50 @@ function renderInspectionResult(asset, inspection) {
       </div>`;
     container.appendChild(card);
   });
+
+  lastRecord = record;
 }
 
-function loadAssetById(assetId) {
-  const asset = findAssetById(assetId);
-
-  if (!asset) {
-    metaBlock.style.display = "none";
-    componentsArea.innerHTML = "";
-    emptyState.style.display = "block";
-    emptyState.textContent = assetId
-      ? `Asset ID "${assetId}" tidak ditemukan di daftar master.`
-      : "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
-    searchHint.textContent = assetId
-      ? `Asset ID "${assetId}" tidak ditemukan.`
-      : "Belum ada aset dipilih. Mulai ketik nama aset di atas.";
-    currentAsset = null;
-    return;
-  }
-
-  // QR opens the prerecorded/latest result when one exists.
-  if (asset.latestInspection) {
-    renderInspectionResult(asset, asset.latestInspection);
-    return;
-  }
-
-  // No result yet: open the normal inspection form.
-  currentAsset = asset;
-  tagManuallyEdited = false;
-  namaAsetInput.value = asset.namaAset;
-  nomorPBSInput.value = asset.nomorPBS;
-  lokasiInput.value = asset.lokasi;
-  metaBlock.style.display = "block";
-  emptyState.style.display = "none";
-  searchHint.textContent = `QR: ${asset.assetId || asset.tagNo} — ${asset.nomorPBS} — ${asset.lokasi}`;
-  refreshTagSuggestion();
-  renderComponents(asset);
-}
-
-namaAsetInput.addEventListener("input", (e) => loadAsset(e.target.value));
-namaAsetInput.addEventListener("change", (e) => loadAsset(e.target.value));
-
-// ---- QR bootstrap: load asset from ?asset=<AssetID> ----
-async function initializeApp() {
-  const assetsLoaded = await loadMasterAssets();
-  if (!assetsLoaded) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const assetId = params.get("asset");
-
-  if (assetId) {
-    loadAssetById(assetId);
+async function loadResultByTag(tag) {
+  try {
+    const res = await fetch(GithubStore.rawUrl(`data/inspections/${encodeURIComponent(tag)}.json`), { cache: "no-store" });
+    if (!res.ok) throw new Error("not found");
+    const record = await res.json();
+    renderInspectionResult(record);
+  } catch (e) {
+    document.getElementById("formView").style.display = "none";
+    document.getElementById("resultView").style.display = "none";
+    saveFooter.style.display = "none";
+    tokenNote.style.display = "none";
+    document.getElementById("notFoundView").style.display = "block";
+    document.getElementById("notFoundTag").textContent = tag;
   }
 }
 
-initializeApp();
-lokasiInput.addEventListener("input", refreshTagSuggestion);
-tagNoInput.addEventListener("input", () => { tagManuallyEdited = true; });
+document.getElementById("backToFormBtn").addEventListener("click", () => {
+  window.location.href = window.location.pathname;
+});
+document.getElementById("notFoundBackBtn").addEventListener("click", () => {
+  window.location.href = window.location.pathname;
+});
 
-// The two inspection dropdowns are:
-// 1) Kondisi Teknis
-// 2) Keputusan Teknis
-// PBS number, component name, and subcomponent structure come from master data.
-// Location and Tag No. / Asset ID remain editable as designed.
-
-// ---- Save (preview only for now — GitHub write comes in a later step) ----
-let lastRecord = null;
-
-document.getElementById("saveBtn").addEventListener("click", () => {
-  if (!currentAsset) {
-    alert("Pilih Nama Aset / Komponen terlebih dahulu.");
+document.getElementById("downloadResultBtn").addEventListener("click", async () => {
+  if (typeof html2canvas === "undefined") {
+    alert("Fitur gambar belum siap. Periksa koneksi internet lalu coba lagi.");
     return;
   }
-
-  const komponenData = currentAsset.subKomponen.map((comp, idx) => {
-    const spesifikasi = componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value;
-    const kondisi = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value;
-    const keputusan = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value;
-    const catatan = componentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value;
-    const hasFoto = !!componentsArea.querySelector(`.photo-preview[data-idx="${idx}"]`).src;
-    return {
-      subKomponen: comp.nama,
-      spesifikasiTeknis: spesifikasi,
-      kondisiTeknis: kondisi,
-      keputusanTeknis: keputusan,
-      catatan: catatan
-    };
+  const canvas = await html2canvas(document.getElementById("resultCapture"), {
+    backgroundColor: "#ffffff", scale: 2, useCORS: true
   });
-
-  lastRecord = {
-    assetId: currentAsset.assetId || currentAsset.tagNo || tagNoInput.value,
-    nomorPBS: currentAsset.nomorPBS,
-    namaAset: currentAsset.namaAset,
-    lokasi: lokasiInput.value,
-    tagNo: tagNoInput.value,
-    tanggalInspeksi: document.getElementById("tanggalInspeksi").value,
-    picInspector: document.getElementById("picInspector").value,
-    fotoTerlampir: !!document.getElementById("inspectionPhotoPreview").src,
-    komponen: komponenData
-  };
-
-  document.getElementById("previewJson").textContent = JSON.stringify(lastRecord, null, 2);
-  document.getElementById("previewOverlay").classList.add("open");
+  const tag = (document.getElementById("resultTag").textContent || "asset")
+    .replace(/[^a-zA-Z0-9_-]+/g, "-");
+  const link = document.createElement("a");
+  link.download = `Hasil-Inspeksi-${tag}.png`;
+  link.href = canvas.toDataURL("image/png");
+  link.click();
 });
 
-document.getElementById("closePreview").addEventListener("click", () => {
-  document.getElementById("previewOverlay").classList.remove("open");
-});
-
-// ---- QR label generation for Niimbot ----
-// Composite PNG sized ~40x30mm at 8px/mm (matches common Niimbot label stock)
+// ---- QR label generation for Niimbot: 5cm x 3cm stock at 8px/mm ----
 function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
   const words = (text || "").split(" ");
   let line = "";
@@ -861,32 +1020,32 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
 function generateLabelPNG(record) {
   const qrHidden = document.getElementById("qrHidden");
   qrHidden.innerHTML = "";
-  const qrUrl = SITE_BASE_URL + "?asset=" + encodeURIComponent(record.tagNo || record.assetId || record.nomorPBS);
+  const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
   new QRCode(qrHidden, { text: qrUrl, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
 
   function draw(qrSource) {
     const canvas = document.createElement("canvas");
-    canvas.width = 320;
-    canvas.height = 240;
+    canvas.width = 400; // 5cm at 8px/mm
+    canvas.height = 240; // 3cm at 8px/mm
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, 320, 240);
+    ctx.fillRect(0, 0, 400, 240);
     ctx.drawImage(qrSource, 12, 20, 200, 200);
 
     ctx.fillStyle = "#000000";
     ctx.textBaseline = "top";
     ctx.font = "bold 24px monospace";
-    ctx.fillText(record.tagNo || record.nomorPBS, 222, 26);
+    ctx.fillText(record.tagNo, 224, 26);
 
     ctx.font = "13px sans-serif";
-    wrapText(ctx, record.namaAset, 222, 62, 90, 15, 4);
+    wrapText(ctx, record.namaAset, 224, 62, 160, 15, 5);
 
     ctx.font = "11px sans-serif";
     ctx.fillStyle = "#555555";
-    wrapText(ctx, record.lokasi, 222, 170, 90, 13, 3);
+    wrapText(ctx, record.lokasi, 224, 190, 160, 13, 3);
 
     const link = document.createElement("a");
-    link.download = `QR-${(record.tagNo || record.nomorPBS)}.png`;
+    link.download = `QR-${record.tagNo}.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
   }
@@ -907,6 +1066,57 @@ document.getElementById("downloadQrBtn").addEventListener("click", () => {
   if (!lastRecord) return;
   generateLabelPNG(lastRecord);
 });
+
+function maskToken(token) {
+  if (!token) return "";
+  return token.length <= 6 ? "•".repeat(token.length) : `${token.slice(0, 6)}…${token.slice(-4)}`;
+}
+
+function updateTokenBanner() {
+  tokenNote.style.display = "block";
+  const token = GithubStore.getToken();
+  if (token) {
+    tokenStatusLine.innerHTML =
+      `Token GitHub aktif di perangkat ini (${escapeHtml(maskToken(token))}). <a href="#" id="tokenChangeLink">Ubah token</a>`;
+    tokenInputRow.style.display = "none";
+    document.getElementById("tokenChangeLink").addEventListener("click", (e) => {
+      e.preventDefault();
+      tokenInputRow.style.display = "flex";
+      tokenInlineInput.focus();
+    });
+  } else {
+    tokenStatusLine.textContent = "Token GitHub belum diatur di perangkat ini — wajib diisi sebelum menyimpan inspeksi.";
+    tokenInputRow.style.display = "flex";
+  }
+}
+
+tokenInlineSaveBtn.addEventListener("click", () => {
+  const value = tokenInlineInput.value.trim();
+  if (!value) {
+    alert("Isi token terlebih dahulu.");
+    return;
+  }
+  GithubStore.setToken(value);
+  tokenInlineInput.value = "";
+  updateTokenBanner();
+  if (currentAsset) {
+    tagManuallyEdited = false;
+    refreshTagSuggestion();
+  }
+});
+
+async function initializeApp() {
+  const params = new URLSearchParams(window.location.search);
+  const tag = params.get("tag");
+  if (tag) {
+    await loadResultByTag(tag);
+    return;
+  }
+  await loadMasterCatalog();
+  updateTokenBanner();
+}
+
+initializeApp();
 </script>
 
 </body>
