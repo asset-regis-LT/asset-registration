@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubrik Penilaian Kondisi Aset / Komponen</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --ink:#14171a;
+    --paper:#f6f5f2;
+    --panel:#ffffff;
+    --line:#d8d5cd;
+    --label-bg:#e4e1d8;
+    --accent:#c9622a;
+    --go:#2f7a3e;
+    --cgo:#b8860b;
+    --hold:#c9622a;
+    --nogo:#b23a2f;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    padding-bottom:80px;
+  }
+  header.bar{
+    background:var(--ink);
+    color:#fff;
+    padding:18px 16px;
+    text-align:center;
+    letter-spacing:0.06em;
+  }
+  header.bar h1{
+    margin:0;
+    font-size:15px;
+    font-weight:700;
+    text-transform:uppercase;
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 0 40px;
+  }
+  .meta{
+    background:var(--panel);
+    border-bottom:1px solid var(--line);
+  }
+  .meta-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border-bottom:1px solid var(--line);
+  }
+  .meta-cell{
+    border-right:1px solid var(--line);
+    padding:10px 14px;
+  }
+  .meta-cell:last-child{border-right:none;}
+  .meta-cell label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:#5a564c;
+    margin-bottom:4px;
+  }
+  .meta-cell input, .meta-cell select{
+    width:100%;
+    border:none;
+    background:transparent;
+    font-size:15px;
+    padding:2px 0;
+    font-family:var(--sans);
+    color:var(--ink);
+  }
+  .meta-cell input:focus, .meta-cell select:focus{outline:none;border-bottom:2px solid var(--accent);}
+  .meta-cell.readonly input{color:#6b675d;font-family:var(--mono);font-size:13px;}
+  .meta-cell.suggested label::after{
+    content:" (saran, bisa diubah)";
+    text-transform:none;
+    font-weight:400;
+    color:#a89e8a;
+    letter-spacing:0;
+  }
+  .meta-cell.suggested input{font-family:var(--mono);}
+  .search-box{
+    padding:14px;
+    background:var(--panel);
+    border-bottom:2px solid var(--ink);
+  }
+  .search-box label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:#5a564c;
+    margin-bottom:6px;
+  }
+  .search-box input{
+    width:100%;
+    padding:12px 12px;
+    font-size:16px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    font-family:var(--sans);
+  }
+  .search-box input:focus{outline:2px solid var(--accent);border-color:var(--accent);}
+  .hint{
+    font-size:12px;
+    color:#8a8578;
+    margin-top:6px;
+  }
+  .empty-state{
+    text-align:center;
+    padding:40px 20px;
+    color:#8a8578;
+    font-size:14px;
+  }
+  .comp-header{
+    background:var(--label-bg);
+    padding:8px 14px;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .comp-card{
+    background:var(--panel);
+    border-bottom:1px solid var(--line);
+    padding:14px;
+  }
+  .comp-card .comp-name{
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:8px;
+  }
+  .field{
+    margin-bottom:12px;
+  }
+  .field label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:#5a564c;
+    margin-bottom:5px;
+  }
+  .field select, .field textarea, .field input[type=text]{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    font-family:var(--sans);
+    background:#fff;
+  }
+  .field input.spec-input{font-family:var(--mono);font-size:13px;}
+  .field textarea{resize:vertical;min-height:44px;}
+  .row2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  select.kondisi{border-left:4px solid #999;}
+  select.keputusan.go{border-left:4px solid var(--go);}
+  select.keputusan.cgo{border-left:4px solid var(--cgo);}
+  select.keputusan.hold{border-left:4px solid var(--hold);}
+  select.keputusan.nogo{border-left:4px solid var(--nogo);}
+  .photo-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .photo-btn{
+    border:1px dashed var(--line);
+    border-radius:4px;
+    padding:10px 14px;
+    background:#fafaf8;
+    font-size:13px;
+    cursor:pointer;
+    color:#5a564c;
+  }
+  .photo-preview{
+    width:44px;height:44px;
+    object-fit:cover;
+    border-radius:4px;
+    border:1px solid var(--line);
+    display:none;
+  }
+  footer.actions{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    background:var(--panel);
+    border-top:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    gap:10px;
+    max-width:900px;
+    margin:0 auto;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.06);
+  }
+  footer.actions .save-btn{
+    flex:1;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    padding:14px;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    border-radius:4px;
+    cursor:pointer;
+  }
+  footer.actions .save-btn:active{background:var(--accent);}
+  .disabled-note{
+    background:#fff4e8;
+    border:1px solid #e8c9a3;
+    color:#8a5a1f;
+    font-size:12px;
+    padding:10px 14px;
+    text-align:center;
+  }
+  #previewOverlay{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(20,23,26,0.7);
+    z-index:50;
+    align-items:flex-end;
+  }
+  #previewOverlay.open{display:flex;}
+  #previewSheet{
+    background:#fff;
+    width:100%;
+    max-height:86vh;
+    overflow:auto;
+    border-radius:12px 12px 0 0;
+    padding:20px;
+  }
+  #previewSheet h2{margin-top:0;font-size:16px;}
+  #previewSheet pre{
+    background:#14171a;
+    color:#c8f0c8;
+    padding:14px;
+    border-radius:6px;
+    font-size:12px;
+    overflow:auto;
+    font-family:var(--mono);
+  }
+  .qr-btn{
+    display:block;
+    width:100%;
+    margin-top:14px;
+    padding:12px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:13px;
+    cursor:pointer;
+  }
+  .close-btn{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:13px;
+    cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <h1>Rubrik Penilaian Kondisi Aset / Komponen</h1>
+</header>
+
+<div class="wrap">
+
+  <div class="search-box">
+    <label for="namaAsetInput">Nama Aset / Komponen</label>
+    <input type="text" id="namaAsetInput" list="namaAsetList" placeholder="Ketik atau pilih nama aset…" autocomplete="off">
+    <datalist id="namaAsetList"></datalist>
+    <div class="hint" id="searchHint">Belum ada aset dipilih. Mulai ketik nama aset di atas.</div>
+  </div>
+
+  <div class="meta" id="metaBlock" style="display:none;">
+    <div class="meta-row">
+      <div class="meta-cell readonly">
+        <label>Nomor PBS</label>
+        <input type="text" id="nomorPBS" readonly>
+      </div>
+      <div class="meta-cell suggested">
+        <label>Tag No. / Asset ID</label>
+        <input type="text" id="tagNo" placeholder="SMELTER-PBS-URUTAN">
+      </div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-cell">
+        <label>Nama Smelter / Lokasi</label>
+        <input type="text" id="lokasi" placeholder="Nama smelter / lokasi">
+      </div>
+      <div class="meta-cell">
+        <label>PIC / Inspector</label>
+        <input type="text" id="picInspector" placeholder="Nama Anda">
+      </div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-cell">
+        <label>Tanggal Inspeksi</label>
+        <input type="date" id="tanggalInspeksi">
+      </div>
+      <div class="meta-cell"></div>
+    </div>
+  </div>
+
+  <div id="componentsArea"></div>
+
+  <div id="emptyState" class="empty-state">
+    Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.
+  </div>
+
+</div>
+
+<div class="disabled-note">
+  Versi uji coba — tombol Simpan hanya menampilkan pratinjau data. Belum tersambung ke penyimpanan GitHub.
+</div>
+
+<footer class="actions">
+  <button class="save-btn" id="saveBtn">Simpan Inspeksi</button>
+</footer>
+
+<div id="previewOverlay">
+  <div id="previewSheet">
+    <h2>Pratinjau Data Inspeksi</h2>
+    <pre id="previewJson"></pre>
+    <button class="qr-btn" id="downloadQrBtn">Unduh QR untuk Cetak (Niimbot)</button>
+    <button class="close-btn" id="closePreview">Tutup</button>
+  </div>
+</div>
+
+<div id="qrHidden" style="display:none;"></div>
+
+<script>
+// ---------------------------------------------------------------------
+// IMPORTANT: once this is live on GitHub Pages, update SITE_BASE_URL
+// below to your real Pages URL, e.g.
+// "https://yourusername.github.io/asset-inspection/"
+// The QR code encodes SITE_BASE_URL + "?asset=<TagNo>"
+// ---------------------------------------------------------------------
+const SITE_BASE_URL = "https://yourusername.github.io/asset-inspection/";
+
+// ---- Sample master asset list (stand-in for the real 200-item list) ----
+// In the GitHub-connected version, this will be loaded from data/master-assets.json
+const MASTER_ASSETS = [
+  {
+    nomorPBS: "PBS-001",
+    namaAset: "Conveyor Belt A",
+    lokasi: "Smelter A",
+    subKomponen: [
+      { nama: "Motor Penggerak", spesifikasi: "15kW, 1450rpm" },
+      { nama: "Roller Idler", spesifikasi: "Diameter 89mm" },
+      { nama: "Belt", spesifikasi: "EP200, lebar 800mm" }
+    ]
+  },
+  {
+    nomorPBS: "PBS-002",
+    namaAset: "Overhead Crane XSY",
+    lokasi: "Smelter A",
+    subKomponen: [
+      { nama: "Hoist Motor", spesifikasi: "22kW, 3 phase" },
+      { nama: "Wire Rope", spesifikasi: "Diameter 16mm, 6x36" },
+      { nama: "Hook Block", spesifikasi: "SWL 10 ton" }
+    ]
+  },
+  {
+    nomorPBS: "PBS-003",
+    namaAset: "Cooling Fan Unit",
+    lokasi: "Smelter B",
+    subKomponen: [
+      { nama: "Fan Blade Assembly", spesifikasi: "Diameter 1.2m, 6 blade" },
+      { nama: "Bearing Housing", spesifikasi: "Pillow block UCP 210" }
+    ]
+  },
+  {
+    nomorPBS: "PBS-004",
+    namaAset: "Hydraulic Press Unit",
+    lokasi: "Smelter B",
+    subKomponen: [
+      { nama: "Hydraulic Pump", spesifikasi: "45L/min, 180 bar" },
+      { nama: "Cylinder Ram", spesifikasi: "Bore 200mm, stroke 500mm" },
+      { nama: "Pressure Relief Valve", spesifikasi: "Set point 200 bar" }
+    ]
+  },
+  {
+    nomorPBS: "PBS-005",
+    namaAset: "Exhaust Blower",
+    lokasi: "Smelter A",
+    subKomponen: [
+      { nama: "Blower Motor", spesifikasi: "37kW, 2900rpm" },
+      { nama: "Impeller", spesifikasi: "Diameter 600mm, 12 blade" }
+    ]
+  }
+];
+
+const KONDISI_OPTIONS = [
+  "Siap Operasi (100%)",
+  "Minor Repair (80 - 100%)",
+  "Repair (50 - 80%)",
+  "Major Repair (20 - 50%)",
+  "Scrap / Tidak Ada (Hilang) (< 20%)"
+];
+
+const KEPUTUSAN_OPTIONS = [
+  { value: "Go", cls: "go" },
+  { value: "Conditional Go", cls: "cgo" },
+  { value: "Hold", cls: "hold" },
+  { value: "No Go", cls: "nogo" }
+];
+
+// ---- Populate the Nama Aset datalist ----
+const namaAsetList = document.getElementById("namaAsetList");
+MASTER_ASSETS.forEach(a => {
+  const opt = document.createElement("option");
+  opt.value = a.namaAset;
+  namaAsetList.appendChild(opt);
+});
+
+// default date = today
+document.getElementById("tanggalInspeksi").valueAsDate = new Date();
+
+const namaAsetInput = document.getElementById("namaAsetInput");
+const searchHint = document.getElementById("searchHint");
+const metaBlock = document.getElementById("metaBlock");
+const componentsArea = document.getElementById("componentsArea");
+const emptyState = document.getElementById("emptyState");
+const lokasiInput = document.getElementById("lokasi");
+const tagNoInput = document.getElementById("tagNo");
+const nomorPBSInput = document.getElementById("nomorPBS");
+
+let currentAsset = null;
+let tagManuallyEdited = false;
+
+function findAssetByName(name) {
+  const q = name.trim().toLowerCase();
+  return MASTER_ASSETS.find(a => a.namaAset.toLowerCase() === q);
+}
+
+// ---- Tag No. suggestion: SMELTER-PBSNUMBER-URUTAN, e.g. A-001-A ----
+function smelterCode(lokasiStr) {
+  if (!lokasiStr) return "";
+  const trimmed = lokasiStr.trim();
+  const m = trimmed.match(/([A-Za-z0-9]+)\s*$/); // trailing token, e.g. "Smelter A" -> "A"
+  return m ? m[1].toUpperCase() : trimmed.charAt(0).toUpperCase();
+}
+function pbsDigits(pbsStr) {
+  if (!pbsStr) return "";
+  const m = pbsStr.match(/(\d+)/);
+  return m ? m[1] : pbsStr;
+}
+function suggestTagNo(lokasiStr, pbsStr, urutan) {
+  return [smelterCode(lokasiStr), pbsDigits(pbsStr), urutan || "A"].filter(Boolean).join("-");
+}
+function refreshTagSuggestion() {
+  if (!currentAsset || tagManuallyEdited) return;
+  tagNoInput.value = suggestTagNo(lokasiInput.value, currentAsset.nomorPBS, "A");
+}
+
+function renderComponents(asset) {
+  componentsArea.innerHTML = "";
+  const header = document.createElement("div");
+  header.className = "comp-header";
+  header.textContent = `Sub Komponen (${asset.subKomponen.length})`;
+  componentsArea.appendChild(header);
+
+  asset.subKomponen.forEach((comp, idx) => {
+    const card = document.createElement("div");
+    card.className = "comp-card";
+    card.innerHTML = `
+      <div class="comp-name">${comp.nama}</div>
+
+      <div class="field">
+        <label>Spesifikasi Teknis</label>
+        <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" value="${comp.spesifikasi.replace(/"/g,'&quot;')}">
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label>Kondisi Teknis</label>
+          <select class="kondisi" data-idx="${idx}" data-field="kondisi">
+            <option value="">Pilih kondisi…</option>
+            ${KONDISI_OPTIONS.map(k => `<option value="${k}">${k}</option>`).join("")}
+          </select>
+        </div>
+        <div class="field">
+          <label>Keputusan Teknis</label>
+          <select class="keputusan" data-idx="${idx}" data-field="keputusan">
+            <option value="">Pilih keputusan…</option>
+            ${KEPUTUSAN_OPTIONS.map(k => `<option value="${k.value}" data-cls="${k.cls}">${k.value}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Catatan / Referensi Foto</label>
+        <textarea data-idx="${idx}" data-field="catatan" placeholder="Catatan opsional…"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Gambar</label>
+        <div class="photo-row">
+          <label class="photo-btn">
+            Ambil / Unggah Foto
+            <input type="file" accept="image/*" capture="environment" data-idx="${idx}" data-field="foto" style="display:none;">
+          </label>
+          <img class="photo-preview" data-idx="${idx}">
+        </div>
+      </div>
+    `;
+    componentsArea.appendChild(card);
+  });
+
+  componentsArea.querySelectorAll("select.keputusan").forEach(sel => {
+    sel.addEventListener("change", () => {
+      sel.className = "keputusan " + (sel.selectedOptions[0]?.dataset.cls || "");
+    });
+  });
+
+  componentsArea.querySelectorAll('input[type=file]').forEach(inp => {
+    inp.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      const idx = e.target.dataset.idx;
+      const img = componentsArea.querySelector(`.photo-preview[data-idx="${idx}"]`);
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = ev => {
+          img.src = ev.target.result;
+          img.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  });
+}
+
+function loadAsset(name) {
+  const asset = findAssetByName(name);
+  if (!asset) {
+    metaBlock.style.display = "none";
+    componentsArea.innerHTML = "";
+    emptyState.style.display = "block";
+    emptyState.textContent = name.trim()
+      ? `Aset "${name}" tidak ditemukan di daftar master.`
+      : "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
+    currentAsset = null;
+    return;
+  }
+  currentAsset = asset;
+  tagManuallyEdited = false;
+  nomorPBSInput.value = asset.nomorPBS;
+  lokasiInput.value = asset.lokasi;
+  metaBlock.style.display = "block";
+  emptyState.style.display = "none";
+  searchHint.textContent = `Ditemukan: ${asset.nomorPBS} — ${asset.lokasi}`;
+  refreshTagSuggestion();
+  renderComponents(asset);
+}
+
+namaAsetInput.addEventListener("input", (e) => loadAsset(e.target.value));
+namaAsetInput.addEventListener("change", (e) => loadAsset(e.target.value));
+lokasiInput.addEventListener("input", refreshTagSuggestion);
+tagNoInput.addEventListener("input", () => { tagManuallyEdited = true; });
+
+// ---- Save (preview only for now — GitHub write comes in a later step) ----
+let lastRecord = null;
+
+document.getElementById("saveBtn").addEventListener("click", () => {
+  if (!currentAsset) {
+    alert("Pilih Nama Aset / Komponen terlebih dahulu.");
+    return;
+  }
+
+  const komponenData = currentAsset.subKomponen.map((comp, idx) => {
+    const spesifikasi = componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value;
+    const kondisi = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value;
+    const keputusan = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value;
+    const catatan = componentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value;
+    const hasFoto = !!componentsArea.querySelector(`.photo-preview[data-idx="${idx}"]`).src;
+    return {
+      subKomponen: comp.nama,
+      spesifikasiTeknis: spesifikasi,
+      kondisiTeknis: kondisi,
+      keputusanTeknis: keputusan,
+      catatan: catatan,
+      fotoTerlampir: hasFoto
+    };
+  });
+
+  lastRecord = {
+    nomorPBS: currentAsset.nomorPBS,
+    namaAset: currentAsset.namaAset,
+    lokasi: lokasiInput.value,
+    tagNo: tagNoInput.value,
+    tanggalInspeksi: document.getElementById("tanggalInspeksi").value,
+    picInspector: document.getElementById("picInspector").value,
+    komponen: komponenData
+  };
+
+  document.getElementById("previewJson").textContent = JSON.stringify(lastRecord, null, 2);
+  document.getElementById("previewOverlay").classList.add("open");
+});
+
+document.getElementById("closePreview").addEventListener("click", () => {
+  document.getElementById("previewOverlay").classList.remove("open");
+});
+
+// ---- QR label generation for Niimbot ----
+// Composite PNG sized ~40x30mm at 8px/mm (matches common Niimbot label stock)
+function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
+  const words = (text || "").split(" ");
+  let line = "";
+  let curY = y;
+  let lines = 0;
+  for (let n = 0; n < words.length; n++) {
+    const testLine = line + words[n] + " ";
+    if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+      ctx.fillText(line, x, curY);
+      line = words[n] + " ";
+      curY += lineHeight;
+      lines++;
+      if (maxLines && lines >= maxLines - 1) {
+        ctx.fillText(words.slice(n + 1).length ? line + "…" : line, x, curY);
+        return;
+      }
+    } else {
+      line = testLine;
+    }
+  }
+  ctx.fillText(line, x, curY);
+}
+
+function generateLabelPNG(record) {
+  const qrHidden = document.getElementById("qrHidden");
+  qrHidden.innerHTML = "";
+  const qrUrl = SITE_BASE_URL + "?asset=" + encodeURIComponent(record.tagNo || record.nomorPBS);
+  new QRCode(qrHidden, { text: qrUrl, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
+
+  function draw(qrSource) {
+    const canvas = document.createElement("canvas");
+    canvas.width = 320;
+    canvas.height = 240;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, 320, 240);
+    ctx.drawImage(qrSource, 12, 20, 200, 200);
+
+    ctx.fillStyle = "#000000";
+    ctx.textBaseline = "top";
+    ctx.font = "bold 24px monospace";
+    ctx.fillText(record.tagNo || record.nomorPBS, 222, 26);
+
+    ctx.font = "13px sans-serif";
+    wrapText(ctx, record.namaAset, 222, 62, 90, 15, 4);
+
+    ctx.font = "11px sans-serif";
+    ctx.fillStyle = "#555555";
+    wrapText(ctx, record.lokasi, 222, 170, 90, 13, 3);
+
+    const link = document.createElement("a");
+    link.download = `QR-${(record.tagNo || record.nomorPBS)}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }
+
+  setTimeout(() => {
+    const img = qrHidden.querySelector("img");
+    const canvasEl = qrHidden.querySelector("canvas");
+    const source = img || canvasEl;
+    if (img && !img.complete) {
+      img.onload = () => draw(img);
+    } else {
+      draw(source);
+    }
+  }, 150);
+}
+
+document.getElementById("downloadQrBtn").addEventListener("click", () => {
+  if (!lastRecord) return;
+  generateLabelPNG(lastRecord);
+});
+</script>
+
+</body>
+</html>
