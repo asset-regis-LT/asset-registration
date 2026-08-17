@@ -369,56 +369,7 @@ const SITE_BASE_URL = "https://asset-regis-lt.github.io/asset-registration/";
 
 // ---- Sample master asset list (stand-in for the real 200-item list) ----
 // In the GitHub-connected version, this will be loaded from data/master-assets.json
-const MASTER_ASSETS = [
-  {
-    nomorPBS: "PBS-001",
-    namaAset: "Conveyor Belt A",
-    lokasi: "Smelter A",
-    subKomponen: [
-      { nama: "Motor Penggerak", spesifikasi: "15kW, 1450rpm" },
-      { nama: "Roller Idler", spesifikasi: "Diameter 89mm" },
-      { nama: "Belt", spesifikasi: "EP200, lebar 800mm" }
-    ]
-  },
-  {
-    nomorPBS: "PBS-002",
-    namaAset: "Overhead Crane XSY",
-    lokasi: "Smelter A",
-    subKomponen: [
-      { nama: "Hoist Motor", spesifikasi: "22kW, 3 phase" },
-      { nama: "Wire Rope", spesifikasi: "Diameter 16mm, 6x36" },
-      { nama: "Hook Block", spesifikasi: "SWL 10 ton" }
-    ]
-  },
-  {
-    nomorPBS: "PBS-003",
-    namaAset: "Cooling Fan Unit",
-    lokasi: "Smelter B",
-    subKomponen: [
-      { nama: "Fan Blade Assembly", spesifikasi: "Diameter 1.2m, 6 blade" },
-      { nama: "Bearing Housing", spesifikasi: "Pillow block UCP 210" }
-    ]
-  },
-  {
-    nomorPBS: "PBS-004",
-    namaAset: "Hydraulic Press Unit",
-    lokasi: "Smelter B",
-    subKomponen: [
-      { nama: "Hydraulic Pump", spesifikasi: "45L/min, 180 bar" },
-      { nama: "Cylinder Ram", spesifikasi: "Bore 200mm, stroke 500mm" },
-      { nama: "Pressure Relief Valve", spesifikasi: "Set point 200 bar" }
-    ]
-  },
-  {
-    nomorPBS: "PBS-005",
-    namaAset: "Exhaust Blower",
-    lokasi: "Smelter A",
-    subKomponen: [
-      { nama: "Blower Motor", spesifikasi: "37kW, 2900rpm" },
-      { nama: "Impeller", spesifikasi: "Diameter 600mm, 12 blade" }
-    ]
-  }
-];
+let MASTER_ASSETS = [];
 
 const KONDISI_OPTIONS = [
   "Siap Operasi (100%)",
@@ -435,13 +386,34 @@ const KEPUTUSAN_OPTIONS = [
   { value: "No Go", cls: "nogo" }
 ];
 
-// ---- Populate the Nama Aset datalist ----
+// ---- Load master assets from /data/master-assets.json ----
 const namaAsetList = document.getElementById("namaAsetList");
-MASTER_ASSETS.forEach(a => {
-  const opt = document.createElement("option");
-  opt.value = a.namaAset;
-  namaAsetList.appendChild(opt);
-});
+
+async function loadMasterAssets() {
+  try {
+    const response = await fetch("./data/master-assets.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    MASTER_ASSETS = await response.json();
+    if (!Array.isArray(MASTER_ASSETS)) {
+      throw new Error("master-assets.json harus berupa array.");
+    }
+
+    namaAsetList.innerHTML = "";
+    MASTER_ASSETS.forEach(a => {
+      const opt = document.createElement("option");
+      opt.value = a.namaAset;
+      namaAsetList.appendChild(opt);
+    });
+
+    return true;
+  } catch (error) {
+    console.error("Gagal memuat master-assets.json:", error);
+    document.getElementById("searchHint").textContent =
+      "Gagal memuat master data aset. Periksa /data/master-assets.json.";
+    return false;
+  }
+}
 
 // default date = today
 document.getElementById("tanggalInspeksi").valueAsDate = new Date();
@@ -461,6 +433,13 @@ let tagManuallyEdited = false;
 function findAssetByName(name) {
   const q = name.trim().toLowerCase();
   return MASTER_ASSETS.find(a => a.namaAset.toLowerCase() === q);
+}
+
+function findAssetById(assetId) {
+  const q = (assetId || "").trim().toLowerCase();
+  return MASTER_ASSETS.find(a =>
+    String(a.assetId || a.tagNo || "").trim().toLowerCase() === q
+  );
 }
 
 // ---- Tag No. suggestion: SMELTER-PBSNUMBER-URUTAN, e.g. A-001-A ----
@@ -583,10 +562,64 @@ function loadAsset(name) {
   renderComponents(asset);
 }
 
+function loadAssetById(assetId) {
+  const asset = findAssetById(assetId);
+
+  if (!asset) {
+    metaBlock.style.display = "none";
+    componentsArea.innerHTML = "";
+    emptyState.style.display = "block";
+    emptyState.textContent = assetId
+      ? `Asset ID "${assetId}" tidak ditemukan di daftar master.`
+      : "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
+    searchHint.textContent = assetId
+      ? `Asset ID "${assetId}" tidak ditemukan.`
+      : "Belum ada aset dipilih. Mulai ketik nama aset di atas.";
+    currentAsset = null;
+    return;
+  }
+
+  // QR identifies which master asset to open.
+  // The Asset ID / Tag No. remains editable because it is derived
+  // from location + PBS number and may be corrected by the user.
+  currentAsset = asset;
+  tagManuallyEdited = false;
+  namaAsetInput.value = asset.namaAset;
+  nomorPBSInput.value = asset.nomorPBS;
+  lokasiInput.value = asset.lokasi;
+  metaBlock.style.display = "block";
+  emptyState.style.display = "none";
+  searchHint.textContent =
+    `QR: ${asset.assetId || asset.tagNo} — ${asset.nomorPBS} — ${asset.lokasi}`;
+  refreshTagSuggestion();
+  renderComponents(asset);
+}
+
 namaAsetInput.addEventListener("input", (e) => loadAsset(e.target.value));
 namaAsetInput.addEventListener("change", (e) => loadAsset(e.target.value));
+
+// ---- QR bootstrap: load asset from ?asset=<AssetID> ----
+async function initializeApp() {
+  const assetsLoaded = await loadMasterAssets();
+  if (!assetsLoaded) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const assetId = params.get("asset");
+
+  if (assetId) {
+    loadAssetById(assetId);
+  }
+}
+
+initializeApp();
 lokasiInput.addEventListener("input", refreshTagSuggestion);
 tagNoInput.addEventListener("input", () => { tagManuallyEdited = true; });
+
+// The two inspection dropdowns are:
+// 1) Kondisi Teknis
+// 2) Keputusan Teknis
+// PBS number, component name, and subcomponent structure come from master data.
+// Location and Tag No. / Asset ID remain editable as designed.
 
 // ---- Save (preview only for now — GitHub write comes in a later step) ----
 let lastRecord = null;
@@ -614,6 +647,7 @@ document.getElementById("saveBtn").addEventListener("click", () => {
   });
 
   lastRecord = {
+    assetId: currentAsset.assetId || currentAsset.tagNo || tagNoInput.value,
     nomorPBS: currentAsset.nomorPBS,
     namaAset: currentAsset.namaAset,
     lokasi: lokasiInput.value,
@@ -659,7 +693,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
 function generateLabelPNG(record) {
   const qrHidden = document.getElementById("qrHidden");
   qrHidden.innerHTML = "";
-  const qrUrl = SITE_BASE_URL + "?asset=" + encodeURIComponent(record.tagNo || record.nomorPBS);
+  const qrUrl = SITE_BASE_URL + "?asset=" + encodeURIComponent(record.tagNo || record.assetId || record.nomorPBS);
   new QRCode(qrHidden, { text: qrUrl, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
 
   function draw(qrSource) {

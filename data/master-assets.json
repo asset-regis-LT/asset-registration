@@ -1,0 +1,94 @@
+[
+  {
+    "assetId": "A-001-A",
+    "nomorPBS": "PBS-001",
+    "namaAset": "Conveyor Belt A",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      {
+        "nama": "Motor Penggerak",
+        "spesifikasi": "15kW, 1450rpm"
+      },
+      {
+        "nama": "Roller Idler",
+        "spesifikasi": "Diameter 89mm"
+      },
+      {
+        "nama": "Belt",
+        "spesifikasi": "EP200, lebar 800mm"
+      }
+    ]
+  },
+  {
+    "assetId": "A-002-A",
+    "nomorPBS": "PBS-002",
+    "namaAset": "Overhead Crane XSY",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      {
+        "nama": "Hoist Motor",
+        "spesifikasi": "22kW, 3 phase"
+      },
+      {
+        "nama": "Wire Rope",
+        "spesifikasi": "Diameter 16mm, 6x36"
+      },
+      {
+        "nama": "Hook Block",
+        "spesifikasi": "SWL 10 ton"
+      }
+    ]
+  },
+  {
+    "assetId": "B-003-A",
+    "nomorPBS": "PBS-003",
+    "namaAset": "Cooling Fan Unit",
+    "lokasi": "Smelter B",
+    "subKomponen": [
+      {
+        "nama": "Fan Blade Assembly",
+        "spesifikasi": "Diameter 1.2m, 6 blade"
+      },
+      {
+        "nama": "Bearing Housing",
+        "spesifikasi": "Pillow block UCP 210"
+      }
+    ]
+  },
+  {
+    "assetId": "B-004-A",
+    "nomorPBS": "PBS-004",
+    "namaAset": "Hydraulic Press Unit",
+    "lokasi": "Smelter B",
+    "subKomponen": [
+      {
+        "nama": "Hydraulic Pump",
+        "spesifikasi": "45L/min, 180 bar"
+      },
+      {
+        "nama": "Cylinder Ram",
+        "spesifikasi": "Bore 200mm, stroke 500mm"
+      },
+      {
+        "nama": "Pressure Relief Valve",
+        "spesifikasi": "Set point 200 bar"
+      }
+    ]
+  },
+  {
+    "assetId": "A-005-A",
+    "nomorPBS": "PBS-005",
+    "namaAset": "Exhaust Blower",
+    "lokasi": "Smelter A",
+    "subKomponen": [
+      {
+        "nama": "Blower Motor",
+        "spesifikasi": "37kW, 2900rpm"
+      },
+      {
+        "nama": "Impeller",
+        "spesifikasi": "Diameter 600mm, 12 blade"
+      }
+    ]
+  }
+]
