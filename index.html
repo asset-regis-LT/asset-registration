@@ -4,7 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+document.getElementById("backToFormBtn").addEventListener("click", () => {
+  const assetId = new URLSearchParams(window.location.search).get("asset");
+  const asset = assetId ? findAssetById(assetId) : null;
+  document.getElementById("resultView").style.display = "none";
+  document.getElementById("trialNote").style.display = "block";
+  document.querySelector(".wrap").style.display = "block";
+  if (asset) {
+    currentAsset = asset;
+    namaAsetInput.value = asset.namaAset;
+    nomorPBSInput.value = asset.nomorPBS;
+    lokasiInput.value = asset.lokasi;
+    tagManuallyEdited = false;
+    metaBlock.style.display = "block";
+    emptyState.style.display = "none";
+    searchHint.textContent = `Ditemukan: ${asset.nomorPBS} — ${asset.lokasi}`;
+    refreshTagSuggestion();
+    renderComponents(asset);
+  }
+});
+
+document.getElementById("downloadResultBtn").addEventListener("click", async () => {
+  if (typeof html2canvas === "undefined") {
+    alert("Fitur gambar belum siap. Periksa koneksi internet lalu coba lagi.");
+    return;
+  }
+  const canvas = await html2canvas(document.getElementById("resultCapture"), {
+    backgroundColor: "#ffffff", scale: 2, useCORS: true
+  });
+  const tag = (document.getElementById("resultTag").textContent || "asset")
+    .replace(/[^a-zA-Z0-9_-]+/g, "-");
+  const link = document.createElement("a");
+  link.download = `Hasil-Inspeksi-${tag}.png`;
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+});
+
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -284,6 +322,32 @@
     font-size:13px;
     cursor:pointer;
   }
+
+  #resultView{display:none;background:var(--panel);margin:0;}
+  .result-header{padding:16px 14px;border-bottom:2px solid var(--ink);}
+  .result-status{display:inline-block;margin-top:8px;padding:6px 9px;border-radius:4px;font-size:12px;font-weight:800;text-transform:uppercase;}
+  .result-status.go{background:#e5f2e7;color:#2f7a3e;}
+  .result-status.cgo{background:#fff4cf;color:#8b6900;}
+  .result-status.hold{background:#fff0e8;color:#b04d20;}
+  .result-status.nogo{background:#f8e4e2;color:#9e3028;}
+  .result-meta{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);}
+  .result-meta .cell{padding:10px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .result-meta .cell:nth-child(even){border-right:none;}
+  .result-meta label{display:block;font-size:10px;font-weight:800;color:#5a564c;text-transform:uppercase;margin-bottom:4px;}
+  .result-meta div{font-size:14px;}
+  .result-component{padding:14px;border-bottom:1px solid var(--line);}
+  .result-component h3{margin:0 0 10px;font-size:15px;}
+  .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .result-field{padding:9px;background:#f6f5f2;border-radius:4px;}
+  .result-field.full{grid-column:1 / -1;}
+  .result-field label{display:block;font-size:10px;font-weight:800;color:#5a564c;text-transform:uppercase;margin-bottom:4px;}
+  .result-inspection-photo{padding:14px;border-bottom:1px solid var(--line);}
+  .result-inspection-photo img{width:100%;max-height:360px;object-fit:contain;background:#f6f5f2;border:1px solid var(--line);border-radius:4px;}
+  .result-actions{padding:14px;display:flex;gap:10px;position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);}
+  .result-actions button{flex:1;border:none;border-radius:4px;padding:13px;font-size:13px;font-weight:800;cursor:pointer;}
+  .result-actions .download-result{background:var(--accent);color:#fff;}
+  .result-actions .back-form{background:var(--ink);color:#fff;}
+  @media(max-width:560px){.result-meta,.result-grid{grid-template-columns:1fr;}.result-meta .cell{border-right:none;}.result-field.full{grid-column:auto;}}
 </style>
 </head>
 <body>
@@ -333,14 +397,53 @@
 
   <div id="componentsArea"></div>
 
+  <div class="comp-card" id="inspectionPhotoCard">
+    <div class="field" style="margin-bottom:0;">
+      <label>Foto Inspeksi</label>
+      <div class="photo-row">
+        <label class="photo-btn">
+          Ambil / Unggah 1 Foto
+          <input type="file" id="inspectionPhotoInput" accept="image/*" capture="environment" style="display:none;">
+        </label>
+        <img class="photo-preview" id="inspectionPhotoPreview" alt="Pratinjau foto inspeksi">
+      </div>
+      <div class="hint">Satu foto untuk setiap inspeksi.</div>
+    </div>
+  </div>
+
   <div id="emptyState" class="empty-state">
     Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.
   </div>
 
 </div>
 
-<div class="disabled-note">
-  Versi uji coba — tombol Simpan hanya menampilkan pratinjau data. Belum tersambung ke penyimpanan GitHub.
+<div id="resultView">
+  <div id="resultCapture">
+    <div class="result-header">
+      <div class="comp-header">HASIL INSPEKSI TERSIMPAN</div>
+      <h2 id="resultAssetName" style="margin:12px 0 0;font-size:20px;"></h2>
+      <div id="resultDecision"></div>
+    </div>
+    <div class="result-meta">
+      <div class="cell"><label>Nomor PBS</label><div id="resultPBS"></div></div>
+      <div class="cell"><label>Tag No. / Asset ID</label><div id="resultTag"></div></div>
+      <div class="cell"><label>Lokasi</label><div id="resultLocation"></div></div>
+      <div class="cell"><label>PIC / Inspector</label><div id="resultInspector"></div></div>
+      <div class="cell"><label>Tanggal Inspeksi</label><div id="resultDate"></div></div>
+      <div class="cell"><label>Inspection ID</label><div id="resultInspectionId"></div></div>
+    </div>
+    <div id="resultPhotoArea"></div>
+    <div class="comp-header">HASIL PER KOMPONEN</div>
+    <div id="resultComponents"></div>
+  </div>
+  <div class="result-actions">
+    <button class="download-result" id="downloadResultBtn">Unduh Hasil sebagai Gambar</button>
+    <button class="back-form" id="backToFormBtn">Kembali ke Form</button>
+  </div>
+</div>
+
+<div class="disabled-note" id="trialNote">
+  Versi uji coba — data contoh tersimpan di master-assets.json. Penyimpanan inspeksi lintas perangkat belum tersambung.
 </div>
 
 <footer class="actions">
@@ -476,7 +579,7 @@ function renderComponents(asset) {
       <div class="comp-name">${comp.nama}</div>
 
       <div class="field">
-        <label>Spesifikasi Teknis</label>
+        <label>Spesifikasi Teknis (dapat disesuaikan saat inspeksi)</label>
         <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" value="${comp.spesifikasi.replace(/"/g,'&quot;')}">
       </div>
 
@@ -500,17 +603,6 @@ function renderComponents(asset) {
       <div class="field">
         <label>Catatan / Referensi Foto</label>
         <textarea data-idx="${idx}" data-field="catatan" placeholder="Catatan opsional…"></textarea>
-      </div>
-
-      <div class="field">
-        <label>Gambar</label>
-        <div class="photo-row">
-          <label class="photo-btn">
-            Ambil / Unggah Foto
-            <input type="file" accept="image/*" capture="environment" data-idx="${idx}" data-field="foto" style="display:none;">
-          </label>
-          <img class="photo-preview" data-idx="${idx}">
-        </div>
       </div>
     `;
     componentsArea.appendChild(card);
@@ -539,6 +631,20 @@ function renderComponents(asset) {
   });
 }
 
+const inspectionPhotoInput = document.getElementById("inspectionPhotoInput");
+const inspectionPhotoPreview = document.getElementById("inspectionPhotoPreview");
+
+inspectionPhotoInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    inspectionPhotoPreview.src = ev.target.result;
+    inspectionPhotoPreview.style.display = "block";
+  };
+  reader.readAsDataURL(file);
+});
+
 function loadAsset(name) {
   const asset = findAssetByName(name);
   if (!asset) {
@@ -562,6 +668,65 @@ function loadAsset(name) {
   renderComponents(asset);
 }
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[ch]));
+}
+
+function renderInspectionResult(asset, inspection) {
+  document.querySelector(".wrap").style.display = "none";
+  document.getElementById("trialNote").style.display = "none";
+  document.getElementById("resultView").style.display = "block";
+
+  document.getElementById("resultAssetName").textContent = asset.namaAset;
+  document.getElementById("resultPBS").textContent = asset.nomorPBS || "";
+  document.getElementById("resultTag").textContent = inspection.tagNo || "";
+  document.getElementById("resultLocation").textContent = asset.lokasi || "";
+  document.getElementById("resultInspector").textContent = inspection.picInspector || "";
+  document.getElementById("resultDate").textContent = inspection.tanggalInspeksi || "";
+  document.getElementById("resultInspectionId").textContent = inspection.inspectionId || "";
+
+  const decision = inspection.overallDecision || "";
+  const decisionClass = {"Go":"go","Conditional Go":"cgo","Hold":"hold","No Go":"nogo"}[decision] || "";
+  document.getElementById("resultDecision").innerHTML =
+    `<span class="result-status ${decisionClass}">${escapeHtml(decision || "Hasil inspeksi")}</span>`;
+
+  const photoArea = document.getElementById("resultPhotoArea");
+  photoArea.innerHTML = inspection.foto
+    ? `<div class="result-inspection-photo"><div class="field"><label>Foto Inspeksi</label><img src="${escapeHtml(inspection.foto)}" alt="Foto inspeksi"></div></div>`
+    : "";
+
+  const container = document.getElementById("resultComponents");
+  container.innerHTML = "";
+
+  (inspection.komponen || []).forEach(item => {
+    const card = document.createElement("div");
+    card.className = "result-component";
+    card.innerHTML = `
+      <h3>${escapeHtml(item.subKomponen || "")}</h3>
+      <div class="result-grid">
+        <div class="result-field full">
+          <label>Spesifikasi Teknis</label>
+          <div>${escapeHtml(item.spesifikasiTeknis || "")}</div>
+        </div>
+        <div class="result-field">
+          <label>Kondisi Teknis</label>
+          <div>${escapeHtml(item.kondisiTeknis || "")}</div>
+        </div>
+        <div class="result-field">
+          <label>Keputusan Teknis</label>
+          <div>${escapeHtml(item.keputusanTeknis || "")}</div>
+        </div>
+        <div class="result-field full">
+          <label>Catatan</label>
+          <div>${escapeHtml(item.catatan || "—")}</div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
 function loadAssetById(assetId) {
   const asset = findAssetById(assetId);
 
@@ -579,9 +744,13 @@ function loadAssetById(assetId) {
     return;
   }
 
-  // QR identifies which master asset to open.
-  // The Asset ID / Tag No. remains editable because it is derived
-  // from location + PBS number and may be corrected by the user.
+  // QR opens the prerecorded/latest result when one exists.
+  if (asset.latestInspection) {
+    renderInspectionResult(asset, asset.latestInspection);
+    return;
+  }
+
+  // No result yet: open the normal inspection form.
   currentAsset = asset;
   tagManuallyEdited = false;
   namaAsetInput.value = asset.namaAset;
@@ -589,8 +758,7 @@ function loadAssetById(assetId) {
   lokasiInput.value = asset.lokasi;
   metaBlock.style.display = "block";
   emptyState.style.display = "none";
-  searchHint.textContent =
-    `QR: ${asset.assetId || asset.tagNo} — ${asset.nomorPBS} — ${asset.lokasi}`;
+  searchHint.textContent = `QR: ${asset.assetId || asset.tagNo} — ${asset.nomorPBS} — ${asset.lokasi}`;
   refreshTagSuggestion();
   renderComponents(asset);
 }
@@ -641,8 +809,7 @@ document.getElementById("saveBtn").addEventListener("click", () => {
       spesifikasiTeknis: spesifikasi,
       kondisiTeknis: kondisi,
       keputusanTeknis: keputusan,
-      catatan: catatan,
-      fotoTerlampir: hasFoto
+      catatan: catatan
     };
   });
 
@@ -654,6 +821,7 @@ document.getElementById("saveBtn").addEventListener("click", () => {
     tagNo: tagNoInput.value,
     tanggalInspeksi: document.getElementById("tanggalInspeksi").value,
     picInspector: document.getElementById("picInspector").value,
+    fotoTerlampir: !!document.getElementById("inspectionPhotoPreview").src,
     komponen: komponenData
   };
 
