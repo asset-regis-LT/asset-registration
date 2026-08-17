@@ -2,6 +2,9 @@
 // Reads/writes live on a dedicated "data" branch so pure data commits never
 // trigger a Pages rebuild, and read-only QR scans can fetch committed JSON
 // straight from raw.githubusercontent.com with no token and no API call.
+// NOTE: index.html/admin.html load this via "js/github-store.js?v=N" — bump
+// that N whenever this file changes, or browsers may keep serving a stale
+// cached copy after a deploy.
 const GithubStore = (() => {
   const GH_OWNER = "asset-regis-lt";
   const GH_REPO = "asset-registration";
