@@ -1,0 +1,28 @@
+{
+  "tagNo": "A-005-A",
+  "inspectionId": "INS-20260818-A-005-A",
+  "nomorPBS": "PBS-005",
+  "subsistem": "Ventilation System",
+  "namaAset": "Exhaust Blower",
+  "lokasi": "Smelter A",
+  "picInspector": "Tyo",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/A-005-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Blower Motor",
+      "spesifikasiTeknis": "Gwuw",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Gwuwh"
+    },
+    {
+      "nama": "Impeller",
+      "spesifikasiTeknis": "Ywhw",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Ywywy"
+    }
+  ]
+}
