@@ -1271,18 +1271,37 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
   ctx.fillText(line, x, curY);
 }
 
+// Preloaded once at app start (see initializeApp) so clicking "Unduh QR
+// Label" doesn't have to wait on it — same-origin image (served from this
+// repo via Pages), so drawing it onto the label canvas never taints it for
+// the later toDataURL() call. Resolves to null (not a rejection) if it
+// fails to load, so a logo hiccup degrades to a label without the logo
+// instead of breaking the download entirely.
+let logoImagePromise = null;
+function getLogoImage() {
+  if (!logoImagePromise) {
+    logoImagePromise = new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = () => resolve(null);
+      img.src = "assets/logo-lapi-itb.png";
+    });
+  }
+  return logoImagePromise;
+}
+
 // 50x30mm label at 12px/mm (~305 DPI) — higher resolution than a typical
 // 203 DPI thermal printer needs, so the printer downsamples rather than
 // upsamples, which is what keeps edges crisp instead of pixelated. The
-// wordmark is drawn as real canvas text/shapes rather than the uploaded
-// logo PNG: canvas text is vector-quality at any size, where the raster
-// PNG scaled down to a small strip showed visible artifacting on its fine
-// details (the accent mark, the tagline).
-function generateLabelPNG(record) {
+// logo is drawn from the actual PNG at its native aspect ratio; the earlier
+// pixelated look came from squeezing it into a tiny ~112px-wide strip, not
+// from using a raster image per se — sized more generously here (and drawn
+// against a much larger reference canvas) it downscales cleanly.
+async function generateLabelPNG(record) {
   const qrHidden = document.getElementById("qrHidden");
   qrHidden.innerHTML = "";
   const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
-  new QRCode(qrHidden, { text: qrUrl, width: 456, height: 456, correctLevel: QRCode.CorrectLevel.M });
+  new QRCode(qrHidden, { text: qrUrl, width: 560, height: 560, correctLevel: QRCode.CorrectLevel.M });
 
   // QRCode.js paints synchronously onto an internal <canvas> — reading that
   // canvas directly (rather than the <img> it separately converts the
@@ -1293,12 +1312,11 @@ function generateLabelPNG(record) {
     alert("Gagal membuat QR code. Coba lagi.");
     return;
   }
+  const logoImg = await getLogoImage();
 
   const W = 600, H = 360;
-  const pad = 18;
-  const leftW = 246; // ~40% — QR column
+  const pad = 16;
   const navy = "#1f2a4a";
-  const red = "#c42d2d";
   const ink = "#14171a";
   const gray = "#5a564c";
 
@@ -1307,79 +1325,68 @@ function generateLabelPNG(record) {
   canvas.height = H;
   const ctx = canvas.getContext("2d");
   ctx.textBaseline = "top";
-
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, W, H);
-  // Right-side info panel — fills what would otherwise be dead white space
-  // around the stacked text fields, reading as a deliberate two-zone label
-  // rather than a QR code with some captions floating next to it.
-  ctx.fillStyle = "#f6f5f2";
-  ctx.fillRect(leftW, 0, W - leftW, H);
 
-  // Wordmark: small red "step" accent + "PT LAPI ITB" in bold text.
-  ctx.fillStyle = red;
-  ctx.fillRect(pad, pad + 2, 7, 7);
-  ctx.fillRect(pad + 9, pad, 7, 7);
-  ctx.fillStyle = navy;
-  ctx.font = "bold 20px sans-serif";
-  ctx.fillText("PT LAPI ITB", pad + 22, pad - 2);
-  ctx.strokeStyle = "#dddddd";
-  ctx.beginPath();
-  ctx.moveTo(pad, pad + 30);
-  ctx.lineTo(leftW - 18, pad + 30);
-  ctx.stroke();
-
-  const qrSize = 228;
-  const qrX = pad, qrY = pad + 40;
-  ctx.drawImage(qrCanvas, qrX, qrY, qrSize, qrSize);
+  // Left column: QR filling the full label height, caption below it.
+  const qrSize = 280;
+  ctx.drawImage(qrCanvas, pad, pad, qrSize, qrSize);
   ctx.fillStyle = gray;
-  ctx.font = "11px sans-serif";
-  ctx.fillText("Scan untuk hasil inspeksi", qrX, qrY + qrSize + 8);
+  ctx.font = "12px sans-serif";
+  ctx.fillText("Scan untuk hasil inspeksi", pad, pad + qrSize + 6);
 
-  // Right column: Tag No. (largest) -> Nama Aset -> Lokasi (bottom-anchored).
-  const rx = leftW + 20;
+  // Right column: logo -> Tag No. (largest) -> divider -> Nama Aset ->
+  // Lokasi, spaced to use the same vertical span as the QR column.
+  const rx = pad + qrSize + pad + 16;
   const rw = W - pad - rx;
+  let y = pad;
+
+  if (logoImg) {
+    const logoW = Math.min(240, rw);
+    const logoH = logoW * (logoImg.naturalHeight / logoImg.naturalWidth);
+    ctx.drawImage(logoImg, rx, y, logoW, logoH);
+    y += logoH;
+  }
+  y += 26;
 
   ctx.fillStyle = ink;
-  ctx.font = "bold 50px monospace";
-  ctx.fillText(record.tagNo, rx, 30);
-  ctx.strokeStyle = red;
-  ctx.lineWidth = 3;
+  ctx.font = "bold 46px monospace";
+  ctx.fillText(record.tagNo, rx, y);
+  y += 54;
+
+  y += 18;
+  ctx.strokeStyle = "#dddddd";
+  ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(rx, 94);
-  ctx.lineTo(rx + 90, 94);
+  ctx.moveTo(rx, y);
+  ctx.lineTo(rx + rw, y);
   ctx.stroke();
+  y += 18;
 
   ctx.fillStyle = gray;
   ctx.font = "bold 11px sans-serif";
-  ctx.fillText("NAMA ASET", rx, 110);
+  ctx.fillText("NAMA ASET", rx, y);
+  y += 17;
   ctx.fillStyle = navy;
   ctx.font = "bold 25px sans-serif";
-  wrapText(ctx, record.namaAset, rx, 126, rw, 28, 3);
+  wrapText(ctx, record.namaAset, rx, y, rw, 27, 2);
+  y += 54;
 
-  ctx.strokeStyle = "#e0ded8";
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(rx, 220);
-  ctx.lineTo(rx + rw - 20, 220);
-  ctx.stroke();
-
+  y += 16;
   ctx.fillStyle = gray;
   ctx.font = "bold 11px sans-serif";
-  ctx.fillText("LOKASI", rx, 240);
+  ctx.fillText("LOKASI", rx, y);
+  y += 17;
   ctx.fillStyle = ink;
-  ctx.font = "18px sans-serif";
-  wrapText(ctx, record.lokasi, rx, 256, rw, 24, 3);
-
-  ctx.fillStyle = navy;
-  ctx.fillRect(leftW, H - 8, W - leftW, 8);
+  ctx.font = "17px sans-serif";
+  wrapText(ctx, record.lokasi, rx, y, rw, 21, 2);
 
   GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
 }
 
-document.getElementById("downloadQrBtn").addEventListener("click", () => {
+document.getElementById("downloadQrBtn").addEventListener("click", async () => {
   if (!lastRecord) return;
-  generateLabelPNG(lastRecord);
+  await generateLabelPNG(lastRecord);
 });
 
 // Once a token is set on this device, the banner goes away entirely rather
@@ -1420,6 +1427,7 @@ async function initializeApp() {
   }
   await loadMasterCatalog();
   updateTokenBanner();
+  getLogoImage(); // fire and forget — warms the cache before Save is even clicked
 }
 
 initializeApp();
