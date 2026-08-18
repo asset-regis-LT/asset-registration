@@ -1,0 +1,35 @@
+{
+  "tagNo": "RBT-101-A",
+  "inspectionId": "INS-20260818-RBT-101-A",
+  "nomorPBS": "PBS-101",
+  "subsistem": "Material Handling",
+  "namaAset": "Conveyor Belt A",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "msh",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/RBT-101-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Motor Penggerak",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Roller Idler",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Belt",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
