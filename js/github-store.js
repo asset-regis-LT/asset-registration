@@ -16,6 +16,30 @@ const GithubStore = (() => {
   // straight into the read-only result view.
   const SITE_BASE_URL = "https://asset-regis-lt.github.io/asset-registration/";
 
+  // Shared between index.html (the inspection form) and admin.html (the
+  // edit-existing-record form), so the two never drift apart on what
+  // options an inspection's Kondisi/Keputusan fields can hold.
+  const KONDISI_OPTIONS = [
+    "Siap Operasi (100%)",
+    "Minor Repair (80 - 100%)",
+    "Repair (50 - 80%)",
+    "Major Repair (20 - 50%)",
+    "Scrap / Tidak Ada (Hilang) (< 20%)"
+  ];
+  const KEPUTUSAN_OPTIONS = [
+    { value: "Go", cls: "go" },
+    { value: "Conditional Go", cls: "cgo" },
+    { value: "Hold", cls: "hold" },
+    { value: "No Go", cls: "nogo" }
+  ];
+  const DECISION_PRECEDENCE = ["No Go", "Hold", "Conditional Go", "Go"];
+  function computeOverallDecision(komponenData) {
+    for (const level of DECISION_PRECEDENCE) {
+      if (komponenData.some(k => k.keputusanTeknis === level)) return level;
+    }
+    return "";
+  }
+
   function getToken() {
     return (localStorage.getItem(TOKEN_KEY) || "").trim();
   }
@@ -84,6 +108,36 @@ const GithubStore = (() => {
       throw new Error(`Gagal menyimpan ke GitHub (HTTP ${res.status}): ${await res.text()}`);
     }
     return res.json();
+  }
+
+  // These three are the admin-only counterparts to createFile: they allow
+  // overwriting/removing an already-committed inspection (for correcting a
+  // data-entry mistake or removing a bad record), which the field save flow
+  // deliberately never does — createFile() only ever creates.
+  async function getFileMeta(path) {
+    const res = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?ref=${GH_DATA_BRANCH}`);
+    if (res.status === 404) return null;
+    if (!res.ok) throw new Error(`Gagal membaca ${path} (HTTP ${res.status}).`);
+    return res.json(); // includes .sha, needed to update/delete this exact file
+  }
+
+  async function updateFile(path, base64Content, message, sha) {
+    const res = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`, {
+      method: "PUT",
+      body: JSON.stringify({ message, content: base64Content, branch: GH_DATA_BRANCH, sha })
+    });
+    if (!res.ok) throw new Error(`Gagal memperbarui ${path} (HTTP ${res.status}): ${await res.text()}`);
+    return res.json();
+  }
+
+  async function deleteFile(path, message, sha) {
+    const res = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`, {
+      method: "DELETE",
+      body: JSON.stringify({ message, sha, branch: GH_DATA_BRANCH })
+    });
+    if (!res.ok && res.status !== 404) {
+      throw new Error(`Gagal menghapus ${path} (HTTP ${res.status}): ${await res.text()}`);
+    }
   }
 
   // Full list of already-committed inspection Tag No.s, via the Git Trees
@@ -184,8 +238,10 @@ const GithubStore = (() => {
 
   return {
     GH_OWNER, GH_REPO, GH_DATA_BRANCH, SITE_BASE_URL,
+    KONDISI_OPTIONS, KEPUTUSAN_OPTIONS, DECISION_PRECEDENCE, computeOverallDecision,
     getToken, setToken, clearToken, hasToken,
     rawUrl, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
+    getFileMeta, updateFile, deleteFile,
     saveOrShareImage,
     toBase64, compressImage
   };

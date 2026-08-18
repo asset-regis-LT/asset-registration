@@ -6,7 +6,7 @@
 <title>Admin — Rubrik Penilaian Kondisi Aset</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
-<script src="js/github-store.js?v=3"></script>
+<script src="js/github-store.js?v=4"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -40,6 +40,27 @@
   .status.warn{background:#fff4e8;color:#8a5a1f;}
   .status.err{background:#f8e4e2;color:#9e3028;}
   .progress-log{margin-top:12px;font-family:var(--mono);font-size:12px;background:#14171a;color:#c8f0c8;padding:10px;border-radius:6px;max-height:180px;overflow:auto;white-space:pre-wrap;display:none;}
+  .table-scroll{overflow-x:auto;margin-top:12px;}
+  table.data-table{width:100%;border-collapse:collapse;font-size:13px;}
+  table.data-table th, table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  table.data-table th{background:var(--paper);font-size:10px;text-transform:uppercase;color:#5a564c;letter-spacing:0.03em;}
+  table.data-table .row-actions{display:flex;gap:6px;}
+  table.data-table .row-actions button{padding:6px 10px;font-size:11px;}
+  .btn-edit{background:var(--ink);color:#fff;}
+  .btn-delete{background:#f8e4e2;color:#9e3028;}
+  #editOverlay{display:none;position:fixed;inset:0;background:rgba(20,23,26,0.7);z-index:60;align-items:flex-end;justify-content:center;}
+  #editOverlay.open{display:flex;}
+  #editSheet{background:#fff;width:100%;max-width:640px;max-height:88vh;overflow:auto;border-radius:12px 12px 0 0;padding:20px;}
+  #editSheet h2{margin-top:0;font-size:16px;}
+  #editSheet label{margin-top:10px;}
+  #editSheet input[type=date]{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;}
+  .edit-comp-card{border:1px solid var(--line);border-radius:6px;padding:12px;margin-top:12px;}
+  .edit-comp-card .edit-comp-name{font-weight:700;font-size:13px;margin-bottom:8px;}
+  .edit-comp-card label{margin-top:8px;}
+  .edit-comp-card input[type=text], .edit-comp-card select, .edit-comp-card textarea{
+    width:100%;padding:9px;font-size:14px;border:1px solid var(--line);border-radius:4px;font-family:var(--sans);background:#fff;
+  }
+  .edit-comp-card textarea{resize:vertical;min-height:44px;}
 </style>
 </head>
 <body>
@@ -83,6 +104,43 @@
     <div class="progress-log" id="progressLog"></div>
   </section>
 
+  <section>
+    <h2>3. Data Tersimpan</h2>
+    <p class="desc">
+      Daftar semua inspeksi yang sudah tersimpan di branch <code>data</code>. Edit untuk memperbaiki data yang
+      salah isi (nama sub komponen dan foto tidak bisa diubah di sini), atau Hapus untuk menghapus inspeksi
+      (termasuk foto) secara permanen dari repo.
+    </p>
+    <div class="row">
+      <button class="btn-primary" id="loadDataBtn">Muat Data Tersimpan</button>
+    </div>
+    <div class="status" id="dataListStatus"></div>
+    <div class="table-scroll">
+      <table class="data-table" id="dataTable" style="display:none;">
+        <thead>
+          <tr><th>Tag No.</th><th>Nama Aset</th><th>Subsistem</th><th>Nama Smelter</th><th></th></tr>
+        </thead>
+        <tbody id="dataTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<div id="editOverlay">
+  <div id="editSheet">
+    <h2>Edit Inspeksi: <span id="editTagLabel"></span></h2>
+    <label for="editPicInput">PIC / Inspector</label>
+    <input type="text" id="editPicInput">
+    <label for="editTanggalInput">Tanggal Inspeksi</label>
+    <input type="date" id="editTanggalInput">
+    <div id="editComponentsArea"></div>
+    <div class="row">
+      <button class="btn-primary" id="saveEditBtn">Simpan Perubahan</button>
+      <button class="btn-secondary" id="cancelEditBtn">Batal</button>
+    </div>
+    <div class="status" id="editStatus"></div>
+  </div>
 </div>
 
 <script>
@@ -178,39 +236,26 @@ async function mapWithConcurrency(items, limit, worker) {
   return results;
 }
 
+// QRCode.js paints synchronously onto an internal <canvas> — no need to
+// wait for anything, and reading that canvas (rather than the <img> it
+// separately converts the canvas to for display) avoids an image-decode
+// race that left the QR blank on some Android browsers. See the matching
+// comment in index.html's generateLabelPNG.
 function generateQrBase64(tagNo) {
-  return new Promise((resolve, reject) => {
-    const holder = document.createElement("div");
-    holder.style.display = "none";
-    document.body.appendChild(holder);
+  const holder = document.createElement("div");
+  holder.style.display = "none";
+  document.body.appendChild(holder);
+  try {
+    if (typeof QRCode === "undefined") return null;
     const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(tagNo);
-    // eslint-disable-next-line no-undef
-    if (typeof QRCode === "undefined") { holder.remove(); resolve(null); return; }
     new QRCode(holder, { text: qrUrl, width: 160, height: 160 });
-    setTimeout(() => {
-      // 50ms is enough for QRCode.js to finish rendering its img/canvas node;
-      // this runs under bounded concurrency (see mapWithConcurrency) so the
-      // delay is paid in parallel across rows, not once per row serially.
-      const img = holder.querySelector("img");
-      const canvasEl = holder.querySelector("canvas");
-      try {
-        if (canvasEl) {
-          resolve(canvasEl.toDataURL("image/png").split(",")[1]);
-        } else if (img) {
-          const c = document.createElement("canvas");
-          c.width = 160; c.height = 160;
-          c.getContext("2d").drawImage(img, 0, 0, 160, 160);
-          resolve(c.toDataURL("image/png").split(",")[1]);
-        } else {
-          resolve(null);
-        }
-      } catch (e) {
-        resolve(null);
-      } finally {
-        holder.remove();
-      }
-    }, 50);
-  });
+    const canvasEl = holder.querySelector("canvas");
+    return canvasEl ? canvasEl.toDataURL("image/png").split(",")[1] : null;
+  } catch (e) {
+    return null;
+  } finally {
+    holder.remove();
+  }
 }
 
 exportBtn.addEventListener("click", async () => {
@@ -260,10 +305,11 @@ exportBtn.addEventListener("click", async () => {
     const rowsData = await mapWithConcurrency(tags, CONCURRENCY, async (tag) => {
       try {
         const record = await fetchInspectionRecord(tag);
-        const [photoBase64, qrBase64] = await Promise.all([
-          record.fotoPath ? fetchPhotoThumbnailBase64(record.fotoPath).catch(() => null) : Promise.resolve(null),
-          generateQrBase64(record.tagNo).catch(() => null)
-        ]);
+        const photoBase64 = record.fotoPath
+          ? await fetchPhotoThumbnailBase64(record.fotoPath).catch(() => null)
+          : null;
+        let qrBase64 = null;
+        try { qrBase64 = generateQrBase64(record.tagNo); } catch (e) { qrBase64 = null; }
         return { record, photoBase64, qrBase64 };
       } catch (e) {
         return { tag, error: e };
@@ -331,6 +377,211 @@ exportBtn.addEventListener("click", async () => {
     log(`Error: ${err.message}`);
   } finally {
     exportBtn.disabled = false;
+  }
+});
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[ch]));
+}
+
+const dataListStatus = document.getElementById("dataListStatus");
+const dataTable = document.getElementById("dataTable");
+const dataTableBody = document.getElementById("dataTableBody");
+const loadDataBtn = document.getElementById("loadDataBtn");
+
+// Cached by loadDataTable so Edit/Hapus don't need to re-fetch a record
+// that's already in hand.
+let loadedRecords = {};
+
+async function loadDataTable() {
+  dataListStatus.className = "status warn";
+  dataListStatus.textContent = "Memuat…";
+  loadDataBtn.disabled = true;
+  dataTable.style.display = "none";
+  dataTableBody.innerHTML = "";
+  try {
+    if (!GithubStore.hasToken()) throw new Error("Token GitHub belum diatur. Isi token di bagian atas terlebih dahulu.");
+    const tags = await GithubStore.listInspectionTags();
+    if (!tags.length) {
+      dataListStatus.className = "status warn";
+      dataListStatus.textContent = "Belum ada inspeksi tersimpan.";
+      return;
+    }
+    const results = await mapWithConcurrency(tags, 8, tag => fetchInspectionRecord(tag).catch(() => null));
+
+    loadedRecords = {};
+    results.forEach(r => { if (r) loadedRecords[r.tagNo] = r; });
+
+    const rows = results.filter(Boolean).sort((a, b) => a.tagNo.localeCompare(b.tagNo));
+    rows.forEach(record => {
+      const tr = document.createElement("tr");
+      tr.dataset.tag = record.tagNo;
+      tr.innerHTML = `
+        <td>${escapeHtml(record.tagNo)}</td>
+        <td>${escapeHtml(record.namaAset)}</td>
+        <td>${escapeHtml(record.subsistem)}</td>
+        <td>${escapeHtml(record.lokasi)}</td>
+        <td class="row-actions">
+          <button class="btn-edit" data-tag="${escapeHtml(record.tagNo)}">Edit</button>
+          <button class="btn-delete" data-tag="${escapeHtml(record.tagNo)}">Hapus</button>
+        </td>
+      `;
+      dataTableBody.appendChild(tr);
+    });
+    dataTable.style.display = rows.length ? "table" : "none";
+    dataListStatus.className = "status ok";
+    dataListStatus.textContent = `Menampilkan ${rows.length} inspeksi.`;
+
+    dataTableBody.querySelectorAll(".btn-edit").forEach(btn => {
+      btn.addEventListener("click", () => openEditModal(btn.dataset.tag));
+    });
+    dataTableBody.querySelectorAll(".btn-delete").forEach(btn => {
+      btn.addEventListener("click", () => deleteInspectionRow(btn.dataset.tag));
+    });
+  } catch (err) {
+    dataListStatus.className = "status err";
+    dataListStatus.textContent = err.message || "Gagal memuat data.";
+  } finally {
+    loadDataBtn.disabled = false;
+  }
+}
+loadDataBtn.addEventListener("click", loadDataTable);
+
+async function deleteInspectionRow(tag) {
+  if (!GithubStore.hasToken()) { alert("Token GitHub belum diatur."); return; }
+  const record = loadedRecords[tag];
+  if (!record) { alert("Data tidak ditemukan — muat ulang data terlebih dahulu."); return; }
+  if (!confirm(`Hapus inspeksi "${tag}" secara permanen? Foto juga akan dihapus. Tindakan ini tidak bisa dibatalkan.`)) return;
+
+  dataListStatus.className = "status warn";
+  dataListStatus.textContent = `Menghapus ${tag}…`;
+  try {
+    const jsonPath = `data/inspections/${tag}.json`;
+    const jsonMeta = await GithubStore.getFileMeta(jsonPath);
+    if (jsonMeta) await GithubStore.deleteFile(jsonPath, `Hapus inspeksi ${tag}`, jsonMeta.sha);
+
+    if (record.fotoPath) {
+      const photoMeta = await GithubStore.getFileMeta(record.fotoPath);
+      if (photoMeta) await GithubStore.deleteFile(record.fotoPath, `Hapus foto inspeksi ${tag}`, photoMeta.sha);
+    }
+    delete loadedRecords[tag];
+    const row = dataTableBody.querySelector(`tr[data-tag="${CSS.escape(tag)}"]`);
+    if (row) row.remove();
+    dataListStatus.className = "status ok";
+    dataListStatus.textContent = `Inspeksi ${tag} berhasil dihapus.`;
+  } catch (err) {
+    dataListStatus.className = "status err";
+    dataListStatus.textContent = err.message || `Gagal menghapus ${tag}.`;
+  }
+}
+
+// ---- Edit modal: corrects PIC/Tanggal/Kondisi/Keputusan/Catatan on an
+// already-saved record. Sub-component names, the photo, and the Tag No.
+// itself are intentionally not editable here — changing those is really
+// "delete and re-register," not a data-entry fix.
+const editOverlay = document.getElementById("editOverlay");
+const editTagLabel = document.getElementById("editTagLabel");
+const editPicInput = document.getElementById("editPicInput");
+const editTanggalInput = document.getElementById("editTanggalInput");
+const editComponentsArea = document.getElementById("editComponentsArea");
+const editStatus = document.getElementById("editStatus");
+const saveEditBtn = document.getElementById("saveEditBtn");
+let editingTag = null;
+
+function openEditModal(tag) {
+  const record = loadedRecords[tag];
+  if (!record) { alert("Data tidak ditemukan — muat ulang data terlebih dahulu."); return; }
+  editingTag = tag;
+  editTagLabel.textContent = tag;
+  editPicInput.value = record.picInspector || "";
+  editTanggalInput.value = record.tanggalInspeksi || "";
+  editStatus.textContent = "";
+  editStatus.className = "status";
+
+  editComponentsArea.innerHTML = "";
+  (record.komponen || []).forEach((comp, idx) => {
+    const card = document.createElement("div");
+    card.className = "edit-comp-card";
+    card.innerHTML = `
+      <div class="edit-comp-name">${escapeHtml(comp.nama)}</div>
+      <label>Spesifikasi Teknis</label>
+      <input type="text" data-idx="${idx}" data-field="spesifikasi" value="${escapeHtml(comp.spesifikasiTeknis)}">
+      <label>Kondisi Teknis</label>
+      <select data-idx="${idx}" data-field="kondisi">
+        <option value="">Pilih kondisi…</option>
+        ${GithubStore.KONDISI_OPTIONS.map(k => `<option value="${escapeHtml(k)}" ${k === comp.kondisiTeknis ? "selected" : ""}>${escapeHtml(k)}</option>`).join("")}
+      </select>
+      <label>Keputusan Teknis</label>
+      <select data-idx="${idx}" data-field="keputusan">
+        <option value="">Pilih keputusan…</option>
+        ${GithubStore.KEPUTUSAN_OPTIONS.map(k => `<option value="${escapeHtml(k.value)}" ${k.value === comp.keputusanTeknis ? "selected" : ""}>${escapeHtml(k.value)}</option>`).join("")}
+      </select>
+      <label>Catatan</label>
+      <textarea data-idx="${idx}" data-field="catatan">${escapeHtml(comp.catatan)}</textarea>
+    `;
+    editComponentsArea.appendChild(card);
+  });
+
+  editOverlay.classList.add("open");
+}
+
+document.getElementById("cancelEditBtn").addEventListener("click", () => {
+  editOverlay.classList.remove("open");
+  editingTag = null;
+});
+
+saveEditBtn.addEventListener("click", async () => {
+  if (!editingTag) return;
+  const record = loadedRecords[editingTag];
+  if (!record) return;
+  if (!GithubStore.hasToken()) { alert("Token GitHub belum diatur."); return; }
+
+  saveEditBtn.disabled = true;
+  saveEditBtn.textContent = "Menyimpan…";
+  editStatus.textContent = "";
+  try {
+    const komponen = (record.komponen || []).map((comp, idx) => ({
+      nama: comp.nama,
+      spesifikasiTeknis: editComponentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
+      kondisiTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
+      keputusanTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
+      catatan: editComponentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
+    }));
+    const updatedRecord = {
+      ...record,
+      picInspector: editPicInput.value.trim(),
+      tanggalInspeksi: editTanggalInput.value,
+      overallDecision: GithubStore.computeOverallDecision(komponen),
+      komponen
+    };
+
+    const jsonPath = `data/inspections/${editingTag}.json`;
+    const meta = await GithubStore.getFileMeta(jsonPath);
+    if (!meta) throw new Error("File inspeksi tidak ditemukan di GitHub (mungkin sudah dihapus).");
+    await GithubStore.updateFile(
+      jsonPath,
+      GithubStore.toBase64(JSON.stringify(updatedRecord, null, 2)),
+      `Edit inspeksi ${editingTag}`,
+      meta.sha
+    );
+
+    loadedRecords[editingTag] = updatedRecord;
+    editOverlay.classList.remove("open");
+    // No table reload needed: only PIC/Tanggal/component values changed,
+    // none of which appear in the summary row (Tag/Nama Aset/Subsistem/
+    // Lokasi are all still correct as-is) — that avoids re-fetching
+    // everything just to redraw a row whose visible cells didn't move.
+    dataListStatus.className = "status ok";
+    dataListStatus.textContent = `Inspeksi ${editingTag} berhasil diperbarui.`;
+    editingTag = null;
+  } catch (err) {
+    editStatus.className = "status err";
+    editStatus.textContent = err.message || "Gagal menyimpan perubahan.";
+  } finally {
+    saveEditBtn.disabled = false;
+    saveEditBtn.textContent = "Simpan Perubahan";
   }
 });
 </script>

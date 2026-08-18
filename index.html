@@ -6,7 +6,7 @@
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="js/github-store.js?v=3"></script>
+<script src="js/github-store.js?v=4"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -158,6 +158,55 @@
     color:#8a8578;
     margin-top:6px;
   }
+  .link-btn{
+    display:block;
+    margin-top:8px;
+    background:none;
+    border:none;
+    padding:0;
+    color:var(--accent);
+    font-size:12px;
+    font-weight:700;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  .meta-cell.editable input{
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:15px;
+  }
+  .add-comp-btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin:0;
+    background:#fafaf8;
+    border:1px dashed var(--line);
+    border-top:none;
+    color:var(--accent);
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+  .remove-comp-btn{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    padding:9px;
+    background:#fff;
+    border:1px solid var(--nogo);
+    border-radius:4px;
+    color:var(--nogo);
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+  input.comp-nama-input[readonly]{
+    background:#fafaf8;
+    color:#6b675d;
+  }
   .empty-state{
     text-align:center;
     padding:40px 20px;
@@ -178,11 +227,6 @@
     background:var(--panel);
     border-bottom:1px solid var(--line);
     padding:14px;
-  }
-  .comp-card .comp-name{
-    font-weight:700;
-    font-size:15px;
-    margin-bottom:8px;
   }
   .field{
     margin-bottom:12px;
@@ -398,6 +442,8 @@
     <input type="text" id="namaAsetInput" placeholder="Ketik atau pilih nama aset…" autocomplete="off">
     <div class="suggestions-list" id="namaAsetSuggestions"></div>
     <div class="hint" id="namaAsetHint">Mulai ketik atau pilih nama aset di atas.</div>
+    <button type="button" class="link-btn" id="manualAssetBtn">Aset tidak ada di katalog? Buat entri baru secara manual</button>
+    <button type="button" class="link-btn" id="cancelManualBtn" style="display:none;">Batal mode manual — kembali pilih dari katalog</button>
   </div>
 
   <div class="search-box" id="subsistemBox" style="display:none;">
@@ -417,17 +463,17 @@
 
   <div class="meta" id="metaBlock" style="display:none;">
     <div class="meta-row">
-      <div class="meta-cell readonly">
+      <div class="meta-cell readonly" id="nomorPBSCell">
         <label>Nomor PBS</label>
         <input type="text" id="nomorPBS" readonly>
       </div>
-      <div class="meta-cell readonly">
+      <div class="meta-cell readonly" id="subsistemDisplayCell">
         <label>Subsistem</label>
         <input type="text" id="subsistemDisplay" readonly>
       </div>
     </div>
     <div class="meta-row">
-      <div class="meta-cell readonly">
+      <div class="meta-cell readonly" id="lokasiDisplayCell">
         <label>Nama Smelter / Lokasi</label>
         <input type="text" id="lokasiDisplay" readonly>
       </div>
@@ -537,26 +583,14 @@ let tagManuallyEdited = false;
 let pendingRecord = null;
 let lastRecord = null;
 
-const KONDISI_OPTIONS = [
-  "Siap Operasi (100%)",
-  "Minor Repair (80 - 100%)",
-  "Repair (50 - 80%)",
-  "Major Repair (20 - 50%)",
-  "Scrap / Tidak Ada (Hilang) (< 20%)"
-];
-
-const KEPUTUSAN_OPTIONS = [
-  { value: "Go", cls: "go" },
-  { value: "Conditional Go", cls: "cgo" },
-  { value: "Hold", cls: "hold" },
-  { value: "No Go", cls: "nogo" }
-];
-
-const DECISION_PRECEDENCE = ["No Go", "Hold", "Conditional Go", "Go"];
+const KONDISI_OPTIONS = GithubStore.KONDISI_OPTIONS;
+const KEPUTUSAN_OPTIONS = GithubStore.KEPUTUSAN_OPTIONS;
 
 const namaAsetInput = document.getElementById("namaAsetInput");
 const namaAsetSuggestions = document.getElementById("namaAsetSuggestions");
 const namaAsetHint = document.getElementById("namaAsetHint");
+const manualAssetBtn = document.getElementById("manualAssetBtn");
+const cancelManualBtn = document.getElementById("cancelManualBtn");
 const subsistemBox = document.getElementById("subsistemBox");
 const subsistemSelect = document.getElementById("subsistemSelect");
 const lokasiBox = document.getElementById("lokasiBox");
@@ -666,78 +700,174 @@ tagNoInput.addEventListener("input", () => {
   tagHint.textContent = "Diisi manual.";
 });
 
-function renderComponents(asset) {
+// Component cards are keyed by an ever-incrementing counter rather than
+// array position, so add/remove in manual mode never collides with an
+// earlier card's data-idx.
+let componentCounter = 0;
+
+function updateComponentsHeader() {
+  const header = document.getElementById("componentsHeader");
+  if (header) header.textContent = `Sub Komponen (${componentsArea.querySelectorAll(".comp-card").length})`;
+}
+
+// `manual`: whether the Nama Sub Komponen field is inspector-editable and a
+// "hapus" button is offered — true only for the freeform manual-asset path,
+// since catalog-derived component names are supposed to stay fixed.
+function addComponentCard(nama, manual) {
+  const idx = componentCounter++;
+  const card = document.createElement("div");
+  card.className = "comp-card";
+  card.dataset.idx = idx;
+  card.innerHTML = `
+    <div class="field">
+      <label>Nama Sub Komponen</label>
+      <input type="text" class="comp-nama-input" data-idx="${idx}" data-field="nama"
+        value="${escapeHtml(nama || "")}" placeholder="Nama sub komponen…" ${manual ? "" : "readonly"}>
+    </div>
+
+    <div class="field">
+      <label>Spesifikasi Teknis</label>
+      <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" placeholder="Isi spesifikasi teknis…">
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label>Kondisi Teknis</label>
+        <select class="kondisi" data-idx="${idx}" data-field="kondisi">
+          <option value="">Pilih kondisi…</option>
+          ${KONDISI_OPTIONS.map(k => `<option value="${k}">${k}</option>`).join("")}
+        </select>
+      </div>
+      <div class="field">
+        <label>Keputusan Teknis</label>
+        <select class="keputusan" data-idx="${idx}" data-field="keputusan">
+          <option value="">Pilih keputusan…</option>
+          ${KEPUTUSAN_OPTIONS.map(k => `<option value="${k.value}" data-cls="${k.cls}">${k.value}</option>`).join("")}
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Catatan / Referensi Foto</label>
+      <textarea data-idx="${idx}" data-field="catatan" placeholder="Catatan opsional…"></textarea>
+    </div>
+    ${manual ? `<button type="button" class="remove-comp-btn" data-idx="${idx}">Hapus Sub Komponen Ini</button>` : ""}
+  `;
+  const addBtn = document.getElementById("addComponentBtn");
+  componentsArea.insertBefore(card, addBtn || null);
+
+  card.querySelector("select.keputusan").addEventListener("change", (e) => {
+    e.target.className = "keputusan " + (e.target.selectedOptions[0]?.dataset.cls || "");
+  });
+  if (manual) {
+    card.querySelector(".remove-comp-btn").addEventListener("click", () => {
+      card.remove();
+      updateComponentsHeader();
+    });
+  }
+}
+
+function renderComponents(asset, manual) {
   componentsArea.innerHTML = "";
+  componentCounter = 0;
   const header = document.createElement("div");
   header.className = "comp-header";
-  header.textContent = `Sub Komponen (${asset.subKomponen.length})`;
+  header.id = "componentsHeader";
   componentsArea.appendChild(header);
 
-  asset.subKomponen.forEach((comp, idx) => {
-    const card = document.createElement("div");
-    card.className = "comp-card";
-    card.innerHTML = `
-      <div class="comp-name">${escapeHtml(comp.nama)}</div>
+  (asset.subKomponen || []).forEach(comp => addComponentCard(comp.nama, manual));
 
-      <div class="field">
-        <label>Spesifikasi Teknis</label>
-        <input type="text" class="spec-input" data-idx="${idx}" data-field="spesifikasi" placeholder="Isi spesifikasi teknis…">
-      </div>
-
-      <div class="row2">
-        <div class="field">
-          <label>Kondisi Teknis</label>
-          <select class="kondisi" data-idx="${idx}" data-field="kondisi">
-            <option value="">Pilih kondisi…</option>
-            ${KONDISI_OPTIONS.map(k => `<option value="${k}">${k}</option>`).join("")}
-          </select>
-        </div>
-        <div class="field">
-          <label>Keputusan Teknis</label>
-          <select class="keputusan" data-idx="${idx}" data-field="keputusan">
-            <option value="">Pilih keputusan…</option>
-            ${KEPUTUSAN_OPTIONS.map(k => `<option value="${k.value}" data-cls="${k.cls}">${k.value}</option>`).join("")}
-          </select>
-        </div>
-      </div>
-
-      <div class="field">
-        <label>Catatan / Referensi Foto</label>
-        <textarea data-idx="${idx}" data-field="catatan" placeholder="Catatan opsional…"></textarea>
-      </div>
-    `;
-    componentsArea.appendChild(card);
-  });
-
-  componentsArea.querySelectorAll("select.keputusan").forEach(sel => {
-    sel.addEventListener("change", () => {
-      sel.className = "keputusan " + (sel.selectedOptions[0]?.dataset.cls || "");
+  if (manual) {
+    const addBtn = document.createElement("button");
+    addBtn.type = "button";
+    addBtn.id = "addComponentBtn";
+    addBtn.className = "add-comp-btn";
+    addBtn.textContent = "+ Tambah Sub Komponen";
+    addBtn.addEventListener("click", () => {
+      addComponentCard("", true);
+      updateComponentsHeader();
     });
+    componentsArea.appendChild(addBtn);
+  }
+  updateComponentsHeader();
+}
+
+function setMetaFieldsEditable(editable) {
+  ["nomorPBS", "subsistemDisplay", "lokasiDisplay"].forEach(id => {
+    document.getElementById(id).readOnly = !editable;
+    document.getElementById(`${id}Cell`).classList.toggle("readonly", !editable);
+    document.getElementById(`${id}Cell`).classList.toggle("editable", editable);
   });
 }
 
 function resolveAsset(row) {
   currentAsset = row;
   tagManuallyEdited = false;
+  setMetaFieldsEditable(false);
   document.getElementById("nomorPBS").value = row.nomorPBS;
   document.getElementById("subsistemDisplay").value = row.subsistem;
   document.getElementById("lokasiDisplay").value = row.lokasi;
   metaBlock.style.display = "block";
   emptyState.style.display = "none";
   inspectionPhotoCard.style.display = "block";
-  renderComponents(row);
+  renderComponents(row, false);
   refreshTagSuggestion();
 }
+
+// Lets an inspector register a physical asset that isn't in
+// master-catalog.json: Nomor PBS/Subsistem/Lokasi become freeform inputs
+// and sub-components are added/removed by hand instead of coming from a
+// fixed list. Duplicate-Tag-No. protection still applies exactly as normal
+// (enforced server-side by GithubStore.createFile), and Tag No. is left for
+// the inspector to fill in manually since there's no catalog prefix to
+// auto-suggest from.
+function enterManualAssetMode() {
+  subsistemBox.style.display = "none";
+  lokasiBox.style.display = "none";
+  pbsDisambigBox.style.display = "none";
+  namaAsetSuggestions.classList.remove("open");
+  namaAsetSuggestions.innerHTML = "";
+
+  currentAsset = { isManual: true };
+  tagManuallyEdited = true;
+  tagNoInput.value = "";
+  tagHint.textContent = "Mode manual — isi Tag No. sendiri (SMELTER-PBS-URUTAN).";
+
+  setMetaFieldsEditable(true);
+  document.getElementById("nomorPBS").value = "";
+  document.getElementById("subsistemDisplay").value = "";
+  document.getElementById("lokasiDisplay").value = "";
+
+  metaBlock.style.display = "block";
+  emptyState.style.display = "none";
+  inspectionPhotoCard.style.display = "block";
+  namaAsetHint.textContent = "Mode manual: isi Nomor PBS, Subsistem, dan Lokasi di atas, lalu tambahkan sub komponen di bawah.";
+  manualAssetBtn.style.display = "none";
+  cancelManualBtn.style.display = "block";
+
+  renderComponents({ subKomponen: [] }, true);
+}
+
+manualAssetBtn.addEventListener("click", enterManualAssetMode);
+cancelManualBtn.addEventListener("click", () => {
+  namaAsetInput.value = "";
+  manualAssetBtn.style.display = "block";
+  cancelManualBtn.style.display = "none";
+  resetDownstream(true);
+});
 
 function resetDownstream(fullReset) {
   subsistemBox.style.display = "none";
   lokasiBox.style.display = "none";
   pbsDisambigBox.style.display = "none";
   metaBlock.style.display = "none";
+  setMetaFieldsEditable(false);
   componentsArea.innerHTML = "";
   inspectionPhotoCard.style.display = "none";
   currentAsset = null;
   tagManuallyEdited = false;
+  manualAssetBtn.style.display = "block";
+  cancelManualBtn.style.display = "none";
   emptyState.style.display = "block";
   emptyState.textContent = "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
   if (fullReset) {
@@ -803,10 +933,15 @@ function resolveNamaAsetSelection() {
 }
 
 namaAsetInput.addEventListener("input", () => {
+  // Still editing the freeform name in manual mode — resolving against the
+  // catalog here would reset(/wipe) the manual form the inspector is
+  // filling in.
+  if (currentAsset && currentAsset.isManual) return;
   renderNamaAsetSuggestions(namaAsetInput.value);
   resolveNamaAsetSelection();
 });
 namaAsetInput.addEventListener("focus", () => {
+  if (currentAsset && currentAsset.isManual) return;
   if (namaAsetInput.value.trim()) renderNamaAsetSuggestions(namaAsetInput.value);
 });
 namaAsetInput.addEventListener("blur", () => {
@@ -874,50 +1009,60 @@ async function handleInspectionPhotoSelected(e) {
 inspectionPhotoCameraInput.addEventListener("change", handleInspectionPhotoSelected);
 inspectionPhotoGalleryInput.addEventListener("change", handleInspectionPhotoSelected);
 
-function computeOverallDecision(komponenData) {
-  for (const level of DECISION_PRECEDENCE) {
-    if (komponenData.some(k => k.keputusanTeknis === level)) return level;
-  }
-  return "";
+const computeOverallDecision = GithubStore.computeOverallDecision;
+
+// Reads the currently rendered component cards straight from the DOM
+// rather than iterating currentAsset.subKomponen — that array only reflects
+// the initial catalog list, and no longer matches card count/order once
+// manual mode lets an inspector add or remove rows.
+function readComponentCards() {
+  return Array.from(componentsArea.querySelectorAll(".comp-card")).map(card => {
+    const idx = card.dataset.idx;
+    return {
+      nama: componentsArea.querySelector(`input[data-idx="${idx}"][data-field="nama"]`).value.trim(),
+      spesifikasiTeknis: componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
+      kondisiTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
+      keputusanTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
+      catatan: componentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
+    };
+  });
 }
 
 function validateForm() {
   const errors = [];
-  if (!currentAsset) errors.push("Pilih Nama Aset, Subsistem, dan Lokasi terlebih dahulu.");
+  if (!currentAsset) errors.push("Pilih Nama Aset, Subsistem, dan Lokasi terlebih dahulu (atau gunakan mode manual).");
+  if (!namaAsetInput.value.trim()) errors.push("Nama Aset wajib diisi.");
+  if (!document.getElementById("nomorPBS").value.trim()) errors.push("Nomor PBS wajib diisi.");
+  if (!document.getElementById("subsistemDisplay").value.trim()) errors.push("Subsistem wajib diisi.");
+  if (!document.getElementById("lokasiDisplay").value.trim()) errors.push("Nama Smelter/Lokasi wajib diisi.");
   if (!tagNoInput.value.trim()) errors.push("Tag No. wajib diisi.");
   if (!picInspectorInput.value.trim()) errors.push("PIC/Inspector wajib diisi.");
   if (!tanggalInspeksiInput.value) errors.push("Tanggal Inspeksi wajib diisi.");
   if (!inspectionPhotoPreview.dataset.base64) errors.push("Foto inspeksi wajib diunggah.");
-  if (currentAsset) {
-    currentAsset.subKomponen.forEach((comp, idx) => {
-      const spesifikasi = componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim();
-      const kondisi = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value;
-      const keputusan = componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value;
-      if (!spesifikasi) errors.push(`Spesifikasi Teknis untuk "${comp.nama}" wajib diisi.`);
-      if (!kondisi) errors.push(`Kondisi Teknis untuk "${comp.nama}" wajib dipilih.`);
-      if (!keputusan) errors.push(`Keputusan Teknis untuk "${comp.nama}" wajib dipilih.`);
-    });
-  }
+
+  const components = readComponentCards();
+  if (!components.length) errors.push("Tambahkan minimal satu sub komponen.");
+  components.forEach(comp => {
+    const label = comp.nama || "sub komponen";
+    if (!comp.nama) errors.push("Nama Sub Komponen wajib diisi untuk setiap baris.");
+    if (!comp.spesifikasiTeknis) errors.push(`Spesifikasi Teknis untuk "${label}" wajib diisi.`);
+    if (!comp.kondisiTeknis) errors.push(`Kondisi Teknis untuk "${label}" wajib dipilih.`);
+    if (!comp.keputusanTeknis) errors.push(`Keputusan Teknis untuk "${label}" wajib dipilih.`);
+  });
   return errors;
 }
 
 function buildRecord() {
-  const komponenData = currentAsset.subKomponen.map((comp, idx) => ({
-    nama: comp.nama,
-    spesifikasiTeknis: componentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
-    kondisiTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
-    keputusanTeknis: componentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
-    catatan: componentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
-  }));
+  const komponenData = readComponentCards();
   const tagNo = tagNoInput.value.trim();
   const tanggal = tanggalInspeksiInput.value;
   return {
     tagNo,
     inspectionId: `INS-${tanggal.replace(/-/g, "")}-${tagNo}`,
-    nomorPBS: currentAsset.nomorPBS,
-    subsistem: currentAsset.subsistem,
-    namaAset: currentAsset.namaAset,
-    lokasi: currentAsset.lokasi,
+    nomorPBS: document.getElementById("nomorPBS").value.trim(),
+    subsistem: document.getElementById("subsistemDisplay").value.trim(),
+    namaAset: namaAsetInput.value.trim(),
+    lokasi: document.getElementById("lokasiDisplay").value.trim(),
     picInspector: picInspectorInput.value.trim(),
     tanggalInspeksi: tanggal,
     fotoPath: `data/inspections/photos/${tagNo}.jpg`,
@@ -1126,40 +1271,40 @@ function generateLabelPNG(record) {
   const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
   new QRCode(qrHidden, { text: qrUrl, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
 
-  function draw(qrSource) {
-    const canvas = document.createElement("canvas");
-    canvas.width = 400; // 5cm at 8px/mm
-    canvas.height = 240; // 3cm at 8px/mm
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, 400, 240);
-    ctx.drawImage(qrSource, 12, 20, 200, 200);
-
-    ctx.fillStyle = "#000000";
-    ctx.textBaseline = "top";
-    ctx.font = "bold 24px monospace";
-    ctx.fillText(record.tagNo, 224, 26);
-
-    ctx.font = "13px sans-serif";
-    wrapText(ctx, record.namaAset, 224, 62, 160, 15, 5);
-
-    ctx.font = "11px sans-serif";
-    ctx.fillStyle = "#555555";
-    wrapText(ctx, record.lokasi, 224, 190, 160, 13, 3);
-
-    GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
+  // QRCode.js paints the QR onto an internal <canvas> synchronously, then
+  // (on basically every real device, Android included) additionally
+  // converts that canvas to a hidden/shown <img> for display. Reading that
+  // <img> back out — as this used to do — races its data: URL decode,
+  // which on some Android browsers wasn't done yet when drawImage() ran,
+  // producing a label with the text but a blank QR. The canvas has no such
+  // race: its pixels are ready the instant the QRCode constructor returns.
+  const qrCanvas = qrHidden.querySelector("canvas");
+  if (!qrCanvas) {
+    alert("Gagal membuat QR code. Coba lagi.");
+    return;
   }
 
-  setTimeout(() => {
-    const img = qrHidden.querySelector("img");
-    const canvasEl = qrHidden.querySelector("canvas");
-    const source = img || canvasEl;
-    if (img && !img.complete) {
-      img.onload = () => draw(img);
-    } else {
-      draw(source);
-    }
-  }, 150);
+  const canvas = document.createElement("canvas");
+  canvas.width = 400; // 5cm at 8px/mm
+  canvas.height = 240; // 3cm at 8px/mm
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, 400, 240);
+  ctx.drawImage(qrCanvas, 12, 20, 200, 200);
+
+  ctx.fillStyle = "#000000";
+  ctx.textBaseline = "top";
+  ctx.font = "bold 24px monospace";
+  ctx.fillText(record.tagNo, 224, 26);
+
+  ctx.font = "13px sans-serif";
+  wrapText(ctx, record.namaAset, 224, 62, 160, 15, 5);
+
+  ctx.font = "11px sans-serif";
+  ctx.fillStyle = "#555555";
+  wrapText(ctx, record.lokasi, 224, 190, 160, 13, 3);
+
+  GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
 }
 
 document.getElementById("downloadQrBtn").addEventListener("click", () => {
