@@ -1271,7 +1271,26 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
   ctx.fillText(line, x, curY);
 }
 
-function generateLabelPNG(record) {
+// Preloaded once at app start (see initializeApp) so clicking "Unduh QR
+// Label" doesn't have to wait on it — same-origin image (served from this
+// repo via Pages), so drawing it onto the label canvas never taints it for
+// the later toDataURL() call. Resolves to null (not a rejection) if it
+// fails to load, so a logo hiccup degrades to a label without the logo
+// instead of breaking the download entirely.
+let logoImagePromise = null;
+function getLogoImage() {
+  if (!logoImagePromise) {
+    logoImagePromise = new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = () => resolve(null);
+      img.src = "assets/logo-lapi-itb.png";
+    });
+  }
+  return logoImagePromise;
+}
+
+async function generateLabelPNG(record) {
   const qrHidden = document.getElementById("qrHidden");
   qrHidden.innerHTML = "";
   const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
@@ -1289,6 +1308,7 @@ function generateLabelPNG(record) {
     alert("Gagal membuat QR code. Coba lagi.");
     return;
   }
+  const logoImg = await getLogoImage();
 
   const canvas = document.createElement("canvas");
   canvas.width = 400; // 5cm at 8px/mm
@@ -1296,26 +1316,43 @@ function generateLabelPNG(record) {
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, 400, 240);
-  ctx.drawImage(qrCanvas, 12, 20, 200, 200);
 
+  // Logo strip across the top, scaled down to a fixed height and centered —
+  // the label is only 5x3cm, so this stays small (branding presence, not a
+  // readable wordmark) to leave room for the QR and text below it.
+  if (logoImg) {
+    const logoH = 28;
+    const logoW = logoH * (logoImg.naturalWidth / logoImg.naturalHeight);
+    ctx.drawImage(logoImg, (400 - logoW) / 2, 6, logoW, logoH);
+  }
+  ctx.strokeStyle = "#dddddd";
+  ctx.beginPath();
+  ctx.moveTo(12, 36);
+  ctx.lineTo(388, 36);
+  ctx.stroke();
+
+  const qrTop = 42;
+  ctx.drawImage(qrCanvas, 12, qrTop, 168, 168);
+
+  const textX = 194;
   ctx.fillStyle = "#000000";
   ctx.textBaseline = "top";
-  ctx.font = "bold 24px monospace";
-  ctx.fillText(record.tagNo, 224, 26);
+  ctx.font = "bold 26px monospace";
+  ctx.fillText(record.tagNo, textX, qrTop);
 
   ctx.font = "13px sans-serif";
-  wrapText(ctx, record.namaAset, 224, 62, 160, 15, 5);
+  wrapText(ctx, record.namaAset, textX, qrTop + 38, 190, 15, 5);
 
   ctx.font = "11px sans-serif";
   ctx.fillStyle = "#555555";
-  wrapText(ctx, record.lokasi, 224, 190, 160, 13, 3);
+  wrapText(ctx, record.lokasi, textX, qrTop + 128, 190, 13, 3);
 
   GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
 }
 
-document.getElementById("downloadQrBtn").addEventListener("click", () => {
+document.getElementById("downloadQrBtn").addEventListener("click", async () => {
   if (!lastRecord) return;
-  generateLabelPNG(lastRecord);
+  await generateLabelPNG(lastRecord);
 });
 
 // Once a token is set on this device, the banner goes away entirely rather
@@ -1356,6 +1393,7 @@ async function initializeApp() {
   }
   await loadMasterCatalog();
   updateTokenBanner();
+  getLogoImage(); // fire and forget — warms the cache before Save is even clicked
 }
 
 initializeApp();
