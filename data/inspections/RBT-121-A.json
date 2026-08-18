@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-121-A",
+  "inspectionId": "INS-20260818-RBT-121-A",
+  "nomorPBS": "PBS-121",
+  "subsistem": "Area Pabrik",
+  "namaAset": "Mobile Crane",
+  "lokasi": "RBT",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/RBT-121-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Engine",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
