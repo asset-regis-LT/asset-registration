@@ -1,0 +1,35 @@
+{
+  "tagNo": "RBT-201-A",
+  "inspectionId": "INS-20260818-RBT-201-A",
+  "nomorPBS": "PBS-201",
+  "subsistem": "Material Handling",
+  "namaAset": "Overhead Crane XSY",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "msh",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/RBT-201-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Hoist Motor",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "xxx"
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "xxx"
+    },
+    {
+      "nama": "Hook Block",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "xxx"
+    }
+  ]
+}
