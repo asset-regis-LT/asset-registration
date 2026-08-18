@@ -146,16 +146,36 @@ async function fetchInspectionRecord(tag) {
   return res.json();
 }
 
-async function fetchPhotoBase64(fotoPath) {
+// The sheet only ever displays this at 110x110px, so the original
+// full-resolution inspection photo (up to 1600px) is wasted bytes here —
+// re-compressing down to a small thumbnail keeps the exported .xlsx a
+// manageable size at a few thousand rows instead of growing into the
+// hundreds of MB.
+async function fetchPhotoThumbnailBase64(fotoPath) {
   const res = await fetch(GithubStore.rawUrl(fotoPath), { cache: "no-store" });
   if (!res.ok) return null;
   const blob = await res.blob();
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = () => reject(new Error("Gagal membaca foto."));
-    reader.onload = () => resolve(reader.result.split(",")[1]);
-    reader.readAsDataURL(blob);
-  });
+  const { base64 } = await GithubStore.compressImage(blob, 320, 0.6);
+  return base64;
+}
+
+// Runs `worker` over `items` with at most `limit` in flight at once,
+// preserving input order in the returned results. Sequential one-row-at-a-
+// time fetching is fine for a handful of inspections but not for a couple
+// thousand of them (this is a batch job hitting the network per row, not a
+// CPU loop) — bounded concurrency keeps memory/requests in check while
+// still cutting wall-clock time roughly in proportion to `limit`.
+async function mapWithConcurrency(items, limit, worker) {
+  const results = new Array(items.length);
+  let next = 0;
+  async function run() {
+    while (next < items.length) {
+      const i = next++;
+      results[i] = await worker(items[i], i);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, run));
+  return results;
 }
 
 function generateQrBase64(tagNo) {
@@ -168,6 +188,9 @@ function generateQrBase64(tagNo) {
     if (typeof QRCode === "undefined") { holder.remove(); resolve(null); return; }
     new QRCode(holder, { text: qrUrl, width: 160, height: 160 });
     setTimeout(() => {
+      // 50ms is enough for QRCode.js to finish rendering its img/canvas node;
+      // this runs under bounded concurrency (see mapWithConcurrency) so the
+      // delay is paid in parallel across rows, not once per row serially.
       const img = holder.querySelector("img");
       const canvasEl = holder.querySelector("canvas");
       try {
@@ -186,7 +209,7 @@ function generateQrBase64(tagNo) {
       } finally {
         holder.remove();
       }
-    }, 150);
+    }, 50);
   });
 }
 
@@ -226,17 +249,39 @@ exportBtn.addEventListener("click", async () => {
     ];
     sheet.getRow(1).font = { bold: true };
 
-    for (let i = 0; i < tags.length; i++) {
-      const tag = tags[i];
-      log(`(${i + 1}/${tags.length}) Memuat ${tag}…`);
-      let record;
+    // Fetch phase: gather record + thumbnail photo + QR for every tag with
+    // several requests in flight at once. At a couple thousand inspections,
+    // doing this one row at a time (previous behavior) could take upward of
+    // 10-20 minutes; bounded concurrency brings that down roughly in
+    // proportion to CONCURRENCY below, while still fetching everything in
+    // the original tag order for a stable row order in the sheet.
+    const CONCURRENCY = 8;
+    let fetched = 0;
+    const rowsData = await mapWithConcurrency(tags, CONCURRENCY, async (tag) => {
       try {
-        record = await fetchInspectionRecord(tag);
+        const record = await fetchInspectionRecord(tag);
+        const [photoBase64, qrBase64] = await Promise.all([
+          record.fotoPath ? fetchPhotoThumbnailBase64(record.fotoPath).catch(() => null) : Promise.resolve(null),
+          generateQrBase64(record.tagNo).catch(() => null)
+        ]);
+        return { record, photoBase64, qrBase64 };
       } catch (e) {
-        log(`  Gagal: ${e.message}`);
-        continue;
+        return { tag, error: e };
+      } finally {
+        fetched++;
+        if (fetched % 25 === 0 || fetched === tags.length) {
+          log(`(${fetched}/${tags.length}) selesai diunduh…`);
+        }
       }
+    });
 
+    log("Menyusun baris di file .xlsx…");
+    rowsData.forEach(item => {
+      if (item.error) {
+        log(`  Gagal memuat ${item.tag}: ${item.error.message}`);
+        return;
+      }
+      const { record, photoBase64, qrBase64 } = item;
       const komponenRingkas = (record.komponen || [])
         .map(k => `${k.nama}: ${k.kondisiTeknis} / ${k.keputusanTeknis}${k.catatan ? " — " + k.catatan : ""}`)
         .join("\n");
@@ -257,18 +302,15 @@ exportBtn.addEventListener("click", async () => {
       sheet.getRow(rowIndex).alignment = { wrapText: true, vertical: "top" };
       sheet.getRow(rowIndex).height = 90;
 
-      const photoBase64 = record.fotoPath ? await fetchPhotoBase64(record.fotoPath) : null;
       if (photoBase64) {
         const imgId = workbook.addImage({ base64: `data:image/jpeg;base64,${photoBase64}`, extension: "jpeg" });
         sheet.addImage(imgId, { tl: { col: 10, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
-
-      const qrBase64 = await generateQrBase64(record.tagNo);
       if (qrBase64) {
         const qrId = workbook.addImage({ base64: `data:image/png;base64,${qrBase64}`, extension: "png" });
         sheet.addImage(qrId, { tl: { col: 11, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
-    }
+    });
 
     log("Membuat file .xlsx…");
     const buffer = await workbook.xlsx.writeBuffer();

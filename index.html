@@ -220,6 +220,7 @@
   .photo-row{
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
     gap:10px;
   }
   .photo-btn{
@@ -455,8 +456,12 @@
       <label>Foto Inspeksi</label>
       <div class="photo-row">
         <label class="photo-btn">
-          Ambil / Unggah 1 Foto
-          <input type="file" id="inspectionPhotoInput" accept="image/*" capture="environment" style="display:none;">
+          Ambil Foto
+          <input type="file" id="inspectionPhotoCameraInput" accept="image/*" capture="environment" style="display:none;">
+        </label>
+        <label class="photo-btn">
+          Pilih dari Galeri
+          <input type="file" id="inspectionPhotoGalleryInput" accept="image/*" style="display:none;">
         </label>
         <img class="photo-preview" id="inspectionPhotoPreview" alt="Pratinjau foto inspeksi">
       </div>
@@ -566,7 +571,8 @@ const tagNoInput = document.getElementById("tagNo");
 const tagHint = document.getElementById("tagHint");
 const picInspectorInput = document.getElementById("picInspector");
 const tanggalInspeksiInput = document.getElementById("tanggalInspeksi");
-const inspectionPhotoInput = document.getElementById("inspectionPhotoInput");
+const inspectionPhotoCameraInput = document.getElementById("inspectionPhotoCameraInput");
+const inspectionPhotoGalleryInput = document.getElementById("inspectionPhotoGalleryInput");
 const inspectionPhotoPreview = document.getElementById("inspectionPhotoPreview");
 const tokenNote = document.getElementById("tokenNote");
 const tokenStatusLine = document.getElementById("tokenStatusLine");
@@ -853,7 +859,7 @@ pbsDisambigSelect.addEventListener("change", () => {
   if (rows.length) resolveAsset(rows[0]);
 });
 
-inspectionPhotoInput.addEventListener("change", async (e) => {
+async function handleInspectionPhotoSelected(e) {
   const file = e.target.files[0];
   if (!file) return;
   try {
@@ -864,7 +870,9 @@ inspectionPhotoInput.addEventListener("change", async (e) => {
   } catch (err) {
     alert(err.message || "Gagal memproses foto.");
   }
-});
+}
+inspectionPhotoCameraInput.addEventListener("change", handleInspectionPhotoSelected);
+inspectionPhotoGalleryInput.addEventListener("change", handleInspectionPhotoSelected);
 
 function computeOverallDecision(komponenData) {
   for (const level of DECISION_PRECEDENCE) {
@@ -1159,27 +1167,18 @@ document.getElementById("downloadQrBtn").addEventListener("click", () => {
   generateLabelPNG(lastRecord);
 });
 
-function maskToken(token) {
-  if (!token) return "";
-  return token.length <= 6 ? "•".repeat(token.length) : `${token.slice(0, 6)}…${token.slice(-4)}`;
-}
-
+// Once a token is set on this device, the banner goes away entirely rather
+// than collapsing to a status line — one less thing cluttering the form for
+// an inspector who already did this setup step. To change or clear a token
+// later, use admin.html (same localStorage key, so it stays in sync).
 function updateTokenBanner() {
-  tokenNote.style.display = "block";
-  const token = GithubStore.getToken();
-  if (token) {
-    tokenStatusLine.innerHTML =
-      `Token GitHub aktif di perangkat ini (${escapeHtml(maskToken(token))}). <a href="#" id="tokenChangeLink">Ubah token</a>`;
-    tokenInputRow.style.display = "none";
-    document.getElementById("tokenChangeLink").addEventListener("click", (e) => {
-      e.preventDefault();
-      tokenInputRow.style.display = "flex";
-      tokenInlineInput.focus();
-    });
-  } else {
-    tokenStatusLine.textContent = "Token GitHub belum diatur di perangkat ini — wajib diisi sebelum menyimpan inspeksi.";
-    tokenInputRow.style.display = "flex";
+  if (GithubStore.hasToken()) {
+    tokenNote.style.display = "none";
+    return;
   }
+  tokenNote.style.display = "block";
+  tokenStatusLine.textContent = "Token GitHub belum diatur di perangkat ini — wajib diisi sebelum menyimpan inspeksi.";
+  tokenInputRow.style.display = "flex";
 }
 
 tokenInlineSaveBtn.addEventListener("click", () => {
