@@ -1,0 +1,35 @@
+{
+  "tagNo": "SIP-204-A",
+  "inspectionId": "INS-20260818-SIP-204-A",
+  "nomorPBS": "PBS-204",
+  "subsistem": "Material Handling",
+  "namaAset": "Overhead Crane XSY",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "msh",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/SIP-204-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Hoist Motor",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Hook Block",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
