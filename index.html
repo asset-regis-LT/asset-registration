@@ -660,11 +660,17 @@ async function loadMasterCatalog() {
 }
 
 // ---- Tag No. suggestion: SMELTER-PBSNUMBER-URUTAN, e.g. A-001-A ----
+// Smelter names are "Full Company Name (ACRONYM)", e.g.
+// "Refined Bangka Tin (RBT)" — the Tag No. prefix is the acronym, not the
+// company name. Falls back to the old trailing-token heuristic for a
+// manually-typed location that doesn't follow that "(ACRONYM)" format.
 function smelterCode(lokasiStr) {
   if (!lokasiStr) return "";
   const trimmed = lokasiStr.trim();
-  const m = trimmed.match(/([A-Za-z0-9]+)\s*$/);
-  return m ? m[1].toUpperCase() : trimmed.charAt(0).toUpperCase();
+  const acronym = trimmed.match(/\(([A-Za-z0-9]+)\)\s*$/);
+  if (acronym) return acronym[1].toUpperCase();
+  const fallback = trimmed.match(/([A-Za-z0-9]+)\s*$/);
+  return fallback ? fallback[1].toUpperCase() : trimmed.charAt(0).toUpperCase();
 }
 function pbsDigits(pbsStr) {
   if (!pbsStr) return "";

@@ -3,7 +3,7 @@
     "nomorPBS": "PBS-001",
     "subsistem": "Material Handling",
     "namaAset": "Conveyor Belt A",
-    "lokasi": "Smelter A",
+    "lokasi": "Refined Bangka Tin (RBT)",
     "subKomponen": [
       { "nama": "Motor Penggerak" },
       { "nama": "Roller Idler" },
@@ -14,7 +14,7 @@
     "nomorPBS": "PBS-002",
     "subsistem": "Material Handling",
     "namaAset": "Overhead Crane XSY",
-    "lokasi": "Smelter A",
+    "lokasi": "Refined Bangka Tin (RBT)",
     "subKomponen": [
       { "nama": "Hoist Motor" },
       { "nama": "Wire Rope" },
@@ -25,7 +25,7 @@
     "nomorPBS": "PBS-003",
     "subsistem": "Cooling System",
     "namaAset": "Cooling Fan Unit",
-    "lokasi": "Smelter B",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
     "subKomponen": [
       { "nama": "Fan Blade Assembly" },
       { "nama": "Bearing Housing" }
@@ -35,7 +35,7 @@
     "nomorPBS": "PBS-004",
     "subsistem": "Hydraulic System",
     "namaAset": "Hydraulic Press Unit",
-    "lokasi": "Smelter B",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
     "subKomponen": [
       { "nama": "Hydraulic Pump" },
       { "nama": "Cylinder Ram" },
@@ -46,7 +46,7 @@
     "nomorPBS": "PBS-005",
     "subsistem": "Ventilation System",
     "namaAset": "Exhaust Blower",
-    "lokasi": "Smelter A",
+    "lokasi": "Venus Inti Perkasa (VIP)",
     "subKomponen": [
       { "nama": "Blower Motor" },
       { "nama": "Impeller" }
