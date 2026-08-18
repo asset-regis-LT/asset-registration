@@ -91,7 +91,14 @@ const GithubStore = (() => {
   // listings at 1000 entries.
   async function listInspectionTags() {
     const refRes = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/git/ref/heads/${GH_DATA_BRANCH}`);
-    if (!refRes.ok) return [];
+    // 404 genuinely means the data branch doesn't exist yet (no inspection has
+    // ever been saved) — that's the only case where "no tags" is correct. Any
+    // other failure (bad token, rate limit, GitHub downtime, ...) must throw,
+    // not be silently treated as "zero inspections" — that previously made
+    // the duplicate-tag check and the Excel export both go quietly blind
+    // during any API hiccup instead of surfacing the real problem.
+    if (refRes.status === 404) return [];
+    if (!refRes.ok) throw new Error(`Gagal membaca daftar inspeksi (HTTP ${refRes.status}).`);
     const refData = await refRes.json();
 
     const treeRes = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/git/trees/${refData.object.sha}?recursive=1`);
@@ -148,10 +155,38 @@ const GithubStore = (() => {
     });
   }
 
+  // Saves/shares a data: URL image from a phone browser. The classic
+  // `<a download>` click trick is unreliable on mobile — iOS Safari in
+  // particular often just navigates to the data: URL instead of saving it.
+  // The Web Share API (share a real file to Photos/Files/etc.) works far
+  // more consistently on phones, so it's tried first; desktop browsers
+  // (where the Share API is usually unavailable) fall back to the classic
+  // download link, which works fine there.
+  async function saveOrShareImage(dataUrl, filename, mimeType) {
+    try {
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], filename, { type: mimeType });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file] });
+        return;
+      }
+    } catch (err) {
+      if (err && err.name === "AbortError") return; // user cancelled the share sheet
+      // fall through to the link-based download below
+    }
+    const link = document.createElement("a");
+    link.download = filename;
+    link.href = dataUrl;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
   return {
     GH_OWNER, GH_REPO, GH_DATA_BRANCH, SITE_BASE_URL,
     getToken, setToken, clearToken, hasToken,
     rawUrl, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
+    saveOrShareImage,
     toBase64, compressImage
   };
 })();

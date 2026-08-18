@@ -6,7 +6,7 @@
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="js/github-store.js?v=2"></script>
+<script src="js/github-store.js?v=3"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -130,6 +130,29 @@
     color:var(--ink);
   }
   .search-box input:focus, .search-box select:focus{outline:2px solid var(--accent);border-color:var(--accent);}
+  .suggestions-list{
+    display:none;
+    position:absolute;
+    left:14px;right:14px;
+    top:100%;
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:none;
+    border-radius:0 0 4px 4px;
+    max-height:220px;
+    overflow-y:auto;
+    z-index:20;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  }
+  .suggestions-list.open{display:block;}
+  .suggestions-list .suggestion-item{
+    padding:12px;
+    font-size:15px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+  }
+  .suggestions-list .suggestion-item:last-child{border-bottom:none;}
+  .suggestions-list .suggestion-item:active{background:var(--paper);}
   .hint{
     font-size:12px;
     color:#8a8578;
@@ -369,10 +392,10 @@
 
 <div class="wrap" id="formView">
 
-  <div class="search-box">
+  <div class="search-box" style="position:relative;">
     <label for="namaAsetInput">1. Nama Aset / Komponen</label>
-    <input type="text" id="namaAsetInput" list="namaAsetList" placeholder="Ketik atau pilih nama aset…" autocomplete="off">
-    <datalist id="namaAsetList"></datalist>
+    <input type="text" id="namaAsetInput" placeholder="Ketik atau pilih nama aset…" autocomplete="off">
+    <div class="suggestions-list" id="namaAsetSuggestions"></div>
     <div class="hint" id="namaAsetHint">Mulai ketik atau pilih nama aset di atas.</div>
   </div>
 
@@ -526,8 +549,8 @@ const KEPUTUSAN_OPTIONS = [
 
 const DECISION_PRECEDENCE = ["No Go", "Hold", "Conditional Go", "Go"];
 
-const namaAsetList = document.getElementById("namaAsetList");
 const namaAsetInput = document.getElementById("namaAsetInput");
+const namaAsetSuggestions = document.getElementById("namaAsetSuggestions");
 const namaAsetHint = document.getElementById("namaAsetHint");
 const subsistemBox = document.getElementById("subsistemBox");
 const subsistemSelect = document.getElementById("subsistemSelect");
@@ -588,12 +611,6 @@ async function loadMasterCatalog() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     MASTER_CATALOG = await response.json();
     if (!Array.isArray(MASTER_CATALOG)) throw new Error("master-catalog.json harus berupa array.");
-    namaAsetList.innerHTML = "";
-    distinctValues(MASTER_CATALOG, "namaAset").forEach(nama => {
-      const opt = document.createElement("option");
-      opt.value = nama;
-      namaAsetList.appendChild(opt);
-    });
     return true;
   } catch (error) {
     console.error("Gagal memuat master-catalog.json:", error);
@@ -724,7 +741,48 @@ function resetDownstream(fullReset) {
   }
 }
 
-function onNamaAsetChange() {
+// Native <datalist> doesn't reliably show suggestions while typing on
+// mobile browsers (notably iOS Safari, which often shows nothing until the
+// text is an exact/full match) — so suggestions are rendered by hand here
+// instead of relying on the browser's built-in datalist UI.
+function renderNamaAsetSuggestions(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    namaAsetSuggestions.classList.remove("open");
+    namaAsetSuggestions.innerHTML = "";
+    return;
+  }
+  const matches = distinctValues(MASTER_CATALOG, "namaAset")
+    .filter(nama => nama.toLowerCase().includes(q))
+    .slice(0, 20);
+  if (!matches.length) {
+    namaAsetSuggestions.classList.remove("open");
+    namaAsetSuggestions.innerHTML = "";
+    return;
+  }
+  namaAsetSuggestions.innerHTML = matches
+    .map(nama => `<div class="suggestion-item">${escapeHtml(nama)}</div>`)
+    .join("");
+  namaAsetSuggestions.classList.add("open");
+  namaAsetSuggestions.querySelectorAll(".suggestion-item").forEach((el, i) => {
+    // mousedown (not click) + preventDefault, so the input never blurs
+    // before the tap/click registers — this also works for touch taps,
+    // since mobile browsers synthesize mouse events for compatibility.
+    el.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      selectNamaAsetValue(matches[i]);
+    });
+  });
+}
+
+function selectNamaAsetValue(nama) {
+  namaAsetInput.value = nama;
+  namaAsetSuggestions.classList.remove("open");
+  namaAsetSuggestions.innerHTML = "";
+  resolveNamaAsetSelection();
+}
+
+function resolveNamaAsetSelection() {
   resetDownstream(true);
   const rows = rowsForNamaAset(namaAsetInput.value);
   if (!rows.length) {
@@ -737,8 +795,25 @@ function onNamaAsetChange() {
   populateSelect(subsistemSelect, distinctValues(rows, "subsistem"), "Pilih subsistem…");
   subsistemBox.style.display = "block";
 }
-namaAsetInput.addEventListener("input", onNamaAsetChange);
-namaAsetInput.addEventListener("change", onNamaAsetChange);
+
+namaAsetInput.addEventListener("input", () => {
+  renderNamaAsetSuggestions(namaAsetInput.value);
+  resolveNamaAsetSelection();
+});
+namaAsetInput.addEventListener("focus", () => {
+  if (namaAsetInput.value.trim()) renderNamaAsetSuggestions(namaAsetInput.value);
+});
+namaAsetInput.addEventListener("blur", () => {
+  setTimeout(() => namaAsetSuggestions.classList.remove("open"), 150);
+});
+namaAsetInput.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  const first = namaAsetSuggestions.querySelector(".suggestion-item");
+  if (first) {
+    e.preventDefault();
+    first.dispatchEvent(new Event("mousedown"));
+  }
+});
 
 subsistemSelect.addEventListener("change", () => {
   lokasiBox.style.display = "none";
@@ -882,13 +957,27 @@ document.getElementById("confirmSaveBtn").addEventListener("click", async () => 
       `Inspeksi ${pendingRecord.tagNo}`
     );
     document.getElementById("previewOverlay").classList.remove("open");
-    renderInspectionResult(pendingRecord, inspectionPhotoPreview.src);
+    renderInspectionResult(pendingRecord, inspectionPhotoPreview.src, "saved");
     pendingRecord = null;
   } catch (err) {
     if (err.code === "DUPLICATE") {
-      alert(err.message + " Tag No. akan disegarkan otomatis.");
-      tagManuallyEdited = false;
-      await refreshTagSuggestion();
+      // This tag might genuinely already belong to someone else — or it
+      // might be this inspector's own earlier save that actually succeeded
+      // on GitHub's side even though the connection dropped before the
+      // confirmation came back (this happened during the GitHub outage).
+      // Offer to pull up whatever is actually saved for this tag instead of
+      // just leaving the inspector stuck with no way to retrieve it.
+      const viewExisting = confirm(
+        `${err.message}\n\nJika percobaan simpan sebelumnya sempat gagal karena koneksi/GitHub bermasalah, kemungkinan data ini sebenarnya sudah tersimpan. Lihat hasil yang sudah tersimpan untuk Tag No. ini sekarang?`
+      );
+      if (viewExisting) {
+        document.getElementById("previewOverlay").classList.remove("open");
+        await loadResultByTag(pendingRecord.tagNo, "saved");
+        pendingRecord = null;
+      } else {
+        tagManuallyEdited = false;
+        await refreshTagSuggestion();
+      }
     } else {
       alert(err.message || "Gagal menyimpan inspeksi.");
     }
@@ -898,12 +987,21 @@ document.getElementById("confirmSaveBtn").addEventListener("click", async () => 
   }
 });
 
-function renderInspectionResult(record, photoSrcOverride) {
+function renderInspectionResult(record, photoSrcOverride, context = "view") {
   document.getElementById("formView").style.display = "none";
   document.getElementById("notFoundView").style.display = "none";
   saveFooter.style.display = "none";
   tokenNote.style.display = "none";
   document.getElementById("resultView").style.display = "block";
+
+  // "saved" = the inspector just submitted this (or is recovering their own
+  // save after a connection drop) — they need the QR label and a way to
+  // start the next inspection. "view" = someone scanned an already-printed
+  // QR label; they're a read-only viewer and should only get the image
+  // download, not QR/registration controls.
+  const isSaved = context === "saved";
+  document.getElementById("downloadQrBtn").style.display = isSaved ? "" : "none";
+  document.getElementById("backToFormBtn").style.display = isSaved ? "" : "none";
 
   document.getElementById("resultAssetName").textContent = record.namaAset || "";
   document.getElementById("resultPBS").textContent = record.nomorPBS || "";
@@ -954,12 +1052,12 @@ function renderInspectionResult(record, photoSrcOverride) {
   lastRecord = record;
 }
 
-async function loadResultByTag(tag) {
+async function loadResultByTag(tag, context = "view") {
   try {
     const res = await fetch(GithubStore.rawUrl(`data/inspections/${encodeURIComponent(tag)}.json`), { cache: "no-store" });
     if (!res.ok) throw new Error("not found");
     const record = await res.json();
-    renderInspectionResult(record);
+    renderInspectionResult(record, null, context);
   } catch (e) {
     document.getElementById("formView").style.display = "none";
     document.getElementById("resultView").style.display = "none";
@@ -987,10 +1085,7 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
   });
   const tag = (document.getElementById("resultTag").textContent || "asset")
     .replace(/[^a-zA-Z0-9_-]+/g, "-");
-  const link = document.createElement("a");
-  link.download = `Hasil-Inspeksi-${tag}.png`;
-  link.href = canvas.toDataURL("image/png");
-  link.click();
+  await GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `Hasil-Inspeksi-${tag}.png`, "image/png");
 });
 
 // ---- QR label generation for Niimbot: 5cm x 3cm stock at 8px/mm ----
@@ -1044,10 +1139,7 @@ function generateLabelPNG(record) {
     ctx.fillStyle = "#555555";
     wrapText(ctx, record.lokasi, 224, 190, 160, 13, 3);
 
-    const link = document.createElement("a");
-    link.download = `QR-${record.tagNo}.png`;
-    link.href = canvas.toDataURL("image/png");
-    link.click();
+    GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
   }
 
   setTimeout(() => {
