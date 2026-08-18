@@ -11,10 +11,43 @@
     ]
   },
   {
+    "nomorPBS": "PBS-101",
+    "subsistem": "Material Handling",
+    "namaAset": "Conveyor Belt A",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": [
+      { "nama": "Motor Penggerak" },
+      { "nama": "Roller Idler" },
+      { "nama": "Belt" }
+    ]
+  },
+  {
     "nomorPBS": "PBS-002",
     "subsistem": "Material Handling",
     "namaAset": "Overhead Crane XSY",
     "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": [
+      { "nama": "Hoist Motor" },
+      { "nama": "Wire Rope" },
+      { "nama": "Hook Block" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-201",
+    "subsistem": "Material Handling",
+    "namaAset": "Overhead Crane XSY",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": [
+      { "nama": "Hoist Motor" },
+      { "nama": "Wire Rope" },
+      { "nama": "Hook Block" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-301",
+    "subsistem": "Material Handling",
+    "namaAset": "Overhead Crane XSY",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
     "subKomponen": [
       { "nama": "Hoist Motor" },
       { "nama": "Wire Rope" },
@@ -35,7 +68,7 @@
     "nomorPBS": "PBS-004",
     "subsistem": "Hydraulic System",
     "namaAset": "Hydraulic Press Unit",
-    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "lokasi": "Venus Inti Perkasa (VIP)",
     "subKomponen": [
       { "nama": "Hydraulic Pump" },
       { "nama": "Cylinder Ram" },
@@ -46,7 +79,17 @@
     "nomorPBS": "PBS-005",
     "subsistem": "Ventilation System",
     "namaAset": "Exhaust Blower",
-    "lokasi": "Venus Inti Perkasa (VIP)",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": [
+      { "nama": "Blower Motor" },
+      { "nama": "Impeller" }
+    ]
+  },
+  {
+    "nomorPBS": "PBS-501",
+    "subsistem": "Ventilation System",
+    "namaAset": "Exhaust Blower",
+    "lokasi": "Menara Cipta Mulia (MCM)",
     "subKomponen": [
       { "nama": "Blower Motor" },
       { "nama": "Impeller" }
