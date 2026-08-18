@@ -1,0 +1,35 @@
+{
+  "tagNo": "A-001-D",
+  "inspectionId": "INS-20260818-A-001-D",
+  "nomorPBS": "PBS-001",
+  "subsistem": "Material Handling",
+  "namaAset": "Conveyor Belt A",
+  "lokasi": "Smelter A",
+  "picInspector": "Tyo",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/A-001-D.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor Penggerak",
+      "spesifikasiTeknis": "Wwww",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Www"
+    },
+    {
+      "nama": "Roller Idler",
+      "spesifikasiTeknis": "Www",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Wwww"
+    },
+    {
+      "nama": "Belt",
+      "spesifikasiTeknis": "Wwww",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Wwww"
+    }
+  ]
+}
