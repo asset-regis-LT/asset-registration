@@ -1,0 +1,28 @@
+{
+  "tagNo": "SBS-505-A",
+  "inspectionId": "INS-20260819-SBS-505-A",
+  "nomorPBS": "PBS-505",
+  "subsistem": "Ventilation System",
+  "namaAset": "Exhaust Blower",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-505-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Blower Motor",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "sss"
+    },
+    {
+      "nama": "Impeller",
+      "spesifikasiTeknis": "sss",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "sss"
+    }
+  ]
+}
