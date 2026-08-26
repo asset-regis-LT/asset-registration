@@ -113,6 +113,7 @@
     </p>
     <div class="row">
       <button class="btn-primary" id="loadDataBtn">Muat Data Tersimpan</button>
+      <button class="btn-delete" id="deleteAllBtn" disabled>Hapus Semua Data Tersimpan</button>
     </div>
     <div class="status" id="dataListStatus"></div>
     <div class="table-scroll">
@@ -390,6 +391,7 @@ const dataListStatus = document.getElementById("dataListStatus");
 const dataTable = document.getElementById("dataTable");
 const dataTableBody = document.getElementById("dataTableBody");
 const loadDataBtn = document.getElementById("loadDataBtn");
+const deleteAllBtn = document.getElementById("deleteAllBtn");
 
 // Cached by loadDataTable so Edit/Hapus don't need to re-fetch a record
 // that's already in hand.
@@ -431,6 +433,7 @@ async function loadDataTable() {
       dataTableBody.appendChild(tr);
     });
     dataTable.style.display = rows.length ? "table" : "none";
+    deleteAllBtn.disabled = !rows.length;
     dataListStatus.className = "status ok";
     dataListStatus.textContent = `Menampilkan ${rows.length} inspeksi.`;
 
@@ -449,6 +452,19 @@ async function loadDataTable() {
 }
 loadDataBtn.addEventListener("click", loadDataTable);
 
+// Deletes one inspection's JSON + photo (if any) from the `data` branch.
+// Shared by the per-row Hapus button and "Hapus Semua Data Tersimpan".
+async function deleteInspectionFiles(tag, record) {
+  const jsonPath = `data/inspections/${tag}.json`;
+  const jsonMeta = await GithubStore.getFileMeta(jsonPath);
+  if (jsonMeta) await GithubStore.deleteFile(jsonPath, `Hapus inspeksi ${tag}`, jsonMeta.sha);
+
+  if (record.fotoPath) {
+    const photoMeta = await GithubStore.getFileMeta(record.fotoPath);
+    if (photoMeta) await GithubStore.deleteFile(record.fotoPath, `Hapus foto inspeksi ${tag}`, photoMeta.sha);
+  }
+}
+
 async function deleteInspectionRow(tag) {
   if (!GithubStore.hasToken()) { alert("Token GitHub belum diatur."); return; }
   const record = loadedRecords[tag];
@@ -458,14 +474,7 @@ async function deleteInspectionRow(tag) {
   dataListStatus.className = "status warn";
   dataListStatus.textContent = `Menghapus ${tag}…`;
   try {
-    const jsonPath = `data/inspections/${tag}.json`;
-    const jsonMeta = await GithubStore.getFileMeta(jsonPath);
-    if (jsonMeta) await GithubStore.deleteFile(jsonPath, `Hapus inspeksi ${tag}`, jsonMeta.sha);
-
-    if (record.fotoPath) {
-      const photoMeta = await GithubStore.getFileMeta(record.fotoPath);
-      if (photoMeta) await GithubStore.deleteFile(record.fotoPath, `Hapus foto inspeksi ${tag}`, photoMeta.sha);
-    }
+    await deleteInspectionFiles(tag, record);
     delete loadedRecords[tag];
     const row = dataTableBody.querySelector(`tr[data-tag="${CSS.escape(tag)}"]`);
     if (row) row.remove();
@@ -476,6 +485,47 @@ async function deleteInspectionRow(tag) {
     dataListStatus.textContent = err.message || `Gagal menghapus ${tag}.`;
   }
 }
+
+// Wipes every currently-loaded inspection (JSON + photo). Destructive and
+// permanent, so it requires typing a confirmation phrase rather than just
+// clicking through a confirm() dialog.
+async function deleteAllInspections() {
+  if (!GithubStore.hasToken()) { alert("Token GitHub belum diatur."); return; }
+  const tags = Object.keys(loadedRecords);
+  if (!tags.length) { alert("Tidak ada data yang dimuat."); return; }
+
+  const phrase = "HAPUS SEMUA";
+  const typed = prompt(
+    `Ini akan MENGHAPUS PERMANEN ${tags.length} inspeksi beserta semua fotonya dari branch "data". ` +
+    `Tindakan ini tidak bisa dibatalkan. Ketik "${phrase}" untuk melanjutkan:`
+  );
+  if (typed !== phrase) return;
+
+  deleteAllBtn.disabled = true;
+  loadDataBtn.disabled = true;
+  dataListStatus.className = "status warn";
+  let done = 0, failed = 0;
+  await mapWithConcurrency(tags, 8, async tag => {
+    try {
+      await deleteInspectionFiles(tag, loadedRecords[tag]);
+      delete loadedRecords[tag];
+      done++;
+    } catch (err) {
+      failed++;
+    }
+    dataListStatus.textContent = `Menghapus… ${done + failed}/${tags.length} (${failed} gagal)`;
+  });
+
+  dataTableBody.innerHTML = "";
+  dataTable.style.display = "none";
+  dataListStatus.className = failed ? "status err" : "status ok";
+  dataListStatus.textContent = failed
+    ? `${done} inspeksi terhapus, ${failed} gagal dihapus — muat ulang untuk melihat sisanya.`
+    : `${done} inspeksi berhasil dihapus.`;
+  loadDataBtn.disabled = false;
+  deleteAllBtn.disabled = !Object.keys(loadedRecords).length;
+}
+deleteAllBtn.addEventListener("click", deleteAllInspections);
 
 // ---- Edit modal: corrects PIC/Tanggal/Kondisi/Keputusan/Catatan on an
 // already-saved record. Sub-component names, the photo, and the Tag No.

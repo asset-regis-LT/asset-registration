@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Session startup
+
+At the start of every session in this repo, invoke the `ponytail:ponytail` and `caveman:caveman` skills
+(default intensity for each) before doing any other work, so lazy/minimal-diff code review and terse
+responses are active for the whole session without needing to be asked.
+
 ## What this is
 
 A mobile-friendly asset condition inspection tool for a smelter operation (6 sites), in Bahasa Indonesia. A

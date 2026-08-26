@@ -674,8 +674,9 @@ function smelterCode(lokasiStr) {
 }
 function pbsDigits(pbsStr) {
   if (!pbsStr) return "";
-  const m = pbsStr.match(/(\d+)/);
-  return m ? m[1] : pbsStr;
+  const parts = String(pbsStr).match(/\d+/g);
+  if (!parts) return pbsStr;
+  return parts.map(p => p.padStart(2, "0")).join("");
 }
 function tagPrefix(row) {
   return `${smelterCode(row.lokasi)}-${pbsDigits(row.nomorPBS)}`;
@@ -717,8 +718,10 @@ function updateComponentsHeader() {
 }
 
 // `manual`: whether the Nama Sub Komponen field is inspector-editable and a
-// "hapus" button is offered — true only for the freeform manual-asset path,
-// since catalog-derived component names are supposed to stay fixed.
+// "hapus" button is offered. True for both the freeform manual-asset path and
+// catalog-resolved assets — master-catalog.json doesn't carry real
+// sub-component data, so the inspector always fills these in by hand; only
+// Nomor PBS/Subsistem/Lokasi stay locked to the catalog row.
 function addComponentCard(nama, manual) {
   const idx = componentCounter++;
   const card = document.createElement("div");
@@ -816,7 +819,10 @@ function resolveAsset(row) {
   metaBlock.style.display = "block";
   emptyState.style.display = "none";
   inspectionPhotoCard.style.display = "block";
-  renderComponents(row, false);
+  // manual=true: master-catalog.json doesn't carry real sub-component data yet,
+  // so the inspector adds/removes sub-components by hand here too, same as
+  // manual-asset mode — only Nomor PBS/Subsistem/Lokasi stay catalog-driven.
+  renderComponents(row, true);
   refreshTagSuggestion();
 }
 

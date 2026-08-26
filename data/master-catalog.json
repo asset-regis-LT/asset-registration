@@ -1,320 +1,6008 @@
 [
   {
-    "nomorPBS": "PBS-101",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Refined Bangka Tin (RBT)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-102",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Tinindo Inter Nusa (TIN)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-103",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Venus Inti Perkasa (VIP)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-104",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Stanindo Inti Perkasa (SIP)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-105",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Sariwiguna Bina Sentosa (SBS)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-106",
-    "subsistem": "Material Handling",
-    "namaAset": "Conveyor Belt A",
+    "nomorPBS": "1.1.1",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tanur",
     "lokasi": "Menara Cipta Mulia (MCM)",
-    "subKomponen": [
-      { "nama": "Motor Penggerak" },
-      { "nama": "Roller Idler" },
-      { "nama": "Belt" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-201",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Refined Bangka Tin (RBT)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-202",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Tinindo Inter Nusa (TIN)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-203",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Venus Inti Perkasa (VIP)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-204",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Stanindo Inti Perkasa (SIP)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-205",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Sariwiguna Bina Sentosa (SBS)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-206",
-    "subsistem": "Material Handling",
-    "namaAset": "Overhead Crane XSY",
+    "nomorPBS": "1.1.2",
+    "subsistem": "Struktur dan Lining Tanur",
+    "namaAset": "Tutup Tanur",
     "lokasi": "Menara Cipta Mulia (MCM)",
-    "subKomponen": [
-      { "nama": "Hoist Motor" },
-      { "nama": "Wire Rope" },
-      { "nama": "Hook Block" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-301",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Refined Bangka Tin (RBT)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-302",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Tinindo Inter Nusa (TIN)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-303",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Venus Inti Perkasa (VIP)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-304",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Stanindo Inti Perkasa (SIP)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-305",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Sariwiguna Bina Sentosa (SBS)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-306",
-    "subsistem": "Cooling System",
-    "namaAset": "Cooling Fan Unit",
+    "nomorPBS": "1.2.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
     "lokasi": "Menara Cipta Mulia (MCM)",
-    "subKomponen": [
-      { "nama": "Fan Blade Assembly" },
-      { "nama": "Bearing Housing" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-401",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Refined Bangka Tin (RBT)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-402",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Tinindo Inter Nusa (TIN)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-403",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Venus Inti Perkasa (VIP)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-404",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Stanindo Inti Perkasa (SIP)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-405",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Sariwiguna Bina Sentosa (SBS)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-406",
-    "subsistem": "Hydraulic System",
-    "namaAset": "Hydraulic Press Unit",
+    "nomorPBS": "1.2.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
     "lokasi": "Menara Cipta Mulia (MCM)",
-    "subKomponen": [
-      { "nama": "Hydraulic Pump" },
-      { "nama": "Cylinder Ram" },
-      { "nama": "Pressure Relief Valve" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-501",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Refined Bangka Tin (RBT)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-502",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Tinindo Inter Nusa (TIN)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-503",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Venus Inti Perkasa (VIP)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-504",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Stanindo Inti Perkasa (SIP)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-505",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Sariwiguna Bina Sentosa (SBS)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
   },
   {
-    "nomorPBS": "PBS-506",
-    "subsistem": "Ventilation System",
-    "namaAset": "Exhaust Blower",
+    "nomorPBS": "1.2.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
     "lokasi": "Menara Cipta Mulia (MCM)",
-    "subKomponen": [
-      { "nama": "Blower Motor" },
-      { "nama": "Impeller" }
-    ]
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.2.7",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Pompa Exhaust",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.1",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Motor Gearbox Stang Elektroda",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.3.2",
+    "subsistem": "Sistem Elektroda",
+    "namaAset": "Electrode Holder dan Contact Shoe",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.1",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hoist Crane",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.4.2",
+    "subsistem": "Sistem Feeding / Charging",
+    "namaAset": "Hopper",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.1",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Trafo Step Down Tanur",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.2",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Cubicle Sistem Daya Tanur",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.5.3",
+    "subsistem": "Sistem Daya Tanur",
+    "namaAset": "Busbar / Bus Tube / Flexible Cable",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.1",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Consule Control",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.2",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Thermocouple",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.6.3",
+    "subsistem": "Sistem Kontrol dan Instrumentasi",
+    "namaAset": "Panel Temperatur Tanur",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Jacket",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Water Box",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.7.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa sirkulasi",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.1",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Pneumatic system",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.8.2",
+    "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+    "namaAset": "Blower Tiup",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.1",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Peralatan Pembukaan dan Penutupan Taphole",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.9.2",
+    "subsistem": "Sistem Tapping Logam dan Slag",
+    "namaAset": "Tapping Launder / Spout",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.1",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "1.10.2",
+    "subsistem": "Sistem Penanganan Logam dan Slag Cair",
+    "namaAset": "Slag Caster",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.1",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Ketel",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.2",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Inverter Control Motor Mixer Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.3",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Dudukan Mixer Pot Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.4",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.5",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Pompa Timah",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.6",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.7",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Peralatan Skimming / Pengeluaran Dross",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.1.8",
+    "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+    "namaAset": "Wadah Dross / Residu Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.1",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Screw atau Blitz Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.2",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.2.3",
+    "subsistem": "Sistem Crystallizer",
+    "namaAset": "Motor Gearbox Screw Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.1",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Wadah Cetak Ingot",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.2",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Talang Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.3",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Control Heater Spiral Pot Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.4",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Element Pemanas Talang Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.5",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Talang Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.3.6",
+    "subsistem": "Sistem Casting dan Pembentukan Ingot",
+    "namaAset": "Pot Casting / Holding Kettle",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.1",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.2",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Electrical Burner – Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.4.3",
+    "subsistem": "Sistem Pemanasan dan Burner",
+    "namaAset": "Burner – Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.1",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.2",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.3",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.4",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic System Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.5",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.6",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.7",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Inverter Control Blower Hisap Bag House Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.8",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Tiup – Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.9",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Bag House Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.10",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Panel Control Pneumatic Bag House Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.11",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Bag House Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.12",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Pneumatic Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.13",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Blower Hisap Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.14",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Hood dan Ducting Penangkap Fume",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.5.15",
+    "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.1",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Pompa Air Pendingin Pot Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.2",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Refining/Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.3",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Sirkulasi Air",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.4",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Tower Tandon Air – Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.6.5",
+    "subsistem": "Sistem Pendinginan Air",
+    "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.2",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Thermocouple Pot Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.3",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.7.4",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.1",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.2",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Lantai Atas Refining",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.3",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Crystallizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.4",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Casting",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.5",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Composisi",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.6",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Antrasite",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.7",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Gudang Ingot",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.8.8",
+    "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+    "namaAset": "Hoist Crane – Granular",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.9.1",
+    "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+    "namaAset": "Mixer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.10.1",
+    "subsistem": "Persiapan Antrasit",
+    "namaAset": "Mesin Crusher",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.1",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Mixer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.11.2",
+    "subsistem": "Sistem Granular / Pengolahan Material Recycle",
+    "namaAset": "Motor Gearbox Mixer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.12.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.1",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Timbangan Duduk",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.2",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Anak Timbangan",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.3",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Sampler",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "2.13.4",
+    "subsistem": "Gudang dan Penimbangan Ingot",
+    "namaAset": "Separator",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.1",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Kubikel Incoming PLN",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.2",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Genset",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.3",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kubikel dan DSI",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.4",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Main Switch Board",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.5",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Sinkron Genset",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.6",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Panel Kapasitor Bank",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.7",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Incoming Power Feeder",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.8",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Main Power Transformer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.9",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Grounding",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.1.10",
+    "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+    "namaAset": "Sistem Proteksi Petir",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.1",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Kompresor Listrik",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.2.2",
+    "subsistem": "Sistem Udara Bertekanan Pabrik",
+    "namaAset": "Tangki Kompresor",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.1",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Skrap",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.2",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Milling",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.3",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Roll",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.4",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Press",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.5",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Las",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.6",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Potong",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.3.7",
+    "subsistem": "Mesin Perkakas",
+    "namaAset": "Mesin Bubut",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.1",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Pompa BBM",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.2",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Filter",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.4.3",
+    "subsistem": "Sistem Bahan Bakar",
+    "namaAset": "Tangki BBM",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.1",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Forklift",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.5.2",
+    "subsistem": "Peralatan Pemindah Material",
+    "namaAset": "Conveyor",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.1",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Platform kerja",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.2",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Railing",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.3",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Tangga",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.4",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Atap",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.6.5",
+    "subsistem": "Struktur Sipil",
+    "namaAset": "Dinding",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.7.1",
+    "subsistem": "Sistem Proteksi Kebakaran",
+    "namaAset": "Pompa Hydrant / Fire Pump",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.1",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Lifting Tools / Peralatan Alat Berat Workshop",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "3.8.2",
+    "subsistem": "Perkakas dan Alat Ukur Workshop",
+    "namaAset": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.1",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Dust Receiving Hopper",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.2",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Storage Bin",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.3",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Pelletizer",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.1.4",
+    "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+    "namaAset": "Conveyor",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.1",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Rotary Kiln",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.2.2",
+    "subsistem": "Rotary Kiln",
+    "namaAset": "Burner – Rotary Kiln",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.1",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Tanur Flame Oven",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.3.2",
+    "subsistem": "Sistem Flame Oven",
+    "namaAset": "Prisma Pot",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.1",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Bawah Tanur",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.2",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Seattle Atas Tanur",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.3",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Dust Collector",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.4",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Bag House",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.5",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Blower Hisap",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.4.6",
+    "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+    "namaAset": "Stack / Cerobong",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "4.5.1",
+    "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+    "namaAset": "Panel Electrical",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.1",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "ICP-OES",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.2",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "XRF",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.3",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Mikroskop",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "5.1.4",
+    "subsistem": "Lab. Analisis",
+    "namaAset": "Timbangan Laboratorium",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.1",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "Air Table",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Refined Bangka Tin (RBT)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Tinindo Inter Nusa (TIN)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Venus Inti Perkasa (VIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Stanindo Inti Perkasa (SIP)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+    "subKomponen": []
+  },
+  {
+    "nomorPBS": "6.1.2",
+    "subsistem": "Sistem Konsentrasi Bijih",
+    "namaAset": "High Tension Separator (HTS)",
+    "lokasi": "Menara Cipta Mulia (MCM)",
+    "subKomponen": []
   }
 ]
