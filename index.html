@@ -6,7 +6,7 @@
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="js/github-store.js?v=4"></script>
+<script src="js/github-store.js?v=5"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -446,18 +446,13 @@
     <button type="button" class="link-btn" id="cancelManualBtn" style="display:none;">Batal mode manual — kembali pilih dari katalog</button>
   </div>
 
-  <div class="search-box" id="subsistemBox" style="display:none;">
-    <label for="subsistemSelect">2. Subsistem</label>
-    <select id="subsistemSelect"></select>
-  </div>
-
   <div class="search-box" id="lokasiBox" style="display:none;">
-    <label for="lokasiSelect">3. Nama Smelter / Lokasi</label>
+    <label for="lokasiSelect">2. Nama Smelter / Lokasi</label>
     <select id="lokasiSelect"></select>
   </div>
 
   <div class="search-box" id="pbsDisambigBox" style="display:none;">
-    <label for="pbsDisambigSelect">Nomor PBS (lebih dari satu cocok, pilih salah satu)</label>
+    <label for="pbsDisambigSelect">Subsistem / Nomor PBS (lebih dari satu cocok, pilih salah satu)</label>
     <select id="pbsDisambigSelect"></select>
   </div>
 
@@ -574,8 +569,6 @@
   </div>
 </div>
 
-<div id="qrHidden" style="display:none;"></div>
-
 <script>
 let MASTER_CATALOG = [];
 let currentAsset = null; // resolved catalog row {nomorPBS, subsistem, namaAset, lokasi, subKomponen}
@@ -591,8 +584,6 @@ const namaAsetSuggestions = document.getElementById("namaAsetSuggestions");
 const namaAsetHint = document.getElementById("namaAsetHint");
 const manualAssetBtn = document.getElementById("manualAssetBtn");
 const cancelManualBtn = document.getElementById("cancelManualBtn");
-const subsistemBox = document.getElementById("subsistemBox");
-const subsistemSelect = document.getElementById("subsistemSelect");
 const lokasiBox = document.getElementById("lokasiBox");
 const lokasiSelect = document.getElementById("lokasiSelect");
 const pbsDisambigBox = document.getElementById("pbsDisambigBox");
@@ -638,11 +629,8 @@ function rowsForNamaAset(nama) {
   if (!q) return [];
   return MASTER_CATALOG.filter(r => r.namaAset.toLowerCase() === q);
 }
-function rowsForNamaAsetSubsistem(nama, subsistem) {
-  return rowsForNamaAset(nama).filter(r => r.subsistem === subsistem);
-}
-function rowsForFull(nama, subsistem, lokasi) {
-  return rowsForNamaAsetSubsistem(nama, subsistem).filter(r => r.lokasi === lokasi);
+function rowsForNamaAsetLokasi(nama, lokasi) {
+  return rowsForNamaAset(nama).filter(r => r.lokasi === lokasi);
 }
 
 async function loadMasterCatalog() {
@@ -834,7 +822,6 @@ function resolveAsset(row) {
 // the inspector to fill in manually since there's no catalog prefix to
 // auto-suggest from.
 function enterManualAssetMode() {
-  subsistemBox.style.display = "none";
   lokasiBox.style.display = "none";
   pbsDisambigBox.style.display = "none";
   namaAsetSuggestions.classList.remove("open");
@@ -869,7 +856,6 @@ cancelManualBtn.addEventListener("click", () => {
 });
 
 function resetDownstream(fullReset) {
-  subsistemBox.style.display = "none";
   lokasiBox.style.display = "none";
   pbsDisambigBox.style.display = "none";
   metaBlock.style.display = "none";
@@ -883,7 +869,6 @@ function resetDownstream(fullReset) {
   emptyState.style.display = "block";
   emptyState.textContent = "Pilih Nama Aset / Komponen untuk memuat daftar sub komponen.";
   if (fullReset) {
-    subsistemSelect.innerHTML = "";
     lokasiSelect.innerHTML = "";
     pbsDisambigSelect.innerHTML = "";
   }
@@ -939,9 +924,9 @@ function resolveNamaAsetSelection() {
       : "Mulai ketik atau pilih nama aset di atas.";
     return;
   }
-  namaAsetHint.textContent = `Ditemukan ${rows.length} entri katalog. Pilih subsistem.`;
-  populateSelect(subsistemSelect, distinctValues(rows, "subsistem"), "Pilih subsistem…");
-  subsistemBox.style.display = "block";
+  namaAsetHint.textContent = `Ditemukan ${rows.length} entri katalog. Pilih lokasi.`;
+  populateSelect(lokasiSelect, distinctValues(rows, "lokasi"), "Pilih lokasi…");
+  lokasiBox.style.display = "block";
 }
 
 namaAsetInput.addEventListener("input", () => {
@@ -968,19 +953,6 @@ namaAsetInput.addEventListener("keydown", (e) => {
   }
 });
 
-subsistemSelect.addEventListener("change", () => {
-  lokasiBox.style.display = "none";
-  pbsDisambigBox.style.display = "none";
-  metaBlock.style.display = "none";
-  componentsArea.innerHTML = "";
-  inspectionPhotoCard.style.display = "none";
-  currentAsset = null;
-  if (!subsistemSelect.value) return;
-  const rows = rowsForNamaAsetSubsistem(namaAsetInput.value, subsistemSelect.value);
-  populateSelect(lokasiSelect, distinctValues(rows, "lokasi"), "Pilih lokasi…");
-  lokasiBox.style.display = "block";
-});
-
 lokasiSelect.addEventListener("change", () => {
   pbsDisambigBox.style.display = "none";
   metaBlock.style.display = "none";
@@ -988,20 +960,23 @@ lokasiSelect.addEventListener("change", () => {
   inspectionPhotoCard.style.display = "none";
   currentAsset = null;
   if (!lokasiSelect.value) return;
-  const rows = rowsForFull(namaAsetInput.value, subsistemSelect.value, lokasiSelect.value);
+  const rows = rowsForNamaAsetLokasi(namaAsetInput.value, lokasiSelect.value);
   if (rows.length === 1) {
     resolveAsset(rows[0]);
   } else if (rows.length > 1) {
-    populateSelect(pbsDisambigSelect, distinctValues(rows, "nomorPBS"), "Pilih Nomor PBS…");
+    // Same asset name + location still maps to >1 catalog row (a handful of
+    // assets sit under two subsistems) — disambiguate by Subsistem/Nomor PBS.
+    pbsDisambigSelect.innerHTML = `<option value="">Pilih…</option>` +
+      rows.map(r => `<option value="${escapeHtml(r.nomorPBS)}">${escapeHtml(r.subsistem)} — ${escapeHtml(r.nomorPBS)}</option>`).join("");
     pbsDisambigBox.style.display = "block";
   } else {
-    emptyState.textContent = "Kombinasi aset/subsistem/lokasi tidak ditemukan di katalog.";
+    emptyState.textContent = "Kombinasi aset/lokasi tidak ditemukan di katalog.";
   }
 });
 
 pbsDisambigSelect.addEventListener("change", () => {
   if (!pbsDisambigSelect.value) return;
-  const rows = rowsForFull(namaAsetInput.value, subsistemSelect.value, lokasiSelect.value)
+  const rows = rowsForNamaAsetLokasi(namaAsetInput.value, lokasiSelect.value)
     .filter(r => r.nomorPBS === pbsDisambigSelect.value);
   if (rows.length) resolveAsset(rows[0]);
 });
@@ -1253,134 +1228,9 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
   await GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `Hasil-Inspeksi-${tag}.png`, "image/png");
 });
 
-// ---- QR label generation for Niimbot: 5cm x 3cm stock at 8px/mm ----
-function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
-  const words = (text || "").split(" ");
-  let line = "";
-  let curY = y;
-  let lines = 0;
-  for (let n = 0; n < words.length; n++) {
-    const testLine = line + words[n] + " ";
-    if (ctx.measureText(testLine).width > maxWidth && n > 0) {
-      ctx.fillText(line, x, curY);
-      line = words[n] + " ";
-      curY += lineHeight;
-      lines++;
-      if (maxLines && lines >= maxLines - 1) {
-        ctx.fillText(words.slice(n + 1).length ? line + "…" : line, x, curY);
-        return lines + 1;
-      }
-    } else {
-      line = testLine;
-    }
-  }
-  ctx.fillText(line, x, curY);
-  return lines + 1;
-}
-
-// Preloaded once at app start (see initializeApp) so clicking "Unduh QR
-// Label" doesn't have to wait on it — same-origin image (served from this
-// repo via Pages), so drawing it onto the label canvas never taints it for
-// the later toDataURL() call. Resolves to null (not a rejection) if it
-// fails to load, so a logo hiccup degrades to a label without the logo
-// instead of breaking the download entirely.
-let logoImagePromise = null;
-function getLogoImage() {
-  if (!logoImagePromise) {
-    logoImagePromise = new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(img);
-      img.onerror = () => resolve(null);
-      img.src = "assets/logo-lapi-itb.png";
-    });
-  }
-  return logoImagePromise;
-}
-
-// 50x30mm label at 12px/mm (~305 DPI) — higher resolution than a typical
-// 203 DPI thermal printer needs, so the printer downsamples rather than
-// upsamples, which is what keeps edges crisp instead of pixelated. The
-// logo is drawn from the actual PNG at its native aspect ratio; the earlier
-// pixelated look came from squeezing it into a tiny ~112px-wide strip, not
-// from using a raster image per se — sized more generously here (and drawn
-// against a much larger reference canvas) it downscales cleanly.
-async function generateLabelPNG(record) {
-  const qrHidden = document.getElementById("qrHidden");
-  qrHidden.innerHTML = "";
-  const qrUrl = GithubStore.SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
-  new QRCode(qrHidden, { text: qrUrl, width: 560, height: 560, correctLevel: QRCode.CorrectLevel.M });
-
-  // QRCode.js paints synchronously onto an internal <canvas> — reading that
-  // canvas directly (rather than the <img> it separately converts the
-  // canvas to for display) avoids an image-decode race that left the QR
-  // blank on some Android browsers in an earlier version of this label.
-  const qrCanvas = qrHidden.querySelector("canvas");
-  if (!qrCanvas) {
-    alert("Gagal membuat QR code. Coba lagi.");
-    return;
-  }
-  const logoImg = await getLogoImage();
-
-  const W = 600, H = 360;
-  const pad = 16;
-  const navy = "#1f2a4a";
-  const ink = "#14171a";
-
-  const canvas = document.createElement("canvas");
-  canvas.width = W;
-  canvas.height = H;
-  const ctx = canvas.getContext("2d");
-  ctx.textBaseline = "top";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, W, H);
-
-  // Left column: QR filling the full label height.
-  const qrSize = 280;
-  ctx.drawImage(qrCanvas, pad, pad, qrSize, qrSize);
-
-  // Right column: logo -> Tag No. -> divider -> Nama Aset -> Lokasi. No mini
-  // labels or scan caption — at this print size they're unreadable, so the
-  // three real values just get bigger instead.
-  const rx = pad + qrSize + pad + 16;
-  const rw = W - pad - rx;
-  let y = pad;
-
-  if (logoImg) {
-    const logoW = Math.min(240, rw);
-    const logoH = logoW * (logoImg.naturalHeight / logoImg.naturalWidth);
-    ctx.drawImage(logoImg, rx, y, logoW, logoH);
-    y += logoH;
-  }
-  y += 22;
-
-  ctx.fillStyle = ink;
-  ctx.font = "bold 42px monospace";
-  ctx.fillText(record.tagNo, rx, y);
-  y += 48;
-
-  y += 16;
-  ctx.strokeStyle = "#dddddd";
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.moveTo(rx, y);
-  ctx.lineTo(rx + rw, y);
-  ctx.stroke();
-  y += 18;
-
-  ctx.fillStyle = navy;
-  ctx.font = "bold 36px sans-serif";
-  y += wrapText(ctx, record.namaAset, rx, y, rw, 40, 2) * 40 + 16;
-
-  ctx.fillStyle = ink;
-  ctx.font = "25px sans-serif";
-  wrapText(ctx, record.lokasi, rx, y, rw, 30, 2);
-
-  GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
-}
-
 document.getElementById("downloadQrBtn").addEventListener("click", async () => {
   if (!lastRecord) return;
-  await generateLabelPNG(lastRecord);
+  await GithubStore.generateLabelPNG(lastRecord);
 });
 
 // Once a token is set on this device, the banner goes away entirely rather
@@ -1421,7 +1271,7 @@ async function initializeApp() {
   }
   await loadMasterCatalog();
   updateTokenBanner();
-  getLogoImage(); // fire and forget — warms the cache before Save is even clicked
+  GithubStore.getLogoImage(); // fire and forget — warms the cache before Save is even clicked
 }
 
 initializeApp();

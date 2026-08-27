@@ -6,7 +6,7 @@
 <title>Admin — Rubrik Penilaian Kondisi Aset</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
-<script src="js/github-store.js?v=4"></script>
+<script src="js/github-store.js?v=5"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -47,6 +47,7 @@
   table.data-table .row-actions{display:flex;gap:6px;}
   table.data-table .row-actions button{padding:6px 10px;font-size:11px;}
   .btn-edit{background:var(--ink);color:#fff;}
+  .btn-qr{background:#e4e1d8;color:var(--ink);}
   .btn-delete{background:#f8e4e2;color:#9e3028;}
   #editOverlay{display:none;position:fixed;inset:0;background:rgba(20,23,26,0.7);z-index:60;align-items:flex-end;justify-content:center;}
   #editOverlay.open{display:flex;}
@@ -427,6 +428,7 @@ async function loadDataTable() {
         <td>${escapeHtml(record.lokasi)}</td>
         <td class="row-actions">
           <button class="btn-edit" data-tag="${escapeHtml(record.tagNo)}">Edit</button>
+          <button class="btn-qr" data-tag="${escapeHtml(record.tagNo)}">QR</button>
           <button class="btn-delete" data-tag="${escapeHtml(record.tagNo)}">Hapus</button>
         </td>
       `;
@@ -439,6 +441,12 @@ async function loadDataTable() {
 
     dataTableBody.querySelectorAll(".btn-edit").forEach(btn => {
       btn.addEventListener("click", () => openEditModal(btn.dataset.tag));
+    });
+    dataTableBody.querySelectorAll(".btn-qr").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const record = loadedRecords[btn.dataset.tag];
+        if (record) GithubStore.generateLabelPNG(record);
+      });
     });
     dataTableBody.querySelectorAll(".btn-delete").forEach(btn => {
       btn.addEventListener("click", () => deleteInspectionRow(btn.dataset.tag));

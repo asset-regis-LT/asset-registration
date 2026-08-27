@@ -236,13 +236,128 @@ const GithubStore = (() => {
     link.remove();
   }
 
+  // ---- QR label generation (shared by index.html's post-save download and
+  // admin.html's per-row "QR" button, so the layout can't drift between them).
+
+  function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
+    const words = (text || "").split(" ");
+    let line = "";
+    let curY = y;
+    let lines = 0;
+    for (let n = 0; n < words.length; n++) {
+      const testLine = line + words[n] + " ";
+      if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+        ctx.fillText(line, x, curY);
+        line = words[n] + " ";
+        curY += lineHeight;
+        lines++;
+        if (maxLines && lines >= maxLines - 1) {
+          ctx.fillText(words.slice(n + 1).length ? line + "…" : line, x, curY);
+          return lines + 1;
+        }
+      } else {
+        line = testLine;
+      }
+    }
+    ctx.fillText(line, x, curY);
+    return lines + 1;
+  }
+
+  // Same-origin logo, cached after the first load. Resolves to null (not a
+  // rejection) on failure so a logo hiccup degrades to a label without the
+  // logo instead of breaking the download.
+  let logoImagePromise = null;
+  function getLogoImage() {
+    if (!logoImagePromise) {
+      logoImagePromise = new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null);
+        img.src = "assets/logo-lapi-itb.png";
+      });
+    }
+    return logoImagePromise;
+  }
+
+  // 50x30mm Niimbot label at 12px/mm (~305 DPI) — higher than a 203 DPI
+  // thermal printer needs, so it downsamples (crisp) rather than upsamples.
+  // Left: QR. Right: logo -> Tag No. -> divider -> Nama Aset -> Lokasi, no
+  // mini-labels (unreadable at print size).
+  async function generateLabelPNG(record) {
+    const qrHidden = document.createElement("div");
+    const qrUrl = SITE_BASE_URL + "?tag=" + encodeURIComponent(record.tagNo);
+    new QRCode(qrHidden, { text: qrUrl, width: 560, height: 560, correctLevel: QRCode.CorrectLevel.M });
+
+    // Read QRCode.js's internal <canvas>, never the <img> it also emits —
+    // reading the <img> races its data: URL decode and shipped blank QRs on
+    // some Android browsers once.
+    const qrCanvas = qrHidden.querySelector("canvas");
+    if (!qrCanvas) {
+      alert("Gagal membuat QR code. Coba lagi.");
+      return;
+    }
+    const logoImg = await getLogoImage();
+
+    const W = 600, H = 360;
+    const pad = 16;
+    const navy = "#1f2a4a";
+    const ink = "#14171a";
+
+    const canvas = document.createElement("canvas");
+    canvas.width = W;
+    canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    ctx.textBaseline = "top";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, W, H);
+
+    const qrSize = 280;
+    ctx.drawImage(qrCanvas, pad, pad, qrSize, qrSize);
+
+    const rx = pad + qrSize + pad + 16;
+    const rw = W - pad - rx;
+    let y = pad;
+
+    if (logoImg) {
+      const logoW = Math.min(240, rw);
+      const logoH = logoW * (logoImg.naturalHeight / logoImg.naturalWidth);
+      ctx.drawImage(logoImg, rx, y, logoW, logoH);
+      y += logoH;
+    }
+    y += 22;
+
+    ctx.fillStyle = ink;
+    ctx.font = "bold 38px monospace";
+    ctx.fillText(record.tagNo, rx, y);
+    y += 44;
+
+    y += 16;
+    ctx.strokeStyle = "#dddddd";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(rx, y);
+    ctx.lineTo(rx + rw, y);
+    ctx.stroke();
+    y += 18;
+
+    ctx.fillStyle = navy;
+    ctx.font = "bold 34px sans-serif";
+    y += wrapText(ctx, record.namaAset, rx, y, rw, 38, 2) * 38 + 16;
+
+    ctx.fillStyle = ink;
+    ctx.font = "25px sans-serif";
+    wrapText(ctx, record.lokasi, rx, y, rw, 30, 2);
+
+    await saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
+  }
+
   return {
     GH_OWNER, GH_REPO, GH_DATA_BRANCH, SITE_BASE_URL,
     KONDISI_OPTIONS, KEPUTUSAN_OPTIONS, DECISION_PRECEDENCE, computeOverallDecision,
     getToken, setToken, clearToken, hasToken,
     rawUrl, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
     getFileMeta, updateFile, deleteFile,
-    saveOrShareImage,
+    saveOrShareImage, generateLabelPNG, getLogoImage,
     toBase64, compressImage
   };
 })();
