@@ -1268,13 +1268,14 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
       lines++;
       if (maxLines && lines >= maxLines - 1) {
         ctx.fillText(words.slice(n + 1).length ? line + "…" : line, x, curY);
-        return;
+        return lines + 1;
       }
     } else {
       line = testLine;
     }
   }
   ctx.fillText(line, x, curY);
+  return lines + 1;
 }
 
 // Preloaded once at app start (see initializeApp) so clicking "Unduh QR
@@ -1324,7 +1325,6 @@ async function generateLabelPNG(record) {
   const pad = 16;
   const navy = "#1f2a4a";
   const ink = "#14171a";
-  const gray = "#5a564c";
 
   const canvas = document.createElement("canvas");
   canvas.width = W;
@@ -1334,15 +1334,13 @@ async function generateLabelPNG(record) {
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, W, H);
 
-  // Left column: QR filling the full label height, caption below it.
+  // Left column: QR filling the full label height.
   const qrSize = 280;
   ctx.drawImage(qrCanvas, pad, pad, qrSize, qrSize);
-  ctx.fillStyle = gray;
-  ctx.font = "12px sans-serif";
-  ctx.fillText("Scan untuk hasil inspeksi", pad, pad + qrSize + 6);
 
-  // Right column: logo -> Tag No. (largest) -> divider -> Nama Aset ->
-  // Lokasi, spaced to use the same vertical span as the QR column.
+  // Right column: logo -> Tag No. -> divider -> Nama Aset -> Lokasi. No mini
+  // labels or scan caption — at this print size they're unreadable, so the
+  // three real values just get bigger instead.
   const rx = pad + qrSize + pad + 16;
   const rw = W - pad - rx;
   let y = pad;
@@ -1353,14 +1351,14 @@ async function generateLabelPNG(record) {
     ctx.drawImage(logoImg, rx, y, logoW, logoH);
     y += logoH;
   }
-  y += 26;
+  y += 22;
 
   ctx.fillStyle = ink;
-  ctx.font = "bold 46px monospace";
+  ctx.font = "bold 42px monospace";
   ctx.fillText(record.tagNo, rx, y);
-  y += 54;
+  y += 48;
 
-  y += 18;
+  y += 16;
   ctx.strokeStyle = "#dddddd";
   ctx.lineWidth = 2;
   ctx.beginPath();
@@ -1369,23 +1367,13 @@ async function generateLabelPNG(record) {
   ctx.stroke();
   y += 18;
 
-  ctx.fillStyle = gray;
-  ctx.font = "bold 11px sans-serif";
-  ctx.fillText("NAMA ASET", rx, y);
-  y += 17;
   ctx.fillStyle = navy;
-  ctx.font = "bold 25px sans-serif";
-  wrapText(ctx, record.namaAset, rx, y, rw, 27, 2);
-  y += 54;
+  ctx.font = "bold 36px sans-serif";
+  y += wrapText(ctx, record.namaAset, rx, y, rw, 40, 2) * 40 + 16;
 
-  y += 16;
-  ctx.fillStyle = gray;
-  ctx.font = "bold 11px sans-serif";
-  ctx.fillText("LOKASI", rx, y);
-  y += 17;
   ctx.fillStyle = ink;
-  ctx.font = "17px sans-serif";
-  wrapText(ctx, record.lokasi, rx, y, rw, 21, 2);
+  ctx.font = "25px sans-serif";
+  wrapText(ctx, record.lokasi, rx, y, rw, 30, 2);
 
   GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `QR-${record.tagNo}.png`, "image/png");
 }
