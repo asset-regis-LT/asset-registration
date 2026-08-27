@@ -79,9 +79,11 @@ files, so the repo itself doubles as the write-side datastore, via `js/github-st
   `sha`), `updateFile()` (PUT with that `sha` — the create-only guarantee above is specific to
   `createFile()`), and `deleteFile()`. These back `admin.html`'s per-row Edit/Hapus and are deliberately
   separate from the field save path.
-- **Tag No. format** is `ACRONYM-PBSDIGITS-LETTER` (e.g. `RBT-001-A`), where ACRONYM comes from the
+- **Tag No. format** is `ACRONYM-PBSNUMBER-LETTER` (e.g. `RBT-1.4.1-A`), where ACRONYM comes from the
   smelter name's parenthetical, e.g. `"Refined Bangka Tin (RBT)"` → `RBT` (`smelterCode()` in `index.html`,
-  with a trailing-word fallback for a manually-typed location that doesn't follow that format). The letter
+  with a trailing-word fallback for a manually-typed location that doesn't follow that format).
+  PBSNUMBER is the catalog `nomorPBS` used verbatim, dots included (`pbsCode()` — just strips
+  whitespace); it is not zero-padded or stripped of dots. The letter
   is auto-suggested by `nextTagSuffix()`, which lists all existing tags for that prefix (via the recursive
   Git Trees API, not the Contents API, since the latter caps directory listings at 1000 entries) and picks
   the next unused letter — skipped in manual-asset mode, where there's no catalog prefix to suggest from.

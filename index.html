@@ -659,7 +659,7 @@ async function loadMasterCatalog() {
   }
 }
 
-// ---- Tag No. suggestion: SMELTER-PBSNUMBER-URUTAN, e.g. A-001-A ----
+// ---- Tag No. suggestion: ACRONYM-PBSNUMBER-URUTAN, e.g. RBT-1.4.1-A ----
 // Smelter names are "Full Company Name (ACRONYM)", e.g.
 // "Refined Bangka Tin (RBT)" — the Tag No. prefix is the acronym, not the
 // company name. Falls back to the old trailing-token heuristic for a
@@ -672,14 +672,14 @@ function smelterCode(lokasiStr) {
   const fallback = trimmed.match(/([A-Za-z0-9]+)\s*$/);
   return fallback ? fallback[1].toUpperCase() : trimmed.charAt(0).toUpperCase();
 }
-function pbsDigits(pbsStr) {
+// Use the PBS number verbatim (e.g. "1.4.1"), dots and all — the Tag No. is
+// ACRONYM-<PBS>-LETTER, so Hoist Crane 1.4.1 at RBT is "RBT-1.4.1-A".
+function pbsCode(pbsStr) {
   if (!pbsStr) return "";
-  const parts = String(pbsStr).match(/\d+/g);
-  if (!parts) return pbsStr;
-  return parts.map(p => p.padStart(2, "0")).join("");
+  return String(pbsStr).trim().replace(/\s+/g, "");
 }
 function tagPrefix(row) {
-  return `${smelterCode(row.lokasi)}-${pbsDigits(row.nomorPBS)}`;
+  return `${smelterCode(row.lokasi)}-${pbsCode(row.nomorPBS)}`;
 }
 
 async function refreshTagSuggestion() {
