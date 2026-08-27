@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-1.4.1-A",
+  "inspectionId": "INS-20260827-RBT-1.4.1-A",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoist Crane",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/RBT-1.4.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Girder",
+      "spesifikasiTeknis": "xxx meter lebar xxx meter panjang",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Terdapat karat"
+    }
+  ]
+}
