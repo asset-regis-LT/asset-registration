@@ -137,10 +137,10 @@ cards came from the catalog or were added by hand.
 Renders a 50x30mm label at 12px/mm (600x360px canvas — higher than the 8px/mm a typical 203 DPI thermal
 printer needs, so it downsamples instead of upsamples when printed, which is what keeps edges crisp).
 Layout: QR fills the left column (drawn oversized from a 560px QRCode.js render, then scaled down to 280px,
-for a cleaner downscale) with a caption underneath; the right column stacks the actual logo image (drawn via
+for a cleaner downscale); the right column stacks the actual logo image (drawn via
 `drawImage()` at its native aspect ratio — not recreated as text, and not squeezed small enough to visibly
-pixelate), then Tag No. (largest text), a divider, Nama Aset, and Lokasi, spaced to fill roughly the same
-height as the QR column rather than leaving dead space.
+pixelate), then Tag No., a divider, Nama Aset, and Lokasi. No mini-labels or scan caption — unreadable at
+the printed size, so the three real values just get bigger instead.
 
 Two non-obvious gotchas baked into this code:
 
@@ -148,9 +148,13 @@ Two non-obvious gotchas baked into this code:
   synchronously, then separately converts that canvas to a hidden/shown `<img>` for display. Reading the
   `<img>` back out races its `data:` URL decode — this actually shipped once and produced labels with the
   text but a blank QR on some Android browsers. The canvas has no such race.
-- **`<a download>` is unreliable on mobile Safari.** Both label download and the "download result as image"
-  button go through `GithubStore.saveOrShareImage()`, which tries the Web Share API (share a real file)
-  first and only falls back to the classic download-link click for browsers where Share isn't available.
+- **No OS share sheet — download straight to the device.** Both label download and the "download result as
+  image" button go through `GithubStore.saveOrShareImage()`, which does a `<a download>` click on a `blob:`
+  URL (not the raw `data:` URL — a large `data:` URL is what iOS Safari refuses to save). Inspectors asked
+  for one tap to a saved file; the share sheet made them hunt for "save to gallery" every time. The file
+  lands in the gallery-indexed Downloads on Android, and in Files → Downloads on iOS (Apple allows nothing
+  else from a web page — there's no way to write to the iOS Photos library from here). An earlier version
+  tried the Web Share API first; that's gone.
 
 ## Admin data management (admin.html)
 

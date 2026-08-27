@@ -209,31 +209,26 @@ const GithubStore = (() => {
     });
   }
 
-  // Saves/shares a data: URL image from a phone browser. The classic
-  // `<a download>` click trick is unreliable on mobile — iOS Safari in
-  // particular often just navigates to the data: URL instead of saving it.
-  // The Web Share API (share a real file to Photos/Files/etc.) works far
-  // more consistently on phones, so it's tried first; desktop browsers
-  // (where the Share API is usually unavailable) fall back to the classic
-  // download link, which works fine there.
+  // Saves an image straight to the device — no OS share sheet. Inspectors
+  // asked for one tap to a saved file (the share sheet made them hunt for
+  // "save to gallery" every time). Download via a blob: URL, not the raw
+  // data: URL — a large data: URL is exactly what iOS Safari refuses to
+  // save (it navigates to it instead); a blob: URL downloads reliably on
+  // current iOS and Android. Lands in the gallery-indexed Downloads on
+  // Android; in Files -> Downloads on iOS (Apple allows nothing else from
+  // a web page). `mimeType` is carried by the data: URL already, so the
+  // blob keeps the right type without it being used here.
   async function saveOrShareImage(dataUrl, filename, mimeType) {
-    try {
-      const blob = await (await fetch(dataUrl)).blob();
-      const file = new File([blob], filename, { type: mimeType });
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file] });
-        return;
-      }
-    } catch (err) {
-      if (err && err.name === "AbortError") return; // user cancelled the share sheet
-      // fall through to the link-based download below
-    }
+    const blob = await (await fetch(dataUrl)).blob();
+    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.download = filename;
-    link.href = dataUrl;
+    link.href = url;
+    link.rel = "noopener";
     document.body.appendChild(link);
     link.click();
     link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000); // let the download start first
   }
 
   // ---- QR label generation (shared by index.html's post-save download and
