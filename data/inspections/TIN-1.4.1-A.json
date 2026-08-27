@@ -1,0 +1,21 @@
+{
+  "tagNo": "TIN-1.4.1-A",
+  "inspectionId": "INS-20260827-TIN-1.4.1-A",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoist Crane",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/TIN-1.4.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Girder",
+      "spesifikasiTeknis": "xxx meter lebar, xxx meter panjang",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Terpadat karat di sisi-sisi girder"
+    }
+  ]
+}
