@@ -1,0 +1,21 @@
+{
+  "tagNo": "SBS-1.1.1-A",
+  "inspectionId": "INS-20260827-SBS-1.1.1-A",
+  "nomorPBS": "1.1.1",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tanur",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-1.1.1-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Transformer",
+      "spesifikasiTeknis": "12000 V",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Bagus kok"
+    }
+  ]
+}
