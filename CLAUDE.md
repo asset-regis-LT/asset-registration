@@ -161,13 +161,15 @@ Two non-obvious gotchas baked into this code:
   synchronously, then separately converts that canvas to a hidden/shown `<img>` for display. Reading the
   `<img>` back out races its `data:` URL decode — this actually shipped once and produced labels with the
   text but a blank QR on some Android browsers. The canvas has no such race.
-- **No OS share sheet — download straight to the device.** Both label download and the "download result as
-  image" button go through `GithubStore.saveOrShareImage()`, which does a `<a download>` click on a `blob:`
-  URL (not the raw `data:` URL — a large `data:` URL is what iOS Safari refuses to save). Inspectors asked
-  for one tap to a saved file; the share sheet made them hunt for "save to gallery" every time. The file
-  lands in the gallery-indexed Downloads on Android, and in Files → Downloads on iOS (Apple allows nothing
-  else from a web page — there's no way to write to the iOS Photos library from here). An earlier version
-  tried the Web Share API first; that's gone.
+- **Image download is platform-split in `GithubStore.saveOrShareImage()`** (used by the label download and
+  the "download result as image" button). **Android / desktop:** silent `<a download>` on a `blob:` URL
+  (not the raw `data:` URL — a large `data:` URL is what iOS Safari refuses to save, and it's flakier on
+  Android too); no OS share sheet, because inspectors didn't want to hunt for "save to gallery" every time.
+  Lands in the gallery-indexed Downloads on Android. **iOS** (`IS_IOS` UA/`MacIntel`+touch check): `<a
+  download>` on iOS can only reach Files → Downloads, never the Photos app — Apple blocks any silent write
+  to the photo library — so iOS goes through `navigator.share({files})` and the inspector taps "Save Image"
+  to land it in the gallery. That's the one platform where the share sheet is unavoidable; don't "simplify"
+  it back to a plain download.
 
 ## Admin data management (admin.html)
 

@@ -209,17 +209,37 @@ const GithubStore = (() => {
     });
   }
 
-  // Saves an image straight to the device — no OS share sheet. Inspectors
-  // asked for one tap to a saved file (the share sheet made them hunt for
-  // "save to gallery" every time). Download via a blob: URL, not the raw
-  // data: URL — a large data: URL is exactly what iOS Safari refuses to
-  // save (it navigates to it instead); a blob: URL downloads reliably on
-  // current iOS and Android. Lands in the gallery-indexed Downloads on
-  // Android; in Files -> Downloads on iOS (Apple allows nothing else from
-  // a web page). `mimeType` is carried by the data: URL already, so the
-  // blob keeps the right type without it being used here.
+  const IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 13+ reports as Mac
+
+  // Gets an image onto the device with the fewest taps, per platform:
+  //
+  // - Android / desktop: a silent blob: URL `<a download>` — no OS share
+  //   sheet (inspectors didn't want to hunt for "save to gallery" every
+  //   time). Lands in the gallery-indexed Downloads on Android. blob:, not
+  //   the raw data: URL — a large data: URL is what iOS Safari refuses to
+  //   save, and it's flakier on Android too.
+  // - iOS: `<a download>` can only reach Files -> Downloads, never the
+  //   Photos app — Apple blocks any silent write to the photo library. The
+  //   share sheet's "Save Image" is the ONLY route to the gallery, so on
+  //   iOS we open it. One extra tap, but the file actually lands where the
+  //   inspector expects it.
   async function saveOrShareImage(dataUrl, filename, mimeType) {
     const blob = await (await fetch(dataUrl)).blob();
+
+    if (IS_IOS && navigator.canShare) {
+      const file = new File([blob], filename, { type: mimeType });
+      if (navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({ files: [file] });
+          return;
+        } catch (err) {
+          if (err && err.name === "AbortError") return; // user dismissed the sheet
+          // anything else: fall through to the download link
+        }
+      }
+    }
+
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.download = filename;
