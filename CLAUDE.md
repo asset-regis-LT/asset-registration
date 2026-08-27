@@ -20,11 +20,12 @@ No framework, no bundler, no `package.json`. Four files loaded directly by the b
 
 - `index.html` — the inspector-facing form, and the read-only result view (same page, switched by JS
   depending on whether the URL has a `?tag=` param).
-- `admin.html` — GitHub token setup, a table of saved inspections with edit/delete, and "export everything
-  to Excel."
+- `admin.html` — GitHub token setup, a table of saved inspections with per-row edit / QR-label download /
+  delete, and "export everything to Excel."
 - `js/github-store.js` — shared module both pages load; the only place that talks to the GitHub API, plus
   shared constants/helpers (Kondisi/Keputusan option lists, `computeOverallDecision`, image compression,
-  the mobile-safe image-download helper).
+  the straight-to-device image-download helper, and the QR label renderer `generateLabelPNG` used by both
+  pages).
 - `assets/logo-lapi-itb.png` — company logo, drawn onto the generated QR label via canvas `drawImage()`.
 
 Third-party libs (QRCode.js, html2canvas, ExcelJS) are pulled from cdnjs via `<script>` tags — no npm.
@@ -117,30 +118,42 @@ hard-refreshing).
 
 ## Picker flow and manual asset entry (index.html)
 
-Selecting an asset is normally a cascade, not a single search box: Nama Aset (custom-rendered suggestion
-dropdown, not a native `<datalist>` — datalist suggestions don't reliably show while typing on mobile
-Safari) → Subsistem (options filtered to that Nama Aset) → Nama Smelter/Lokasi (filtered further). If more
-than one catalog row still matches after all three, a fourth Nomor PBS `<select>` disambiguates. Only once a
-single catalog row resolves does `resolveAsset()` populate the sub-component fields and kick off the async
-Tag No. suggestion.
+Selecting an asset is a cascade, not a single search box: Nama Aset (custom-rendered suggestion dropdown,
+not a native `<datalist>` — datalist suggestions don't reliably show while typing on mobile Safari) → Nama
+Smelter/Lokasi (options filtered to that Nama Aset). Subsistem is **not** picked — it's derived from the
+resolved catalog row and shown read-only. If Nama Aset + Lokasi still match more than one catalog row (a
+handful of asset names sit under two subsistems), a Subsistem/Nomor PBS `<select>` disambiguates
+(`pbsDisambigSelect`, option text `"<Subsistem> — <Nomor PBS>"`, value = Nomor PBS). Only once a single
+catalog row resolves does `resolveAsset()` populate the sub-component fields and kick off the async Tag No.
+suggestion.
 
-An inspector can bypass all of that via **manual asset mode** (`enterManualAssetMode()`), for an asset
-that isn't in the catalog: Nomor PBS/Subsistem/Lokasi become plain editable inputs, and sub-component rows
-are added/removed by hand (`addComponentCard()` / the "+ Tambah Sub Komponen" button) instead of coming
-from `subKomponen`. Because of this, `validateForm()`/`buildRecord()` never trust
-`currentAsset.subKomponen` as the source of truth — they read whatever `.comp-card` elements are actually
-rendered in `componentsArea` at save time (`readComponentCards()`), which works the same way whether the
-cards came from the catalog or were added by hand.
+**Sub-components are always filled in by hand**, catalog pick or not — `master-catalog.json` carries only
+sub-component *names* (often none), no real spec/condition data, so `resolveAsset()` calls
+`renderComponents(row, true)` and the inspector adds/removes rows with `addComponentCard()` / the "+ Tambah
+Sub Komponen" button. Only Nomor PBS/Subsistem/Lokasi stay locked to the catalog row.
 
-## QR label generation (index.html, `generateLabelPNG`)
+An inspector can bypass the catalog entirely via **manual asset mode** (`enterManualAssetMode()`), for an
+asset that isn't in the catalog: Nomor PBS/Subsistem/Lokasi become plain editable inputs too. Either way,
+`validateForm()`/`buildRecord()` never trust `currentAsset.subKomponen` as the source of truth — they read
+whatever `.comp-card` elements are actually rendered in `componentsArea` at save time
+(`readComponentCards()`), which works the same regardless of how the cards got there.
+
+## QR label generation (`js/github-store.js`, `GithubStore.generateLabelPNG`)
+
+Lives in the shared module, not per-page, so `index.html`'s post-save "Unduh QR Label" button and
+`admin.html`'s per-row "QR" button render the exact same label. Takes a saved inspection record; the QR
+container is a detached `<div>` (no `#qrHidden` DOM element).
 
 Renders a 50x30mm label at 12px/mm (600x360px canvas — higher than the 8px/mm a typical 203 DPI thermal
 printer needs, so it downsamples instead of upsamples when printed, which is what keeps edges crisp).
 Layout: QR fills the left column (drawn oversized from a 560px QRCode.js render, then scaled down to 280px,
-for a cleaner downscale); the right column stacks the actual logo image (drawn via
-`drawImage()` at its native aspect ratio — not recreated as text, and not squeezed small enough to visibly
-pixelate), then Tag No., a divider, Nama Aset, and Lokasi. No mini-labels or scan caption — unreadable at
-the printed size, so the three real values just get bigger instead.
+for a cleaner downscale); the right column stacks the actual logo image (drawn via `drawImage()` at its
+native aspect ratio — not recreated as text, and not squeezed small enough to visibly pixelate), then Tag
+No. (`bold 38px monospace`), a divider, Nama Aset (`bold 34px sans-serif`), and Lokasi (`25px sans-serif`,
+both wrapped to max 2 lines via `wrapText()`, which returns its line count so Lokasi's baseline follows a
+1- or 2-line asset name). No mini-labels or scan caption — unreadable at the printed size, so the three
+real values just get bigger instead. Font sizes were tuned by hand on real prints; change them only on
+request.
 
 Two non-obvious gotchas baked into this code:
 
@@ -160,11 +173,14 @@ Two non-obvious gotchas baked into this code:
 
 "Muat Data Tersimpan" lists every saved inspection (fetched with bounded concurrency via
 `mapWithConcurrency()` — sequential one-row-at-a-time fetching doesn't scale to the ~2000 inspections this
-is sized for). Edit opens a modal for PIC/Tanggal/per-component Kondisi/Keputusan/Catatan and overwrites the
-JSON with `GithubStore.updateFile()`; sub-component names, the photo, and the Tag No. itself are
-intentionally not editable there (changing those is really "delete and re-register," not a data-entry fix).
-Delete removes both the JSON and photo. Both operations patch the in-memory row/table directly instead of
-reloading the whole list, since a full reload at ~2000 rows is slow.
+is sized for). Each row has three actions: **Edit** opens a modal for
+PIC/Tanggal/per-component Kondisi/Keputusan/Catatan and overwrites the JSON with `GithubStore.updateFile()`
+(sub-component names, the photo, and the Tag No. itself are intentionally not editable there — changing
+those is really "delete and re-register," not a data-entry fix); **QR** re-generates and downloads that
+inspection's label from the cached record via `GithubStore.generateLabelPNG()`; **Hapus** removes both the
+JSON and photo. Edit and Hapus patch the in-memory row/table directly instead of reloading the whole list,
+since a full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan" bulk-deletes, sharing the per-tag
+delete logic.
 
 The Excel export reuses the same concurrency helper, and re-compresses each photo down to thumbnail size
 before embedding it — the sheet only ever displays it at 110x110px, so embedding the full ~1600px capture
