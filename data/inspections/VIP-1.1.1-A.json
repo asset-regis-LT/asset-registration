@@ -12,7 +12,7 @@
   "komponen": [
     {
       "nama": "shell",
-      "spesifikasiTeknis": "xx",
+      "spesifikasiTeknis": "yyyy",
       "kondisiTeknis": "Minor Repair (80 - 100%)",
       "keputusanTeknis": "Conditional Go",
       "catatan": "xx"
