@@ -93,21 +93,7 @@
   </section>
 
   <section>
-    <h2>2. Export Semua Inspeksi</h2>
-    <p class="desc">
-      Mengumpulkan semua inspeksi yang sudah tersimpan di branch <code>data</code> pada repo ini, lalu membuat satu file
-      .xlsx dengan seluruh data terisi, foto inspeksi, dan QR code sebagai gambar yang tertanam di tiap baris.
-      Proses berjalan di browser ini, bisa memakan waktu beberapa menit tergantung jumlah data.
-    </p>
-    <div class="row">
-      <button class="btn-primary" id="exportBtn">Export ke Excel</button>
-    </div>
-    <div class="status" id="exportStatus"></div>
-    <div class="progress-log" id="progressLog"></div>
-  </section>
-
-  <section>
-    <h2>3. Data Tersimpan</h2>
+    <h2>2. Data Tersimpan</h2>
     <p class="desc">
       Daftar semua inspeksi yang sudah tersimpan di branch <code>data</code>. Edit untuk memperbaiki data yang
       salah isi (nama sub komponen dan foto tidak bisa diubah di sini), atau Hapus untuk menghapus inspeksi
@@ -126,6 +112,20 @@
         <tbody id="dataTableBody"></tbody>
       </table>
     </div>
+  </section>
+
+  <section>
+    <h2>3. Export Semua Inspeksi</h2>
+    <p class="desc">
+      Mengumpulkan semua inspeksi yang sudah tersimpan di branch <code>data</code> pada repo ini, lalu membuat satu file
+      .xlsx dengan seluruh data terisi, foto inspeksi, dan QR code sebagai gambar yang tertanam di tiap baris.
+      Proses berjalan di browser ini, bisa memakan waktu beberapa menit tergantung jumlah data.
+    </p>
+    <div class="row">
+      <button class="btn-primary" id="exportBtn">Export ke Excel</button>
+    </div>
+    <div class="status" id="exportStatus"></div>
+    <div class="progress-log" id="progressLog"></div>
   </section>
 
 </div>
@@ -308,7 +308,7 @@ exportBtn.addEventListener("click", async () => {
     let fetched = 0;
     const rowsData = await mapWithConcurrency(tags, CONCURRENCY, async (tag) => {
       try {
-        const record = await fetchInspectionRecord(tag);
+        const record = applyRecentEdits(await fetchInspectionRecord(tag));
         const photoBase64 = record.fotoPath
           ? await fetchPhotoThumbnailBase64(record.fotoPath).catch(() => null)
           : null;
@@ -400,6 +400,35 @@ const deleteAllBtn = document.getElementById("deleteAllBtn");
 // that's already in hand.
 let loadedRecords = {};
 
+// raw.githubusercontent.com sits behind a CDN that can keep serving a
+// pre-edit snapshot for a few minutes after a commit, even though the write
+// (GithubStore.updateFile, a GitHub Contents API PUT) already landed for
+// real. Without this, reloading "Muat Data Tersimpan" or exporting right
+// after an edit could show/export the stale pre-edit copy and look like the
+// edit was lost. Track this session's own edits and prefer them over a
+// freshly (possibly stale) fetched copy for a few minutes.
+// ponytail: fixed 5-minute window is a heuristic, not a guarantee — widen if
+// CDN lag turns out to exceed it.
+const RECENT_EDIT_WINDOW_MS = 5 * 60 * 1000;
+const recentEdits = {}; // tag -> { record, at }
+
+function rememberRecentEdit(tag, record) {
+  recentEdits[tag] = { record, at: Date.now() };
+}
+
+// Overwrites any freshly-fetched record with this session's own known-good
+// edit if that edit is newer than RECENT_EDIT_WINDOW_MS, and prunes expired
+// entries so the map doesn't grow unbounded across a long admin session.
+function applyRecentEdits(record) {
+  const entry = recentEdits[record.tagNo];
+  if (!entry) return record;
+  if (Date.now() - entry.at > RECENT_EDIT_WINDOW_MS) {
+    delete recentEdits[record.tagNo];
+    return record;
+  }
+  return entry.record;
+}
+
 async function loadDataTable() {
   dataListStatus.className = "status warn";
   dataListStatus.textContent = "Memuat…";
@@ -417,7 +446,7 @@ async function loadDataTable() {
     const results = await mapWithConcurrency(tags, 8, tag => fetchInspectionRecord(tag).catch(() => null));
 
     loadedRecords = {};
-    results.forEach(r => { if (r) loadedRecords[r.tagNo] = r; });
+    results.forEach(r => { if (r) loadedRecords[r.tagNo] = applyRecentEdits(r); });
 
     const rows = results.filter(Boolean).sort((a, b) => a.tagNo.localeCompare(b.tagNo));
     rows.forEach(record => {
@@ -655,6 +684,7 @@ saveEditBtn.addEventListener("click", async () => {
     );
 
     loadedRecords[editingTag] = updatedRecord;
+    rememberRecentEdit(editingTag, updatedRecord);
     editOverlay.classList.remove("open");
     // No table reload needed: only PIC/Tanggal/component values changed,
     // none of which appear in the summary row (Tag/Nama Aset/Subsistem/
