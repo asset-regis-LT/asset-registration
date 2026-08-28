@@ -56,12 +56,13 @@
   #editSheet label{margin-top:10px;}
   #editSheet input[type=date]{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;}
   .edit-comp-card{border:1px solid var(--line);border-radius:6px;padding:12px;margin-top:12px;}
-  .edit-comp-card .edit-comp-name{font-weight:700;font-size:13px;margin-bottom:8px;}
   .edit-comp-card label{margin-top:8px;}
   .edit-comp-card input[type=text], .edit-comp-card select, .edit-comp-card textarea{
     width:100%;padding:9px;font-size:14px;border:1px solid var(--line);border-radius:4px;font-family:var(--sans);background:#fff;
   }
   .edit-comp-card textarea{resize:vertical;min-height:44px;}
+  .edit-comp-remove-btn{width:100%;margin-top:10px;}
+  #addEditComponentBtn{width:100%;margin-top:12px;}
 </style>
 </head>
 <body>
@@ -120,7 +121,7 @@
     <div class="table-scroll">
       <table class="data-table" id="dataTable" style="display:none;">
         <thead>
-          <tr><th>Tag No.</th><th>Nama Aset</th><th>Subsistem</th><th>Nama Smelter</th><th></th></tr>
+          <tr><th>Tag No.</th><th>Nama Aset</th><th>Subsistem</th><th>Nama Smelter</th><th>PIC</th><th></th></tr>
         </thead>
         <tbody id="dataTableBody"></tbody>
       </table>
@@ -137,6 +138,7 @@
     <label for="editTanggalInput">Tanggal Inspeksi</label>
     <input type="date" id="editTanggalInput">
     <div id="editComponentsArea"></div>
+    <button type="button" class="btn-secondary" id="addEditComponentBtn">+ Tambah Sub Komponen</button>
     <div class="row">
       <button class="btn-primary" id="saveEditBtn">Simpan Perubahan</button>
       <button class="btn-secondary" id="cancelEditBtn">Batal</button>
@@ -426,6 +428,7 @@ async function loadDataTable() {
         <td>${escapeHtml(record.namaAset)}</td>
         <td>${escapeHtml(record.subsistem)}</td>
         <td>${escapeHtml(record.lokasi)}</td>
+        <td>${escapeHtml(record.picInspector || "")}</td>
         <td class="row-actions">
           <button class="btn-edit" data-tag="${escapeHtml(record.tagNo)}">Edit</button>
           <button class="btn-qr" data-tag="${escapeHtml(record.tagNo)}">QR</button>
@@ -536,9 +539,9 @@ async function deleteAllInspections() {
 deleteAllBtn.addEventListener("click", deleteAllInspections);
 
 // ---- Edit modal: corrects PIC/Tanggal/Kondisi/Keputusan/Catatan on an
-// already-saved record. Sub-component names, the photo, and the Tag No.
-// itself are intentionally not editable here — changing those is really
-// "delete and re-register," not a data-entry fix.
+// already-saved record, and (unlike a straight data-entry fix) also lets
+// sub-component rows be renamed, added, or removed — the photo and Tag No.
+// itself stay locked; changing those is still "delete and re-register."
 const editOverlay = document.getElementById("editOverlay");
 const editTagLabel = document.getElementById("editTagLabel");
 const editPicInput = document.getElementById("editPicInput");
@@ -547,6 +550,37 @@ const editComponentsArea = document.getElementById("editComponentsArea");
 const editStatus = document.getElementById("editStatus");
 const saveEditBtn = document.getElementById("saveEditBtn");
 let editingTag = null;
+// Ever-increasing per-modal-open counter, same purpose as index.html's
+// componentCounter — keeps data-idx unique as rows are added/removed.
+let editComponentCounter = 0;
+
+function addEditComponentCard(comp) {
+  const idx = editComponentCounter++;
+  const card = document.createElement("div");
+  card.className = "edit-comp-card";
+  card.dataset.idx = idx;
+  card.innerHTML = `
+    <label>Nama Sub Komponen</label>
+    <input type="text" data-idx="${idx}" data-field="nama" value="${escapeHtml(comp.nama || "")}">
+    <label>Spesifikasi Teknis</label>
+    <input type="text" data-idx="${idx}" data-field="spesifikasi" value="${escapeHtml(comp.spesifikasiTeknis || "")}">
+    <label>Kondisi Teknis</label>
+    <select data-idx="${idx}" data-field="kondisi">
+      <option value="">Pilih kondisi…</option>
+      ${GithubStore.KONDISI_OPTIONS.map(k => `<option value="${escapeHtml(k)}" ${k === comp.kondisiTeknis ? "selected" : ""}>${escapeHtml(k)}</option>`).join("")}
+    </select>
+    <label>Keputusan Teknis</label>
+    <select data-idx="${idx}" data-field="keputusan">
+      <option value="">Pilih keputusan…</option>
+      ${GithubStore.KEPUTUSAN_OPTIONS.map(k => `<option value="${escapeHtml(k.value)}" ${k.value === comp.keputusanTeknis ? "selected" : ""}>${escapeHtml(k.value)}</option>`).join("")}
+    </select>
+    <label>Catatan</label>
+    <textarea data-idx="${idx}" data-field="catatan">${escapeHtml(comp.catatan || "")}</textarea>
+    <button type="button" class="btn-delete edit-comp-remove-btn" data-idx="${idx}">Hapus Sub Komponen Ini</button>
+  `;
+  editComponentsArea.appendChild(card);
+  card.querySelector(".edit-comp-remove-btn").addEventListener("click", () => card.remove());
+}
 
 function openEditModal(tag) {
   const record = loadedRecords[tag];
@@ -559,31 +593,15 @@ function openEditModal(tag) {
   editStatus.className = "status";
 
   editComponentsArea.innerHTML = "";
-  (record.komponen || []).forEach((comp, idx) => {
-    const card = document.createElement("div");
-    card.className = "edit-comp-card";
-    card.innerHTML = `
-      <div class="edit-comp-name">${escapeHtml(comp.nama)}</div>
-      <label>Spesifikasi Teknis</label>
-      <input type="text" data-idx="${idx}" data-field="spesifikasi" value="${escapeHtml(comp.spesifikasiTeknis)}">
-      <label>Kondisi Teknis</label>
-      <select data-idx="${idx}" data-field="kondisi">
-        <option value="">Pilih kondisi…</option>
-        ${GithubStore.KONDISI_OPTIONS.map(k => `<option value="${escapeHtml(k)}" ${k === comp.kondisiTeknis ? "selected" : ""}>${escapeHtml(k)}</option>`).join("")}
-      </select>
-      <label>Keputusan Teknis</label>
-      <select data-idx="${idx}" data-field="keputusan">
-        <option value="">Pilih keputusan…</option>
-        ${GithubStore.KEPUTUSAN_OPTIONS.map(k => `<option value="${escapeHtml(k.value)}" ${k.value === comp.keputusanTeknis ? "selected" : ""}>${escapeHtml(k.value)}</option>`).join("")}
-      </select>
-      <label>Catatan</label>
-      <textarea data-idx="${idx}" data-field="catatan">${escapeHtml(comp.catatan)}</textarea>
-    `;
-    editComponentsArea.appendChild(card);
-  });
+  editComponentCounter = 0;
+  (record.komponen || []).forEach(comp => addEditComponentCard(comp));
 
   editOverlay.classList.add("open");
 }
+
+document.getElementById("addEditComponentBtn").addEventListener("click", () => {
+  addEditComponentCard({});
+});
 
 document.getElementById("cancelEditBtn").addEventListener("click", () => {
   editOverlay.classList.remove("open");
@@ -600,13 +618,24 @@ saveEditBtn.addEventListener("click", async () => {
   saveEditBtn.textContent = "Menyimpan…";
   editStatus.textContent = "";
   try {
-    const komponen = (record.komponen || []).map((comp, idx) => ({
-      nama: comp.nama,
-      spesifikasiTeknis: editComponentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
-      kondisiTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
-      keputusanTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
-      catatan: editComponentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
-    }));
+    const komponen = Array.from(editComponentsArea.querySelectorAll(".edit-comp-card")).map(card => {
+      const idx = card.dataset.idx;
+      return {
+        nama: editComponentsArea.querySelector(`input[data-idx="${idx}"][data-field="nama"]`).value.trim(),
+        spesifikasiTeknis: editComponentsArea.querySelector(`input[data-idx="${idx}"][data-field="spesifikasi"]`).value.trim(),
+        kondisiTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="kondisi"]`).value,
+        keputusanTeknis: editComponentsArea.querySelector(`select[data-idx="${idx}"][data-field="keputusan"]`).value,
+        catatan: editComponentsArea.querySelector(`textarea[data-idx="${idx}"][data-field="catatan"]`).value.trim()
+      };
+    });
+    if (!komponen.length) throw new Error("Minimal harus ada satu sub komponen.");
+    for (const comp of komponen) {
+      const label = comp.nama || "sub komponen";
+      if (!comp.nama) throw new Error("Nama Sub Komponen wajib diisi untuk setiap baris.");
+      if (!comp.spesifikasiTeknis) throw new Error(`Spesifikasi Teknis untuk "${label}" wajib diisi.`);
+      if (!comp.kondisiTeknis) throw new Error(`Kondisi Teknis untuk "${label}" wajib dipilih.`);
+      if (!comp.keputusanTeknis) throw new Error(`Keputusan Teknis untuk "${label}" wajib dipilih.`);
+    }
     const updatedRecord = {
       ...record,
       picInspector: editPicInput.value.trim(),

@@ -175,10 +175,13 @@ Two non-obvious gotchas baked into this code:
 
 "Muat Data Tersimpan" lists every saved inspection (fetched with bounded concurrency via
 `mapWithConcurrency()` — sequential one-row-at-a-time fetching doesn't scale to the ~2000 inspections this
-is sized for). Each row has three actions: **Edit** opens a modal for
-PIC/Tanggal/per-component Kondisi/Keputusan/Catatan and overwrites the JSON with `GithubStore.updateFile()`
-(sub-component names, the photo, and the Tag No. itself are intentionally not editable there — changing
-those is really "delete and re-register," not a data-entry fix); **QR** re-generates and downloads that
+is sized for), one row per inspection including its PIC/Inspector. Each row has three actions: **Edit**
+opens a modal for PIC/Tanggal/per-component Kondisi/Keputusan/Catatan, and also lets sub-component rows be
+renamed, added (`+ Tambah Sub Komponen`), or removed, mirroring index.html's manual-asset component editing
+(`addEditComponentCard`, validated the same way as `index.html`'s `validateForm()` before
+`GithubStore.updateFile()` overwrites the JSON — at least one component, and nama/spesifikasiTeknis/
+kondisiTeknis/keputusanTeknis all required per row). The photo and the Tag No. itself stay locked — changing
+those is still "delete and re-register," not a data-entry fix; **QR** re-generates and downloads that
 inspection's label from the cached record via `GithubStore.generateLabelPNG()`; **Hapus** removes both the
 JSON and photo. Edit and Hapus patch the in-memory row/table directly instead of reloading the whole list,
 since a full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan" bulk-deletes, sharing the per-tag
