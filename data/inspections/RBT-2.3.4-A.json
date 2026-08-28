@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-2.3.4-A",
+  "inspectionId": "INS-20260828-RBT-2.3.4-A",
+  "nomorPBS": "2.3.4",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Element Pemanas Talang Casting",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "RS",
+  "tanggalInspeksi": "2026-08-28",
+  "fotoPath": "data/inspections/photos/RBT-2.3.4-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Medin",
+      "spesifikasiTeknis": "Set",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Jalan"
+    }
+  ]
+}
