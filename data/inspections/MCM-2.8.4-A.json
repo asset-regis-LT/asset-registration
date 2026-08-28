@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-2.8.4-A",
+  "inspectionId": "INS-20260828-MCM-2.8.4-A",
+  "nomorPBS": "2.8.4",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Casting",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-28",
+  "fotoPath": "data/inspections/photos/MCM-2.8.4-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Girder",
+      "spesifikasiTeknis": "xx meter panjang, xx meter lebar",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "xxxx"
+    },
+    {
+      "nama": "Motor penggerak",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "xxx"
+    }
+  ]
+}
