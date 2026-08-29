@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-1.2.5-B",
+  "inspectionId": "INS-20260829-MCM-1.2.5-B",
+  "nomorPBS": "1.2.5",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Blower Hisap",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.2.5-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "s",
+      "spesifikasiTeknis": "s",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
