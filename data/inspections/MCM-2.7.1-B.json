@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.7.1-B",
+  "inspectionId": "INS-20260829-MCM-2.7.1-B",
+  "nomorPBS": "2.7.1",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.7.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Panel utama",
+      "spesifikasiTeknis": "Schneider electric",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "PCB ada yang lepas, kabel ada beberapa yang lepas"
+    }
+  ]
+}
