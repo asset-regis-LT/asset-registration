@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-1.5.1-D",
+  "inspectionId": "INS-20260829-MCM-1.5.1-D",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.5.1-D.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Incoming outgoing tanur 1",
+      "spesifikasiTeknis": "Incoming 400 v, outgoing basbar 105 kv ke tanur",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Siap operasi tinggal commisioning"
+    },
+    {
+      "nama": "Panel Trafo",
+      "spesifikasiTeknis": "IN 3200 A, ice 440 v, icu 50 kA, icw 50 kA 1 sekon",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Commisioning"
+    },
+    {
+      "nama": "Minyak temperatur",
+      "spesifikasiTeknis": "Flow maks 250",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Cleaning saja"
+    }
+  ]
+}
