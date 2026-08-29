@@ -1,0 +1,42 @@
+{
+  "tagNo": "MCM-3.1.5-B",
+  "inspectionId": "INS-20260829-MCM-3.1.5-B",
+  "nomorPBS": "3.1.5",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Sinkron Genset",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.5-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Panel crystalizer genset",
+      "spesifikasiTeknis": "Toshiba compact NJ400H, 400A, 65/33 kA",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hanya perlu pembersihan. Grounding masih terhubung"
+    },
+    {
+      "nama": "Panel Crystalizer PLN",
+      "spesifikasiTeknis": "Schneider easypact, 400 A, Ics 36 kA",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Grounding perlu diperbaiki. Grounding tidak terhubung"
+    },
+    {
+      "nama": "Panel Induk",
+      "spesifikasiTeknis": "1 MCCB utama merk toshiba 400A Ics 25 kA, 5 MCCB pembagi merk schneider Ics 25-36 kA",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hanya perlu pembersihan. Grounding masih terhubung"
+    },
+    {
+      "nama": "Panel Genset/PLN di sisi crystalizer",
+      "spesifikasiTeknis": "Panel switch genset/PLN",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu penggantian. Bukan long lead item"
+    }
+  ]
+}
