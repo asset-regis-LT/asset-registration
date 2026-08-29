@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.5.6-A",
+  "inspectionId": "INS-20260829-MCM-2.5.6-A",
+  "nomorPBS": "2.5.6",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Blower Hisap Bag House Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.5.6-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "id fan",
+      "spesifikasiTeknis": "kk",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
