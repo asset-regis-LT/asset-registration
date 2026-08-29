@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-1.5.1-C",
+  "inspectionId": "INS-20260829-MCM-1.5.1-C",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.5.1-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Incoming/outgoing tanur 1",
+      "spesifikasiTeknis": "3000 KvA, 20 kv ke 400 volt, 7 tap, 21 kv sd 18 kv",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Incoming diketanahkan (grounding)"
+    },
+    {
+      "nama": "Minyak",
+      "spesifikasiTeknis": "Maks 150 c, gaada minyak",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Gaada minyaknya"
+    }
+  ]
+}
