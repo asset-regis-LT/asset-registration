@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.4.3-D",
+  "inspectionId": "INS-20260829-MCM-3.4.3-D",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.4.3-D.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Tangki BBM",
+      "spesifikasiTeknis": "8500 liter",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Minim korosi, sambungan terlihat bagus"
+    }
+  ]
+}
