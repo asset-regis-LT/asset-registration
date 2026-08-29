@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-1.1.1-B",
+  "inspectionId": "INS-20260829-MCM-1.1.1-B",
+  "nomorPBS": "1.1.1",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.1.1-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "shell",
+      "spesifikasiTeknis": "a",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
