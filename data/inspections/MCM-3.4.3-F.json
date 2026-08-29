@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-3.4.3-F",
+  "inspectionId": "INS-20260829-MCM-3.4.3-F",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "FRB",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.4.3-F.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Tangki BBC",
+      "spesifikasiTeknis": "4 unit tangki BBC @8500 L; Masih cukup baik",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Tangki BBM",
+      "spesifikasiTeknis": "1 unit sekitar 15.000 L dengan 29 drum 208 L; kondisi sudah berkarat",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Flowmeter",
+      "spesifikasiTeknis": "Hose sudah rusak",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
