@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-4.4.5-A",
+  "inspectionId": "INS-20260829-MCM-4.4.5-A",
+  "nomorPBS": "4.4.5",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Blower Hisap",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-4.4.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "30 kw",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi minimum, shaft motor keropos dan perlu diganti"
+    },
+    {
+      "nama": "Bracket motor",
+      "spesifikasiTeknis": "Bracket penunjang motor",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Bracket korosif dan keropos"
+    },
+    {
+      "nama": "Pulley",
+      "spesifikasiTeknis": "Belt + roller",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Roller dan belt full korosi"
+    }
+  ]
+}
