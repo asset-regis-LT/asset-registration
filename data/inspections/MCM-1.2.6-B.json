@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-1.2.6-B",
+  "inspectionId": "INS-20260829-MCM-1.2.6-B",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack / Cerobong",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.2.6-B.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "s",
+      "spesifikasiTeknis": "s",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    }
+  ]
+}
