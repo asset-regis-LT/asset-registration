@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.7.1-A",
+  "inspectionId": "INS-20260829-MCM-2.7.1-A",
+  "nomorPBS": "2.7.1",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.7.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Panel listrik",
+      "spesifikasiTeknis": "Schneider Electric",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Kabel terkelupas dan tidak tersambung"
+    }
+  ]
+}
