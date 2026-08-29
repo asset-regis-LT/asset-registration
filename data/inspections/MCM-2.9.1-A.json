@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-2.9.1-A",
+  "inspectionId": "INS-20260829-MCM-2.9.1-A",
+  "nomorPBS": "2.9.1",
+  "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAset": "Mixer",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.9.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor mixer",
+      "spesifikasiTeknis": "4 HP",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu uji jalan, ada beberapa yang korosi"
+    },
+    {
+      "nama": "Shaft mixer",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Shaft korosi, perlu diganti"
+    }
+  ]
+}
