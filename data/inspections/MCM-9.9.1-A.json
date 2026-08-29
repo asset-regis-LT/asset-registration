@@ -1,0 +1,42 @@
+{
+  "tagNo": "MCM-9.9.1-A",
+  "inspectionId": "INS-20260829-MCM-9.9.1-A",
+  "nomorPBS": "9.9.1",
+  "subsistem": "Panel Furnance Tegangan Rendah",
+  "namaAset": "Panel Furnance",
+  "lokasi": "MCM",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-9.9.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Incoming PLN",
+      "spesifikasiTeknis": "Terdapat ACB (proteksi) 440 colt, ICU 65 KA, ICQ 65 kA 1 sekon, IN 2500 ampere",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing, washing"
+    },
+    {
+      "nama": "Incoming genset",
+      "spesifikasiTeknis": "Metering, genset control, IN 2000 ampere, tegangan 440 volt, ICU 65 kA, ICW 65 kA 1 sekon, terdapat ACB",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing, washing"
+    },
+    {
+      "nama": "Outgoing Beban Tanur 2",
+      "spesifikasiTeknis": "Terdapat ACB yakni ABB, UE 440, icu 66 kA, icw 66 kA 1 sekon, IN 2500 ampere",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing, washing"
+    },
+    {
+      "nama": "Kapasitor",
+      "spesifikasiTeknis": "Metering, control, 10 BAM, each BAM 1 MCCB 100 ampere, ui 440 volt, icu 36 kA, ics 18 kA",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing, washing, gaada kapasitasnya berapa, 10 step"
+    }
+  ]
+}
