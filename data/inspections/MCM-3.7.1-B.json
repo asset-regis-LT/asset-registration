@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.7.1-B",
+  "inspectionId": "INS-20260829-MCM-3.7.1-B",
+  "nomorPBS": "3.7.1",
+  "subsistem": "Sistem Proteksi Kebakaran",
+  "namaAset": "Pompa Hydrant / Fire Pump",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.7.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu uji jalan, tergenang"
+    }
+  ]
+}
