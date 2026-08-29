@@ -1,0 +1,42 @@
+{
+  "tagNo": "MCM-3.1.5-C",
+  "inspectionId": "INS-20260829-MCM-3.1.5-C",
+  "nomorPBS": "3.1.5",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Sinkron Genset",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.5-C.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Metering (Amperemeter, voltmeter,frequency meter)",
+      "spesifikasiTeknis": "Tegangan class 1.5 maks 9 kV, arus class 1.5 maks 200 ampere, freq class 0.5 maks 55 hz",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing"
+    },
+    {
+      "nama": "Trafo instrumentasi",
+      "spesifikasiTeknis": "PT 6600/110 V, CT 200/5 ampere (gabisa di akses)",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing"
+    },
+    {
+      "nama": "Generator protection",
+      "spesifikasiTeknis": "Tipical genset",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing"
+    },
+    {
+      "nama": "Sinkro check",
+      "spesifikasiTeknis": "Tipical genset (voltage, freq lower raise,& angle check)",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing"
+    }
+  ]
+}
