@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-2.8.4-A",
+  "inspectionId": "INS-20260829-MCM-2.8.4-A",
+  "nomorPBS": "2.8.4",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Casting",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.8.4-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Crane",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "Korosi",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak bisa dicek karena jauh diatas"
+    },
+    {
+      "nama": "Sistem elektrikal",
+      "spesifikasiTeknis": "Kabel etc",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "kabel semrawut, tidak bisa di cek"
+    }
+  ]
+}
