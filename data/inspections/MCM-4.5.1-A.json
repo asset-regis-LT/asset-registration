@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-4.5.1-A",
+  "inspectionId": "INS-20260829-MCM-4.5.1-A",
+  "nomorPBS": "4.5.1",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-4.5.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Panel listrik workshop",
+      "spesifikasiTeknis": "Schneider electric",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Ada beberapa kabel yang terputus, perlu dites lebih lanjut"
+    }
+  ]
+}
