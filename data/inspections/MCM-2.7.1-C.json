@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.7.1-C",
+  "inspectionId": "INS-20260829-MCM-2.7.1-C",
+  "nomorPBS": "2.7.1",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.7.1-C.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Panel utama DCS",
+      "spesifikasiTeknis": "PCB Schneider, OMRON temp. control",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "PCB terawat, cable management rapih, perlu dites"
+    }
+  ]
+}
