@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-3.1.1-A",
+  "inspectionId": "INS-20260829-MCM-3.1.1-A",
+  "nomorPBS": "3.1.1",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Kubikel Incoming PLN",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1 Kubikel incoming PLN & 2 kubikel outgoing",
+      "spesifikasiTeknis": "Schneider electric SM6",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Pembersihan & rekomisioning. Tidak terdapat circuit breaker sehingga tidak ada fungsi proteksi."
+    },
+    {
+      "nama": "Metering pembanding",
+      "spesifikasiTeknis": "-",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Metering pembanding PLN sebaiknya ditambahkan"
+    },
+    {
+      "nama": "Proteksi kubikel 20 KV",
+      "spesifikasiTeknis": "-",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Tidak ada karena kubikel tidak dilengkapi circuit breaker"
+    }
+  ]
+}
