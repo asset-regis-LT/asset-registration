@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-1.5.1-A",
+  "inspectionId": "INS-20260829-MCM-1.5.1-A",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.5.1-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Tangki minyak temp",
+      "spesifikasiTeknis": "Maks 150 C, temp sekarang 40 C",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Cleaning saja"
+    },
+    {
+      "nama": "Incoming/outgoing genset",
+      "spesifikasiTeknis": "6.3 kV outgoing 400 v",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Cleaning saja"
+    }
+  ]
+}
