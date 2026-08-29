@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-2.10.1-A",
+  "inspectionId": "INS-20260829-MCM-2.10.1-A",
+  "nomorPBS": "2.10.1",
+  "subsistem": "Persiapan Antrasit",
+  "namaAset": "Mesin Crusher",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.10.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Terlihat bagus dari luar, perlu dites"
+    },
+    {
+      "nama": "Body crusher",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Keropos, berkarat, banyak yang patah"
+    }
+  ]
+}
