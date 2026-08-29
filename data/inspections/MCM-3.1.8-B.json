@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.1.8-B",
+  "inspectionId": "INS-20260829-MCM-3.1.8-B",
+  "nomorPBS": "3.1.8",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Main Power Transformer",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.8-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Trafo distribusi ke Crystalizer",
+      "spesifikasiTeknis": "20 kV/0.4 kV, merk B&D, 630 kVA, produksi tahun 2016",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Dari kondisi luar, trafo masih dalam keadaan baik dan cukup bersih."
+    }
+  ]
+}
