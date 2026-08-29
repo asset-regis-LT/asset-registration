@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.3.2-B",
+  "inspectionId": "INS-20260829-MCM-3.3.2-B",
+  "nomorPBS": "3.3.2",
+  "subsistem": "Mesin Perkakas",
+  "namaAset": "Mesin Milling",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "FRB",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.3.2-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Mesin Drilling",
+      "spesifikasiTeknis": "Berkarat",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
