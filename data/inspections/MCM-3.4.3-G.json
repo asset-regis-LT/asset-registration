@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.4.3-G",
+  "inspectionId": "INS-20260829-MCM-3.4.3-G",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.4.3-G.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Tangki BBC Genset",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Berkarat, perlu dicek perpipaannya dan dites clogging"
+    }
+  ]
+}
