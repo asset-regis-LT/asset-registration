@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-7.1.4-B",
+  "inspectionId": "INS-20260829-MCM-7.1.4-B",
+  "nomorPBS": "7.1.4",
+  "subsistem": "Gas Handling Tanur Reverb",
+  "namaAset": "Cerobong - DCS Tanur Reverb",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-7.1.4-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "xx",
+      "spesifikasiTeknis": "xx",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
