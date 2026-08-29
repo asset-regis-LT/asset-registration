@@ -1,0 +1,42 @@
+{
+  "tagNo": "MCM-3.1.1-B",
+  "inspectionId": "INS-20260829-MCM-3.1.1-B",
+  "nomorPBS": "3.1.1",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Kubikel Incoming PLN",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Panel Kubikel",
+      "spesifikasiTeknis": "SM6-IAC12.5, ur 24 kV, ika 16 kA 1 sekon, irated 630 ampere",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu cleaning, recommisioning"
+    },
+    {
+      "nama": "Lemari kubikel",
+      "spesifikasiTeknis": "1 incoming PLN, 2 outgoing T1&T2",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu cleaning, recommisioning"
+    },
+    {
+      "nama": "Protection",
+      "spesifikasiTeknis": "Tidak ada proteksi dari tipenya",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada untuk tipe ini"
+    },
+    {
+      "nama": "Metering",
+      "spesifikasiTeknis": "Tidak ada metering",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada untuk tipe ini"
+    }
+  ]
+}
