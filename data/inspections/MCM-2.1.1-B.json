@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.1.1-B",
+  "inspectionId": "INS-20260829-MCM-2.1.1-B",
+  "nomorPBS": "2.1.1",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Ketel",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.1.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Ketel Pemurnian",
+      "spesifikasiTeknis": "xxx",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "xxx"
+    }
+  ]
+}
