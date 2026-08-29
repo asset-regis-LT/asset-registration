@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-9.9.1-B",
+  "inspectionId": "INS-20260829-MCM-9.9.1-B",
+  "nomorPBS": "9.9.1",
+  "subsistem": "Panel Furnance Tegangan Rendah",
+  "namaAset": "Panel Furnance Tanur 1",
+  "lokasi": "MCM",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-9.9.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Incoming PLN",
+      "spesifikasiTeknis": "Metering, HCB , in 4000 ampere, ue 44, ice 65 kA, icw 65 kA 1 sekon",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu testing, washing"
+    },
+    {
+      "nama": "Outgoing Beban",
+      "spesifikasiTeknis": "Tidak ada panel beban, karena langsung dari incoming",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada panel beban proteksi"
+    },
+    {
+      "nama": "Kapasitor",
+      "spesifikasiTeknis": "10 step, 10 CB, rating 440 volt, icu 20 kA, ics 15 kA, IN 100 ampere",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "25 kVar per step"
+    }
+  ]
+}
