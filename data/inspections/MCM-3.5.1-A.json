@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.5.1-A",
+  "inspectionId": "INS-20260829-MCM-3.5.1-A",
+  "nomorPBS": "3.5.1",
+  "subsistem": "Peralatan Pemindah Material",
+  "namaAset": "Forklift",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "VV",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.5.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Forklift",
+      "spesifikasiTeknis": "Kapasitas 2 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
