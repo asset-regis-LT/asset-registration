@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.2.1-B",
+  "inspectionId": "INS-20260829-MCM-3.2.1-B",
+  "nomorPBS": "3.2.1",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Kompresor Listrik",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.2.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Kompressor",
+      "spesifikasiTeknis": "RCB-30A, 30 HP, 22 kW",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Berkarat, ketindihan atap, butuh uji lebih lanjut"
+    }
+  ]
+}
