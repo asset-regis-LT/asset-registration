@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-3.4.3-E",
+  "inspectionId": "INS-20260829-MCM-3.4.3-E",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.4.3-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Tangki Abu",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Sambungan pipa patah dan korosif"
+    }
+  ]
+}
