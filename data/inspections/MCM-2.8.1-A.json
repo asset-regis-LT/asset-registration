@@ -1,0 +1,49 @@
+{
+  "tagNo": "MCM-2.8.1-A",
+  "inspectionId": "INS-20260829-MCM-2.8.1-A",
+  "nomorPBS": "2.8.1",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.8.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Crane",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Masih bagus, tidak terlihat ada korosi"
+    },
+    {
+      "nama": "Wire rope",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Terlihat adanya korosi, perlu dites"
+    },
+    {
+      "nama": "Motor penggerak x3",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Terlihat baik, butuh dites"
+    },
+    {
+      "nama": "Girder",
+      "spesifikasiTeknis": "12 m panjang, 12 m lebar",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat baik, tidak ada korosi"
+    },
+    {
+      "nama": "Instalasi kabel",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Kabel terlindung dengan baik, perlu dites"
+    }
+  ]
+}
