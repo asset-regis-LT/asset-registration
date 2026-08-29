@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-1.9.2-A",
+  "inspectionId": "INS-20260829-MCM-1.9.2-A",
+  "nomorPBS": "1.9.2",
+  "subsistem": "Sistem Tapping Logam dan Slag",
+  "namaAset": "Tapping Launder / Spout",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.9.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "e",
+      "spesifikasiTeknis": "r",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
