@@ -1,0 +1,35 @@
+{
+  "tagNo": "MCM-1.5.1-E",
+  "inspectionId": "INS-20260829-MCM-1.5.1-E",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.5.1-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Monitoring",
+      "spesifikasiTeknis": "Temperatur, oil",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Gel silika kotor, oil berserakan"
+    },
+    {
+      "nama": "Incoming outgoing tanur 2",
+      "spesifikasiTeknis": "Daya 12,5 kV; incoming 400 v kabel; outgoing basbar",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Repair"
+    },
+    {
+      "nama": "Panel proteksi di sisi ruang trafo",
+      "spesifikasiTeknis": "2500 A, ic 50 kA, icw 50 kA 1 sekon",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Proteksi ganda"
+    }
+  ]
+}
