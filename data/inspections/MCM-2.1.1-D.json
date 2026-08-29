@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.1.1-D",
+  "inspectionId": "INS-20260829-MCM-2.1.1-D",
+  "nomorPBS": "2.1.1",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Ketel",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.1.1-D.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "ketel",
+      "spesifikasiTeknis": "lebar",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
