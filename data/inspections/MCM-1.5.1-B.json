@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-1.5.1-B",
+  "inspectionId": "INS-20260829-MCM-1.5.1-B",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-1.5.1-B.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Incoming/Outgoing tanur 2",
+      "spesifikasiTeknis": "20 Kv ke 400 volt, 5 tap changer (21 kV sd 19 kV)",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Kapasitas 1600 kVA, cleaning saja"
+    },
+    {
+      "nama": "Minyak temperatur",
+      "spesifikasiTeknis": "Maks 150 C, suhu sekarang 40 C",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Cleaning saja"
+    }
+  ]
+}
