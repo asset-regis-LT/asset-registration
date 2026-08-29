@@ -1,0 +1,49 @@
+{
+  "tagNo": "MCM-2.8.3-A",
+  "inspectionId": "INS-20260829-MCM-2.8.3-A",
+  "nomorPBS": "2.8.3",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Crystallizer",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.8.3-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Crane 1",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi, perlu dites jalan"
+    },
+    {
+      "nama": "Crane 2",
+      "spesifikasiTeknis": "10 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu uji jalan, korosi"
+    },
+    {
+      "nama": "Girder",
+      "spesifikasiTeknis": "6.5 meter",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Korosi minim"
+    },
+    {
+      "nama": "Roller 1",
+      "spesifikasiTeknis": "20 cm diameter",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu uji jalan, visual terlihat baik"
+    },
+    {
+      "nama": "Roller 2",
+      "spesifikasiTeknis": "20 cm diameter",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu uji jalan, visual terlihat baik"
+    }
+  ]
+}
