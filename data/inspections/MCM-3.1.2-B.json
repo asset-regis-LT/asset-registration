@@ -1,0 +1,28 @@
+{
+  "tagNo": "MCM-3.1.2-B",
+  "inspectionId": "INS-20260829-MCM-3.1.2-B",
+  "nomorPBS": "3.1.2",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Genset",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Kevin",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-3.1.2-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Alternator Genset Crystalizer no 1 & no 2",
+      "spesifikasiTeknis": "2x 250 kVA, 400 V",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Kotor, butuh rekomisioning"
+    },
+    {
+      "nama": "Baterai starter genset crystalizer unit.1 & 2",
+      "spesifikasiTeknis": "GS astra premium",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Diganti baterai baru. Bukan long lead item"
+    }
+  ]
+}
