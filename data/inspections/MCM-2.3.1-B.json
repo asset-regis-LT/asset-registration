@@ -1,0 +1,21 @@
+{
+  "tagNo": "MCM-2.3.1-B",
+  "inspectionId": "INS-20260829-MCM-2.3.1-B",
+  "nomorPBS": "2.3.1",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Wadah Cetak Ingot",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-08-29",
+  "fotoPath": "data/inspections/photos/MCM-2.3.1-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "wadah cetak",
+      "spesifikasiTeknis": "ukuran",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
