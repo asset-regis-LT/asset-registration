@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-1.2.3-C",
+  "inspectionId": "INS-20260831-RBT-1.2.3-C",
+  "createdAt": "2026-08-31T15:17:23.460Z",
+  "nomorPBS": "1.2.3",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Dust Collector",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.3-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Pondasi Dust Collector",
+      "spesifikasiTeknis": "cor k200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Plat Dust Collector",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian di beberapa section"
+    },
+    {
+      "nama": "Tiang Dust Collector",
+      "spesifikasiTeknis": "IWF 150",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan coating"
+    },
+    {
+      "nama": "Atap Dust Collector",
+      "spesifikasiTeknis": "atap spandek dan kanal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian kanal C"
+    },
+    {
+      "nama": "Skep Dust Collector",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}
