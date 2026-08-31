@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-1.2.3-A",
+  "inspectionId": "INS-20260831-RBT-1.2.3-A",
+  "createdAt": "2026-08-31T15:08:13.322Z",
+  "nomorPBS": "1.2.3",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Dust Collector",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Dust Collector",
+      "spesifikasiTeknis": "Cor setara k200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "masih layak"
+    },
+    {
+      "nama": "Plat Dust Collector",
+      "spesifikasiTeknis": "plat 3-5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Perbaikan di hampir keseluruhan plat, korosi"
+    },
+    {
+      "nama": "Tiang Dust Collector",
+      "spesifikasiTeknis": "IWF 200",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan coating"
+    },
+    {
+      "nama": "Atap Dust Collector",
+      "spesifikasiTeknis": "atap spandek dan kuda-kuda baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian spandek dan coating Canal C"
+    },
+    {
+      "nama": "Skep Dust Collector",
+      "spesifikasiTeknis": "plat 3-5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "6 skep perlu pergantian"
+    }
+  ]
+}
