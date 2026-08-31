@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-12.1.7-B",
+  "inspectionId": "INS-20260831-RBT-12.1.7-B",
+  "createdAt": "2026-08-31T15:17:30.308Z",
+  "nomorPBS": "12.1.7",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Office",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.7-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Keramik granit",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat bagus"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "Dinding bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan perbaikan pada jendela"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap alderon",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan perbaikan pada skeleton atap"
+    }
+  ]
+}
