@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-1.7.2-B",
+  "inspectionId": "INS-20260831-RBT-1.7.2-B",
+  "nomorPBS": "1.7.2",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Water Box",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.7.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Water Box Tanur B",
+      "spesifikasiTeknis": "plat 5",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}
