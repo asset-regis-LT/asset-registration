@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-2.3.5-B",
+  "inspectionId": "INS-20260831-RBT-2.3.5-B",
+  "createdAt": "2026-08-31T17:10:29.154Z",
+  "nomorPBS": "2.3.5",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Talang Casting",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.3.5-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Heater Element",
+      "spesifikasiTeknis": "15kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Test beban"
+    },
+    {
+      "nama": "Panel Indikator Control",
+      "spesifikasiTeknis": "Kontaktor kontrol",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Thermocouple",
+      "spesifikasiTeknis": "Thermocouple",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
