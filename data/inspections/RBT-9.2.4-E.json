@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-9.2.4-E",
+  "inspectionId": "INS-20260831-RBT-9.2.4-E",
+  "createdAt": "2026-08-31T18:58:06.382Z",
+  "nomorPBS": "9.2.4",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Exhaust Fan",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.2.4-E.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosif"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "Size 27inci",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Ganti cover"
+    },
+    {
+      "nama": "Impeller Sistem",
+      "spesifikasiTeknis": "2,2 KW",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Kontaktor kontrol",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
