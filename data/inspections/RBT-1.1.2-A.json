@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-1.1.2-A",
+  "inspectionId": "INS-20260831-RBT-1.1.2-A",
+  "createdAt": "2026-08-31T15:29:43.834Z",
+  "nomorPBS": "1.1.2",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tutup Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.1.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Plat Tutup Tanur",
+      "spesifikasiTeknis": "Tebal plat 20 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengujian lebih lanjut"
+    },
+    {
+      "nama": "Cor Tutup Tanur",
+      "spesifikasiTeknis": "Tebal cor 27 cm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "terdapat patahan cor"
+    }
+  ]
+}
