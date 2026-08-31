@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.3.2-B",
+  "inspectionId": "INS-20260831-RBT-9.3.2-B",
+  "createdAt": "2026-08-31T18:51:48.517Z",
+  "nomorPBS": "9.3.2",
+  "subsistem": "Kompressor",
+  "namaAset": "Mesin Compressor Sullair",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.3.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Mesin Compressor Sullair 2",
+      "spesifikasiTeknis": "Sullair 3700",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
