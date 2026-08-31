@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-1.2.1-E",
+  "inspectionId": "INS-20260831-RBT-1.2.1-E",
+  "createdAt": "2026-08-31T16:55:28.350Z",
+  "nomorPBS": "1.2.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Seattle Bawah Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.1-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "bata api sk 32 -36",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "UNP dan SIku",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "coating"
+    },
+    {
+      "nama": "Waterbox",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Ducting",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Pintu Shuttel",
+      "spesifikasiTeknis": "cor castabel dan plat",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
