@@ -9,7 +9,7 @@
   "picInspector": "AM",
   "tanggalInspeksi": "2026-08-31",
   "fotoPath": "data/inspections/photos/VIP-11.1.2-A.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
       "nama": "Lantai",
@@ -28,8 +28,8 @@
     {
       "nama": "Atap",
       "spesifikasiTeknis": "Spandek dan rangka canal C",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
       "catatan": "Pergantian, atap bolong."
     }
   ]
