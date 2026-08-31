@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-9.1.4-B",
+  "inspectionId": "INS-20260831-RBT-9.1.4-B",
+  "createdAt": "2026-08-31T17:25:31.439Z",
+  "nomorPBS": "9.1.4",
+  "subsistem": "Sistem Off Gas Karbon",
+  "namaAset": "Pneumatic",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.4-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Panel Control",
+      "spesifikasiTeknis": "DC kontrol selenoid",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service dan ganti power supply"
+    },
+    {
+      "nama": "Valve Pneumatic",
+      "spesifikasiTeknis": "Pneumatic Membran valve",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Kabel nyaf 1mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service uji"
+    }
+  ]
+}
