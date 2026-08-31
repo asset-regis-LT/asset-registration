@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.6-A",
+  "inspectionId": "INS-20260831-RBT-3.1.6-A",
+  "createdAt": "2026-08-31T17:32:02.379Z",
+  "nomorPBS": "3.1.6",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Kapasitor Bank",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.6-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Panel Capasitor Bank",
+      "spesifikasiTeknis": "2x600kva",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Ganti kapasitor"
+    }
+  ]
+}
