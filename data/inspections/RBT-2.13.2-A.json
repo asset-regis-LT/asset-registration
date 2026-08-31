@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-2.13.2-A",
+  "inspectionId": "INS-20260831-RBT-2.13.2-A",
+  "nomorPBS": "2.13.2",
+  "subsistem": "Gudang dan Penimbangan Ingot",
+  "namaAset": "Anak Timbangan",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.13.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Anak Timbangan",
+      "spesifikasiTeknis": "Kalibrasi",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
