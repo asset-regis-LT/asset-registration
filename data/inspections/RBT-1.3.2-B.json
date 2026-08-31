@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-1.3.2-B",
+  "inspectionId": "INS-20260831-RBT-1.3.2-B",
+  "createdAt": "2026-08-31T17:26:26.698Z",
+  "nomorPBS": "1.3.2",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Electrode Holder dan Contact Shoe",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.3.2-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Stang Elektroda 1",
+      "spesifikasiTeknis": "baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Stang Elektroda 2",
+      "spesifikasiTeknis": "baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Stang Elektroda 3",
+      "spesifikasiTeknis": "baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
