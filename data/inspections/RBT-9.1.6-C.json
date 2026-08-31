@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-9.1.6-C",
+  "inspectionId": "INS-20260831-RBT-9.1.6-C",
+  "createdAt": "2026-08-31T17:40:40.519Z",
+  "nomorPBS": "9.1.6",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Motor Screw Hopper Elecroda Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.6-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor Screw 1",
+      "spesifikasiTeknis": "Motor gearbox 1,5kw 3p",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Screw 1",
+      "spesifikasiTeknis": "Screw Conveyor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Motor Screw 2",
+      "spesifikasiTeknis": "Motorgearbox 1,5kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Screw 2",
+      "spesifikasiTeknis": "Screw Conveyor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
