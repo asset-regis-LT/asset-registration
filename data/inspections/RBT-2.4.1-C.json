@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-2.4.1-C",
+  "inspectionId": "INS-20260831-RBT-2.4.1-C",
+  "createdAt": "2026-08-31T17:06:04.489Z",
+  "nomorPBS": "2.4.1",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Electrical Burner – Refining",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.4.1-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Burner",
+      "spesifikasiTeknis": "burner FBR",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "instalasi solar",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti selang hose"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Kontrol api burner",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
