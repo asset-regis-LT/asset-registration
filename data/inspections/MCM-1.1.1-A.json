@@ -8,14 +8,21 @@
   "picInspector": "MSH",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.1.1-A.jpg",
-  "overallDecision": "No Go",
+  "overallDecision": "Conditional Go",
   "komponen": [
     {
-      "nama": "Tanur Reverb",
-      "spesifikasiTeknis": "xxx",
-      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "No Go",
-      "catatan": "xxx"
+      "nama": "Struktur Tanur Reverb",
+      "spesifikasiTeknis": "Ukuran  630 x 350 cm, terdapat 2 burner di kedua sisi, terdapat 3 lubang pengaduk, seharusnya ada 2 bin pada atas tanur, namun yang masih ada hanya 1 bin berukuran 121 x 146 cm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Tanur reverb yang tersisa sepertinya sudah tidak digunakan lagi oleh pihak MCM dan sudah beralih seluruhnya ke tanur listrik"
+    },
+    {
+      "nama": "Bin",
+      "spesifikasiTeknis": "ukuran 121 x 146 cm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "hanya satu yang tersedia, dan sudah berkarat strukturnya"
     }
   ]
 }
