@@ -1,0 +1,35 @@
+{
+  "tagNo": "RBT-11.1.1-A",
+  "inspectionId": "INS-20260831-RBT-11.1.1-A",
+  "nomorPBS": "11.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Pos Jaga",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-11.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "keramik",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perlu dilakukan pengantian"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "dinding bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan pengecatan kembali"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap asbes",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
