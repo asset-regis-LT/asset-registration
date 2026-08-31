@@ -1,0 +1,42 @@
+{
+  "tagNo": "RBT-12.1.1-A",
+  "inspectionId": "INS-20260831-RBT-12.1.1-A",
+  "nomorPBS": "12.1.1",
+  "subsistem": "Komposisi",
+  "namaAset": "Blower Vacuum",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "blower vacuum",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Impeller Sistem",
+      "spesifikasiTeknis": "blower vacuum",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan maintenance"
+    },
+    {
+      "nama": "Filter",
+      "spesifikasiTeknis": "filter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian"
+    }
+  ]
+}
