@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-3.1.2-A",
+  "inspectionId": "INS-20260831-RBT-3.1.2-A",
+  "createdAt": "2026-08-31T15:41:11.563Z",
+  "nomorPBS": "3.1.2",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Genset",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Mesin KTA 75 1000 kVA",
+      "spesifikasiTeknis": "Cummins 1000 kVA",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Aki dan servis"
+    },
+    {
+      "nama": "Panel Syncron",
+      "spesifikasiTeknis": "Intelicompact",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Uji beban"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Nyy 1×300mm",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Uji beban"
+    }
+  ]
+}
