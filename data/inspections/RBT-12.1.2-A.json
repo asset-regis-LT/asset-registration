@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-12.1.2-A",
+  "inspectionId": "INS-20260831-RBT-12.1.2-A",
+  "createdAt": "2026-08-31T14:04:14.307Z",
+  "nomorPBS": "12.1.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Bangunan Crusher",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "lantai cor setara k250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Tiang",
+      "spesifikasiTeknis": "IWF 150",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "atap spandek dan rangka baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "Dinding spandek",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
