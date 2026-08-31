@@ -112,6 +112,11 @@ hard-refreshing).
   the `data` branch. Includes the technical spec, condition, and decision per sub-component (all filled in
   at inspection time, not part of the catalog), plus an `overallDecision` computed by worst-case precedence
   across components (`No Go` > `Hold` > `Conditional Go` > `Go` — `GithubStore.computeOverallDecision`).
+  Also carries `createdAt` (ISO timestamp, set once in `index.html`'s `buildRecord()` and never touched
+  again) — added later, so inspections saved before that shipped don't have it; admin.html's sort falls
+  back to Tag No. for those. `qrPrinted` (bool) is admin-only: unset/false until admin.html's per-row
+  "QR Dicetak" checkbox is ticked (by hand, or automatically the first time that row's "QR" button is
+  clicked).
 - `data/inspections/photos/<tagNo>.jpg` — the one photo per inspection, resized/compressed client-side
   (`GithubStore.compressImage`, max ~1600px, JPEG quality ~0.7) before upload, since these accumulate in
   the repo indefinitely.
@@ -175,17 +180,26 @@ Two non-obvious gotchas baked into this code:
 
 "Muat Data Tersimpan" lists every saved inspection (fetched with bounded concurrency via
 `mapWithConcurrency()` — sequential one-row-at-a-time fetching doesn't scale to the ~2000 inspections this
-is sized for), one row per inspection including its PIC/Inspector. Each row has three actions: **Edit**
-opens a modal for PIC/Tanggal/per-component Kondisi/Keputusan/Catatan, and also lets sub-component rows be
-renamed, added (`+ Tambah Sub Komponen`), or removed, mirroring index.html's manual-asset component editing
+is sized for), one row per inspection including its PIC/Inspector. Rows are newest-first by `createdAt`
+(records without it, i.e. saved before that field existed, sort after all dated ones, tied among
+themselves by Tag No.) — the full sorted set is kept in `allRows`, separate from whatever subset
+`renderDataTableRows()` currently has on screen. A "Filter Nama Smelter" dropdown (`populateLokasiFilter()`,
+built from the distinct `lokasi` values in `allRows`, no extra fetch) re-renders that subset client-side.
+
+Each row has a "QR Dicetak" checkbox (`qrPrinted`) plus three actions: **Edit** opens a modal for
+PIC/Tanggal/per-component Kondisi/Keputusan/Catatan, and also lets sub-component rows be renamed, added
+(`+ Tambah Sub Komponen`), or removed, mirroring index.html's manual-asset component editing
 (`addEditComponentCard`, validated the same way as `index.html`'s `validateForm()` before
 `GithubStore.updateFile()` overwrites the JSON — at least one component, and nama/spesifikasiTeknis/
-kondisiTeknis/keputusanTeknis all required per row). The photo and the Tag No. itself stay locked — changing
-those is still "delete and re-register," not a data-entry fix; **QR** re-generates and downloads that
-inspection's label from the cached record via `GithubStore.generateLabelPNG()`; **Hapus** removes both the
-JSON and photo. Edit and Hapus patch the in-memory row/table directly instead of reloading the whole list,
-since a full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan" bulk-deletes, sharing the per-tag
-delete logic.
+kondisiTeknis/keputusanTeknis all required per row); it patches the PIC cell and the `allRows` entry in
+place rather than reloading. The photo and the Tag No. itself stay locked — changing those is still
+"delete and re-register," not a data-entry fix. **QR** re-generates and downloads that inspection's label
+from the cached record via `GithubStore.generateLabelPNG()`, then auto-ticks "QR Dicetak" if it wasn't
+already (best-effort — a download isn't proof of an actual print — via the same `setQrPrinted()` the
+checkbox itself uses, which never blocks or fails the download on a write error). **Hapus** removes both
+the JSON and photo. Edit and Hapus patch the in-memory row/table (and `allRows`) directly instead of
+reloading the whole list, since a full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan"
+bulk-deletes, sharing the per-tag delete logic.
 
 The Excel export reuses the same concurrency helper, and re-compresses each photo down to thumbnail size
 before embedding it — the sheet only ever displays it at 110x110px, so embedding the full ~1600px capture

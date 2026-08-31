@@ -40,6 +40,8 @@
   .status.warn{background:#fff4e8;color:#8a5a1f;}
   .status.err{background:#f8e4e2;color:#9e3028;}
   .progress-log{margin-top:12px;font-family:var(--mono);font-size:12px;background:#14171a;color:#c8f0c8;padding:10px;border-radius:6px;max-height:180px;overflow:auto;white-space:pre-wrap;display:none;}
+  label[for="lokasiFilter"]{margin-top:14px;}
+  #lokasiFilter{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);}
   .table-scroll{overflow-x:auto;margin-top:12px;}
   table.data-table{width:100%;border-collapse:collapse;font-size:13px;}
   table.data-table th, table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;}
@@ -104,10 +106,14 @@
       <button class="btn-delete" id="deleteAllBtn" disabled>Hapus Semua Data Tersimpan</button>
     </div>
     <div class="status" id="dataListStatus"></div>
+    <label for="lokasiFilter">Filter Nama Smelter</label>
+    <select id="lokasiFilter" style="display:none;">
+      <option value="">Semua Lokasi</option>
+    </select>
     <div class="table-scroll">
       <table class="data-table" id="dataTable" style="display:none;">
         <thead>
-          <tr><th>Tag No.</th><th>Nama Aset</th><th>Subsistem</th><th>Nama Smelter</th><th>PIC</th><th></th></tr>
+          <tr><th>Tag No.</th><th>Nama Aset</th><th>Subsistem</th><th>Nama Smelter</th><th>PIC</th><th>QR Dicetak</th><th></th></tr>
         </thead>
         <tbody id="dataTableBody"></tbody>
       </table>
@@ -429,6 +435,109 @@ function applyRecentEdits(record) {
   return entry.record;
 }
 
+// Full fetched-and-sorted set from the last loadDataTable() run. Separate
+// from whatever renderDataTableRows() currently has on screen, since the
+// Lokasi filter renders a subset of this without re-fetching.
+let allRows = [];
+const lokasiFilter = document.getElementById("lokasiFilter");
+
+// Persists the QR-printed flag: same read-sha/write-with-sha pattern as the
+// edit modal's save, plus the same recentEdits guard so a reload right after
+// toggling can't show it flip back due to raw.githubusercontent.com's CDN lag.
+async function setQrPrinted(tag, printed, checkbox) {
+  const record = loadedRecords[tag];
+  if (!record) return;
+  checkbox.disabled = true;
+  try {
+    if (!GithubStore.hasToken()) throw new Error("Token GitHub belum diatur.");
+    const jsonPath = `data/inspections/${tag}.json`;
+    const meta = await GithubStore.getFileMeta(jsonPath);
+    if (!meta) throw new Error("File inspeksi tidak ditemukan di GitHub.");
+    const updatedRecord = { ...record, qrPrinted: printed };
+    await GithubStore.updateFile(
+      jsonPath,
+      GithubStore.toBase64(JSON.stringify(updatedRecord, null, 2)),
+      `Tandai QR ${printed ? "dicetak" : "belum dicetak"}: ${tag}`,
+      meta.sha
+    );
+    loadedRecords[tag] = updatedRecord;
+    rememberRecentEdit(tag, updatedRecord);
+    const cached = allRows.find(r => r.tagNo === tag);
+    if (cached) cached.qrPrinted = printed;
+  } catch (err) {
+    checkbox.checked = !printed;
+    alert(err.message || "Gagal menyimpan status QR dicetak.");
+  } finally {
+    checkbox.disabled = false;
+  }
+}
+
+// Renders the given (already-filtered, already-sorted) records into the
+// table and (re)wires their row buttons/checkbox — shared by the initial
+// load and by the Lokasi filter, which only re-renders a subset of allRows.
+function renderDataTableRows(records) {
+  dataTableBody.innerHTML = "";
+  records.forEach(record => {
+    const tr = document.createElement("tr");
+    tr.dataset.tag = record.tagNo;
+    tr.innerHTML = `
+      <td>${escapeHtml(record.tagNo)}</td>
+      <td>${escapeHtml(record.namaAset)}</td>
+      <td>${escapeHtml(record.subsistem)}</td>
+      <td>${escapeHtml(record.lokasi)}</td>
+      <td>${escapeHtml(record.picInspector || "")}</td>
+      <td><input type="checkbox" class="qr-printed-check" data-tag="${escapeHtml(record.tagNo)}" ${record.qrPrinted ? "checked" : ""}></td>
+      <td class="row-actions">
+        <button class="btn-edit" data-tag="${escapeHtml(record.tagNo)}">Edit</button>
+        <button class="btn-qr" data-tag="${escapeHtml(record.tagNo)}">QR</button>
+        <button class="btn-delete" data-tag="${escapeHtml(record.tagNo)}">Hapus</button>
+      </td>
+    `;
+    dataTableBody.appendChild(tr);
+  });
+  dataTable.style.display = records.length ? "table" : "none";
+  dataListStatus.className = "status ok";
+  dataListStatus.textContent = records.length === allRows.length
+    ? `Menampilkan ${records.length} inspeksi.`
+    : `Menampilkan ${records.length} dari ${allRows.length} inspeksi.`;
+
+  dataTableBody.querySelectorAll(".btn-edit").forEach(btn => {
+    btn.addEventListener("click", () => openEditModal(btn.dataset.tag));
+  });
+  dataTableBody.querySelectorAll(".btn-qr").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const record = loadedRecords[btn.dataset.tag];
+      if (!record) return;
+      await GithubStore.generateLabelPNG(record);
+      const checkbox = dataTableBody.querySelector(`.qr-printed-check[data-tag="${CSS.escape(btn.dataset.tag)}"]`);
+      if (checkbox && !checkbox.checked) {
+        checkbox.checked = true;
+        setQrPrinted(btn.dataset.tag, true, checkbox).catch(err => console.error("Gagal menandai QR dicetak:", err));
+      }
+    });
+  });
+  dataTableBody.querySelectorAll(".btn-delete").forEach(btn => {
+    btn.addEventListener("click", () => deleteInspectionRow(btn.dataset.tag));
+  });
+  dataTableBody.querySelectorAll(".qr-printed-check").forEach(cb => {
+    cb.addEventListener("change", () => setQrPrinted(cb.dataset.tag, cb.checked, cb));
+  });
+}
+
+function populateLokasiFilter() {
+  const current = lokasiFilter.value;
+  const lokasiValues = [...new Set(allRows.map(r => r.lokasi).filter(Boolean))].sort();
+  lokasiFilter.innerHTML = `<option value="">Semua Lokasi</option>` +
+    lokasiValues.map(l => `<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`).join("");
+  lokasiFilter.value = lokasiValues.includes(current) ? current : "";
+  lokasiFilter.style.display = lokasiValues.length ? "block" : "none";
+}
+
+lokasiFilter.addEventListener("change", () => {
+  const selected = lokasiFilter.value;
+  renderDataTableRows(selected ? allRows.filter(r => r.lokasi === selected) : allRows);
+});
+
 async function loadDataTable() {
   dataListStatus.className = "status warn";
   dataListStatus.textContent = "Memuat…";
@@ -448,41 +557,21 @@ async function loadDataTable() {
     loadedRecords = {};
     results.forEach(r => { if (r) loadedRecords[r.tagNo] = applyRecentEdits(r); });
 
-    const rows = results.filter(Boolean).sort((a, b) => a.tagNo.localeCompare(b.tagNo));
-    rows.forEach(record => {
-      const tr = document.createElement("tr");
-      tr.dataset.tag = record.tagNo;
-      tr.innerHTML = `
-        <td>${escapeHtml(record.tagNo)}</td>
-        <td>${escapeHtml(record.namaAset)}</td>
-        <td>${escapeHtml(record.subsistem)}</td>
-        <td>${escapeHtml(record.lokasi)}</td>
-        <td>${escapeHtml(record.picInspector || "")}</td>
-        <td class="row-actions">
-          <button class="btn-edit" data-tag="${escapeHtml(record.tagNo)}">Edit</button>
-          <button class="btn-qr" data-tag="${escapeHtml(record.tagNo)}">QR</button>
-          <button class="btn-delete" data-tag="${escapeHtml(record.tagNo)}">Hapus</button>
-        </td>
-      `;
-      dataTableBody.appendChild(tr);
+    // Newest-first by createdAt (only present on inspections saved since this
+    // field shipped); records without it sort after all dated ones, tied
+    // among themselves by Tag No. — ISO timestamps compare correctly with
+    // plain string comparison.
+    allRows = results.filter(Boolean).sort((a, b) => {
+      if (a.createdAt && b.createdAt) return b.createdAt.localeCompare(a.createdAt);
+      if (a.createdAt) return -1;
+      if (b.createdAt) return 1;
+      return a.tagNo.localeCompare(b.tagNo);
     });
-    dataTable.style.display = rows.length ? "table" : "none";
-    deleteAllBtn.disabled = !rows.length;
-    dataListStatus.className = "status ok";
-    dataListStatus.textContent = `Menampilkan ${rows.length} inspeksi.`;
 
-    dataTableBody.querySelectorAll(".btn-edit").forEach(btn => {
-      btn.addEventListener("click", () => openEditModal(btn.dataset.tag));
-    });
-    dataTableBody.querySelectorAll(".btn-qr").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const record = loadedRecords[btn.dataset.tag];
-        if (record) GithubStore.generateLabelPNG(record);
-      });
-    });
-    dataTableBody.querySelectorAll(".btn-delete").forEach(btn => {
-      btn.addEventListener("click", () => deleteInspectionRow(btn.dataset.tag));
-    });
+    populateLokasiFilter();
+    const selected = lokasiFilter.value;
+    renderDataTableRows(selected ? allRows.filter(r => r.lokasi === selected) : allRows);
+    deleteAllBtn.disabled = !allRows.length;
   } catch (err) {
     dataListStatus.className = "status err";
     dataListStatus.textContent = err.message || "Gagal memuat data.";
@@ -516,6 +605,7 @@ async function deleteInspectionRow(tag) {
   try {
     await deleteInspectionFiles(tag, record);
     delete loadedRecords[tag];
+    allRows = allRows.filter(r => r.tagNo !== tag);
     const row = dataTableBody.querySelector(`tr[data-tag="${CSS.escape(tag)}"]`);
     if (row) row.remove();
     dataListStatus.className = "status ok";
@@ -556,8 +646,10 @@ async function deleteAllInspections() {
     dataListStatus.textContent = `Menghapus… ${done + failed}/${tags.length} (${failed} gagal)`;
   });
 
+  allRows = allRows.filter(r => loadedRecords[r.tagNo]);
   dataTableBody.innerHTML = "";
   dataTable.style.display = "none";
+  lokasiFilter.style.display = "none";
   dataListStatus.className = failed ? "status err" : "status ok";
   dataListStatus.textContent = failed
     ? `${done} inspeksi terhapus, ${failed} gagal dihapus — muat ulang untuk melihat sisanya.`
@@ -685,11 +777,14 @@ saveEditBtn.addEventListener("click", async () => {
 
     loadedRecords[editingTag] = updatedRecord;
     rememberRecentEdit(editingTag, updatedRecord);
+    const cachedIdx = allRows.findIndex(r => r.tagNo === editingTag);
+    if (cachedIdx !== -1) allRows[cachedIdx] = updatedRecord;
+    // Patch the PIC cell in place rather than reloading — Tag/Nama Aset/
+    // Subsistem/Lokasi can't change here, and PIC is the only visible
+    // summary-row column this modal can touch.
+    const picCell = dataTableBody.querySelector(`tr[data-tag="${CSS.escape(editingTag)}"] td:nth-child(5)`);
+    if (picCell) picCell.textContent = updatedRecord.picInspector || "";
     editOverlay.classList.remove("open");
-    // No table reload needed: only PIC/Tanggal/component values changed,
-    // none of which appear in the summary row (Tag/Nama Aset/Subsistem/
-    // Lokasi are all still correct as-is) — that avoids re-fetching
-    // everything just to redraw a row whose visible cells didn't move.
     dataListStatus.className = "status ok";
     dataListStatus.textContent = `Inspeksi ${editingTag} berhasil diperbarui.`;
     editingTag = null;

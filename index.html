@@ -1047,6 +1047,7 @@ function buildRecord() {
   return {
     tagNo,
     inspectionId: `INS-${tanggal.replace(/-/g, "")}-${tagNo}`,
+    createdAt: new Date().toISOString(),
     nomorPBS: document.getElementById("nomorPBS").value.trim(),
     subsistem: document.getElementById("subsistemDisplay").value.trim(),
     namaAset: namaAsetInput.value.trim(),
