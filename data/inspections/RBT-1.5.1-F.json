@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.5.1-F",
+  "inspectionId": "INS-20260831-RBT-1.5.1-F",
+  "createdAt": "2026-08-31T18:16:32.838Z",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maul",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.5.1-F.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Trafo Step Down 1250 Kva 20kv Tanur A",
+      "spesifikasiTeknis": "1250kva 110a",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
