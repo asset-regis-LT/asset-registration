@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.6.1-G",
+  "inspectionId": "INS-20260831-RBT-1.6.1-G",
+  "createdAt": "2026-08-31T13:56:03.971Z",
+  "nomorPBS": "1.6.1",
+  "subsistem": "Sistem Kontrol dan Instrumentasi",
+  "namaAset": "Panel Consule Control",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.6.1-G.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Control Board 2",
+      "spesifikasiTeknis": "Control Engine pumpt",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Tes uji beban"
+    }
+  ]
+}
