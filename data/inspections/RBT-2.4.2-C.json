@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.4.2-C",
+  "inspectionId": "INS-20260831-RBT-2.4.2-C",
+  "createdAt": "2026-08-31T14:49:37.209Z",
+  "nomorPBS": "2.4.2",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Electrical Burner – Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.4.2-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Heater Element",
+      "spesifikasiTeknis": "25kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "test beban"
+    }
+  ]
+}
