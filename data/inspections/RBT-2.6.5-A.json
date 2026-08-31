@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-2.6.5-A",
+  "inspectionId": "INS-20260831-RBT-2.6.5-A",
+  "createdAt": "2026-08-31T18:55:42.845Z",
+  "nomorPBS": "2.6.5",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.6.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Instalasi Pipa",
+      "spesifikasiTeknis": "Pipa SCH",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "scrab"
+    },
+    {
+      "nama": "Gate Valve",
+      "spesifikasiTeknis": "4 inch",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan maintenace"
+    }
+  ]
+}
