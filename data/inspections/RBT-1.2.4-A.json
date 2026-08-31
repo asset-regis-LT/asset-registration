@@ -1,0 +1,63 @@
+{
+  "tagNo": "RBT-1.2.4-A",
+  "inspectionId": "INS-20260831-RBT-1.2.4-A",
+  "nomorPBS": "1.2.4",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Bag House",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.4-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Baghouse",
+      "spesifikasiTeknis": "cor setara k200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "Plat 5mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengujian ticknes dan pengantian tutup baghouse"
+    },
+    {
+      "nama": "Tiang Baghouse",
+      "spesifikasiTeknis": "IWF 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan coating"
+    },
+    {
+      "nama": "Atap Baghouse",
+      "spesifikasiTeknis": "atap spandek dan rangka baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pergantian atap spandek dan kuda kuda baja"
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "Plat kombinasi 2 -5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Filter Baghouse",
+      "spesifikasiTeknis": "serat sintetis",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Cage",
+      "spesifikasiTeknis": "Diameter 140 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Pergantian"
+    }
+  ]
+}
