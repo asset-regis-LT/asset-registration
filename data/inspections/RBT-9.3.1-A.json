@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.3.1-A",
+  "inspectionId": "INS-20260831-RBT-9.3.1-A",
+  "createdAt": "2026-08-31T18:48:08.854Z",
+  "nomorPBS": "9.3.1",
+  "subsistem": "Hydrant",
+  "namaAset": "Jockey Pumpt",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.3.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Jockey Pumpt",
+      "spesifikasiTeknis": "Grounfos CR-15",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    }
+  ]
+}
