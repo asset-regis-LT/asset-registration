@@ -1,0 +1,63 @@
+{
+  "tagNo": "RBT-2.5.5-B",
+  "inspectionId": "INS-20260831-RBT-2.5.5-B",
+  "nomorPBS": "2.5.5",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Bag House Refining",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.5.5-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Baghouse",
+      "spesifikasiTeknis": "cor setara k 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Masih layak"
+    },
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Tiang Baghouse",
+      "spesifikasiTeknis": "IWF 150",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Tiang korosi, pengantian di beberapa tiang"
+    },
+    {
+      "nama": "Atap Baghouse",
+      "spesifikasiTeknis": "spandek dan rangka baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian di beberapa section"
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Pengantian"
+    },
+    {
+      "nama": "Filter Baghouse",
+      "spesifikasiTeknis": "sintetis",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrub"
+    },
+    {
+      "nama": "Cage",
+      "spesifikasiTeknis": "diameter 140 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
