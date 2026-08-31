@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.1-A",
+  "inspectionId": "INS-20260831-RBT-3.1.1-A",
+  "createdAt": "2026-08-31T17:07:40.091Z",
+  "nomorPBS": "3.1.1",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Kubikel Incoming PLN",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Kubikel Incoming PLN",
+      "spesifikasiTeknis": "Kubikel Schneider sm6",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hipot test, uji relay"
+    }
+  ]
+}
