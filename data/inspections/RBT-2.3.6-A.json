@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-2.3.6-A",
+  "inspectionId": "INS-20260831-RBT-2.3.6-A",
+  "createdAt": "2026-08-31T15:47:12.530Z",
+  "nomorPBS": "2.3.6",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Pot Casting / Holding Kettle",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.3.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Tong cryztallizer",
+      "spesifikasiTeknis": "Kapasitas 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Heater Sistem",
+      "spesifikasiTeknis": "Element 25kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Test beban"
+    },
+    {
+      "nama": "Valve",
+      "spesifikasiTeknis": "Valve",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu pengetesan"
+    }
+  ]
+}
