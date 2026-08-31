@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-2.4.2-F",
+  "inspectionId": "INS-20260831-RBT-2.4.2-F",
+  "createdAt": "2026-08-31T17:04:41.856Z",
+  "nomorPBS": "2.4.2",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Electrical Burner – Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.4.2-F.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Burner",
+      "spesifikasiTeknis": "Burner",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "Instalasi bbm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti hose bbm"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Kontrol api",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
