@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.5.3-A",
+  "inspectionId": "INS-20260831-VIP-1.5.3-A",
+  "createdAt": "2026-08-31T13:50:20.777Z",
+  "nomorPBS": "1.5.3",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Busbar / Bus Tube / Flexible Cable",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/VIP-1.5.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Busbar Elektroda 1 Tanur A",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Busbar kurang aman, hanya mengandalkan penjepitan kabel tanpa skun."
+    }
+  ]
+}
