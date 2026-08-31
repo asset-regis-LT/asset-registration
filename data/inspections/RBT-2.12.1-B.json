@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-2.12.1-B",
+  "inspectionId": "INS-20260831-RBT-2.12.1-B",
+  "createdAt": "2026-08-31T17:16:56.004Z",
+  "nomorPBS": "2.12.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "Tanur Flame Oven",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.12.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "Bata api sk 34 -38 kombinasi",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Lantai Tanur",
+      "spesifikasiTeknis": "Lantai Bata api kombinasi castabel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengecekan kembali"
+    },
+    {
+      "nama": "Plat Dinding",
+      "spesifikasiTeknis": "plat 8 -12 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Water Box",
+      "spesifikasiTeknis": "Plat 5-8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Roof",
+      "spesifikasiTeknis": "Atap spandek dan rangka baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
