@@ -1,0 +1,28 @@
+{
+  "tagNo": "RBT-2.1.5-A",
+  "inspectionId": "INS-20260831-RBT-2.1.5-A",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Pompa Timah",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.1.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Pumpt",
+      "spesifikasiTeknis": "Pumpt",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    }
+  ]
+}
