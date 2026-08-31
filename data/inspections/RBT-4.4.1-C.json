@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-4.4.1-C",
+  "inspectionId": "INS-20260831-RBT-4.4.1-C",
+  "createdAt": "2026-08-31T16:28:51.277Z",
+  "nomorPBS": "4.4.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Seattle Bawah Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-4.4.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "Dinding bata dan plat baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "Bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Waterbox",
+      "spesifikasiTeknis": "Plat 8mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Pengantian"
+    },
+    {
+      "nama": "Ducting",
+      "spesifikasiTeknis": "Plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Pintu Settle",
+      "spesifikasiTeknis": "Plat 5mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
