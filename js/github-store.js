@@ -358,7 +358,7 @@ const GithubStore = (() => {
     y += 22;
 
     ctx.fillStyle = ink;
-    ctx.font = "bold 32px monospace";
+    ctx.font = "bold 26px monospace";
     ctx.fillText(record.tagNo, rx, y);
     y += 44;
 
