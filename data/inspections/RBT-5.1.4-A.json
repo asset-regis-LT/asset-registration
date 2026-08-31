@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-5.1.4-A",
+  "inspectionId": "INS-20260831-RBT-5.1.4-A",
+  "nomorPBS": "5.1.4",
+  "subsistem": "Lab. Analisis",
+  "namaAset": "Timbangan Laboratorium",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-5.1.4-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Timbangan Digital",
+      "spesifikasiTeknis": "Kapasitas 2 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "kalibrasi"
+    }
+  ]
+}
