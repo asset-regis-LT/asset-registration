@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.1.8-A",
+  "inspectionId": "INS-20260831-RBT-9.1.8-A",
+  "createdAt": "2026-08-31T18:05:57.238Z",
+  "nomorPBS": "9.1.8",
+  "subsistem": "Rotary Kiln",
+  "namaAset": "Motor Gearbox",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.8-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor Gearbox",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrab"
+    }
+  ]
+}
