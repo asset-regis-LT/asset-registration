@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-2.2.1-D",
+  "inspectionId": "INS-20260831-RBT-2.2.1-D",
+  "createdAt": "2026-08-31T14:50:59.845Z",
+  "nomorPBS": "2.2.1",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "Screw atau Blitz Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.2.1-D.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Chamber",
+      "spesifikasiTeknis": "kapasitas 10 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi sebagian besar"
+    },
+    {
+      "nama": "Screw",
+      "spesifikasiTeknis": "kapasitas 10 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi sebagian besar"
+    }
+  ]
+}
