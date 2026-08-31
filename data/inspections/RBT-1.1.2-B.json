@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-1.1.2-B",
+  "inspectionId": "INS-20260831-RBT-1.1.2-B",
+  "createdAt": "2026-08-31T17:34:17.212Z",
+  "nomorPBS": "1.1.2",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tutup Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.1.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Dinding Tanur",
+      "spesifikasiTeknis": "plat 8 - 20 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Bata Api",
+      "spesifikasiTeknis": "bata dan plat",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Platform Tanur",
+      "spesifikasiTeknis": "plat boardes",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "coating"
+    },
+    {
+      "nama": "Instalasi Air Tanur",
+      "spesifikasiTeknis": "pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}
