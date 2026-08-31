@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.2.6-A",
+  "inspectionId": "INS-20260831-RBT-1.2.6-A",
+  "createdAt": "2026-08-31T17:53:35.229Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack / Cerobong",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Stack/Cerobong",
+      "spesifikasiTeknis": "plat baja 5mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pergantian di beberapa section yang berkarat"
+    }
+  ]
+}
