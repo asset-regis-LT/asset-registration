@@ -1,0 +1,63 @@
+{
+  "tagNo": "RBT-2.5.5-A",
+  "inspectionId": "INS-20260831-RBT-2.5.5-A",
+  "nomorPBS": "2.5.5",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Bag House Refining",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.5.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Baghouse",
+      "spesifikasiTeknis": "Cor setara k200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "Plat 5mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Harus dilakukan pengujian lebih lanjut"
+    },
+    {
+      "nama": "Tiang Baghouse",
+      "spesifikasiTeknis": "IWF 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Tiang berkarat perlu dilakukan coating"
+    },
+    {
+      "nama": "Atap Baghouse",
+      "spesifikasiTeknis": "Atap spandek rangka baja",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Perlu dilakukan pengantian"
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "Plat 3mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Berkarat"
+    },
+    {
+      "nama": "Filter Baghouse",
+      "spesifikasiTeknis": "Sintesis",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Harus dilakukan pengantian"
+    },
+    {
+      "nama": "Cage",
+      "spesifikasiTeknis": "diameter 140mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
