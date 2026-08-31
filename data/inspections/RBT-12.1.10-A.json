@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-12.1.10-A",
+  "inspectionId": "INS-20260831-RBT-12.1.10-A",
+  "createdAt": "2026-08-31T15:38:56.375Z",
+  "nomorPBS": "12.1.10",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang Pasir",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.10-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Cor setara K250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengecoran untuk lantai yang bolong"
+    },
+    {
+      "nama": "Tiang",
+      "spesifikasiTeknis": "IWF 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan penggantian pada tiang yang korosif"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap spandek dan rangka baja berat",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Terdapat rangka/skeleton yang korosif dan perlu diganti"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "dinding kombinasi spandek dan bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian dinding spandek"
+    }
+  ]
+}
