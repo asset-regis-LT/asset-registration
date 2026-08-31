@@ -1,0 +1,57 @@
+{
+  "tagNo": "RBT-9.1.6-A",
+  "inspectionId": "INS-20260831-RBT-9.1.6-A",
+  "createdAt": "2026-08-31T17:33:45.952Z",
+  "nomorPBS": "9.1.6",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Motor Screw Hopper Elecroda Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.6-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor Screw 1",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Gearbox Screw 1",
+      "spesifikasiTeknis": "1 ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perawatan"
+    },
+    {
+      "nama": "Screw 1",
+      "spesifikasiTeknis": "1 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosif"
+    },
+    {
+      "nama": "Motor Screw 2",
+      "spesifikasiTeknis": "1,5kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Gearbox Screw 2",
+      "spesifikasiTeknis": "1 ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "maintenance"
+    },
+    {
+      "nama": "Screw 2",
+      "spesifikasiTeknis": "1 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perlu dilakukan pengujian"
+    }
+  ]
+}
