@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-4.4.1-B",
+  "inspectionId": "INS-20260831-RBT-4.4.1-B",
+  "createdAt": "2026-08-31T16:03:25.601Z",
+  "nomorPBS": "4.4.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Seattle Bawah Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-4.4.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "Sk 32",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "kombinasi besi siku dan plat",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "dilakukan pengelasan kembali dan dilakukan coating"
+    },
+    {
+      "nama": "Ducting",
+      "spesifikasiTeknis": "plat 3mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "kondisi masih cukup baik"
+    },
+    {
+      "nama": "Pintu Settle",
+      "spesifikasiTeknis": "kombinasi plat dan siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan maintenance"
+    }
+  ]
+}
