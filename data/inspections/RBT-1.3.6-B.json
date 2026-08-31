@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.3.6-B",
+  "inspectionId": "INS-20260831-RBT-1.3.6-B",
+  "createdAt": "2026-08-31T15:06:22.128Z",
+  "nomorPBS": "1.3.6",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Cubicle 20 kV Tanur B",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.3.6-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Cubicle 20kv",
+      "spesifikasiTeknis": "Transformers inlet switchgear",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Maintenance service, Merger, ganti aki, dan uji beban"
+    }
+  ]
+}
