@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.2.6-H",
+  "inspectionId": "INS-20260831-RBT-1.2.6-H",
+  "createdAt": "2026-08-31T18:03:42.504Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack / Cerobong",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.2.6-H.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Stack/Cerobong Tanur E",
+      "spesifikasiTeknis": "8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Penggantian di beberapa bagian yang korosif"
+    }
+  ]
+}
