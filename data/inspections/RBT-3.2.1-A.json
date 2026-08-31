@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.2.1-A",
+  "inspectionId": "INS-20260831-RBT-3.2.1-A",
+  "createdAt": "2026-08-31T16:38:47.867Z",
+  "nomorPBS": "3.2.1",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Kompresor Listrik",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.2.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pipa Instalasi Udara",
+      "spesifikasiTeknis": "Pipa SCH",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Penggantian"
+    }
+  ]
+}
