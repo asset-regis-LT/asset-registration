@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-11.1.2-A",
+  "inspectionId": "INS-20260831-VIP-11.1.2-A",
+  "createdAt": "2026-08-31T13:22:23.247Z",
+  "nomorPBS": "11.1.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Area Peleburan/Tanur",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/VIP-11.1.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perbaikan"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "Tiang IWF",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Sebagian korosi ringan"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Spandek dan rangka canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pergantian, atap bolong."
+    }
+  ]
+}
