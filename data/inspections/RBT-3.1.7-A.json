@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.7-A",
+  "inspectionId": "INS-20260831-RBT-3.1.7-A",
+  "createdAt": "2026-08-31T17:04:32.273Z",
+  "nomorPBS": "3.1.7",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Incoming Power Feeder",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.7-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Kubikel Incoming GENSET",
+      "spesifikasiTeknis": "Schneider TM sm6",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hipot test uji relay"
+    }
+  ]
+}
