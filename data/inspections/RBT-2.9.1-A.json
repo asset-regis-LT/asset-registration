@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-2.9.1-A",
+  "inspectionId": "INS-20260831-RBT-2.9.1-A",
+  "createdAt": "2026-08-31T17:58:57.831Z",
+  "nomorPBS": "2.9.1",
+  "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAset": "Mixer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.9.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "5,5kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "Gearbox",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Konstruksi Molen",
+      "spesifikasiTeknis": "Kapasitas 1,5ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Molen",
+      "spesifikasiTeknis": "Kapasitas 1,5ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Control Board",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
+    }
+  ]
+}
