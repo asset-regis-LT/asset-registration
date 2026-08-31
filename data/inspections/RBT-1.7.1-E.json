@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-1.7.1-E",
+  "inspectionId": "INS-20260831-RBT-1.7.1-E",
+  "nomorPBS": "1.7.1",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Water Jacket",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.7.1-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Plat Water Jaket",
+      "spesifikasiTeknis": "plat 5 -10 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perlu dilakukan pengujian"
+    }
+  ]
+}
