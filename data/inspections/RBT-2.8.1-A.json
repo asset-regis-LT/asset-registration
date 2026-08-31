@@ -1,0 +1,99 @@
+{
+  "tagNo": "RBT-2.8.1-A",
+  "inspectionId": "INS-20260831-RBT-2.8.1-A",
+  "createdAt": "2026-08-31T23:16:16.215Z",
+  "nomorPBS": "2.8.1",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Refining",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.8.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Hoist",
+      "spesifikasiTeknis": "Hitachi 5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "12mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "Hook Block",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengujian"
+    },
+    {
+      "nama": "Bridge Girder",
+      "spesifikasiTeknis": "18 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
+    },
+    {
+      "nama": "Endtruck",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "Runway Beam",
+      "spesifikasiTeknis": "130 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan maintenance"
+    },
+    {
+      "nama": "Runway Rail",
+      "spesifikasiTeknis": "130 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "Downshop Conductors",
+      "spesifikasiTeknis": "300a",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Control Panel",
+      "spesifikasiTeknis": "Panel inverter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Remote Telecrane",
+      "spesifikasiTeknis": "Remote kontrol",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service ganti batre"
+    },
+    {
+      "nama": "Motor Endtruck",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Installasi Power Hoist",
+      "spesifikasiTeknis": "Kabel Nyyhy 4*2,5mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
