@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.4-A",
+  "inspectionId": "INS-20260831-RBT-3.1.4-A",
+  "createdAt": "2026-08-31T18:02:51.626Z",
+  "nomorPBS": "3.1.4",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Main Switch Board",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.4-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Panel LVMDP",
+      "spesifikasiTeknis": "Panel distribusi 380v",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    }
+  ]
+}
