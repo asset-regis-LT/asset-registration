@@ -1,0 +1,35 @@
+{
+  "tagNo": "RBT-1.5.3-B",
+  "inspectionId": "INS-20260831-RBT-1.5.3-B",
+  "nomorPBS": "1.5.3",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Busbar / Bus Tube / Flexible Cable",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.5.3-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Busbar Stang Electroda 1",
+      "spesifikasiTeknis": "1250kva 110v 6000",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service dan merger isolator stang"
+    },
+    {
+      "nama": "Busbar Stang Electroda 2",
+      "spesifikasiTeknis": "1250kva 110v 6000",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service dan merger"
+    },
+    {
+      "nama": "Busbar Stang Electroda 3",
+      "spesifikasiTeknis": "1250kva 110v 6000",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service dan merger isolator stang elektroda"
+    }
+  ]
+}
