@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-2.7.2-A",
+  "inspectionId": "INS-20260831-RBT-2.7.2-A",
+  "createdAt": "2026-08-31T18:14:01.410Z",
+  "nomorPBS": "2.7.2",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Thermocouple Pot Refining",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.7.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Sensor Indikator",
+      "spesifikasiTeknis": "Sensor Indikator",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Thermocouple",
+      "spesifikasiTeknis": "Thermocouple C8",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
