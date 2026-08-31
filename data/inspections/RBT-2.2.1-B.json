@@ -24,13 +24,6 @@
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "Tidak center dan terkorosi sebagian"
-    },
-    {
-      "nama": "Heater Element",
-      "spesifikasiTeknis": "125kw 4 zona",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": "Uji beban"
     }
   ],
   "qrPrinted": false
