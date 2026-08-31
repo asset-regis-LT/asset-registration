@@ -1,0 +1,28 @@
+{
+  "tagNo": "RBT-2.3.1-A",
+  "inspectionId": "INS-20260831-RBT-2.3.1-A",
+  "nomorPBS": "2.3.1",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Wadah Cetak Ingot",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.3.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Cooling Sistem",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu di lakukan pengujian"
+    },
+    {
+      "nama": "Kontruksi",
+      "spesifikasiTeknis": "Kombinasi UNP dan siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Kontruksi korosi"
+    }
+  ]
+}
