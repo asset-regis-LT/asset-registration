@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.2.2-A",
+  "inspectionId": "INS-20260831-RBT-2.2.2-A",
+  "createdAt": "2026-08-31T14:14:05.090Z",
+  "nomorPBS": "2.2.2",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "Motor Gearbox Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.2.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "gear box",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu pengujian LBH lanjut"
+    }
+  ]
+}
