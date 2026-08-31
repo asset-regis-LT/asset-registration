@@ -1,0 +1,43 @@
+{
+  "tagNo": "RBT-12.1.8-A",
+  "inspectionId": "INS-20260831-RBT-12.1.8-A",
+  "createdAt": "2026-08-31T15:21:30.195Z",
+  "nomorPBS": "12.1.8",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Rotary Kiln & Flame Oven",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.8-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Cor setara k250",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat baik"
+    },
+    {
+      "nama": "Tiang",
+      "spesifikasiTeknis": "IWF 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu diganti tiang-tiang yang korosi dan cenderung keropos"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap spandek dengan kuda-kuda baja berat",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu perbaikan di bagian atap yang bolong."
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "dinding spandek kombinasi bata",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu penggantian spandek dan canal C"
+    }
+  ]
+}
