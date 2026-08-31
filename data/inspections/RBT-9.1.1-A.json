@@ -1,0 +1,21 @@
+{
+  "tagNo": "RBT-9.1.1-A",
+  "inspectionId": "INS-20260831-RBT-9.1.1-A",
+  "nomorPBS": "9.1.1",
+  "subsistem": "Hydrant",
+  "namaAset": "Water",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Water Instalation",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
