@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.3-A-B-C",
+  "inspectionId": "INS-20260831-RBT-3.1.3-A-B-C",
+  "createdAt": "2026-08-31T16:51:41.422Z",
+  "nomorPBS": "3.1.3",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Kubikel dan DSI",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.3-A-B-C.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Kubikel 20kv Distribusi Tanur A-B-C",
+      "spesifikasiTeknis": "Kubikel TM",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hipot test, uji relay"
+    }
+  ]
+}
