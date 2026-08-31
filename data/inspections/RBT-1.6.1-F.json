@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.6.1-F",
+  "inspectionId": "INS-20260831-RBT-1.6.1-F",
+  "createdAt": "2026-08-31T13:54:40.543Z",
+  "nomorPBS": "1.6.1",
+  "subsistem": "Sistem Kontrol dan Instrumentasi",
+  "namaAset": "Panel Consule Control",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.6.1-F.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Control Board 1",
+      "spesifikasiTeknis": "Control Electrical pumpt",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Tes beban"
+    }
+  ]
+}
