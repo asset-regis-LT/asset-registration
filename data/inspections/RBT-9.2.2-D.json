@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-9.2.2-D",
+  "inspectionId": "INS-20260831-RBT-9.2.2-D",
+  "createdAt": "2026-08-31T18:36:23.117Z",
+  "nomorPBS": "9.2.2",
+  "subsistem": "Off Gas",
+  "namaAset": "ID Fan Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.2.2-D.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor Blower",
+      "spesifikasiTeknis": "45kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Merger"
+    },
+    {
+      "nama": "Bearing Housing",
+      "spesifikasiTeknis": "Blower hisap",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Service besar"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "Blower Hisap",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "scrab"
+    },
+    {
+      "nama": "Impeller Sistem",
+      "spesifikasiTeknis": "blower hisap",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Inverter Control Board",
+      "spesifikasiTeknis": "Acs580-01-088a-4",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
