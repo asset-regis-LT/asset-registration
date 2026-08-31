@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.9.2-B",
+  "inspectionId": "INS-20260831-RBT-1.9.2-B",
+  "createdAt": "2026-08-31T17:25:11.479Z",
+  "nomorPBS": "1.9.2",
+  "subsistem": "Sistem Tapping Logam dan Slag",
+  "namaAset": "Tapping Launder / Spout",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.9.2-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Bak Taping",
+      "spesifikasiTeknis": "kombinasi metal dan bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
