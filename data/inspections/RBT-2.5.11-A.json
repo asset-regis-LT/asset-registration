@@ -1,0 +1,56 @@
+{
+  "tagNo": "RBT-2.5.11-A",
+  "inspectionId": "INS-20260831-RBT-2.5.11-A",
+  "nomorPBS": "2.5.11",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Bag House Flame Oven",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.5.11-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Baghouse",
+      "spesifikasiTeknis": "Cor setara k200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "Plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Tiang Baghouse",
+      "spesifikasiTeknis": "IWF 150",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Perlu dilakukan coating"
+    },
+    {
+      "nama": "Atap Baghouse",
+      "spesifikasiTeknis": "Spandek dan kanal C",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "Plat 3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Pengantian"
+    },
+    {
+      "nama": "Filter Baghouse",
+      "spesifikasiTeknis": "plat 8mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
