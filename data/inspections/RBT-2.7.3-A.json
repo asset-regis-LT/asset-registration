@@ -53,5 +53,6 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "qrPrinted": true
 }
