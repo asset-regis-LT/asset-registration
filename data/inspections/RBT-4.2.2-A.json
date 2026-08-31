@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-4.2.2-A",
+  "inspectionId": "INS-20260831-RBT-4.2.2-A",
+  "createdAt": "2026-08-31T15:56:34.467Z",
+  "nomorPBS": "4.2.2",
+  "subsistem": "Rotary Kiln",
+  "namaAset": "Burner – Rotary Kiln",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-4.2.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "shell",
+      "spesifikasiTeknis": "pelat baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi sebagian besar"
+    },
+    {
+      "nama": "Refractory Lining / Bata Api",
+      "spesifikasiTeknis": "tebal",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
