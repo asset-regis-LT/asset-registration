@@ -278,6 +278,18 @@ const GithubStore = (() => {
     return lines + 1;
   }
 
+  // Shrinks a font size in 1px steps (floored at minSize) until `text` fits
+  // maxWidth. fontFor(size) builds the font string, so this isn't tied to one
+  // call site's family/weight. Leaves ctx.font set to the fitted size.
+  function fitFontSize(ctx, text, maxWidth, fontFor, startSize, minSize) {
+    for (let size = startSize; size > minSize; size--) {
+      ctx.font = fontFor(size);
+      if (ctx.measureText(text).width <= maxWidth) return size;
+    }
+    ctx.font = fontFor(minSize);
+    return minSize; // may still overflow slightly at the floor — acceptable, no multi-line wrap for Tag No.
+  }
+
   // Same-origin logo, cached after the first load. Resolves to null (not a
   // rejection) on failure so a logo hiccup degrades to a label without the
   // logo instead of breaking the download.
@@ -342,7 +354,7 @@ const GithubStore = (() => {
     y += 22;
 
     ctx.fillStyle = ink;
-    ctx.font = "bold 38px monospace";
+    fitFontSize(ctx, record.tagNo, rw, size => `bold ${size}px monospace`, 38, 22);
     ctx.fillText(record.tagNo, rx, y);
     y += 44;
 
