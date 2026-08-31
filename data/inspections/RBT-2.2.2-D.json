@@ -12,11 +12,11 @@
   "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "Motor",
-      "spesifikasiTeknis": "11kw 3p",
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "gear box",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
-      "catatan": "Merger dan running test"
+      "catatan": "diperlukan service menyeluruh"
     }
   ]
 }
