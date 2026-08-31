@@ -1,0 +1,57 @@
+{
+  "tagNo": "RBT-2.7.3-B",
+  "inspectionId": "INS-20260831-RBT-2.7.3-B",
+  "createdAt": "2026-08-31T17:47:18.626Z",
+  "nomorPBS": "2.7.3",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.7.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Sistem Instalasi",
+      "spesifikasiTeknis": "Instalasi sistem pemanas",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu pengujian lebih lanjut"
+    },
+    {
+      "nama": "Kontaktor",
+      "spesifikasiTeknis": "Kontaktor",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Dimer",
+      "spesifikasiTeknis": "Fotex",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Indikator Control",
+      "spesifikasiTeknis": "Indikator Control",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Inverter",
+      "spesifikasiTeknis": "Acs580-01-026a-4",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Thermocouple",
+      "spesifikasiTeknis": "Thermocouple",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
