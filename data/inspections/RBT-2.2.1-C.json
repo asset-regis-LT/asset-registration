@@ -24,13 +24,6 @@
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "sudah korosi parah"
-    },
-    {
-      "nama": "Heater Element",
-      "spesifikasiTeknis": "25kw",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": "tes beban"
     }
   ]
 }
