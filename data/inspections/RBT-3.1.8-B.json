@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.8-B",
+  "inspectionId": "INS-20260831-RBT-3.1.8-B",
+  "createdAt": "2026-08-31T18:25:53.231Z",
+  "nomorPBS": "3.1.8",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Main Power Transformer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.8-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Trafo Step Up 20kv RM 1",
+      "spesifikasiTeknis": "Step up 1500kva",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Uji tegangan tembus,, hipot test,"
+    }
+  ]
+}
