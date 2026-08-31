@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.10.1-A",
+  "inspectionId": "INS-20260831-RBT-2.10.1-A",
+  "createdAt": "2026-08-31T14:07:14.450Z",
+  "nomorPBS": "2.10.1",
+  "subsistem": "Persiapan Antrasit",
+  "namaAset": "Mesin Crusher",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.10.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "xx",
+      "spesifikasiTeknis": "xx",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
