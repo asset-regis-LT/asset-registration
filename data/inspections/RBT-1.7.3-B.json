@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-1.7.3-B",
+  "inspectionId": "INS-20260831-RBT-1.7.3-B",
+  "createdAt": "2026-08-31T17:02:47.069Z",
+  "nomorPBS": "1.7.3",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Pompa sirkulasi",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.7.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pipa Sirkulasi",
+      "spesifikasiTeknis": "Pipa SCH",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Gate Valve",
+      "spesifikasiTeknis": "4 inch",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Plumbing",
+      "spesifikasiTeknis": "pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "pengantian"
+    },
+    {
+      "nama": "Water Pumpt",
+      "spesifikasiTeknis": "pedrolo",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perlu dilakukan pengujian"
+    },
+    {
+      "nama": "Board Control",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
