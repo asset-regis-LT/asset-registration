@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-1.8.1-E",
+  "inspectionId": "INS-20260831-RBT-1.8.1-E",
+  "createdAt": "2026-08-31T15:07:10.675Z",
+  "nomorPBS": "1.8.1",
+  "subsistem": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+  "namaAset": "Pneumatic system",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.8.1-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Valve",
+      "spesifikasiTeknis": "Pneumatic Membran valve",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti membran"
+    },
+    {
+      "nama": "Board Control",
+      "spesifikasiTeknis": "Otomatis kontrol analog",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti power supply"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Kabel nyaf 1mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Cek ulang"
+    }
+  ]
+}
