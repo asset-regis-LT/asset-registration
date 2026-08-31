@@ -1,0 +1,57 @@
+{
+  "tagNo": "RBT-2.12.1-A",
+  "inspectionId": "INS-20260831-RBT-2.12.1-A",
+  "createdAt": "2026-08-31T17:14:16.129Z",
+  "nomorPBS": "2.12.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "Tanur Flame Oven",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.12.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "Kombinasi sk 34 -38",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "masih cukup baik"
+    },
+    {
+      "nama": "Lantai Tanur",
+      "spesifikasiTeknis": "Lantai bata api kombinasi castabel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengecekan lebih lanjut"
+    },
+    {
+      "nama": "Plat Dinding",
+      "spesifikasiTeknis": "plat 8-12 mm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "masih cukup baik"
+    },
+    {
+      "nama": "Water Box",
+      "spesifikasiTeknis": "Plat 5-8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Kontrsuksi",
+      "spesifikasiTeknis": "cor setara k 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Roof",
+      "spesifikasiTeknis": "Plat 4 - 8mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
