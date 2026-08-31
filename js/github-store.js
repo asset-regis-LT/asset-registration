@@ -278,16 +278,20 @@ const GithubStore = (() => {
     return lines + 1;
   }
 
-  // Shrinks a font size in 1px steps (floored at minSize) until `text` fits
-  // maxWidth. fontFor(size) builds the font string, so this isn't tied to one
-  // call site's family/weight. Leaves ctx.font set to the fitted size.
-  function fitFontSize(ctx, text, maxWidth, fontFor, startSize, minSize) {
-    for (let size = startSize; size > minSize; size--) {
-      ctx.font = fontFor(size);
-      if (ctx.measureText(text).width <= maxWidth) return size;
-    }
-    ctx.font = fontFor(minSize);
-    return minSize; // may still overflow slightly at the floor — acceptable, no multi-line wrap for Tag No.
+  // Fetches a file's raw bytes and returns them as base64, unmodified — for
+  // copying an existing committed file (e.g. a photo) to a new path without
+  // recompressing it. FileReader.readAsDataURL is binary-safe; split off the
+  // data: URL header the same way compressImage()'s output already does.
+  async function fetchFileAsBase64(url) {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Gagal mengambil file (HTTP ${res.status}).`);
+    const blob = await res.blob();
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Gagal membaca file."));
+      reader.onload = () => resolve(reader.result.split(",")[1]);
+      reader.readAsDataURL(blob);
+    });
   }
 
   // Same-origin logo, cached after the first load. Resolves to null (not a
@@ -354,7 +358,7 @@ const GithubStore = (() => {
     y += 22;
 
     ctx.fillStyle = ink;
-    fitFontSize(ctx, record.tagNo, rw, size => `bold ${size}px monospace`, 38, 22);
+    ctx.font = "bold 32px monospace";
     ctx.fillText(record.tagNo, rx, y);
     y += 44;
 
@@ -383,7 +387,7 @@ const GithubStore = (() => {
     KONDISI_OPTIONS, KEPUTUSAN_OPTIONS, DECISION_PRECEDENCE, computeOverallDecision,
     getToken, setToken, clearToken, hasToken,
     rawUrl, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
-    getFileMeta, updateFile, deleteFile,
+    getFileMeta, updateFile, deleteFile, fetchFileAsBase64,
     saveOrShareImage, generateLabelPNG, getLogoImage,
     toBase64, compressImage
   };

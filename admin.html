@@ -6,7 +6,7 @@
 <title>Admin — Rubrik Penilaian Kondisi Aset</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
-<script src="js/github-store.js?v=8"></script>
+<script src="js/github-store.js?v=9"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -141,13 +141,15 @@
 <div id="editOverlay">
   <div id="editSheet">
     <h2>Edit Inspeksi: <span id="editTagLabel"></span></h2>
+    <label for="editTagNoInput">Tag No. / Asset ID</label>
+    <input type="text" id="editTagNoInput" style="font-family:var(--mono);">
+    <p class="status warn" style="margin-top:-4px;">Catatan: mengubah Tag No. memindahkan data (JSON &amp; foto) ke path baru di GitHub. Jika label QR untuk Tag No. lama sudah dicetak dan ditempel, label itu akan berhenti berfungsi setelah diubah.</p>
     <label for="editNomorPBSInput">Nomor PBS</label>
     <input type="text" id="editNomorPBSInput">
     <label for="editSubsistemInput">Subsistem</label>
     <input type="text" id="editSubsistemInput">
     <label for="editLokasiInput">Nama Smelter / Lokasi</label>
     <input type="text" id="editLokasiInput">
-    <p class="status warn" style="margin-top:-4px;">Catatan: kolom ini hanya memperbaiki data — Tag No. tetap terkunci, tidak ikut berubah meski Nomor PBS diedit.</p>
     <label for="editPicInput">PIC / Inspector</label>
     <input type="text" id="editPicInput">
     <label for="editTanggalInput">Tanggal Inspeksi</label>
@@ -678,13 +680,15 @@ async function deleteAllInspections() {
 }
 deleteAllBtn.addEventListener("click", deleteAllInspections);
 
-// ---- Edit modal: corrects Nomor PBS/Subsistem/Lokasi/PIC/Tanggal/foto/
-// Kondisi/Keputusan/Catatan on an already-saved record, and (unlike a
+// ---- Edit modal: corrects Tag No./Nomor PBS/Subsistem/Lokasi/PIC/Tanggal/
+// foto/Kondisi/Keputusan/Catatan on an already-saved record, and (unlike a
 // straight data-entry fix) also lets sub-component rows be renamed, added,
-// or removed — Tag No. itself (and the file paths derived from it) stay
-// locked; renaming it is still "delete and re-register."
+// or removed. Changing Tag No. actually moves the underlying files
+// (data/inspections/<tag>.json + photos/<tag>.jpg) to new paths — see the
+// tagChanged branch in saveEditBtn's handler.
 const editOverlay = document.getElementById("editOverlay");
 const editTagLabel = document.getElementById("editTagLabel");
+const editTagNoInput = document.getElementById("editTagNoInput");
 const editNomorPBSInput = document.getElementById("editNomorPBSInput");
 const editSubsistemInput = document.getElementById("editSubsistemInput");
 const editLokasiInput = document.getElementById("editLokasiInput");
@@ -750,6 +754,7 @@ function openEditModal(tag) {
   if (!record) { alert("Data tidak ditemukan — muat ulang data terlebih dahulu."); return; }
   editingTag = tag;
   editTagLabel.textContent = tag;
+  editTagNoInput.value = record.tagNo || tag;
   editNomorPBSInput.value = record.nomorPBS || "";
   editSubsistemInput.value = record.subsistem || "";
   editLokasiInput.value = record.lokasi || "";
@@ -794,6 +799,16 @@ saveEditBtn.addEventListener("click", async () => {
   if (!record) return;
   if (!GithubStore.hasToken()) { alert("Token GitHub belum diatur."); return; }
 
+  const newTagNo = editTagNoInput.value.trim();
+  if (!newTagNo) { alert("Tag No. wajib diisi."); return; }
+  const tagChanged = newTagNo !== editingTag;
+  if (tagChanged && record.qrPrinted) {
+    const proceed = confirm(
+      `Tag No. "${editingTag}" sudah ditandai QR Dicetak. Jika label fisik sudah dicetak dan ditempel di aset, label itu akan berhenti berfungsi (404) setelah Tag No. diubah menjadi "${newTagNo}". Lanjutkan?`
+    );
+    if (!proceed) return;
+  }
+
   saveEditBtn.disabled = true;
   saveEditBtn.textContent = "Menyimpan…";
   editStatus.textContent = "";
@@ -823,8 +838,23 @@ saveEditBtn.addEventListener("click", async () => {
     if (!subsistem) throw new Error("Subsistem wajib diisi.");
     if (!lokasi) throw new Error("Nama Smelter/Lokasi wajib diisi.");
 
+    if (tagChanged) {
+      const existingTags = await GithubStore.listInspectionTags();
+      if (existingTags.includes(newTagNo)) {
+        throw new Error(`Tag No. "${newTagNo}" sudah dipakai oleh inspeksi lain.`);
+      }
+    }
+
+    const newFotoPath = tagChanged ? `data/inspections/photos/${newTagNo}.jpg` : record.fotoPath;
+    const newInspectionId = tagChanged
+      ? `INS-${(editTanggalInput.value || "").replace(/-/g, "")}-${newTagNo}`
+      : record.inspectionId;
+
     const updatedRecord = {
       ...record,
+      tagNo: newTagNo,
+      inspectionId: newInspectionId,
+      fotoPath: newFotoPath,
       nomorPBS,
       subsistem,
       lokasi,
@@ -834,40 +864,74 @@ saveEditBtn.addEventListener("click", async () => {
       komponen
     };
 
-    // Photo replace is optional — only committed if a new file was actually
-    // picked. Overwrites the SAME fotoPath (Tag No./paths stay locked), same
-    // read-sha-then-write shape as the JSON overwrite below.
-    const newPhotoBase64 = editPhotoPreview.dataset.base64 || null;
-    if (newPhotoBase64) {
-      if (!record.fotoPath) throw new Error("Path foto tidak ditemukan pada data ini — tidak bisa mengganti foto.");
-      const photoMeta = await GithubStore.getFileMeta(record.fotoPath);
-      if (!photoMeta) throw new Error("File foto tidak ditemukan di GitHub (mungkin sudah dihapus).");
-      await GithubStore.updateFile(record.fotoPath, newPhotoBase64, `Ganti foto inspeksi ${editingTag}`, photoMeta.sha);
+    const pickedPhotoBase64 = editPhotoPreview.dataset.base64 || null;
+
+    if (tagChanged) {
+      // Resolve the bytes to commit at the NEW photo path: a freshly picked
+      // photo wins; otherwise copy the existing committed photo unchanged
+      // (fetched, not recompressed) so a rename-only save doesn't silently
+      // degrade image quality.
+      let photoForNewPath = pickedPhotoBase64;
+      if (!photoForNewPath && record.fotoPath) {
+        photoForNewPath = await GithubStore.fetchFileAsBase64(GithubStore.rawUrl(record.fotoPath));
+      }
+      // Create-new-then-delete-old: never remove the old record until the
+      // new one is confirmed written, so a failure partway leaves the old
+      // data intact (worst case: a stray duplicate under the old tag)
+      // instead of losing data. createFile (not updateFile) also
+      // re-guarantees newTagNo isn't already taken, on top of the
+      // listInspectionTags() check above.
+      if (photoForNewPath) {
+        await GithubStore.createFile(newFotoPath, photoForNewPath, `Foto inspeksi ${newTagNo} (pindah dari ${editingTag})`);
+      }
+      await GithubStore.createFile(
+        `data/inspections/${newTagNo}.json`,
+        GithubStore.toBase64(JSON.stringify(updatedRecord, null, 2)),
+        `Inspeksi ${newTagNo} (pindah dari ${editingTag})`
+      );
+      try {
+        await deleteInspectionFiles(editingTag, record);
+      } catch (cleanupErr) {
+        throw new Error(`Tag baru "${newTagNo}" berhasil dibuat, tapi gagal menghapus data lama "${editingTag}": ${cleanupErr.message}. Hapus data lama secara manual.`);
+      }
+    } else {
+      // Unchanged-tag path — overwrite-in-place, same as before.
+      if (pickedPhotoBase64) {
+        if (!record.fotoPath) throw new Error("Path foto tidak ditemukan pada data ini — tidak bisa mengganti foto.");
+        const photoMeta = await GithubStore.getFileMeta(record.fotoPath);
+        if (!photoMeta) throw new Error("File foto tidak ditemukan di GitHub (mungkin sudah dihapus).");
+        await GithubStore.updateFile(record.fotoPath, pickedPhotoBase64, `Ganti foto inspeksi ${editingTag}`, photoMeta.sha);
+      }
+      const jsonPath = `data/inspections/${editingTag}.json`;
+      const meta = await GithubStore.getFileMeta(jsonPath);
+      if (!meta) throw new Error("File inspeksi tidak ditemukan di GitHub (mungkin sudah dihapus).");
+      await GithubStore.updateFile(
+        jsonPath,
+        GithubStore.toBase64(JSON.stringify(updatedRecord, null, 2)),
+        `Edit inspeksi ${editingTag}`,
+        meta.sha
+      );
     }
 
-    const jsonPath = `data/inspections/${editingTag}.json`;
-    const meta = await GithubStore.getFileMeta(jsonPath);
-    if (!meta) throw new Error("File inspeksi tidak ditemukan di GitHub (mungkin sudah dihapus).");
-    await GithubStore.updateFile(
-      jsonPath,
-      GithubStore.toBase64(JSON.stringify(updatedRecord, null, 2)),
-      `Edit inspeksi ${editingTag}`,
-      meta.sha
-    );
-
-    loadedRecords[editingTag] = updatedRecord;
-    rememberRecentEdit(editingTag, updatedRecord);
+    if (tagChanged) {
+      delete loadedRecords[editingTag];
+      delete recentEdits[editingTag];
+    }
+    loadedRecords[newTagNo] = updatedRecord;
+    rememberRecentEdit(newTagNo, updatedRecord);
     const cachedIdx = allRows.findIndex(r => r.tagNo === editingTag);
-    if (cachedIdx !== -1) allRows[cachedIdx] = updatedRecord;
+    if (cachedIdx !== -1) allRows[cachedIdx] = updatedRecord; else allRows.push(updatedRecord);
     // Re-render through the same filter-aware path used everywhere else
     // (Lokasi filter change, initial load) rather than hand-patching cells —
-    // Subsistem/Lokasi can now change here, and this also drops the row from
-    // view for free if its lokasi no longer matches the active filter.
+    // Tag No./Subsistem/Lokasi can now change here, and this also drops the
+    // row from view for free if its lokasi no longer matches the active
+    // filter. renderDataTableRows rebuilds tr.dataset.tag from the record,
+    // so a renamed row re-keys itself with no manual DOM patch.
     populateLokasiFilter();
     renderDataTableRows(lokasiFilter.value ? allRows.filter(r => r.lokasi === lokasiFilter.value) : allRows);
     editOverlay.classList.remove("open");
     dataListStatus.className = "status ok";
-    dataListStatus.textContent = `Inspeksi ${editingTag} berhasil diperbarui.`;
+    dataListStatus.textContent = `Inspeksi ${newTagNo} berhasil diperbarui.`;
     editingTag = null;
   } catch (err) {
     editStatus.className = "status err";
