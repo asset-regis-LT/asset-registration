@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.1.7-B",
+  "inspectionId": "INS-20260831-RBT-3.1.7-B",
+  "createdAt": "2026-08-31T17:24:55.886Z",
+  "nomorPBS": "3.1.7",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Incoming Power Feeder",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.1.7-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Kubikel Trafo 2500kva",
+      "spesifikasiTeknis": "Kubikel Schneider sm6 20kv",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Uji relay, hipot test"
+    }
+  ]
+}
