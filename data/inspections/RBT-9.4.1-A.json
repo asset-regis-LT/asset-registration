@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-9.4.1-A",
+  "inspectionId": "INS-20260831-RBT-9.4.1-A",
+  "createdAt": "2026-08-31T18:59:28.429Z",
+  "nomorPBS": "9.4.1",
+  "subsistem": "Cooling System",
+  "namaAset": "Water Instalation",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.4.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Istalasi Pipa",
+      "spesifikasiTeknis": "HDPE 2,5inci",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Bagus"
+    },
+    {
+      "nama": "Gate Valve",
+      "spesifikasiTeknis": "Gate Valve 2, 5inci",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "scrab dan 1 mesin rusak"
+    },
+    {
+      "nama": "Water Pumpt",
+      "spesifikasiTeknis": "Pedrolo 2,2kw",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    }
+  ]
+}
