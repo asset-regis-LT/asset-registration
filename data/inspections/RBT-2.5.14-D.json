@@ -1,0 +1,29 @@
+{
+  "tagNo": "RBT-2.5.14-D",
+  "inspectionId": "INS-20260831-RBT-2.5.14-D",
+  "createdAt": "2026-08-31T15:35:56.297Z",
+  "nomorPBS": "2.5.14",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Hood dan Ducting Penangkap Fume",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.5.14-D.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Ducting Hood",
+      "spesifikasiTeknis": "plat 3mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian"
+    },
+    {
+      "nama": "ID Fan Hood",
+      "spesifikasiTeknis": "11 KW",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perbaikan"
+    }
+  ]
+}
