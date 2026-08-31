@@ -1,0 +1,78 @@
+{
+  "tagNo": "RBT-1.3.1-B",
+  "inspectionId": "INS-20260831-RBT-1.3.1-B",
+  "createdAt": "2026-08-31T15:50:04.798Z",
+  "nomorPBS": "1.3.1",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Motor Gearbox Stang Elektroda",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.3.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor Gearbox 1",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Gearbox Stang 1",
+      "spesifikasiTeknis": "gear box 120",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Wire Rope 1",
+      "spesifikasiTeknis": "10 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian"
+    },
+    {
+      "nama": "Motor Gearbox 2",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Motor Gearbox 3",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Gearbox Stang 2",
+      "spesifikasiTeknis": "gearbox 120",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Gearbox Stang 3",
+      "spesifikasiTeknis": "gearbox 120",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Wire Rope 2",
+      "spesifikasiTeknis": "10 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian"
+    },
+    {
+      "nama": "Wire Rope 3",
+      "spesifikasiTeknis": "10 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian"
+    }
+  ]
+}
