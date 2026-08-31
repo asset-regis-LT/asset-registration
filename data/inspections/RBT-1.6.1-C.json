@@ -1,0 +1,28 @@
+{
+  "tagNo": "RBT-1.6.1-C",
+  "inspectionId": "INS-20260831-RBT-1.6.1-C",
+  "nomorPBS": "1.6.1",
+  "subsistem": "Sistem Kontrol dan Instrumentasi",
+  "namaAset": "Panel Consule Control",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.6.1-C.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Instalasi kabel kontrol",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Board Control",
+      "spesifikasiTeknis": "Kontrol penggerak sistem tanur",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    }
+  ]
+}
