@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-4.4.3-B",
+  "inspectionId": "INS-20260831-RBT-4.4.3-B",
+  "createdAt": "2026-08-31T15:04:31.007Z",
+  "nomorPBS": "4.4.3",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Dust Collector",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-4.4.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Dust Collector",
+      "spesifikasiTeknis": "cor setara K250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Pondasi masih layak"
+    },
+    {
+      "nama": "Plat Dust Collector",
+      "spesifikasiTeknis": "plat baja 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Tiang Dust Collector",
+      "spesifikasiTeknis": "IWF 150",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "coating"
+    },
+    {
+      "nama": "Atap Dust Collector",
+      "spesifikasiTeknis": "spandek dan rangka baja",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perbaikan dibeberapa section"
+    },
+    {
+      "nama": "Skep Dust Collector",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Skep korosi"
+    }
+  ]
+}
