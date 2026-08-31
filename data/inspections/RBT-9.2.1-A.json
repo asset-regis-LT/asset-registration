@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-9.2.1-A",
+  "inspectionId": "INS-20260831-RBT-9.2.1-A",
+  "createdAt": "2026-08-31T18:15:37.390Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Off Gas FO",
+  "namaAset": "ID Fan",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.2.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor Blower",
+      "spesifikasiTeknis": "45kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Cyclone rusak, mtor utk spare"
+    },
+    {
+      "nama": "Bearing Housing",
+      "spesifikasiTeknis": "Couple",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "Cyclone",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Impeller Sistem",
+      "spesifikasiTeknis": "Cyclone",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Inverter Control Board",
+      "spesifikasiTeknis": "Inverter control 45kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
+    }
+  ]
+}
