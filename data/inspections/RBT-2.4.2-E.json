@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-2.4.2-E",
+  "inspectionId": "INS-20260831-RBT-2.4.2-E",
+  "createdAt": "2026-08-31T17:01:42.482Z",
+  "nomorPBS": "2.4.2",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Electrical Burner – Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.4.2-E.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Burner",
+      "spesifikasiTeknis": "Riello RL130",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "instalasi solar",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Panel distribusi",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
