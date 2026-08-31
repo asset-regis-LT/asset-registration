@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-12.1.6-A",
+  "inspectionId": "INS-20260831-RBT-12.1.6-A",
+  "createdAt": "2026-08-31T15:02:54.652Z",
+  "nomorPBS": "12.1.6",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Musholla",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-12.1.6-A.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Keramik",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat baik"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "Dinding bata",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat baik"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap asbes",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "Terlihat baik"
+    }
+  ]
+}
