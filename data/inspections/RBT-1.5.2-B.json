@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.5.2-B",
+  "inspectionId": "INS-20260831-RBT-1.5.2-B",
+  "createdAt": "2026-08-31T17:17:42.381Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Cubicle Sistem Daya Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.5.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Kubikel Tanur D-E",
+      "spesifikasiTeknis": "Inlet switchgear 20kv",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Hipot test l, ganti batre"
+    }
+  ]
+}
