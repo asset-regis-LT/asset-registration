@@ -9,7 +9,7 @@
   "picInspector": "Maulana",
   "tanggalInspeksi": "2026-08-31",
   "fotoPath": "data/inspections/photos/RBT-2.2.1-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
       "nama": "Screw",
@@ -17,6 +17,20 @@
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu dilakukan pengujian"
+    },
+    {
+      "nama": "Chamber",
+      "spesifikasiTeknis": "kapasitas 10ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "diperlukan maintenance"
+    },
+    {
+      "nama": "Heater Element",
+      "spesifikasiTeknis": "125kw 4 zona",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
     }
   ]
 }
