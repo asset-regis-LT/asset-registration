@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.5.14-F",
+  "inspectionId": "INS-20260831-RBT-2.5.14-F",
+  "createdAt": "2026-08-31T18:24:45.821Z",
+  "nomorPBS": "2.5.14",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Hood dan Ducting Penangkap Fume",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.5.14-F.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Ducting",
+      "spesifikasiTeknis": "Plat 3mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengecekan lebih lanjut/diganti"
+    }
+  ]
+}
