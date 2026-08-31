@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.1.1-B",
+  "inspectionId": "INS-20260831-RBT-2.1.1-B",
+  "createdAt": "2026-08-31T15:40:55.139Z",
+  "nomorPBS": "2.1.1",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Ketel",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.1.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Ketel",
+      "spesifikasiTeknis": "30 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengujian"
+    }
+  ]
+}
