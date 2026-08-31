@@ -1,0 +1,50 @@
+{
+  "tagNo": "RBT-2.1.6-B",
+  "inspectionId": "INS-20260831-RBT-2.1.6-B",
+  "createdAt": "2026-08-31T17:56:33.569Z",
+  "nomorPBS": "2.1.6",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.1.6-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "45kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service, merger"
+    },
+    {
+      "nama": "As Mixer",
+      "spesifikasiTeknis": "baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "penggantian as dan bearing"
+    },
+    {
+      "nama": "Inverter Control Board",
+      "spesifikasiTeknis": "Inverter 45kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Kabel 4*70mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Uji tahanan"
+    },
+    {
+      "nama": "Kontruksi",
+      "spesifikasiTeknis": "kombinasi siku dan UNP",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perlu dilakukan coating"
+    }
+  ]
+}
