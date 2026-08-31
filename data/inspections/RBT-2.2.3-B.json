@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.2.3-B",
+  "inspectionId": "INS-20260831-RBT-2.2.3-B",
+  "createdAt": "2026-08-31T14:39:05.446Z",
+  "nomorPBS": "2.2.3",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "Motor Gearbox Screw Crystallizer",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-2.2.3-B.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "11kw 3phase",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Merger dan uji beban"
+    }
+  ]
+}
