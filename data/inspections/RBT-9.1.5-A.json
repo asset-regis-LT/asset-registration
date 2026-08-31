@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-9.1.5-A",
+  "inspectionId": "INS-20260831-RBT-9.1.5-A",
+  "createdAt": "2026-08-31T17:27:47.311Z",
+  "nomorPBS": "9.1.5",
+  "subsistem": "Sistem Off Gas FO",
+  "namaAset": "Pneumatic",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Control Board",
+      "spesifikasiTeknis": "Pneumatic analog DC kontrol",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service, Ganti power supply"
+    },
+    {
+      "nama": "Valve Pneumatic",
+      "spesifikasiTeknis": "Air control valve",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Pergantian pipa",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
