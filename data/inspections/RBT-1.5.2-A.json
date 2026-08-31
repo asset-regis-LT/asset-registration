@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.5.2-A",
+  "inspectionId": "INS-20260831-RBT-1.5.2-A",
+  "createdAt": "2026-08-31T17:15:04.668Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Cubicle Sistem Daya Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-1.5.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Kubikel Tanur A-B-C",
+      "spesifikasiTeknis": "Kubikel Schneider sm6",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Hipot test, uji relay"
+    }
+  ]
+}
