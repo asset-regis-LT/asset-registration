@@ -1,0 +1,36 @@
+{
+  "tagNo": "RBT-9.1.10-A",
+  "inspectionId": "INS-20260831-RBT-9.1.10-A",
+  "createdAt": "2026-08-31T18:23:47.391Z",
+  "nomorPBS": "9.1.10",
+  "subsistem": "Cooling System",
+  "namaAset": "Diesel Pump",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-9.1.10-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Diesel pump",
+      "spesifikasiTeknis": "Toyota 88 hp",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi, beberapa komponen hilang, perlu diganti"
+    },
+    {
+      "nama": "Instalasi pipa",
+      "spesifikasiTeknis": "To be edited",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "To be edited"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "To be edited",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "To be edited"
+    }
+  ]
+}
