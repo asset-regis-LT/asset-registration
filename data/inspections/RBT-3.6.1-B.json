@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.6.1-B",
+  "inspectionId": "INS-20260831-RBT-3.6.1-B",
+  "createdAt": "2026-08-31T17:03:50.593Z",
+  "nomorPBS": "3.6.1",
+  "subsistem": "Struktur Sipil",
+  "namaAset": "Platform kerja",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-08-31",
+  "fotoPath": "data/inspections/photos/RBT-3.6.1-B.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Platform Kerja Refining",
+      "spesifikasiTeknis": "To be edited",
+      "kondisiTeknis": "Siap Operasi (100%)",
+      "keputusanTeknis": "Go",
+      "catatan": "To be edited"
+    }
+  ]
+}
