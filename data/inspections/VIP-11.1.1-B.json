@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-11.1.1-B",
+  "inspectionId": "INS-20260901-VIP-11.1.1-B",
+  "createdAt": "2026-09-01T12:48:58.584Z",
+  "nomorPBS": "11.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Area Genset/Trafo",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-11.1.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "kombinasi bata dan spandek",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "spandek rangka canal C",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perbaikan dibeberapa section"
+    }
+  ]
+}
