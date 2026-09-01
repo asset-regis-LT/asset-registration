@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.2.2-C",
+  "inspectionId": "INS-20260901-RBT-3.2.2-C",
+  "createdAt": "2026-09-01T08:21:16.402Z",
+  "nomorPBS": "3.2.2",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Tangki Kompresor",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-3.2.2-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Tangki",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
