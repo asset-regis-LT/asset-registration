@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-12.1.11-A",
+  "inspectionId": "INS-20260901-VIP-12.1.11-A",
+  "createdAt": "2026-09-01T13:52:17.906Z",
+  "nomorPBS": "12.1.11",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang Sparepart",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-12.1.11-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Lantai",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa area"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "dinding seng",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan perbaikan dibeberapa area"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Canal C dan asbes",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa section"
+    }
+  ]
+}
