@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-14.1.4-A",
+  "inspectionId": "INS-20260901-VIP-14.1.4-A",
+  "createdAt": "2026-09-01T13:47:10.634Z",
+  "nomorPBS": "14.1.4",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Refining",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-14.1.4-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "Spandek",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "spandek dan kuda kuda kanal C",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
