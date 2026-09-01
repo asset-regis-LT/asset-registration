@@ -9,7 +9,7 @@
   "picInspector": "Maulana",
   "tanggalInspeksi": "2026-09-01",
   "fotoPath": "data/inspections/photos/VIP-1.5.3-A.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
       "nama": "Busbar Electroda 1 Tanur A",
@@ -17,6 +17,20 @@
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Service"
+    },
+    {
+      "nama": "Busbar Electroda 2 Tanur A",
+      "spesifikasiTeknis": "ND",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Busbar Electroda 3 Tanur A",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "busbar"
     }
   ]
 }
