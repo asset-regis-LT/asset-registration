@@ -1,0 +1,85 @@
+{
+  "tagNo": "VIP-2.8.1-A",
+  "inspectionId": "INS-20260901-VIP-2.8.1-A",
+  "createdAt": "2026-09-01T14:11:43.941Z",
+  "nomorPBS": "2.8.1",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Refining",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-2.8.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Hoist",
+      "spesifikasiTeknis": "nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "Wire rope 12mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Hook Block",
+      "spesifikasiTeknis": "Hook",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Bridge Girder",
+      "spesifikasiTeknis": "SwL 5ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Berkarat"
+    },
+    {
+      "nama": "Endtruck",
+      "spesifikasiTeknis": "nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Runway Beam",
+      "spesifikasiTeknis": "42 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Runway Rail",
+      "spesifikasiTeknis": "Beam 300",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Berkarat"
+    },
+    {
+      "nama": "Downshop Conductors",
+      "spesifikasiTeknis": "Instalasi power hoist",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Control Panel",
+      "spesifikasiTeknis": "nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Remote",
+      "spesifikasiTeknis": "Remote kabel",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "rusak"
+    }
+  ]
+}
