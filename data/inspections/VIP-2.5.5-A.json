@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-2.5.5-A",
+  "inspectionId": "INS-20260901-VIP-2.5.5-A",
+  "createdAt": "2026-09-01T12:56:04.210Z",
+  "nomorPBS": "2.5.5",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Bag House Refining",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-2.5.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Pondasi Baghouse",
+      "spesifikasiTeknis": "cor setara K200",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "plat 2 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}
