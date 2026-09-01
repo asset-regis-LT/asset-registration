@@ -1,0 +1,200 @@
+nomorPBS,subsistem,namaAset
+1.1.1,Struktur dan Lining Tanur,Tanur
+1.1.2,Struktur dan Lining Tanur,Tutup Tanur
+1.2.1,Sistem Penanganan Gas Buang dan Debu,Seattle Bawah Tanur
+1.2.2,Sistem Penanganan Gas Buang dan Debu,Seattle Atas Tanur
+1.2.3,Sistem Penanganan Gas Buang dan Debu,Dust Collector
+1.2.4,Sistem Penanganan Gas Buang dan Debu,Bag House
+1.2.5,Sistem Penanganan Gas Buang dan Debu,Blower Hisap
+1.2.6,Sistem Penanganan Gas Buang dan Debu,Stack / Cerobong
+1.2.7,Sistem Penanganan Gas Buang dan Debu,Pompa Exhaust
+1.3.1,Sistem Elektroda,Motor Gearbox Stang Elektroda
+1.3.2,Sistem Elektroda,Electrode Holder dan Contact Shoe
+1.3.3,Sistem Daya Tanur,Cubicle 20 kV Tanur A
+1.3.6,Sistem Daya Tanur,Cubicle 20 kV Tanur B
+1.3.9,Sistem Daya Tanur,Cubicle 20 kV Tanur C
+1.3.12,Sistem Daya Tanur,Cubicle 20 kV Tanur D
+1.3.15,Sistem Daya Tanur,Cubicle 20 kV Tanur E
+1.4.1,Sistem Feeding / Charging,Hoist Crane
+1.4.2,Sistem Feeding / Charging,Hopper
+1.5.1,Sistem Daya Tanur,Trafo Step Down Tanur
+1.5.2,Sistem Daya Tanur,Cubicle Sistem Daya Tanur
+1.5.3,Sistem Daya Tanur,Busbar / Bus Tube / Flexible Cable
+1.6.1,Sistem Kontrol dan Instrumentasi,Panel Consule Control
+1.6.2,Sistem Kontrol dan Instrumentasi,Thermocouple
+1.6.3,Sistem Kontrol dan Instrumentasi,Panel Temperatur Tanur
+1.7.1,Sistem Pendinginan Air,Water Jacket
+1.7.2,Sistem Pendinginan Air,Water Box
+1.7.3,Sistem Pendinginan Air,Pompa sirkulasi
+1.8.1,Sistem Udara Bertekanan dan Sirkulasi Udara,Pneumatic system
+1.8.2,Sistem Udara Bertekanan dan Sirkulasi Udara,Blower Tiup
+1.9.1,Sistem Tapping Logam dan Slag,Peralatan Pembukaan dan Penutupan Taphole
+1.9.2,Sistem Tapping Logam dan Slag,Tapping Launder / Spout
+1.10.1,Sistem Penanganan Logam dan Slag Cair,Prisma Pot
+1.10.2,Sistem Penanganan Logam dan Slag Cair,Slag Caster
+2.1.1,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Ketel
+2.1.2,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Inverter Control Motor Mixer Refining
+2.1.3,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Dudukan Mixer Pot Refining
+2.1.4,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Pompa Timah Refining
+2.1.5,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Pompa Timah
+2.1.6,"Sistem Refining Pot, Pengadukan, dan Transfer Timah","Mixer / Agitator Pot Refining (motor, shaft, dan impeller)"
+2.1.7,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Peralatan Skimming / Pengeluaran Dross
+2.1.8,"Sistem Refining Pot, Pengadukan, dan Transfer Timah",Wadah Dross / Residu Refining
+2.2.1,Sistem Crystallizer,Screw atau Blitz Crystallizer
+2.2.2,Sistem Crystallizer,Motor Gearbox Crystallizer
+2.2.3,Sistem Crystallizer,Motor Gearbox Screw Crystallizer
+2.3.1,Sistem Casting dan Pembentukan Ingot,Wadah Cetak Ingot
+2.3.2,Sistem Casting dan Pembentukan Ingot,Control Heater Spiral Talang Casting
+2.3.3,Sistem Casting dan Pembentukan Ingot,Control Heater Spiral Pot Casting
+2.3.4,Sistem Casting dan Pembentukan Ingot,Element Pemanas Talang Casting
+2.3.5,Sistem Casting dan Pembentukan Ingot,Talang Casting
+2.3.6,Sistem Casting dan Pembentukan Ingot,Pot Casting / Holding Kettle
+2.4.1,Sistem Pemanasan dan Burner,Electrical Burner – Refining
+2.4.2,Sistem Pemanasan dan Burner,Electrical Burner – Crystallizer
+2.4.3,Sistem Pemanasan dan Burner,Burner – Flame Oven
+2.5.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Inverter Control Blower Hisap Bag House Refining
+2.5.2,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Blower Tiup – Refining
+2.5.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Panel Control Pneumatic Bag House Refining
+2.5.4,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Pneumatic System Refining
+2.5.5,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Bag House Refining
+2.5.6,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Blower Hisap Bag House Refining
+2.5.7,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Inverter Control Blower Hisap Bag House Crystallizer
+2.5.8,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Blower Tiup – Crystallizer
+2.5.9,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Blower Hisap Bag House Crystallizer
+2.5.10,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Panel Control Pneumatic Bag House Crystallizer
+2.5.11,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Bag House Flame Oven
+2.5.12,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Pneumatic Flame Oven
+2.5.13,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Blower Hisap Flame Oven
+2.5.14,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Hood dan Ducting Penangkap Fume
+2.5.15,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Stack / Cerobong
+2.5.16,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Cyclone - Pemurnian
+2.6.1,Sistem Pendinginan Air,Pompa Air Pendingin Pot Casting
+2.6.2,Sistem Pendinginan Air,Tower Tandon Air – Refining/Casting
+2.6.3,Sistem Pendinginan Air,Sirkulasi Air
+2.6.4,Sistem Pendinginan Air,Tower Tandon Air – Crystallizer
+2.6.5,Sistem Pendinginan Air,Mesin Pompa Air Pendingin Crystallizer & Casting
+2.7.1,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Refining
+2.7.2,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Thermocouple Pot Refining
+2.7.3,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Crystallizer
+2.7.4,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Casting
+2.8.1,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Refining
+2.8.2,"Sistem Pengangkatan, Platform, dan Akses",Lantai Atas Refining
+2.8.3,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Crystallizer
+2.8.4,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Casting
+2.8.5,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Composisi
+2.8.6,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Antrasite
+2.8.7,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Gudang Ingot
+2.8.8,"Sistem Pengangkatan, Platform, dan Akses",Hoist Crane – Granular
+2.9.1,Persiapan Komposisi / Bahan Tambahan,Mixer
+2.10.1,Persiapan Antrasit,Mesin Crusher
+2.11.1,Sistem Granular / Pengolahan Material Recycle,Mixer
+2.11.2,Sistem Granular / Pengolahan Material Recycle,Motor Gearbox Mixer
+2.12.1,Sistem Flame Oven,Tanur Flame Oven
+2.12.2,Sistem Flame Oven,Prisma Pot
+2.13.1,Gudang dan Penimbangan Ingot,Timbangan Duduk
+2.13.2,Gudang dan Penimbangan Ingot,Anak Timbangan
+2.13.3,Gudang dan Penimbangan Ingot,Sampler
+2.13.4,Gudang dan Penimbangan Ingot,Separator
+3.1.1,Sistem Kelistrikan Utama dan Daya Cadangan,Kubikel Incoming PLN
+3.1.2,Sistem Kelistrikan Utama dan Daya Cadangan,Genset
+3.1.3,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Kubikel dan DSI
+3.1.4,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Main Switch Board
+3.1.5,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Sinkron Genset
+3.1.6,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Kapasitor Bank
+3.1.7,Sistem Kelistrikan Utama dan Daya Cadangan,Incoming Power Feeder
+3.1.8,Sistem Kelistrikan Utama dan Daya Cadangan,Main Power Transformer
+3.1.9,Sistem Kelistrikan Utama dan Daya Cadangan,Sistem Grounding
+3.1.10,Sistem Kelistrikan Utama dan Daya Cadangan,Sistem Proteksi Petir
+3.2.1,Sistem Udara Bertekanan Pabrik,Kompresor Listrik
+3.2.2,Sistem Udara Bertekanan Pabrik,Tangki Kompresor
+3.3.1,Mesin Perkakas,Mesin Skrap
+3.3.2,Mesin Perkakas,Mesin Milling
+3.3.3,Mesin Perkakas,Mesin Roll
+3.3.4,Mesin Perkakas,Mesin Press
+3.3.5,Mesin Perkakas,Mesin Las
+3.3.6,Mesin Perkakas,Mesin Potong
+3.3.7,Mesin Perkakas,Mesin Bubut
+3.4.1,Sistem Bahan Bakar,Pompa BBM
+3.4.2,Sistem Bahan Bakar,Filter
+3.4.3,Sistem Bahan Bakar,Tangki BBM
+3.5.1,Peralatan Pemindah Material,Forklift
+3.5.2,Peralatan Pemindah Material,Conveyor
+3.6.1,Struktur Sipil,Platform kerja
+3.6.2,Struktur Sipil,Railing
+3.6.3,Struktur Sipil,Tangga
+3.6.4,Struktur Sipil,Atap
+3.6.5,Struktur Sipil,Dinding
+3.7.1,Sistem Proteksi Kebakaran,Pompa Hydrant / Fire Pump
+3.8.1,Perkakas dan Alat Ukur Workshop,Lifting Tools / Peralatan Alat Berat Workshop
+3.8.2,Perkakas dan Alat Ukur Workshop,Alat Ukur Maintenance / Peralatan Kelistrikan Workshop
+4.1.1,"Sistem Penerimaan, Penyimpanan, dan Pelletizing",Dust Receiving Hopper
+4.1.2,"Sistem Penerimaan, Penyimpanan, dan Pelletizing",Storage Bin
+4.1.3,"Sistem Penerimaan, Penyimpanan, dan Pelletizing",Pelletizer
+4.1.4,"Sistem Penerimaan, Penyimpanan, dan Pelletizing",Conveyor
+4.2.1,Rotary Kiln,Rotary Kiln
+4.2.2,Rotary Kiln,Burner – Rotary Kiln
+4.3.1,Sistem Flame Oven,Tanur Flame Oven
+4.3.2,Sistem Flame Oven,Prisma Pot
+4.4.1,Sistem Penanganan Gas Buang dan Debu,Seattle Bawah Tanur
+4.4.2,Sistem Penanganan Gas Buang dan Debu,Seattle Atas Tanur
+4.4.3,Sistem Penanganan Gas Buang dan Debu,Dust Collector
+4.4.4,Sistem Penanganan Gas Buang dan Debu,Bag House
+4.4.5,Sistem Penanganan Gas Buang dan Debu,Blower Hisap
+4.4.6,Sistem Penanganan Gas Buang dan Debu,Stack / Cerobong
+4.5.1,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical
+5.1.1,Lab. Analisis,ICP-OES
+5.1.2,Lab. Analisis,XRF
+5.1.3,Lab. Analisis,Mikroskop
+5.1.4,Lab. Analisis,Timbangan Laboratorium
+6.1.1,Sistem Konsentrasi Bijih,Air Table
+6.1.2,Sistem Konsentrasi Bijih,High Tension Separator (HTS)
+7.1.1,Gas Handling Tanur Reverb,Skin Cooler - DCS Tanur Reverb
+7.1.2,Gas Handling Tanur Reverb,Bag Filter - DCS Tanur Reverb
+7.1.3,Gas Handling Tanur Reverb,ID Fan - DCS Tanur Reverb
+7.1.4,Gas Handling Tanur Reverb,Cerobong - DCS Tanur Reverb
+8.1.2,Kompressor,Distribution Board
+9.1.1,Hydrant,Water
+9.1.2,Cooling System,Water Circulation
+9.1.3,Genset dan Power House,Trafo Step Up 20kv
+9.1.4,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Pneumatic
+9.1.5,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Pneumatic
+9.1.6,Sistem Elektroda,Motor Screw Hopper Elektroda Tanur
+9.1.7,Hydrant,Motor Pump
+9.1.8,Rotary Kiln,Motor Gearbox
+9.1.10,Cooling System,Diesel Pump
+9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan
+9.2.2,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan Tanur
+9.2.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan
+9.2.4,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan
+9.3.1,Hydrant,Jockey Pump
+9.3.2,Kompressor,Mesin Compressor Sullair
+9.4.1,Cooling System,Water Instalasi
+9.9.1,Panel Furnace Tegangan Rendah,Panel Furnace
+11.1.1,Bangunan,Area Genset/Trafo
+11.1.1,Bangunan,Pos Jaga
+11.1.2,Bangunan,Area Peleburan/Tanur
+12.1.1,Komposisi,Blower Vacuum
+12.1.2,Bangunan,Bangunan Crusher
+12.1.3,Bangunan,"Gedung Antrasit, Workshop, dan Gudang Pasir"
+12.1.4,Bangunan,Gedung HTS MS
+12.1.5,Bangunan,Gedung Komposisi
+12.1.6,Bangunan,Gedung Musholla
+12.1.7,Bangunan,Gedung Office
+12.1.8,Bangunan,Gedung Rotary Kiln & Flame Oven
+12.1.9,Bangunan,Gedung Timbangan
+12.1.10,Bangunan,Gudang Pasir
+12.1.11,Bangunan,Gudang Sparepart
+12.1.12,Bangunan,Laboratorium
+12.1.13,Bangunan,Gedung Produksi Tanur
+12.1.14,Bangunan,Gedung Genset
+12.1.15,Bangunan,Gedung Ruang Pompa
+13.1.1,Bangunan,Workshop Teknik
+13.1.2,Bangunan,Rumah Parkir Alat Berat
+13.1.3,Bangunan,Workshop Tanur Listrik
+13.1.4,Bangunan,Rumah Kompressor
+13.1.5,Bangunan,Rumah Cooling System
+13.1.6,Bangunan,Workshop Listrik
+13.1.8,Bangunan,Rumah Baghouse
+14.1.1,Bangunan,Rumah Mainflue
+14.1.2,Bangunan,Struktur Fixed Tanur
+14.1.3,Bangunan,Struktur Fixed Pemurnian
