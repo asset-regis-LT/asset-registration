@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.2.3-AE",
+  "inspectionId": "INS-20260901-RBT-9.2.3-AE",
+  "createdAt": "2026-09-01T08:35:53.770Z",
+  "nomorPBS": "9.2.3",
+  "subsistem": "Sistem Gas",
+  "namaAset": "Exhaust Fan",
+  "lokasi": "RBT",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-9.2.3-AE.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "2 hp",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    }
+  ]
+}
