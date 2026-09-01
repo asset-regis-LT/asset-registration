@@ -1,0 +1,57 @@
+{
+  "tagNo": "SBS-1.2.4-C",
+  "inspectionId": "INS-20260901-SBS-1.2.4-C",
+  "createdAt": "2026-09-01T13:41:38.833Z",
+  "nomorPBS": "1.2.4",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Bag House",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-1.2.4-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "Plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Penggantian dibeberapa section"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Atap Baghouse",
+      "spesifikasiTeknis": "Canal C dan asbes",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak dan bolong"
+    },
+    {
+      "nama": "Skep Baghouse",
+      "spesifikasiTeknis": "Plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Filter Baghouse",
+      "spesifikasiTeknis": "Sintetis",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Cage",
+      "spesifikasiTeknis": "Diameter 120",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
