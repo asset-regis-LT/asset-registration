@@ -112,11 +112,16 @@ hard-refreshing).
 
 - `data/master-catalog.json` — the fixed catalog (Nomor PBS, Subsistem, Nama Aset, Nama Smelter/Lokasi,
   and the list of sub-component names for that asset). Committed on `main`, part of the site. This is
-  reference data an inspector picks from, not something the app writes to. **The same asset can appear in
-  multiple rows** — one row per smelter it's actually installed at, each with its own Nomor PBS but the same
-  Subsistem/sub-components — that's what lets the picker offer a choice of smelters for one asset name.
-  `lokasi` values follow `"Company Name (ACRONYM)"`, since the acronym is what the Tag No. prefix is
-  derived from.
+  reference data an inspector picks from, not something the app writes to. **The same asset is replicated
+  across all 6 smelters** — one row per smelter, same Nomor PBS/Subsistem/sub-components — that's what lets
+  the picker offer a choice of smelters for one asset name. `lokasi` values follow `"Company Name
+  (ACRONYM)"`, since the acronym is what the Tag No. prefix is derived from. Nomor PBS is `SYSTEM.MID.LEAF`;
+  systems 1–14 exist (7–14 — gas handling, cooling, hydrant, genset, buildings — were folded in later from
+  field registrations). **Leaf numbers are NOT always contiguous and NOT safe to string-sort** (`1.10.1`
+  sorts before `1.2.1` lexically); nothing in the app sorts inspections by PBS, but keep this in mind if
+  adding anything that does.
+- `data/pbs-subsistem.csv` — flat `nomorPBS,subsistem,namaAset` reference, one row per distinct catalog
+  PBS, generated from `master-catalog.json`. Not read by the app; regenerate if the catalog changes.
 - `data/inspections/<tagNo>.json` — one committed record per finalized inspection, written by the app to
   the `data` branch. Includes the technical spec, condition, and decision per sub-component (all filled in
   at inspection time, not part of the catalog), plus an `overallDecision` computed by worst-case precedence
@@ -129,6 +134,27 @@ hard-refreshing).
 - `data/inspections/photos/<tagNo>.jpg` — the one photo per inspection, resized/compressed client-side
   (`GithubStore.compressImage`, max ~1600px, JPEG quality ~0.7) before upload, since these accumulate in
   the repo indefinitely.
+
+## Bulk-imported records (rubric workbooks)
+
+Each smelter has a legacy "Rubrik Penilaian" Excel asset register (one sheet per asset, embedded photos).
+These were bulk-imported into the `data` branch as inspection records via throwaway scripts kept in
+`scratch_data/` (gitignored — `curated_map_*.py` build a name→catalog crosswalk CSV, `import_sbs.py` writes
+the JSON + photos). Done for **SBS, VIP, SIP, TIN**; RBT/MCM already had enough real field data. Things to
+know about these records:
+
+- **`nomorPBS`/`subsistem` come from a hand-curated crosswalk** (workbook asset name → nearest catalog PBS);
+  **`namaAset` is kept verbatim from the workbook** (more specific, e.g. `"Exhaust Fan Tanur A"`). So a
+  multi-unit group's records do NOT string-match their catalog row on `namaAset` — matching is by PBS only.
+  Multiple workbook sheets can collapse onto one catalog PBS (`TIN-2.1.1-A..I` = 9 ketels).
+- **Some records have a `fotoPath` pointing at a file that doesn't exist** (the workbook sheet had no
+  photo). QR label, admin list and Excel export all handle this; only the read-only scan view shows a
+  missing image.
+- **A few records have an empty `subsistem`** (workbook asset with no catalog equivalent — e.g. `*-6.3.1-A`
+  "Fertilizer"); these keep their workbook PBS.
+- **Imports were gap-only** — any catalog PBS the field team had already started entering by hand was
+  skipped, so a later hand-entry under one of the imported PBS will land as a new letter alongside the
+  bulk rows, not a conflict.
 
 ## Picker flow and manual asset entry (index.html)
 
@@ -196,8 +222,11 @@ Two non-obvious gotchas baked into this code:
 is sized for), one row per inspection including its PIC/Inspector. Rows are newest-first by `createdAt`
 (records without it, i.e. saved before that field existed, sort after all dated ones, tied among
 themselves by Tag No.) — the full sorted set is kept in `allRows`, separate from whatever subset
-`renderDataTableRows()` currently has on screen. A "Filter Nama Smelter" dropdown (`populateLokasiFilter()`,
-built from the distinct `lokasi` values in `allRows`, no extra fetch) re-renders that subset client-side.
+`renderDataTableRows()` currently has on screen. Two dropdowns filter that subset client-side (no extra
+fetch): "Filter Nama Smelter" (`populateLokasiFilter()`, distinct `lokasi`) and "Filter Subsistem"
+(`populateSubsistemFilter()`, distinct `subsistem`). They **AND-combine** via the `filteredRows()` helper —
+a row shows only if it matches both — and every render path (both `change` handlers, initial load, post-edit
+re-render) goes through `renderDataTableRows(filteredRows())`.
 
 Each row has a "QR Dicetak" checkbox (`qrPrinted`) plus three actions: **Edit** opens a modal covering
 everything about the record — Tag No., Nomor PBS/Subsistem/Lokasi, PIC/Tanggal, foto, and per-component
@@ -221,10 +250,10 @@ Lokasi all required non-empty).
   record whose `qrPrinted` is already checked triggers a `confirm()` warning that the old physical label
   will stop resolving — the admin can still proceed past it.
 
-Save re-renders through `populateLokasiFilter()` + `renderDataTableRows()` — the same filter-aware path used
-everywhere else in this file — instead of patching individual table cells; needed now that Tag No./
-Subsistem/Lokasi can all change from this modal, and it resolves "row's lokasi no longer matches the active
-filter" for free. **QR** re-generates and downloads that inspection's label from the cached record via
+Save re-renders through `populateLokasiFilter()` + `populateSubsistemFilter()` + `renderDataTableRows(filteredRows())` —
+the same filter-aware path used everywhere else in this file — instead of patching individual table cells;
+needed now that Tag No./Subsistem/Lokasi can all change from this modal, and it resolves "row's lokasi/
+subsistem no longer matches the active filter" for free. **QR** re-generates and downloads that inspection's label from the cached record via
 `GithubStore.generateLabelPNG()`, then auto-ticks "QR Dicetak" if it wasn't already (best-effort — a
 download isn't proof of an actual print — via the same `setQrPrinted()` the checkbox itself uses, which
 never blocks or fails the download on a write error). **Hapus** removes both the JSON and photo. Edit and
