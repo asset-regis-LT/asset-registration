@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-14.1.2-A",
+  "inspectionId": "INS-20260901-RBT-14.1.2-A",
+  "createdAt": "2026-09-01T05:28:16.828Z",
+  "nomorPBS": "14.1.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Struktur Fixed Tanur",
+  "lokasi": "RBT",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-14.1.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Coran",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    }
+  ]
+}
