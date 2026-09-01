@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-3.2.1-B",
+  "inspectionId": "INS-20260901-SIP-3.2.1-B",
+  "createdAt": "2026-09-01T13:51:11.900Z",
+  "nomorPBS": "3.2.1",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Kompresor Listrik",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SIP-3.2.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Panel Control",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
