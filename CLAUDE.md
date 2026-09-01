@@ -79,7 +79,16 @@ files, so the repo itself doubles as the write-side datastore, via `js/github-st
 - **Admin can still overwrite or delete an existing record** via `getFileMeta()` (fetches a file's current
   `sha`), `updateFile()` (PUT with that `sha` — the create-only guarantee above is specific to
   `createFile()`), and `deleteFile()`. These back `admin.html`'s per-row Edit/Hapus and are deliberately
-  separate from the field save path.
+  separate from the field save path. Admin's Edit modal can also rename a Tag No. outright — that reuses
+  `createFile()`'s same create-only guarantee for the new path (see "Admin data management" below).
+- **`raw.githubusercontent.com` can serve a stale pre-write snapshot for a few minutes after a commit**,
+  and a browser's own image cache is a second, independent staleness source specifically for `<img src>`
+  loads. `admin.html` works around the JSON case with a short-lived `recentEdits`/`applyRecentEdits()`
+  override (~5 min, keyed by Tag No.); photo re-display right after an edit instead uses
+  `GithubStore.rawUrlFresh()` (same as `rawUrl()` but with a `?_=<timestamp>` cache-buster) rather than the
+  plain `rawUrl()` used everywhere else — without it, a photo that actually saved correctly can appear to
+  have silently failed (this shipped once and was diagnosed by checking the commit history directly, not
+  by finding a bug in the write path — there wasn't one).
 - **Tag No. format** is `ACRONYM-PBSNUMBER-LETTER` (e.g. `RBT-1.4.1-A`), where ACRONYM comes from the
   smelter name's parenthetical, e.g. `"Refined Bangka Tin (RBT)"` → `RBT` (`smelterCode()` in `index.html`,
   with a trailing-word fallback for a manually-typed location that doesn't follow that format).
@@ -154,11 +163,15 @@ printer needs, so it downsamples instead of upsamples when printed, which is wha
 Layout: QR fills the left column (drawn oversized from a 560px QRCode.js render, then scaled down to 280px,
 for a cleaner downscale); the right column stacks the actual logo image (drawn via `drawImage()` at its
 native aspect ratio — not recreated as text, and not squeezed small enough to visibly pixelate), then Tag
-No. (`bold 38px monospace`), a divider, Nama Aset (`bold 34px sans-serif`), and Lokasi (`25px sans-serif`,
+No. (`bold 26px monospace`), a divider, Nama Aset (`bold 34px sans-serif`), and Lokasi (`25px sans-serif`,
 both wrapped to max 2 lines via `wrapText()`, which returns its line count so Lokasi's baseline follows a
 1- or 2-line asset name). No mini-labels or scan caption — unreadable at the printed size, so the three
 real values just get bigger instead. Font sizes were tuned by hand on real prints; change them only on
-request.
+request. (An auto-shrink-to-fit for Tag No. was tried and reverted — canvas `measureText()` metrics vary
+enough across real devices/browsers that a runtime-computed size was less reliable than a fixed, hand-tuned
+one; Tag No. is a single `ctx.font`/`fillText()` call, so it's always uniform across the whole string even
+though the acronym/letters can look visually "bigger" than the digits/dots in a monospace font — that's the
+font's glyph shapes, not a per-segment size difference.)
 
 Two non-obvious gotchas baked into this code:
 
@@ -186,20 +199,38 @@ themselves by Tag No.) — the full sorted set is kept in `allRows`, separate fr
 `renderDataTableRows()` currently has on screen. A "Filter Nama Smelter" dropdown (`populateLokasiFilter()`,
 built from the distinct `lokasi` values in `allRows`, no extra fetch) re-renders that subset client-side.
 
-Each row has a "QR Dicetak" checkbox (`qrPrinted`) plus three actions: **Edit** opens a modal for
-PIC/Tanggal/per-component Kondisi/Keputusan/Catatan, and also lets sub-component rows be renamed, added
+Each row has a "QR Dicetak" checkbox (`qrPrinted`) plus three actions: **Edit** opens a modal covering
+everything about the record — Tag No., Nomor PBS/Subsistem/Lokasi, PIC/Tanggal, foto, and per-component
+Kondisi/Keputusan/Catatan — none of it locked anymore. Sub-component rows can be renamed, added
 (`+ Tambah Sub Komponen`), or removed, mirroring index.html's manual-asset component editing
-(`addEditComponentCard`, validated the same way as `index.html`'s `validateForm()` before
-`GithubStore.updateFile()` overwrites the JSON — at least one component, and nama/spesifikasiTeknis/
-kondisiTeknis/keputusanTeknis all required per row); it patches the PIC cell and the `allRows` entry in
-place rather than reloading. The photo and the Tag No. itself stay locked — changing those is still
-"delete and re-register," not a data-entry fix. **QR** re-generates and downloads that inspection's label
-from the cached record via `GithubStore.generateLabelPNG()`, then auto-ticks "QR Dicetak" if it wasn't
-already (best-effort — a download isn't proof of an actual print — via the same `setQrPrinted()` the
-checkbox itself uses, which never blocks or fails the download on a write error). **Hapus** removes both
-the JSON and photo. Edit and Hapus patch the in-memory row/table (and `allRows`) directly instead of
-reloading the whole list, since a full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan"
-bulk-deletes, sharing the per-tag delete logic.
+(`addEditComponentCard`, validated the same way as `index.html`'s `validateForm()`: at least one component,
+nama/spesifikasiTeknis/kondisiTeknis/keputusanTeknis required per row, plus Tag No./Nomor PBS/Subsistem/
+Lokasi all required non-empty).
+
+- **Photo replace** reuses `index.html`'s camera/gallery-input + `GithubStore.compressImage()` pattern; if
+  no new photo is picked, the existing one is left untouched (no photo write happens at all).
+- **Tag No. rename** actually moves the record: `data/inspections/<tag>.json` and
+  `data/inspections/photos/<tag>.jpg` move to new paths keyed by the new tag. Implemented as
+  create-new-then-delete-old (`createFile()` for the new JSON/photo, then `deleteInspectionFiles()` for the
+  old ones) so a failure partway leaves the old record intact — a stray duplicate the admin is told to clean
+  up manually — rather than losing data. `createFile()`'s create-only guarantee doubles as a second check
+  (on top of an explicit `listInspectionTags()` lookup) that the new Tag No. isn't already taken.
+  Inspection ID is regenerated to match the new tag. If no new photo was picked during a rename, the
+  existing photo bytes are copied to the new path unchanged (not recompressed) via
+  `GithubStore.fetchFileAsBase64()`. Because a printed QR label encodes the Tag No. in its URL, renaming a
+  record whose `qrPrinted` is already checked triggers a `confirm()` warning that the old physical label
+  will stop resolving — the admin can still proceed past it.
+
+Save re-renders through `populateLokasiFilter()` + `renderDataTableRows()` — the same filter-aware path used
+everywhere else in this file — instead of patching individual table cells; needed now that Tag No./
+Subsistem/Lokasi can all change from this modal, and it resolves "row's lokasi no longer matches the active
+filter" for free. **QR** re-generates and downloads that inspection's label from the cached record via
+`GithubStore.generateLabelPNG()`, then auto-ticks "QR Dicetak" if it wasn't already (best-effort — a
+download isn't proof of an actual print — via the same `setQrPrinted()` the checkbox itself uses, which
+never blocks or fails the download on a write error). **Hapus** removes both the JSON and photo. Edit and
+Hapus patch the in-memory row/table (and `allRows`) directly instead of reloading the whole list, since a
+full reload at ~2000 rows is slow. "Hapus Semua Data Tersimpan" bulk-deletes, sharing the per-tag delete
+logic.
 
 The Excel export reuses the same concurrency helper, and re-compresses each photo down to thumbnail size
 before embedding it — the sheet only ever displays it at 110x110px, so embedding the full ~1600px capture
