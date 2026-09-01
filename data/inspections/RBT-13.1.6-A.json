@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-13.1.6-A",
+  "inspectionId": "INS-20260901-RBT-13.1.6-A",
+  "createdAt": "2026-09-01T05:05:28.205Z",
+  "nomorPBS": "13.1.6",
+  "subsistem": "Bangunan",
+  "namaAset": "Workshop Listrik",
+  "lokasi": "RBT",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-13.1.6-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "Coran",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Minor repair"
+    }
+  ]
+}
