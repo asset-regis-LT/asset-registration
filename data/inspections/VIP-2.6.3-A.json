@@ -1,0 +1,43 @@
+{
+  "tagNo": "VIP-2.6.3-A",
+  "inspectionId": "INS-20260901-VIP-2.6.3-A",
+  "createdAt": "2026-09-01T13:14:51.196Z",
+  "nomorPBS": "2.6.3",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Sirkulasi Air",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-2.6.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "-",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Water Pump",
+      "spesifikasiTeknis": "3-4 inch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Motor Pump",
+      "spesifikasiTeknis": "3kw",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
