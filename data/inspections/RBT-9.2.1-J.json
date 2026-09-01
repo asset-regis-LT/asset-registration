@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.2.1-J",
+  "inspectionId": "INS-20260901-RBT-9.2.1-J",
+  "createdAt": "2026-09-01T07:30:23.901Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas",
+  "namaAset": "ID Fan",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-9.2.1-J.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
