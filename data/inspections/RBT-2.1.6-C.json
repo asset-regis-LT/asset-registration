@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.1.6-C",
+  "inspectionId": "INS-20260901-RBT-2.1.6-C",
+  "createdAt": "2026-09-01T07:06:25.151Z",
+  "nomorPBS": "2.1.6",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-2.1.6-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
