@@ -1,0 +1,64 @@
+{
+  "tagNo": "SBS-1.4.1-C",
+  "inspectionId": "INS-20260824-SBS-1.4.1-C",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoistcrane 2.5 Ton 3.1",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-24",
+  "fotoPath": "data/inspections/photos/SBS-1.4.1-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.6.3.1 Hoist",
+      "spesifikasiTeknis": "5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "1.6.3.2 Wire Rope",
+      "spesifikasiTeknis": "Diameter 13 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.3.3 Hook Block",
+      "spesifikasiTeknis": "2,5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.3.4 Bridge Girder",
+      "spesifikasiTeknis": "24 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.3.5 Endtruck",
+      "spesifikasiTeknis": "2,5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.3.6 Runway Beam",
+      "spesifikasiTeknis": "54 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    },
+    {
+      "nama": "1.6.3.7 Runway Rail",
+      "spesifikasiTeknis": "54 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    }
+  ]
+}

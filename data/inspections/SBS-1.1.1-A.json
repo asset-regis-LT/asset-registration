@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-1.1.1-A",
+  "inspectionId": "INS-20260823-SBS-1.1.1-A",
+  "createdAt": "2026-08-23T00:00:00.000Z",
+  "nomorPBS": "1.1.1",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tanur A Kapasitas 15 Ton",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-23",
+  "fotoPath": "data/inspections/photos/SBS-1.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.1.1.1 Plat Dinding Tanur",
+      "spesifikasiTeknis": "plat 5 - 16 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perbaikan"
+    },
+    {
+      "nama": "1.1.1.2 Bata Api",
+      "spesifikasiTeknis": "sk 35-38",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "rusak"
+    }
+  ]
+}

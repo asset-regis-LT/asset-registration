@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-2.1.5-A",
+  "inspectionId": "INS-20260819-SBS-2.1.5-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Pompa Timah",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-2.1.5-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.9.1 Motor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.9.2 Pumpt",
+      "spesifikasiTeknis": "baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}

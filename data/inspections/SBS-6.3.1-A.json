@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-6.3.1-A",
+  "inspectionId": "INS-20260827-SBS-6.3.1-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "6.3.1",
+  "subsistem": "",
+  "namaAset": "Fertilizer",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-6.3.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "6.3.1.1 Motor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "6.3.1.2 Fertilizer Disk",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

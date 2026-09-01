@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-1.7.2-B",
+  "inspectionId": "INS-20260821-SBS-1.7.2-B",
+  "createdAt": "2026-08-21T00:00:00.000Z",
+  "nomorPBS": "1.7.2",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Water Box Tanur B",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-21",
+  "fotoPath": "data/inspections/photos/SBS-1.7.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.4.3.1 Plat Water Box",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

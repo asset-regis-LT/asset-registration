@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-2.3.5-A",
+  "inspectionId": "INS-20260818-SBS-2.3.5-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.3.5",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "Talang Casting",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/SBS-2.3.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.3.2.1 Heater",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Kabel  hilang"
+    },
+    {
+      "nama": "2.3.2.2 Panel Indikator Control",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-3.1.8-A",
+  "inspectionId": "INS-20260825-SBS-3.1.8-A",
+  "createdAt": "2026-08-25T00:00:00.000Z",
+  "nomorPBS": "3.1.8",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Trafo PS 630Kva",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-25",
+  "fotoPath": "data/inspections/photos/SBS-3.1.8-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "7.1.4.1 Trafo Ps 630kva",
+      "spesifikasiTeknis": "Trafindo 630kva 20kv~400v",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    }
+  ]
+}

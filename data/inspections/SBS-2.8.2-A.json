@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-2.8.2-A",
+  "inspectionId": "INS-20260819-SBS-2.8.2-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.8.2",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Platform Refining",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-2.8.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.8.1 Plat Lantai",
+      "spesifikasiTeknis": "plat boardes",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "2.1.8.2 Konstruksi Lantai",
+      "spesifikasiTeknis": "besi siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Mulai berkarat"
+    }
+  ]
+}

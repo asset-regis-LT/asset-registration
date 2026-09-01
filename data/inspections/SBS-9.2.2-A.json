@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-9.2.2-A",
+  "inspectionId": "INS-20260818-SBS-9.2.2-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "9.2.2",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan Tanur A",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/SBS-9.2.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.5.5.1 Motor Blower",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "1.5.5.2 Cylone",
+      "spesifikasiTeknis": "Plat baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.5.3 Inverter Kontrol",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak, kabel hilang"
+    }
+  ]
+}

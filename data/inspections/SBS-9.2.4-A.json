@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-9.2.4-A",
+  "inspectionId": "INS-20260825-SBS-9.2.4-A",
+  "createdAt": "2026-08-25T00:00:00.000Z",
+  "nomorPBS": "9.2.4",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Exhaust Fan",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-25",
+  "fotoPath": "data/inspections/photos/SBS-9.2.4-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.4.3.1 Casing",
+      "spesifikasiTeknis": "8 inch",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}

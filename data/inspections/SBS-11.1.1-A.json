@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-11.1.1-A",
+  "inspectionId": "INS-20260827-SBS-11.1.1-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "11.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Pos Jaga",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-11.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.1.1 Lantai",
+      "spesifikasiTeknis": "kramik",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.1.2 Dinding",
+      "spesifikasiTeknis": "dinding bata",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.1.3 Atap",
+      "spesifikasiTeknis": "asbes",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    }
+  ]
+}

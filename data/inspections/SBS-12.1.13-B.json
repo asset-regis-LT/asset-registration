@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-12.1.13-B",
+  "inspectionId": "INS-20260827-SBS-12.1.13-B",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "12.1.13",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Produksi 2",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-12.1.13-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.7.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.7.2 Dinding",
+      "spesifikasiTeknis": "Spandek",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian"
+    },
+    {
+      "nama": "9.1.7.3 Atap",
+      "spesifikasiTeknis": "spandek dengan rangka canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "rusak dibeberapa section"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "tagNo": "SBS-1.2.1-B",
+  "inspectionId": "INS-20260819-SBS-1.2.1-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "1.2.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Settle Box 1 Tanur B",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-1.2.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.7.1 Bata Api Dinding",
+      "spesifikasiTeknis": "Sk 32 - 34",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengantian"
+    },
+    {
+      "nama": "1.5.7.2 Konstruksi Shuttel",
+      "spesifikasiTeknis": "UNP 150",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.7.3 Waterbox",
+      "spesifikasiTeknis": "Plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.7.4 Ducting",
+      "spesifikasiTeknis": "Plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.7.5 Pintu Shuttel",
+      "spesifikasiTeknis": "Plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "rusak"
+    }
+  ]
+}

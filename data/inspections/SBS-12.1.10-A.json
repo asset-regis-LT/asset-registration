@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-12.1.10-A",
+  "inspectionId": "INS-20260827-SBS-12.1.10-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "12.1.10",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang Pasir",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-12.1.10-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.5.1 Lantai",
+      "spesifikasiTeknis": "setara k 250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perbaikan minor"
+    },
+    {
+      "nama": "9.1.5.2 Dinding",
+      "spesifikasiTeknis": "dinding bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.5.3 Atap",
+      "spesifikasiTeknis": "atap spandek dengan rangka canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa section"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-1.3.1-H",
+  "inspectionId": "INS-20260824-SBS-1.3.1-H",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "nomorPBS": "1.3.1",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Motorgearbox Stang Elecroda 2 Tanur C",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-24",
+  "fotoPath": "data/inspections/photos/SBS-1.3.1-H.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.2.14.1 Motorgearbox",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Motor hilang"
+    },
+    {
+      "nama": "1.2.14.2 Wire Rope",
+      "spesifikasiTeknis": "diameter 8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}

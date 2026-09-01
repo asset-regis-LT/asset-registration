@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-2.9.1-C",
+  "inspectionId": "INS-20260825-SBS-2.9.1-C",
+  "createdAt": "2026-08-25T00:00:00.000Z",
+  "nomorPBS": "2.9.1",
+  "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAset": "Mixer 1",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-25",
+  "fotoPath": "data/inspections/photos/SBS-2.9.1-C.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "3.1.1.1 Molen",
+      "spesifikasiTeknis": "Kapasitas 1 ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    }
+  ]
+}

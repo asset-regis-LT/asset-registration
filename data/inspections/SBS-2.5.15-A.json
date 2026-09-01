@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-2.5.15-A",
+  "inspectionId": "INS-20260819-SBS-2.5.15-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.5.15",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Stack/Cerobong",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-2.5.15-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.5.5.1 Stack/Cerobong",
+      "spesifikasiTeknis": "plat 5 - 12 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Berkarat"
+    }
+  ]
+}

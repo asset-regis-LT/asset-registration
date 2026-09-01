@@ -1,0 +1,43 @@
+{
+  "tagNo": "SBS-1.2.3-C",
+  "inspectionId": "INS-20260821-SBS-1.2.3-C",
+  "createdAt": "2026-08-21T00:00:00.000Z",
+  "nomorPBS": "1.2.3",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Dust Collector Tanur C",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-21",
+  "fotoPath": "data/inspections/photos/SBS-1.2.3-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.14.1 Ducting Sistem",
+      "spesifikasiTeknis": "Plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.14.2 Plat Dust Collector",
+      "spesifikasiTeknis": "Plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.14.3 Tiang Baghouse",
+      "spesifikasiTeknis": "IWF 120",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Sudah terlihat korosi"
+    },
+    {
+      "nama": "1.5.14.4 Skep Dust Collector",
+      "spesifikasiTeknis": "Plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

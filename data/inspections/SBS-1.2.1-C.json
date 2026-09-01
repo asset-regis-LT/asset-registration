@@ -1,0 +1,43 @@
+{
+  "tagNo": "SBS-1.2.1-C",
+  "inspectionId": "INS-20260819-SBS-1.2.1-C",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "1.2.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Settle Box 1 Tanur C",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-1.2.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.13.1 Bata Api Dinding",
+      "spesifikasiTeknis": "SK 32-34",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perbaikan"
+    },
+    {
+      "nama": "1.5.13.2 Konstruksi Shuttel",
+      "spesifikasiTeknis": "Besi Siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Sebagian korosi"
+    },
+    {
+      "nama": "1.5.13.3 Ducting",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.13.4 Pintu Shuttel",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi ringan"
+    }
+  ]
+}

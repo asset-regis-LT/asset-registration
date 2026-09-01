@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-13.1.1-A",
+  "inspectionId": "INS-20260827-SBS-13.1.1-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "13.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Workshop",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-13.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.6.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa area"
+    },
+    {
+      "nama": "9.1.6.2 Dinding",
+      "spesifikasiTeknis": "dinding bata kombinasi wiermesh",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian pada wiermesh"
+    },
+    {
+      "nama": "9.1.6.3 Atap",
+      "spesifikasiTeknis": "spandek dengan rangka kanal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-1.2.6-A",
+  "inspectionId": "INS-20260819-SBS-1.2.6-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack/Cerobong Tanur A",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-1.2.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.5.6.1 Stack/Cerobong Tanur A",
+      "spesifikasiTeknis": "Plat 5 - 8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}

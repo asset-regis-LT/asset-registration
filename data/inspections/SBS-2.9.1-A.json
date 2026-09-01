@@ -1,0 +1,43 @@
+{
+  "tagNo": "SBS-2.9.1-A",
+  "inspectionId": "INS-20260818-SBS-2.9.1-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.9.1",
+  "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAset": "Mixer 1",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/SBS-2.9.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.2.1 Motor",
+      "spesifikasiTeknis": "45kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.2.2 As Mixer",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.2.3 Inverter Control Board",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.2.4 Kontruksi",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

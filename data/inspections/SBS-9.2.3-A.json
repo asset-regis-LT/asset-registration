@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-9.2.3-A",
+  "inspectionId": "INS-20260820-SBS-9.2.3-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "9.2.3",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Exhaust Fan Tanur A",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/SBS-9.2.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.4.2.1 exhausfan",
+      "spesifikasiTeknis": "8 inch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "rusak"
+    }
+  ]
+}

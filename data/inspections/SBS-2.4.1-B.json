@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-2.4.1-B",
+  "inspectionId": "INS-20260819-SBS-2.4.1-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.4.1",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater Ketel 2",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-2.4.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.5.1 Burner",
+      "spesifikasiTeknis": "olympia",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Dibutuhkan pengujian"
+    },
+    {
+      "nama": "2.1.5.2 Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak dan korosi"
+    },
+    {
+      "nama": "2.1.5.3 Panel Kontrol",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

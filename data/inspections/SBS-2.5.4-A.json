@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-2.5.4-A",
+  "inspectionId": "INS-20260819-SBS-2.5.4-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.5.4",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Sistem Pneumatic",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-2.5.4-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.5.3.1 Panel Control",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.5.3.2 Valve Pneumatic",
+      "spesifikasiTeknis": "Pneumatic Membran valve",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

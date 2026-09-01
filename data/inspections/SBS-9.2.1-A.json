@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-9.2.1-A",
+  "inspectionId": "INS-20260819-SBS-9.2.1-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SBS-9.2.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.5.4.1 Motor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "2.5.4.2 Cyclone",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.5.4.3 Panel Inverter",
+      "spesifikasiTeknis": "Panel control",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Scrap"
+    }
+  ]
+}

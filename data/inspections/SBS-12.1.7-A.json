@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-12.1.7-A",
+  "inspectionId": "INS-20260827-SBS-12.1.7-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "12.1.7",
+  "subsistem": "Bangunan",
+  "namaAset": "Office",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SBS-12.1.7-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.3.1 Lantai",
+      "spesifikasiTeknis": "keramik",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.3.2 Dinding",
+      "spesifikasiTeknis": "dinding bata",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "9.1.3.3 Atap",
+      "spesifikasiTeknis": "atap asbes",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan di beberapa section"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-4.3.1-A",
+  "inspectionId": "INS-20260821-SBS-4.3.1-A",
+  "createdAt": "2026-08-21T00:00:00.000Z",
+  "nomorPBS": "4.3.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "F.O Portable",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-21",
+  "fotoPath": "data/inspections/photos/SBS-4.3.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "6.1.1.1 Bata Api Dinding",
+      "spesifikasiTeknis": "Sk 32 - 36",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    },
+    {
+      "nama": "6.1.1.2 Plat Dinding",
+      "spesifikasiTeknis": "Plat 5 - 8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}

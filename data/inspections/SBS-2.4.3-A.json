@@ -1,0 +1,29 @@
+{
+  "tagNo": "SBS-2.4.3-A",
+  "inspectionId": "INS-20260824-SBS-2.4.3-A",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "nomorPBS": "2.4.3",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater Tanur 1",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-24",
+  "fotoPath": "data/inspections/photos/SBS-2.4.3-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "6.1.2.1 Burner",
+      "spesifikasiTeknis": "Oil burner",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "6.1.2.2 Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    }
+  ]
+}
