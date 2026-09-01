@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-2.5.5-A",
+  "inspectionId": "INS-20260901-SBS-2.5.5-A",
+  "createdAt": "2026-09-01T13:31:48.018Z",
+  "nomorPBS": "2.5.5",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Bag House Refining",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-2.5.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Baghouse",
+      "spesifikasiTeknis": "Plat 3 - 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi, perlu dilakukan pengantian di beberapa section"
+    },
+    {
+      "nama": "Tiang baghouse",
+      "spesifikasiTeknis": "IWF 120",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dicoating dan repair agar tidak keropos"
+    },
+    {
+      "nama": "Atap baghouse",
+      "spesifikasiTeknis": "Atap transpart",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Bocor, perlu diganti"
+    }
+  ]
+}
