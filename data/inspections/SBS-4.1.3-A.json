@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-4.1.3-A",
+  "inspectionId": "INS-20260901-SBS-4.1.3-A",
+  "createdAt": "2026-09-01T14:39:26.571Z",
+  "nomorPBS": "4.1.3",
+  "subsistem": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+  "namaAset": "Pelletizer",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-4.1.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "MHD",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Disk",
+      "spesifikasiTeknis": "1 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
