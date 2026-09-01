@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-1.1.2-B",
+  "inspectionId": "INS-20260901-VIP-1.1.2-B",
+  "createdAt": "2026-09-01T13:44:30.857Z",
+  "nomorPBS": "1.1.2",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tutup Tanur",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-1.1.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Tutup Tanur",
+      "spesifikasiTeknis": "plat besi",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Cor Tutup Tanur",
+      "spesifikasiTeknis": "castable",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "belum dilakukan pnegecoran"
+    }
+  ]
+}
