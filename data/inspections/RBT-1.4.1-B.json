@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.4.1-B",
+  "inspectionId": "INS-20260901-RBT-1.4.1-B",
+  "createdAt": "2026-09-01T06:31:05.507Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoist Crane",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-1.4.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Crane",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
