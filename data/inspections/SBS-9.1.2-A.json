@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-9.1.2-A",
+  "inspectionId": "INS-20260901-SBS-9.1.2-A",
+  "createdAt": "2026-09-01T13:56:42.987Z",
+  "nomorPBS": "9.1.2",
+  "subsistem": "Cooling System",
+  "namaAset": "Water Circulation",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-9.1.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Instalasi",
+      "spesifikasiTeknis": "Pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Water Pump",
+      "spesifikasiTeknis": "NS 50",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Motor Pump",
+      "spesifikasiTeknis": "2.2kw",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
