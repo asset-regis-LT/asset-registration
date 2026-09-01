@@ -1,0 +1,50 @@
+{
+  "tagNo": "SBS-2.2.1-A",
+  "inspectionId": "INS-20260901-SBS-2.2.1-A",
+  "createdAt": "2026-09-01T13:59:31.004Z",
+  "nomorPBS": "2.2.1",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "Screw atau Blitz Crystallizer",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-2.2.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "11kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "Refulet roda gigi",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    },
+    {
+      "nama": "Chamber",
+      "spesifikasiTeknis": "Plat besi",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan perbaikan"
+    },
+    {
+      "nama": "Screw",
+      "spesifikasiTeknis": "Material baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Heater",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
