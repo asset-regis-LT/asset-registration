@@ -1,0 +1,92 @@
+{
+  "tagNo": "VIP-2.8.3-A",
+  "inspectionId": "INS-20260901-VIP-2.8.3-A",
+  "createdAt": "2026-09-01T14:04:42.910Z",
+  "nomorPBS": "2.8.3",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane – Crystallizer",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-2.8.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Hoist",
+      "spesifikasiTeknis": "Hitachi 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "Wire 12mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "Hook Block",
+      "spesifikasiTeknis": "Hook",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Bridge Girder",
+      "spesifikasiTeknis": "SwL 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Endtruck",
+      "spesifikasiTeknis": "nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Runway Beam",
+      "spesifikasiTeknis": "42 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Runway Rail",
+      "spesifikasiTeknis": "42 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Downshop Conductors",
+      "spesifikasiTeknis": "Nyyhy 4x4mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "Control Panel",
+      "spesifikasiTeknis": "Panel inverter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service ganti inverter"
+    },
+    {
+      "nama": "Remote",
+      "spesifikasiTeknis": "Telecrane",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti telecrane"
+    },
+    {
+      "nama": "Motor endtruck",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
