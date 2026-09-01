@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-1.5.3-B",
+  "inspectionId": "INS-20260901-VIP-1.5.3-B",
+  "createdAt": "2026-09-01T13:05:07.929Z",
+  "nomorPBS": "1.5.3",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Busbar / Bus Tube / Flexible Cable",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-1.5.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Busbar Electroda 1 Tanur B",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti kabel busbar"
+    },
+    {
+      "nama": "Busbar Electroda 2 Tanur B",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti kabel busbar"
+    },
+    {
+      "nama": "Busbar Electroda 3 Tanur B",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti kabel busbar"
+    }
+  ]
+}
