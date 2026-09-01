@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-9.2.3-M",
+  "inspectionId": "INS-20260901-RBT-9.2.3-M",
+  "createdAt": "2026-09-01T03:44:43.147Z",
+  "nomorPBS": "9.2.3",
+  "subsistem": "Sistem Gas",
+  "namaAset": "Exhaust Fan",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-9.2.3-M.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
