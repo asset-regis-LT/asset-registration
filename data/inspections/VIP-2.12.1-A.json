@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-2.12.1-A",
+  "inspectionId": "INS-20260901-VIP-2.12.1-A",
+  "createdAt": "2026-09-01T13:36:53.801Z",
+  "nomorPBS": "2.12.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "Tanur Flame Oven",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-2.12.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Bata Api",
+      "spesifikasiTeknis": "Perbaikan bata api flame oven",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Kontruksi",
+      "spesifikasiTeknis": "Plat baja dan UNP",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
