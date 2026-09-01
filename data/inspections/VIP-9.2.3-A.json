@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-9.2.3-A",
+  "inspectionId": "INS-20260901-VIP-9.2.3-A",
+  "createdAt": "2026-09-01T13:29:18.189Z",
+  "nomorPBS": "9.2.3",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Exhaust Fan",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-9.2.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Exhaust fan portable",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
