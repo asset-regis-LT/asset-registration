@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-2.12.1-A",
+  "inspectionId": "INS-20260901-SIP-2.12.1-A",
+  "createdAt": "2026-09-01T14:22:39.651Z",
+  "nomorPBS": "2.12.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "Tanur Flame Oven",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SIP-2.12.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Bata Api Dinding",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Kontruksi",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}
