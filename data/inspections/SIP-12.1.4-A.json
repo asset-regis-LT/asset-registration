@@ -1,0 +1,36 @@
+{
+  "tagNo": "SIP-12.1.4-A",
+  "inspectionId": "INS-20260901-SIP-12.1.4-A",
+  "createdAt": "2026-09-01T13:32:43.365Z",
+  "nomorPBS": "12.1.4",
+  "subsistem": "Bangunan",
+  "namaAset": "Area Bahanbakar",
+  "lokasi": "PT Stanindo Inti Perkasa",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SIP-12.1.4-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "cor setara k 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "tiang pipa sch dan spandek",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian dibeberapan section"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "spandek dengan kuda kuda canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Kanal C mulai korosi"
+    }
+  ]
+}
