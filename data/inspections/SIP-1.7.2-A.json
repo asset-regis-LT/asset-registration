@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-1.7.2-A",
+  "inspectionId": "INS-20260822-SIP-1.7.2-A",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.7.2",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Water Box Tanur A",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/SIP-1.7.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.4.1.1 Kontruksi",
+      "spesifikasiTeknis": ".",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-1.1.1-A",
+  "inspectionId": "INS-20260818-SIP-1.1.1-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "1.1.1",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tanur A Kapasitas 20 Ton",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/SIP-1.1.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.1.1.1 Plat Dinding Tanur",
+      "spesifikasiTeknis": "plat 5 - 16 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.1.1.2 Bak Taping",
+      "spesifikasiTeknis": "plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

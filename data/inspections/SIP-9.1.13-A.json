@@ -1,0 +1,36 @@
+{
+  "tagNo": "SIP-9.1.13-A",
+  "inspectionId": "INS-20260827-SIP-9.1.13-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "9.1.13",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang LB3",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SIP-9.1.13-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.13.1 Lantai",
+      "spesifikasiTeknis": "cor setara k200",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "9.1.13.2 Dinding",
+      "spesifikasiTeknis": "Tiang IWF kombinasi kanal C rangkap",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "sebagian korosi"
+    },
+    {
+      "nama": "9.1.13.3 Atap",
+      "spesifikasiTeknis": "atap spandek dengan kuda kuda canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian dibeberapa section"
+    }
+  ]
+}

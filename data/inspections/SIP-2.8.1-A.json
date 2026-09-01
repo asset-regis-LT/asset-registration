@@ -1,0 +1,43 @@
+{
+  "tagNo": "SIP-2.8.1-A",
+  "inspectionId": "INS-20260824-SIP-2.8.1-A",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "nomorPBS": "2.8.1",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoistcrane 5 Ton Refining",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-24",
+  "fotoPath": "data/inspections/photos/SIP-2.8.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.1.1 Hoist",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.1.2 Hook Block",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.1.3 Bridge Girder",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.1.1.4 Runway Beam",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

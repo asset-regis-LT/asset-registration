@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-1.2.1-B",
+  "inspectionId": "INS-20260822-SIP-1.2.1-B",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.2.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Settle Box 1 Tanur B",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/SIP-1.2.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.8.1 Kontruksi",
+      "spesifikasiTeknis": "Besi siku",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

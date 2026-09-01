@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-2.7.1-A",
+  "inspectionId": "INS--SIP-2.7.1-A",
+  "createdAt": "",
+  "nomorPBS": "2.7.1",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Refining",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "",
+  "tanggalInspeksi": "",
+  "fotoPath": "data/inspections/photos/SIP-2.7.1-A.jpg",
+  "overallDecision": "",
+  "komponen": [
+    {
+      "nama": "2.1.2.1 Panel Refining",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "",
+      "keputusanTeknis": "",
+      "catatan": ""
+    }
+  ]
+}

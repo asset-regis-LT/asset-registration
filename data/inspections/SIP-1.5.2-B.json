@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-1.5.2-B",
+  "inspectionId": "INS-20260826-SIP-1.5.2-B",
+  "createdAt": "2026-08-26T00:00:00.000Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Panel ACB Trafo Tanur Tanur B",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-26",
+  "fotoPath": "data/inspections/photos/SIP-1.5.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.3.6.1 Panel ACB Trafo Tanur Tanur B",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

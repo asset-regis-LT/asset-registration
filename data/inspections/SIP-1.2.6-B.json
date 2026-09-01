@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-1.2.6-B",
+  "inspectionId": "INS-20260822-SIP-1.2.6-B",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack/Cerobong Tanur B",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/SIP-1.2.6-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.14.1 Stack/Cerobong Tanur B",
+      "spesifikasiTeknis": "plat 5 - 12 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

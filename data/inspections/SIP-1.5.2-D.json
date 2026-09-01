@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-1.5.2-D",
+  "inspectionId": "INS-20260826-SIP-1.5.2-D",
+  "createdAt": "2026-08-26T00:00:00.000Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Panel ACB - Tanur 2",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-26",
+  "fotoPath": "data/inspections/photos/SIP-1.5.2-D.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "7.1.6.1 ACB 12kv",
+      "spesifikasiTeknis": "2000A",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    }
+  ]
+}

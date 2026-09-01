@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-2.4.1-A",
+  "inspectionId": "INS-20260819-SIP-2.4.1-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.4.1",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater KETEL 1",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SIP-2.4.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.3.1 Burner",
+      "spesifikasiTeknis": "Olympia Burner oil",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

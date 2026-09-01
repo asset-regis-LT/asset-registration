@@ -1,0 +1,71 @@
+{
+  "tagNo": "SIP-1.4.1-B",
+  "inspectionId": "INS-20260824-SIP-1.4.1-B",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoistcrane 5 Ton Tanur Bawah",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-24",
+  "fotoPath": "data/inspections/photos/SIP-1.4.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.6.2.1 Hoist",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.6.2.2 Wire Rope",
+      "spesifikasiTeknis": "diameter 15 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.6.2.3 Hook Block",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.6.2.4 Bridge Girder",
+      "spesifikasiTeknis": "14 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.2.5 Endtruck",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
+    },
+    {
+      "nama": "1.6.2.6 Runway Beam",
+      "spesifikasiTeknis": "24 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "terdapat korosi"
+    },
+    {
+      "nama": "1.6.2.7 Control Panel",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "1.6.2.8 Motor Endtruck",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-3.1.1-A",
+  "inspectionId": "INS-20260826-SIP-3.1.1-A",
+  "createdAt": "2026-08-26T00:00:00.000Z",
+  "nomorPBS": "3.1.1",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Incoming PLN 1",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-26",
+  "fotoPath": "data/inspections/photos/SIP-3.1.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "7.1.1.1 Kubikel",
+      "spesifikasiTeknis": "Kubikel Schneider 20kv",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "7.1.1.2 Trafo 400kva",
+      "spesifikasiTeknis": "Trafindo 400kva 20kv~400v",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Service"
+    }
+  ]
+}

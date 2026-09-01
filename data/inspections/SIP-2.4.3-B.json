@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-2.4.3-B",
+  "inspectionId": "INS-20260819-SIP-2.4.3-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.4.3",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SIP-2.4.3-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.8.3.1 Pompa Bhan Bakar",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

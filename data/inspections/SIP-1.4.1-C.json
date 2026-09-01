@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-1.4.1-C",
+  "inspectionId": "INS-20260827-SIP-1.4.1-C",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoistcrane 3 Ton Gudang",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SIP-1.4.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.6.3.1 Hoist",
+      "spesifikasiTeknis": "Kamuchi 3ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Posisi hoist dibwah"
+    },
+    {
+      "nama": "1.6.3.2 Bridge Girder",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "."
+    }
+  ]
+}

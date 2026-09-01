@@ -1,0 +1,36 @@
+{
+  "tagNo": "SIP-9.1.11-A",
+  "inspectionId": "INS-20260827-SIP-9.1.11-A",
+  "createdAt": "2026-08-27T00:00:00.000Z",
+  "nomorPBS": "9.1.11",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang Kapur",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-27",
+  "fotoPath": "data/inspections/photos/SIP-9.1.11-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.11.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 200",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "9.1.11.2 Dinding",
+      "spesifikasiTeknis": "spandek dan bata",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "kanal C korosi"
+    },
+    {
+      "nama": "9.1.11.3 Atap",
+      "spesifikasiTeknis": "asbes dengan kuda kuda kanal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}

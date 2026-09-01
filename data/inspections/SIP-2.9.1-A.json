@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-2.9.1-A",
+  "inspectionId": "INS-20260819-SIP-2.9.1-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.9.1",
+  "subsistem": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAset": "Mixer 1",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SIP-2.9.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.7.1 Motor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.7.2 Kontuksi",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

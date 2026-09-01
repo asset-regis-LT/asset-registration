@@ -1,0 +1,36 @@
+{
+  "tagNo": "SIP-9.1.9-A",
+  "inspectionId": "INS-20260828-SIP-9.1.9-A",
+  "createdAt": "2026-08-28T00:00:00.000Z",
+  "nomorPBS": "9.1.9",
+  "subsistem": "Bangunan",
+  "namaAset": "Ruang Trafo",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-28",
+  "fotoPath": "data/inspections/photos/SIP-9.1.9-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.9.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "9.1.9.2 Dinding",
+      "spesifikasiTeknis": "tembok",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "9.1.9.3 Atap",
+      "spesifikasiTeknis": "spandek dengan kuda kuda baja ringan",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian kuda kuda"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tagNo": "SIP-1.3.1-C",
+  "inspectionId": "INS--SIP-1.3.1-C",
+  "createdAt": "",
+  "nomorPBS": "1.3.1",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Motor Winc Stang Elecroda 3 Tanur A",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "",
+  "tanggalInspeksi": "",
+  "fotoPath": "data/inspections/photos/SIP-1.3.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.2.3.1 Motorgearbox",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "",
+      "keputusanTeknis": "",
+      "catatan": ""
+    },
+    {
+      "nama": "1.2.3.2 Wire Rope",
+      "spesifikasiTeknis": "8mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

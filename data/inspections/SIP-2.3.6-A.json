@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-2.3.6-A",
+  "inspectionId": "INS-20260819-SIP-2.3.6-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.3.6",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "POT Casting",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/SIP-2.3.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.3.1.1 Tong",
+      "spesifikasiTeknis": "Plat bending",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    }
+  ]
+}
