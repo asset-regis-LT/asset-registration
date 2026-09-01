@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-2.4.1-C",
+  "inspectionId": "INS-20260818-VIP-2.4.1-C",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.4.1",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater KETEL 1",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.4.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.2.3.1 Burner",
+      "spesifikasiTeknis": "Na",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

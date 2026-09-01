@@ -1,0 +1,43 @@
+{
+  "tagNo": "VIP-2.1.5-B",
+  "inspectionId": "INS-20260818-VIP-2.1.5-B",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Pompa Timah",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.1.5-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.2.6.1 Motor",
+      "spesifikasiTeknis": "3kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Berkarat"
+    },
+    {
+      "nama": "2.2.6.2 Pompa",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.2.6.3 Pompa timah 2",
+      "spesifikasiTeknis": "2,2kw",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.2.6.4 Pompa timah 3",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    }
+  ]
+}

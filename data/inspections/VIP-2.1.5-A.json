@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-2.1.5-A",
+  "inspectionId": "INS-20260818-VIP-2.1.5-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Tin Pumpt",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.1.5-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.6.1 Motor",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.6.2 Pumpt",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

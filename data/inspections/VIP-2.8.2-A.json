@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-2.8.2-A",
+  "inspectionId": "INS-20260818-VIP-2.8.2-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.8.2",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Platform Refining",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.8.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.5.1 Plat Lantai",
+      "spesifikasiTeknis": "plat boardesk",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Lantai korosif"
+    },
+    {
+      "nama": "2.1.5.2 Konstruksi Lantai",
+      "spesifikasiTeknis": "besi siku",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}

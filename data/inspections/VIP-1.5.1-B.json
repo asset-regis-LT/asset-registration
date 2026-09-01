@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.5.1-B",
+  "inspectionId": "INS-20260818-VIP-1.5.1-B",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "1.5.1",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Trafo Step Down 1250 Kva 400v Tanur B",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-1.5.1-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.3.4.1 Trafo Step Down 1250 Kva 400v Tanur B",
+      "spesifikasiTeknis": "1250kva 400v",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Kabel terlepas"
+    }
+  ]
+}

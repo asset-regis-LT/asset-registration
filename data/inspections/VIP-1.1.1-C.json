@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-1.1.1-C",
+  "inspectionId": "INS-20260819-VIP-1.1.1-C",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "1.1.1",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tanur Reverb Kapaistas 20 Ton",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/VIP-1.1.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.6.1.1 Kontruksi",
+      "spesifikasiTeknis": "Kontruksi bata api",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "1.6.1.2 Burner",
+      "spesifikasiTeknis": "Burner oil",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Sudah tidak ada"
+    }
+  ]
+}

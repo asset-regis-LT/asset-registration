@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-2.5.4-A",
+  "inspectionId": "INS-20260818-VIP-2.5.4-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.5.4",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Sistem Pneumatic",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.5.4-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.5.4.1 Panel Control",
+      "spesifikasiTeknis": "Plc",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.5.4.2 Valve Pneumatic",
+      "spesifikasiTeknis": "Pneumatic Membran valve",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

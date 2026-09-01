@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.2.6-B",
+  "inspectionId": "INS-20260818-VIP-1.2.6-B",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack/Cerobong Tanur B",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-1.2.6-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.5.12.1 Stack/Cerobong Tanur B",
+      "spesifikasiTeknis": "plat besi",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Pengantian dibeberapa section"
+    }
+  ]
+}

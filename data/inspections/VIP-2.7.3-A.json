@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-2.7.3-A",
+  "inspectionId": "INS-20260818-VIP-2.7.3-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.7.3",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Crsytallizer 1",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.7.3-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.2.1.1 Sistem Instalasi",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

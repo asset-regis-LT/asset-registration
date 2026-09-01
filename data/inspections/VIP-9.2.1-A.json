@@ -1,0 +1,43 @@
+{
+  "tagNo": "VIP-9.2.1-A",
+  "inspectionId": "INS-20260818-VIP-9.2.1-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-9.2.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.5.5.1 Motor",
+      "spesifikasiTeknis": "15kw 3p 2900rpm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.5.5.2 Bearing Housing",
+      "spesifikasiTeknis": "Coupling",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.5.5.3 Cyclone",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.5.5.4 Panel Inverter",
+      "spesifikasiTeknis": "Kontrol panel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

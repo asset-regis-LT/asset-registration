@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-2.3.6-A",
+  "inspectionId": "INS-20260818-VIP-2.3.6-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.3.6",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "POT Casting",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.3.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.3.1.1 Tong",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

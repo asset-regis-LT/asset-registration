@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.5.2-B",
+  "inspectionId": "INS-20260820-VIP-1.5.2-B",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Panel ACB Trafo Tanur B",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/VIP-1.5.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.3.6.1 Panel ACB Trafo Tanur B",
+      "spesifikasiTeknis": "Chint 4000A",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

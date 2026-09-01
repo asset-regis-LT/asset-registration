@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-3.1.7-A",
+  "inspectionId": "INS-20260819-VIP-3.1.7-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "3.1.7",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel FEEDER",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/VIP-3.1.7-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "7.1.6.1 Panel FEEDER",
+      "spesifikasiTeknis": "Panel feeder 400v",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

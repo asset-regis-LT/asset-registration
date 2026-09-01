@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-9.1.2-B",
+  "inspectionId": "INS-20260818-VIP-9.1.2-B",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "9.1.2",
+  "subsistem": "Cooling System",
+  "namaAset": "Water Circulation",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-9.1.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.4.2.1 Istalasi Pipa",
+      "spesifikasiTeknis": "pipa sch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "2.4.2.2 Gate Valve",
+      "spesifikasiTeknis": "3 - 4 inch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "2.4.2.3 Impeller Sistem",
+      "spesifikasiTeknis": "3-4 inch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}

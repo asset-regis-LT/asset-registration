@@ -1,0 +1,43 @@
+{
+  "tagNo": "VIP-9.2.2-A",
+  "inspectionId": "INS-20260818-VIP-9.2.2-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "9.2.2",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan Tanur A",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-9.2.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.5.5.1 Motor Blower",
+      "spesifikasiTeknis": "30 kW 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service ganti cover"
+    },
+    {
+      "nama": "1.5.5.2 Bearing Housing",
+      "spesifikasiTeknis": "Cor Iron",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "1.5.5.3 Cyclone",
+      "spesifikasiTeknis": "Plat baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "1.5.5.4 Inverter Control Board",
+      "spesifikasiTeknis": "Szado 30kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

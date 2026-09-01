@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.7.2-A",
+  "inspectionId": "INS-20260818-VIP-1.7.2-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "1.7.2",
+  "subsistem": "Sistem Pendinginan Air",
+  "namaAset": "Water Box Tanur A",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-1.7.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.4.1.1 Plat Water Box",
+      "spesifikasiTeknis": "plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

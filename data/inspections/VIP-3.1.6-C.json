@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-3.1.6-C",
+  "inspectionId": "INS--VIP-3.1.6-C",
+  "createdAt": "",
+  "nomorPBS": "3.1.6",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Kapasitor Bank 2",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "",
+  "tanggalInspeksi": "",
+  "fotoPath": "data/inspections/photos/VIP-3.1.6-C.jpg",
+  "overallDecision": "",
+  "komponen": [
+    {
+      "nama": "7.1.10.1 Panel Kapasitor Bank 2",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "",
+      "keputusanTeknis": "",
+      "catatan": ""
+    }
+  ]
+}

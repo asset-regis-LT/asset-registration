@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-2.4.1-A",
+  "inspectionId": "INS-20260818-VIP-2.4.1-A",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "2.4.1",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater KETEL 1",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-2.4.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.1.1 Burner",
+      "spesifikasiTeknis": "Burner TMH 0,75 kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "2.1.1.2 Panel Kontrol",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

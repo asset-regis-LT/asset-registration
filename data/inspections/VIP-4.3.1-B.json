@@ -1,0 +1,29 @@
+{
+  "tagNo": "VIP-4.3.1-B",
+  "inspectionId": "INS-20260818-VIP-4.3.1-B",
+  "createdAt": "2026-08-18T00:00:00.000Z",
+  "nomorPBS": "4.3.1",
+  "subsistem": "Sistem Flame Oven",
+  "namaAset": "F.O Portable 2",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-18",
+  "fotoPath": "data/inspections/photos/VIP-4.3.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "6.1.2.1 Bata Api",
+      "spesifikasiTeknis": "Bata Tahan Api SK 34 -38",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrab"
+    },
+    {
+      "nama": "6.1.2.2 Kontruksi",
+      "spesifikasiTeknis": "Plat baja dan UNP",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
