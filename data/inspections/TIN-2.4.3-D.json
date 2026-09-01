@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-2.4.3-D",
+  "inspectionId": "INS-20260820-TIN-2.4.3-D",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.4.3",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater F.O Refining",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.4.3-D.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "6.1.4.1 Burner",
+      "spesifikasiTeknis": "ND",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "6.1.4.2 Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "Hose fuel",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "6.1.4.3 Control Board",
+      "spesifikasiTeknis": "Kontaktor kontrol",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

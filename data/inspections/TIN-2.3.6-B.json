@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.3.6-B",
+  "inspectionId": "INS-20260819-TIN-2.3.6-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.3.6",
+  "subsistem": "Sistem Casting dan Pembentukan Ingot",
+  "namaAset": "POT Casting 50 Ton 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-2.3.6-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.3.2.1 POT Casting 50 Ton 2",
+      "spesifikasiTeknis": "Kapasitas 50ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

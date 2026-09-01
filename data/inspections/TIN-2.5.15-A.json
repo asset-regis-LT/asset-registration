@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.5.15-A",
+  "inspectionId": "INS-20260820-TIN-2.5.15-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.5.15",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "Stack/Cerobong",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.5.15-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.5.4.1 Stack/Cerobong",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Baik"
+    }
+  ]
+}

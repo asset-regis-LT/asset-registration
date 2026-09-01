@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.4.3-B",
+  "inspectionId": "INS-20260819-TIN-2.4.3-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.4.3",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Superheater 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-2.4.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.3.4.1 Superheater 2",
+      "spesifikasiTeknis": "Burner MFO",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    }
+  ]
+}

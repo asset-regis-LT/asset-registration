@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.7.3-B",
+  "inspectionId": "INS-20260819-TIN-2.7.3-B",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.7.3",
+  "subsistem": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAset": "Panel Electrical Crsytallizer 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-2.7.3-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.2.2.1 Sistem Instalasi",
+      "spesifikasiTeknis": "Instalasi kelistrikan",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

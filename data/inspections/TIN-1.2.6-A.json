@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-1.2.6-A",
+  "inspectionId": "INS-20260822-TIN-1.2.6-A",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.2.6",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Stack/Cerobong Tanur A",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/TIN-1.2.6-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.5.6.1 Stack/Cerobong Tanur A",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "tagNo": "TIN-9.2.1-A",
+  "inspectionId": "INS-20260820-TIN-9.2.1-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-9.2.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.5.3.1 Motor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.5.3.2 Cyclone",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.5.3.3 Panel Kontrol",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.5.3.4 Ducting",
+      "spesifikasiTeknis": "Pipa 6inci",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Baik"
+    }
+  ]
+}

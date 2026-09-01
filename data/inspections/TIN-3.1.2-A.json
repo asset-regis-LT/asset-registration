@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-3.1.2-A",
+  "inspectionId": "INS-20260820-TIN-3.1.2-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "3.1.2",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Genset Yanmar 1000kva 1",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-3.1.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "7.1.2.1 Genset Yanmar 1000kva 1",
+      "spesifikasiTeknis": "Yanmar diesel 1000kva",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perbaikan berat"
+    },
+    {
+      "nama": "7.1.2.2 Panel Syncron",
+      "spesifikasiTeknis": "Panel syncron",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "7.1.2.3 Gen SWGR 2",
+      "spesifikasiTeknis": "Exciter panel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

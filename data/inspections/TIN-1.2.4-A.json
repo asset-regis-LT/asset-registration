@@ -1,0 +1,43 @@
+{
+  "tagNo": "TIN-1.2.4-A",
+  "inspectionId": "INS-20260820-TIN-1.2.4-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "1.2.4",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Bag House Tanur A",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-1.2.4-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.3.1 Plat Baghouse",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.3.2 Tiang Baghouse",
+      "spesifikasiTeknis": "cor setara k 200",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.3.3 Skep Baghouse",
+      "spesifikasiTeknis": "plat 3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.3.4 Filter Baghouse",
+      "spesifikasiTeknis": "sintetis",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

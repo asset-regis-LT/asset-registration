@@ -1,0 +1,50 @@
+{
+  "tagNo": "TIN-1.2.1-B",
+  "inspectionId": "INS-20260822-TIN-1.2.1-B",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.2.1",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Settle Box 1 Tanur B",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/TIN-1.2.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.7.1 Bata Api Dinding",
+      "spesifikasiTeknis": "sk 32 -34",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.7.2 Konstruksi Shuttel",
+      "spesifikasiTeknis": "besi siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.7.3 Waterbox",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.7.4 Ducting",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "1.5.7.5 Pintu Shuttel",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}

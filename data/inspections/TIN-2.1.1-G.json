@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.1.1-G",
+  "inspectionId": "INS-20260820-TIN-2.1.1-G",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.1.1",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "KETEL / Kuali 20 ton 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.1.1-G.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "2.1.15.1 KETEL / Kuali 20 Ton 2",
+      "spesifikasiTeknis": "plat bending",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "diperlukan pengujian"
+    }
+  ]
+}

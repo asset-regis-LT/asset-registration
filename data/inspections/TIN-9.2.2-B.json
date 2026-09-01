@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-9.2.2-B",
+  "inspectionId": "INS-20260820-TIN-9.2.2-B",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "9.2.2",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan Tanur B",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-9.2.2-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.5.11.1 Motor Blower",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "1.5.11.2 Cylone",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "1.5.11.3 Bearing Housing",
+      "spesifikasiTeknis": "Coupling",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Scrap"
+    }
+  ]
+}

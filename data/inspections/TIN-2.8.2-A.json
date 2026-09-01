@@ -1,0 +1,29 @@
+{
+  "tagNo": "TIN-2.8.2-A",
+  "inspectionId": "INS-20260820-TIN-2.8.2-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.8.2",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Platform Refining",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.8.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.1.18.1 Plat Lantai",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "2.1.18.2 Konstruksi Lantai",
+      "spesifikasiTeknis": "besi siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "pengantian dibeberapa bagian"
+    }
+  ]
+}

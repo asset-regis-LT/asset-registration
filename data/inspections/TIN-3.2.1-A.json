@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.2.1-A",
+  "inspectionId": "INS-20260823-TIN-3.2.1-A",
+  "createdAt": "2026-08-23T00:00:00.000Z",
+  "nomorPBS": "3.2.1",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Compressor Portable Refining",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-23",
+  "fotoPath": "data/inspections/photos/TIN-3.2.1-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "8.1.1.1 Compressor Portable Refining",
+      "spesifikasiTeknis": "Swan  10hp",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

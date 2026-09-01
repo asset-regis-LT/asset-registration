@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.5.2-A",
+  "inspectionId": "INS-20260820-TIN-3.5.2-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "3.5.2",
+  "subsistem": "Peralatan Pemindah Material",
+  "namaAset": "Conveyour",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-3.5.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "6.3.2.1 Conveyour",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    }
+  ]
+}

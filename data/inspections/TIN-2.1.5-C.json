@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-2.1.5-C",
+  "inspectionId": "INS-20260819-TIN-2.1.5-C",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Pompa Timah",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-2.1.5-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.3.6.1 Pompa Timah",
+      "spesifikasiTeknis": "Motor 2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.3.6.2 Pompa timah 2",
+      "spesifikasiTeknis": "Motor 2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.3.6.3 Pompa timah 3",
+      "spesifikasiTeknis": "Motor 2,2kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

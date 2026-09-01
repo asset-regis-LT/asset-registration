@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-1.5.3-F",
+  "inspectionId": "INS-20260820-TIN-1.5.3-F",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "1.5.3",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Busbar Electroda 3 Tanur B",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-1.5.3-F.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.2.12.1 Busbar Electroda 3 Tanur B",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Sebagian hilang"
+    }
+  ]
+}

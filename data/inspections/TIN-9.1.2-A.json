@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-9.1.2-A",
+  "inspectionId": "INS-20260819-TIN-9.1.2-A",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "9.1.2",
+  "subsistem": "Cooling System",
+  "namaAset": "Water Circulation",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-9.1.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.4.2.1 Istalasi Pipa",
+      "spesifikasiTeknis": "pipa PVC",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}

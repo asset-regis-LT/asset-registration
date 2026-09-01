@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-12.1.14-A",
+  "inspectionId": "INS-20260828-TIN-12.1.14-A",
+  "createdAt": "2026-08-28T00:00:00.000Z",
+  "nomorPBS": "12.1.14",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Genset",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-28",
+  "fotoPath": "data/inspections/photos/TIN-12.1.14-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "9.1.6.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "9.1.6.2 Dinding / Tiang",
+      "spesifikasiTeknis": "tiang IWF dan dinding spandek",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "pengantian dibeberapa section"
+    },
+    {
+      "nama": "9.1.6.3 Atap",
+      "spesifikasiTeknis": "atap spandek dengan kuda kuda canal C",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "pengantian dibeberapa section"
+    }
+  ]
+}

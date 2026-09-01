@@ -1,0 +1,71 @@
+{
+  "tagNo": "TIN-2.8.1-A",
+  "inspectionId": "INS-20260820-TIN-2.8.1-A",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.8.1",
+  "subsistem": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAset": "Hoist Crane 10/5 Ton 1 Refining",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.8.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "2.1.20.1 Hoist",
+      "spesifikasiTeknis": "10/5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.1.20.2 Wire Rope",
+      "spesifikasiTeknis": "12mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "2.1.20.3 Downshop Konduktor",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.1.20.4 Bridge Girder",
+      "spesifikasiTeknis": "10 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
+    },
+    {
+      "nama": "2.1.20.5 Endtruck",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
+    },
+    {
+      "nama": "2.1.20.6 Runway Beam",
+      "spesifikasiTeknis": "60 meter",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan perbaikan"
+    },
+    {
+      "nama": "2.1.20.7 Motor Endtruck",
+      "spesifikasiTeknis": "1,5kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.1.20.8 Control Panel",
+      "spesifikasiTeknis": "Kontrol hoist",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

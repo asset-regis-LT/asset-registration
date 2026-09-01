@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.1.1-I",
+  "inspectionId": "INS-20260819-TIN-2.1.1-I",
+  "createdAt": "2026-08-19T00:00:00.000Z",
+  "nomorPBS": "2.1.1",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "KETEL 4B 50ton",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-19",
+  "fotoPath": "data/inspections/photos/TIN-2.1.1-I.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.2.3.1 KETEL 4B 50ton",
+      "spesifikasiTeknis": "Kapasitas 50ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

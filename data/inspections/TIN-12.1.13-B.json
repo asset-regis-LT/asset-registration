@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-12.1.13-B",
+  "inspectionId": "INS-20260828-TIN-12.1.13-B",
+  "createdAt": "2026-08-28T00:00:00.000Z",
+  "nomorPBS": "12.1.13",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Produksi",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-28",
+  "fotoPath": "data/inspections/photos/TIN-12.1.13-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "9.1.5.1 Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa area"
+    },
+    {
+      "nama": "9.1.5.2 Dinding / Tiang",
+      "spesifikasiTeknis": "tiang IWF dan dinding spandek",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan pada dinding"
+    },
+    {
+      "nama": "9.1.5.3 Atap",
+      "spesifikasiTeknis": "spandek dengan kuda - kuda Kanal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "tagNo": "TIN-1.4.1-B",
+  "inspectionId": "INS-20260822-TIN-1.4.1-B",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoistcrane 5 Ton 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/TIN-1.4.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "1.6.2.1 Hoist",
+      "spesifikasiTeknis": "SwL 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "1.6.2.2 Wire Rope",
+      "spesifikasiTeknis": "12mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "1.6.2.3 Instalasi Power",
+      "spesifikasiTeknis": "Kabel Nyyhy 4 x2,5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "1.6.2.4 Remote",
+      "spesifikasiTeknis": "Remote kabel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
+    }
+  ]
+}

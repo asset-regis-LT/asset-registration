@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.2.1-C",
+  "inspectionId": "INS-20260822-TIN-3.2.1-C",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "3.2.1",
+  "subsistem": "Sistem Udara Bertekanan Pabrik",
+  "namaAset": "Compressor Portable Tanur 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/TIN-3.2.1-C.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "8.1.3.1 Compressor Portable Tanur 2",
+      "spesifikasiTeknis": "Swan 10hp",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Scrap"
+    }
+  ]
+}

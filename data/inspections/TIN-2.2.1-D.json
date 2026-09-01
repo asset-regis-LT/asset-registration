@@ -1,0 +1,29 @@
+{
+  "tagNo": "TIN-2.2.1-D",
+  "inspectionId": "INS-20260820-TIN-2.2.1-D",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "2.2.1",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "POT 2",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-2.2.1-D.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "2.2.9.1 Tong Kapasitan 2,5 Ton",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "2.2.9.2 Heater Sistem",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

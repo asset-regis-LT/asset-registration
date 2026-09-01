@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-1.5.2-B",
+  "inspectionId": "INS-20260822-TIN-1.5.2-B",
+  "createdAt": "2026-08-22T00:00:00.000Z",
+  "nomorPBS": "1.5.2",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Panel Kubikel Trafo Tanur B",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-22",
+  "fotoPath": "data/inspections/photos/TIN-1.5.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "1.3.6.1 Panel Kubikel Trafo Tanur B",
+      "spesifikasiTeknis": "KYN28A-12",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}

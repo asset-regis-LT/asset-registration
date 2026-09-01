@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.1.2-E",
+  "inspectionId": "INS-20260820-TIN-3.1.2-E",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "nomorPBS": "3.1.2",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Mitsubishi 125",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Ahmad Maulana",
+  "tanggalInspeksi": "2026-08-20",
+  "fotoPath": "data/inspections/photos/TIN-3.1.2-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "7.1.6.1 Mitsubishi 125",
+      "spesifikasiTeknis": "Engine diesel marine",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    }
+  ]
+}
