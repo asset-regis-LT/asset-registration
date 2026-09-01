@@ -72,6 +72,15 @@ const GithubStore = (() => {
     return `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/${GH_DATA_BRANCH}/${path}`;
   }
 
+  // Same as rawUrl but appends a cache-busting query param — use when
+  // displaying content that might have just changed (e.g. a photo shown
+  // right after an admin edit), so neither the browser's own image cache
+  // nor a stale raw.githubusercontent.com CDN edge response can mask the
+  // new bytes.
+  function rawUrlFresh(path) {
+    return `${rawUrl(path)}?_=${Date.now()}`;
+  }
+
   // Creates the "data" branch off main the first time this app is ever used.
   async function ensureDataBranch() {
     const check = await apiFetch(`/repos/${GH_OWNER}/${GH_REPO}/branches/${GH_DATA_BRANCH}`);
@@ -386,7 +395,7 @@ const GithubStore = (() => {
     GH_OWNER, GH_REPO, GH_DATA_BRANCH, SITE_BASE_URL,
     KONDISI_OPTIONS, KEPUTUSAN_OPTIONS, DECISION_PRECEDENCE, computeOverallDecision,
     getToken, setToken, clearToken, hasToken,
-    rawUrl, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
+    rawUrl, rawUrlFresh, ensureDataBranch, createFile, listInspectionTags, nextTagSuffix,
     getFileMeta, updateFile, deleteFile, fetchFileAsBase64,
     saveOrShareImage, generateLabelPNG, getLogoImage,
     toBase64, compressImage

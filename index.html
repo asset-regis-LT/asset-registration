@@ -6,7 +6,7 @@
 <title>Rubrik Penilaian Kondisi Aset / Komponen</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="js/github-store.js?v=10"></script>
+<script src="js/github-store.js?v=11"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -1159,7 +1159,7 @@ function renderInspectionResult(record, photoSrcOverride, context = "view") {
   document.getElementById("resultDecision").innerHTML =
     `<span class="result-status ${decisionClass}">${escapeHtml(decision || "Hasil inspeksi")}</span>`;
 
-  const photoSrc = photoSrcOverride || GithubStore.rawUrl(record.fotoPath);
+  const photoSrc = photoSrcOverride || GithubStore.rawUrlFresh(record.fotoPath);
   document.getElementById("resultPhotoArea").innerHTML =
     `<div class="result-inspection-photo"><div class="field"><label>Foto Inspeksi</label><img src="${escapeHtml(photoSrc)}" alt="Foto inspeksi" onerror="this.replaceWith(document.createTextNode('Foto tidak dapat dimuat.'))"></div></div>`;
 

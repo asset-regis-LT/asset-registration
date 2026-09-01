@@ -6,7 +6,7 @@
 <title>Admin — Rubrik Penilaian Kondisi Aset</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
-<script src="js/github-store.js?v=10"></script>
+<script src="js/github-store.js?v=11"></script>
 <style>
   :root{
     --ink:#14171a;
@@ -770,7 +770,7 @@ function openEditModal(tag) {
   delete editPhotoPreview.dataset.base64;
   editPhotoPreview.onerror = () => { editPhotoPreview.style.display = "none"; };
   if (record.fotoPath) {
-    editPhotoPreview.src = GithubStore.rawUrl(record.fotoPath);
+    editPhotoPreview.src = GithubStore.rawUrlFresh(record.fotoPath);
     editPhotoPreview.style.display = "block";
   } else {
     editPhotoPreview.removeAttribute("src");
