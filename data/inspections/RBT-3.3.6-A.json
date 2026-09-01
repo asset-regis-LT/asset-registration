@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-3.3.6-A",
+  "inspectionId": "INS-20260901-RBT-3.3.6-A",
+  "createdAt": "2026-09-01T04:00:58.700Z",
+  "nomorPBS": "3.3.6",
+  "subsistem": "Mesin Perkakas",
+  "namaAset": "Mesin Potong",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-3.3.6-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Body",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
