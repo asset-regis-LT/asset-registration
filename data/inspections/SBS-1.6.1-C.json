@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-1.6.1-C",
+  "inspectionId": "INS-20260901-SBS-1.6.1-C",
+  "createdAt": "2026-09-01T13:55:11.925Z",
+  "nomorPBS": "1.6.1",
+  "subsistem": "Sistem Kontrol dan Instrumentasi",
+  "namaAset": "Panel Consule Control",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-1.6.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Board Control",
+      "spesifikasiTeknis": "Control Board",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Kabel instalasi hilang"
+    }
+  ]
+}
