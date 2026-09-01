@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-12.1.3-A",
+  "inspectionId": "INS-20260901-VIP-12.1.3-A",
+  "createdAt": "2026-09-01T13:56:15.142Z",
+  "nomorPBS": "12.1.3",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Antrasit, Workshop, dan Gudang Pasir",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-12.1.3-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "cor setara k 250",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan"
+    },
+    {
+      "nama": "Dinding",
+      "spesifikasiTeknis": "dinding bata",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa area"
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "Atap spandek dan canal C",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "perbaikan dibeberapa section"
+    }
+  ]
+}
