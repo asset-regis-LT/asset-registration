@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-1.1.2-D",
+  "inspectionId": "INS-20260901-RBT-1.1.2-D",
+  "createdAt": "2026-09-01T05:15:23.036Z",
+  "nomorPBS": "1.1.2",
+  "subsistem": "Struktur dan Lining Tanur",
+  "namaAset": "Tutup Tanur",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-1.1.2-D.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "ss",
+      "spesifikasiTeknis": "ss",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
