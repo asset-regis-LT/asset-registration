@@ -40,8 +40,8 @@
   .status.warn{background:#fff4e8;color:#8a5a1f;}
   .status.err{background:#f8e4e2;color:#9e3028;}
   .progress-log{margin-top:12px;font-family:var(--mono);font-size:12px;background:#14171a;color:#c8f0c8;padding:10px;border-radius:6px;max-height:180px;overflow:auto;white-space:pre-wrap;display:none;}
-  label[for="lokasiFilter"]{margin-top:14px;}
-  #lokasiFilter{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);}
+  label[for="lokasiFilter"], label[for="subsistemFilter"]{margin-top:14px;}
+  #lokasiFilter, #subsistemFilter{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);}
   .table-scroll{overflow-x:auto;margin-top:12px;}
   table.data-table{width:100%;border-collapse:collapse;font-size:13px;}
   table.data-table th, table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;}
@@ -111,6 +111,10 @@
     <label for="lokasiFilter">Filter Nama Smelter</label>
     <select id="lokasiFilter" style="display:none;">
       <option value="">Semua Lokasi</option>
+    </select>
+    <label for="subsistemFilter">Filter Subsistem</label>
+    <select id="subsistemFilter" style="display:none;">
+      <option value="">Semua Subsistem</option>
     </select>
     <div class="table-scroll">
       <table class="data-table" id="dataTable" style="display:none;">
@@ -461,6 +465,14 @@ function applyRecentEdits(record) {
 // Lokasi filter renders a subset of this without re-fetching.
 let allRows = [];
 const lokasiFilter = document.getElementById("lokasiFilter");
+const subsistemFilter = document.getElementById("subsistemFilter");
+
+// The rows that match BOTH the smelter and subsistem filters (either empty = no
+// constraint). Single source of truth for what renderDataTableRows() should show.
+function filteredRows() {
+  const l = lokasiFilter.value, s = subsistemFilter.value;
+  return allRows.filter(r => (!l || r.lokasi === l) && (!s || r.subsistem === s));
+}
 
 // Persists the QR-printed flag: same read-sha/write-with-sha pattern as the
 // edit modal's save, plus the same recentEdits guard so a reload right after
@@ -554,10 +566,17 @@ function populateLokasiFilter() {
   lokasiFilter.style.display = lokasiValues.length ? "block" : "none";
 }
 
-lokasiFilter.addEventListener("change", () => {
-  const selected = lokasiFilter.value;
-  renderDataTableRows(selected ? allRows.filter(r => r.lokasi === selected) : allRows);
-});
+function populateSubsistemFilter() {
+  const current = subsistemFilter.value;
+  const values = [...new Set(allRows.map(r => r.subsistem).filter(Boolean))].sort();
+  subsistemFilter.innerHTML = `<option value="">Semua Subsistem</option>` +
+    values.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join("");
+  subsistemFilter.value = values.includes(current) ? current : "";
+  subsistemFilter.style.display = values.length ? "block" : "none";
+}
+
+lokasiFilter.addEventListener("change", () => renderDataTableRows(filteredRows()));
+subsistemFilter.addEventListener("change", () => renderDataTableRows(filteredRows()));
 
 async function loadDataTable() {
   dataListStatus.className = "status warn";
@@ -590,8 +609,8 @@ async function loadDataTable() {
     });
 
     populateLokasiFilter();
-    const selected = lokasiFilter.value;
-    renderDataTableRows(selected ? allRows.filter(r => r.lokasi === selected) : allRows);
+    populateSubsistemFilter();
+    renderDataTableRows(filteredRows());
     deleteAllBtn.disabled = !allRows.length;
   } catch (err) {
     dataListStatus.className = "status err";
@@ -671,6 +690,7 @@ async function deleteAllInspections() {
   dataTableBody.innerHTML = "";
   dataTable.style.display = "none";
   lokasiFilter.style.display = "none";
+  subsistemFilter.style.display = "none";
   dataListStatus.className = failed ? "status err" : "status ok";
   dataListStatus.textContent = failed
     ? `${done} inspeksi terhapus, ${failed} gagal dihapus — muat ulang untuk melihat sisanya.`
@@ -928,7 +948,8 @@ saveEditBtn.addEventListener("click", async () => {
     // filter. renderDataTableRows rebuilds tr.dataset.tag from the record,
     // so a renamed row re-keys itself with no manual DOM patch.
     populateLokasiFilter();
-    renderDataTableRows(lokasiFilter.value ? allRows.filter(r => r.lokasi === lokasiFilter.value) : allRows);
+    populateSubsistemFilter();
+    renderDataTableRows(filteredRows());
     editOverlay.classList.remove("open");
     dataListStatus.className = "status ok";
     dataListStatus.textContent = `Inspeksi ${newTagNo} berhasil diperbarui.`;
