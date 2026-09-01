@@ -1,0 +1,22 @@
+{
+  "tagNo": "RBT-2.13.1-A",
+  "inspectionId": "INS-20260901-RBT-2.13.1-A",
+  "createdAt": "2026-09-01T08:34:40.281Z",
+  "nomorPBS": "2.13.1",
+  "subsistem": "Gudang dan Penimbangan Ingot",
+  "namaAset": "Timbangan Duduk",
+  "lokasi": "Refined Bangka Tin (RBT)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/RBT-2.13.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Timbangan",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
