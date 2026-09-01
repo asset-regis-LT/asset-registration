@@ -1,0 +1,36 @@
+{
+  "tagNo": "SBS-1.5.3-B",
+  "inspectionId": "INS-20260901-SBS-1.5.3-B",
+  "createdAt": "2026-09-01T13:48:02.262Z",
+  "nomorPBS": "1.5.3",
+  "subsistem": "Sistem Daya Tanur",
+  "namaAset": "Busbar / Bus Tube / Flexible Cable",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "AM",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/SBS-1.5.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Busbar Electroda 1 Tanur B",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada"
+    },
+    {
+      "nama": "Busbar Electroda 2 Tanur B",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada"
+    },
+    {
+      "nama": "Busbar Electroda 3 Tanur B",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Tidak ada"
+    }
+  ]
+}
