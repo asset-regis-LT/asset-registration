@@ -1,0 +1,36 @@
+{
+  "tagNo": "VIP-1.2.3-B",
+  "inspectionId": "INS-20260901-VIP-1.2.3-B",
+  "createdAt": "2026-09-01T13:27:52.520Z",
+  "nomorPBS": "1.2.3",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Dust Collector",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-01",
+  "fotoPath": "data/inspections/photos/VIP-1.2.3-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Plat Dust Collector",
+      "spesifikasiTeknis": "plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Tiang Baghouse",
+      "spesifikasiTeknis": "Besi siku",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan perbaikan"
+    },
+    {
+      "nama": "Skep Dust Collector",
+      "spesifikasiTeknis": "plat 3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    }
+  ]
+}
