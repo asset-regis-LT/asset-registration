@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-9.2.1-B",
+  "inspectionId": "INS-20260902-SBS-9.2.1-B",
+  "createdAt": "2026-09-02T08:25:21.300Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SBS-9.2.1-B.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
