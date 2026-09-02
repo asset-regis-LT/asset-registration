@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.4.1-C",
+  "inspectionId": "INS-20260902-VIP-1.4.1-C",
+  "createdAt": "2026-09-02T04:27:03.967Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoist Crane",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/VIP-1.4.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Crane",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
