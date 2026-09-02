@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-9.2.1-C",
+  "inspectionId": "INS-20260902-TIN-9.2.1-C",
+  "createdAt": "2026-09-02T03:06:39.112Z",
+  "nomorPBS": "9.2.1",
+  "subsistem": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAset": "ID Fan",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-9.2.1-C.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
