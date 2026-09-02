@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-14.1.2-A",
+  "inspectionId": "INS-20260902-VIP-14.1.2-A",
+  "createdAt": "2026-09-02T04:17:58.533Z",
+  "nomorPBS": "14.1.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Struktur Fixed Tanur",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/VIP-14.1.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Platform kerja",
+      "spesifikasiTeknis": "Baja",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "-"
+    }
+  ]
+}
