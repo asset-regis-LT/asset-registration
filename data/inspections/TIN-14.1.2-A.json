@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-14.1.2-A",
+  "inspectionId": "INS-20260902-TIN-14.1.2-A",
+  "createdAt": "2026-09-02T02:36:54.503Z",
+  "nomorPBS": "14.1.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Struktur Fixed Tanur",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-14.1.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Platform kerja",
+      "spesifikasiTeknis": "Baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    }
+  ]
+}
