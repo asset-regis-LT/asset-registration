@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-12.1.5-A",
+  "inspectionId": "INS-20260902-SBS-12.1.5-A",
+  "createdAt": "2026-09-02T08:26:36.100Z",
+  "nomorPBS": "12.1.5",
+  "subsistem": "Pendinginan",
+  "namaAset": "Cooling Tower",
+  "lokasi": "SBS",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SBS-12.1.5-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "Plat 5 mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    }
+  ]
+}
