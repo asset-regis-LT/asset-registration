@@ -1,0 +1,22 @@
+{
+  "tagNo": "VIP-1.9.2-A",
+  "inspectionId": "INS-20260902-VIP-1.9.2-A",
+  "createdAt": "2026-09-02T04:27:37.189Z",
+  "nomorPBS": "1.9.2",
+  "subsistem": "Sistem Tapping Logam dan Slag",
+  "namaAset": "Tapping Launder / Spout",
+  "lokasi": "Venus Inti Perkasa (VIP)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/VIP-1.9.2-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "tbe",
+      "spesifikasiTeknis": "tbe",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
