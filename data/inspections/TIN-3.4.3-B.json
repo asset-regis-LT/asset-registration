@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.4.3-B",
+  "inspectionId": "INS-20260902-TIN-3.4.3-B",
+  "createdAt": "2026-09-02T02:53:59.277Z",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-3.4.3-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Tangki BBM",
+      "spesifikasiTeknis": "Kapasitas 40 ton",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "-"
+    }
+  ]
+}
