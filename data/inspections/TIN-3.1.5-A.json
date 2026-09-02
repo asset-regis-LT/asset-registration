@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.1.5-A",
+  "inspectionId": "INS-20260902-TIN-3.1.5-A",
+  "createdAt": "2026-09-02T03:10:20.708Z",
+  "nomorPBS": "3.1.5",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Panel Sinkron Genset",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-3.1.5-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Panel sinkron",
+      "spesifikasiTeknis": "Panel",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
