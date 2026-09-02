@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-1.4.1-D",
+  "inspectionId": "INS-20260902-SBS-1.4.1-D",
+  "createdAt": "2026-09-02T08:30:19.196Z",
+  "nomorPBS": "1.4.1",
+  "subsistem": "Sistem Feeding / Charging",
+  "namaAset": "Hoist Crane",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SBS-1.4.1-D.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Crane",
+      "spesifikasiTeknis": "3 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
