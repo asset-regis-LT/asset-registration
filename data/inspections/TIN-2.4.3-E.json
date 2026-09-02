@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.4.3-E",
+  "inspectionId": "INS-20260902-TIN-2.4.3-E",
+  "createdAt": "2026-09-02T02:59:36.675Z",
+  "nomorPBS": "2.4.3",
+  "subsistem": "Sistem Pemanasan dan Burner",
+  "namaAset": "Burner – Flame Oven",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-2.4.3-E.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "TBE",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
