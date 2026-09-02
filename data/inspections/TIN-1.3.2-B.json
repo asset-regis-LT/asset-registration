@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-1.3.2-B",
+  "inspectionId": "INS-20260902-TIN-1.3.2-B",
+  "createdAt": "2026-09-02T03:08:10.466Z",
+  "nomorPBS": "1.3.2",
+  "subsistem": "Sistem Elektroda",
+  "namaAset": "Electrode Holder dan Contact Shoe",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-1.3.2-B.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "TBE",
+      "spesifikasiTeknis": "TBE",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
