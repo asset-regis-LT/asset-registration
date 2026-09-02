@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.1.5-D",
+  "inspectionId": "INS-20260902-TIN-2.1.5-D",
+  "createdAt": "2026-09-02T02:48:16.385Z",
+  "nomorPBS": "2.1.5",
+  "subsistem": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAset": "Pompa Timah",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-2.1.5-D.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
