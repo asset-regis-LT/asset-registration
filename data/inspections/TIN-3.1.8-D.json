@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.1.8-D",
+  "inspectionId": "INS-20260902-TIN-3.1.8-D",
+  "createdAt": "2026-09-02T03:14:16.049Z",
+  "nomorPBS": "3.1.8",
+  "subsistem": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAset": "Main Power Transformer",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "Maulana",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-3.1.8-D.jpg",
+  "overallDecision": "Go",
+  "komponen": [
+    {
+      "nama": "Trafo arah trafo tanur",
+      "spesifikasiTeknis": "Trafo",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Go",
+      "catatan": ""
+    }
+  ]
+}
