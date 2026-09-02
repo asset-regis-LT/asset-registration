@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-3.3.2-A",
+  "inspectionId": "INS-20260902-TIN-3.3.2-A",
+  "createdAt": "2026-09-02T03:12:51.286Z",
+  "nomorPBS": "3.3.2",
+  "subsistem": "Mesin Perkakas",
+  "namaAset": "Mesin Milling",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-3.3.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Bor duduk",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
