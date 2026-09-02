@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-3.4.3-A",
+  "inspectionId": "INS-20260902-SIP-3.4.3-A",
+  "createdAt": "2026-09-02T07:15:06.007Z",
+  "nomorPBS": "3.4.3",
+  "subsistem": "Sistem Bahan Bakar",
+  "namaAset": "Tangki BBM",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SIP-3.4.3-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Tangki BBM 1",
+      "spesifikasiTeknis": "Kapasitas 28000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    }
+  ]
+}
