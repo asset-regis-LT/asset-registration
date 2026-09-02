@@ -1,0 +1,36 @@
+{
+  "tagNo": "TIN-9.1.10-A",
+  "inspectionId": "INS-20260902-TIN-9.1.10-A",
+  "createdAt": "2026-09-02T02:41:06.210Z",
+  "nomorPBS": "9.1.10",
+  "subsistem": "Cooling System",
+  "namaAset": "Diesel Pump",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-9.1.10-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Kompressor x2",
+      "spesifikasiTeknis": "4 HP",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Tangki Kompressor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    },
+    {
+      "nama": "Motor x2",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Korosi"
+    }
+  ]
+}
