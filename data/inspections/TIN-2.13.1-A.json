@@ -1,0 +1,22 @@
+{
+  "tagNo": "TIN-2.13.1-A",
+  "inspectionId": "INS-20260902-TIN-2.13.1-A",
+  "createdAt": "2026-09-02T03:22:25.711Z",
+  "nomorPBS": "2.13.1",
+  "subsistem": "Gudang dan Penimbangan Ingot",
+  "namaAset": "Timbangan Duduk",
+  "lokasi": "Tinindo Inter Nusa (TIN)",
+  "picInspector": "BRS",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/TIN-2.13.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Timbangan Duduk",
+      "spesifikasiTeknis": "Kapasitas 1 Ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    }
+  ]
+}
