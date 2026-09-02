@@ -1,0 +1,22 @@
+{
+  "tagNo": "SIP-2.2.2-A",
+  "inspectionId": "INS-20260902-SIP-2.2.2-A",
+  "createdAt": "2026-09-02T07:05:42.015Z",
+  "nomorPBS": "2.2.2",
+  "subsistem": "Sistem Crystallizer",
+  "namaAset": "Motor Gearbox Crystallizer",
+  "lokasi": "Stanindo Inti Perkasa (SIP)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SIP-2.2.2-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "N/A",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
