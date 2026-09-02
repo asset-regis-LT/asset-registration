@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-3.5.1-A",
+  "inspectionId": "INS-20260902-SBS-3.5.1-A",
+  "createdAt": "2026-09-02T08:31:24.883Z",
+  "nomorPBS": "3.5.1",
+  "subsistem": "Peralatan Pemindah Material",
+  "namaAset": "Forklift",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SBS-3.5.1-A.jpg",
+  "overallDecision": "No Go",
+  "komponen": [
+    {
+      "nama": "Forklift",
+      "spesifikasiTeknis": "Komatsu",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "TBE"
+    }
+  ]
+}
