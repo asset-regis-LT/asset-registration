@@ -13,7 +13,56 @@
   "komponen": [
     {
       "nama": "Tangki BBM 1",
+      "spesifikasiTeknis": "Kapasitas 8000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 2",
+      "spesifikasiTeknis": "Kapasitas 8000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 3",
+      "spesifikasiTeknis": "Kapasitas 28000",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 4",
       "spesifikasiTeknis": "Kapasitas 28000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 5",
+      "spesifikasiTeknis": "Kapasitas 3000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 6",
+      "spesifikasiTeknis": "Kapasitas 8000",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 7",
+      "spesifikasiTeknis": "Kapasitas 8000 liter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "-"
+    },
+    {
+      "nama": "Tangki BBM 8",
+      "spesifikasiTeknis": "Kapasitas 1000 liter",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "-"
