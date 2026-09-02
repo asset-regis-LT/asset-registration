@@ -1,0 +1,22 @@
+{
+  "tagNo": "SBS-1.2.4-D",
+  "inspectionId": "INS-20260902-SBS-1.2.4-D",
+  "createdAt": "2026-09-02T08:19:14.534Z",
+  "nomorPBS": "1.2.4",
+  "subsistem": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAset": "Bag House",
+  "lokasi": "Sariwiguna Bina Sentosa (SBS)",
+  "picInspector": "Lutfi",
+  "tanggalInspeksi": "2026-09-02",
+  "fotoPath": "data/inspections/photos/SBS-1.2.4-D.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "tbe",
+      "spesifikasiTeknis": "tbe",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    }
+  ]
+}
