@@ -116,12 +116,18 @@ hard-refreshing).
   across all 6 smelters** — one row per smelter, same Nomor PBS/Subsistem/sub-components — that's what lets
   the picker offer a choice of smelters for one asset name. `lokasi` values follow `"Company Name
   (ACRONYM)"`, since the acronym is what the Tag No. prefix is derived from. Nomor PBS is `SYSTEM.MID.LEAF`;
-  systems 1–14 exist (7–14 — gas handling, cooling, hydrant, genset, buildings — were folded in later from
+  systems 1–16 exist (7–16 — gas handling, cooling, hydrant, genset, buildings — were folded in later from
   field registrations). **Leaf numbers are NOT always contiguous and NOT safe to string-sort** (`1.10.1`
   sorts before `1.2.1` lexically); nothing in the app sorts inspections by PBS, but keep this in mind if
-  adding anything that does.
+  adding anything that does. **Regenerated from `PBS_MASTER_CANONICAL.xlsx`** (the reviewed clean PBS tree,
+  4-column `Kode PBS | Level | Jenis | Komponen`) via `python3 scripts/import-pbs-master.py
+  PBS_MASTER_CANONICAL.xlsx` — edit the xlsx and re-run rather than hand-editing the JSON.
 - `data/pbs-subsistem.csv` — flat `nomorPBS,subsistem,namaAset` reference, one row per distinct catalog
   PBS, generated from `master-catalog.json`. Not read by the app; regenerate if the catalog changes.
+- `data/pbs-crosswalk.csv` — one row per distinct `(recorded nomorPBS, recorded namaAset)` seen in the
+  inspection records, mapping to `pbsCanonical / subsistemCanonical / namaAsetCanonical / unitLabel`. The
+  input to the canonical-PBS backfill (below); regenerate with `scripts/build-canonical-pbs.py` if the
+  recorded data or the merge/typo rules in that script change.
 - `data/inspections/<tagNo>.json` — one committed record per finalized inspection, written by the app to
   the `data` branch. Includes the technical spec, condition, and decision per sub-component (all filled in
   at inspection time, not part of the catalog), plus an `overallDecision` computed by worst-case precedence
@@ -131,6 +137,16 @@ hard-refreshing).
   back to Tag No. for those. `qrPrinted` (bool) is admin-only: unset/false until admin.html's per-row
   "QR Dicetak" checkbox is ticked (by hand, or automatically the first time that row's "QR" button is
   clicked).
+- **Canonical PBS fields** (`pbsCanonical`, `subsistemCanonical`, `namaAsetCanonical`, `unitLabel`) —
+  backfilled onto every existing record by `scripts/backfill-canonical-pbs.py` from `pbs-crosswalk.csv`.
+  They carry the *cleaned* classification (wrong PBS branch fixed, duplicate codes merged, per-unit/typo
+  name variants collapsed with the unit detail in `unitLabel`) while the raw `nomorPBS`/`subsistem`/
+  `namaAset` and the Tag No. are left untouched — so QR codes and file paths never move. The QR scan view
+  ignores these fields; the admin Excel export and `scripts/build-pbs-report.py` read them with a
+  `pbsCanonical || nomorPBS` fallback (new inspections saved after the backfill don't have them, since
+  `index.html` doesn't write them — the fallback covers that). `scripts/build-pbs-report.py` emits
+  `PBS_STRUKTUR_CANONICAL.xlsx`, the tidy 3-level reporting list (one row per canonical PBS + a
+  `Jumlah Unit` count).
 - `data/inspections/photos/<tagNo>.jpg` — the one photo per inspection, resized/compressed client-side
   (`GithubStore.compressImage`, max ~1600px, JPEG quality ~0.7) before upload, since these accumulate in
   the repo indefinitely.
@@ -282,4 +298,7 @@ logic.
 
 The Excel export reuses the same concurrency helper, and re-compresses each photo down to thumbnail size
 before embedding it — the sheet only ever displays it at 110x110px, so embedding the full ~1600px capture
-would make the exported file unnecessarily large at that row count.
+would make the exported file unnecessarily large at that row count. Its `Nomor PBS` / `Subsistem` /
+`Nama Aset` columns show the **canonical** values (`record.pbsCanonical || record.nomorPBS`, etc.) plus a
+`Unit` column from `unitLabel` — see "Canonical PBS fields" in the data model. The Tag No. column and the
+embedded photo/QR are unchanged; only the two `addImage` `col:` indices shifted (+1) for the new column.

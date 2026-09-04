@@ -344,6 +344,7 @@ exportBtn.addEventListener("click", async () => {
       { header: "Nomor PBS", key: "nomorPBS", width: 12 },
       { header: "Subsistem", key: "subsistem", width: 18 },
       { header: "Nama Aset", key: "namaAset", width: 22 },
+      { header: "Unit", key: "unitLabel", width: 16 },
       { header: "Lokasi", key: "lokasi", width: 14 },
       { header: "PIC / Inspector", key: "picInspector", width: 18 },
       { header: "Tanggal Inspeksi", key: "tanggalInspeksi", width: 14 },
@@ -396,9 +397,15 @@ exportBtn.addEventListener("click", async () => {
       sheet.addRow({
         tagNo: record.tagNo,
         inspectionId: record.inspectionId,
-        nomorPBS: record.nomorPBS,
-        subsistem: record.subsistem,
-        namaAset: record.namaAset,
+        // Canonical PBS classification (backfilled onto every record); the raw
+        // nomorPBS/subsistem/namaAset are the field-entered values and stay in
+        // the record, but the export shows the cleaned-up canonical ones. New
+        // inspections saved after the backfill won't have the canonical fields,
+        // so fall back to the raw value.
+        nomorPBS: record.pbsCanonical || record.nomorPBS,
+        subsistem: record.subsistemCanonical || record.subsistem,
+        namaAset: record.namaAsetCanonical || record.namaAset,
+        unitLabel: record.unitLabel || "",
         lokasi: record.lokasi,
         picInspector: record.picInspector,
         tanggalInspeksi: record.tanggalInspeksi,
@@ -410,11 +417,11 @@ exportBtn.addEventListener("click", async () => {
 
       if (photoBase64) {
         const imgId = workbook.addImage({ base64: `data:image/jpeg;base64,${photoBase64}`, extension: "jpeg" });
-        sheet.addImage(imgId, { tl: { col: 10, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(imgId, { tl: { col: 11, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
       if (qrBase64) {
         const qrId = workbook.addImage({ base64: `data:image/png;base64,${qrBase64}`, extension: "png" });
-        sheet.addImage(qrId, { tl: { col: 11, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(qrId, { tl: { col: 12, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
     });
 
