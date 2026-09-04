@@ -59,5 +59,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "pengantian"
     }
-  ]
+  ],
+  "pbsCanonical": "1.2.4",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Bag House",
+  "unitLabel": ""
 }

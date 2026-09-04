@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "1.4.1",
+  "subsistemCanonical": "Sistem Feeding / Charging",
+  "namaAsetCanonical": "Hoist Crane",
+  "unitLabel": ""
 }

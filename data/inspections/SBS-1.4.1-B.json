@@ -61,5 +61,9 @@
       "catatan": "Diperlukan perbaikan"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.4.1",
+  "subsistemCanonical": "Sistem Feeding / Charging",
+  "namaAsetCanonical": "Hoist Crane",
+  "unitLabel": "5 Ton 2"
 }

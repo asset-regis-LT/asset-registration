@@ -19,5 +19,9 @@
       "catatan": "Minor repair"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "13.1.4",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Rumah Kompresor",
+  "unitLabel": "Kompressor"
 }

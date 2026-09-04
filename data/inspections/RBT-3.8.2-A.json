@@ -38,5 +38,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perbaikan pada beberapa section spandek"
     }
-  ]
+  ],
+  "pbsCanonical": "3.8.2",
+  "subsistemCanonical": "Perkakas dan Alat Ukur Workshop",
+  "namaAsetCanonical": "Alat Ukur Maintenance / Peralatan Kelistrikan Workshop",
+  "unitLabel": ""
 }

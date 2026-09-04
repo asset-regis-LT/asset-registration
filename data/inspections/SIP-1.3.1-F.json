@@ -25,5 +25,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "1.3.1",
+  "subsistemCanonical": "Sistem Elektroda",
+  "namaAsetCanonical": "Motor Gearbox Stang Elektroda",
+  "unitLabel": "Motorgearbox 3 Tanur B"
 }

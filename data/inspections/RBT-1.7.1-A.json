@@ -17,5 +17,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "perlu dilakukan pengujian ketebalan"
     }
-  ]
+  ],
+  "pbsCanonical": "1.7.1",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Water Jacket",
+  "unitLabel": ""
 }

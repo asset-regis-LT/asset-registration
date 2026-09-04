@@ -40,5 +40,9 @@
       "catatan": "Perlu dilakukan perbaikan di beberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.5",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Komposisi",
+  "unitLabel": ""
 }

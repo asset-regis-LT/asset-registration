@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "1.7.3",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Pompa sirkulasi",
+  "unitLabel": "Tanur A"
 }

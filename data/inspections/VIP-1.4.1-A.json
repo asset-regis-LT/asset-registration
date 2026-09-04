@@ -88,5 +88,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "1.4.1",
+  "subsistemCanonical": "Sistem Feeding / Charging",
+  "namaAsetCanonical": "Hoist Crane",
+  "unitLabel": ""
 }

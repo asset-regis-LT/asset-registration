@@ -67,5 +67,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "-"
     }
-  ]
+  ],
+  "pbsCanonical": "3.4.3",
+  "subsistemCanonical": "Sistem Bahan Bakar",
+  "namaAsetCanonical": "Tangki BBM",
+  "unitLabel": ""
 }

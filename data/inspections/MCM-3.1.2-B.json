@@ -24,5 +24,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Diganti baterai baru. Bukan long lead item"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.2",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Genset",
+  "unitLabel": ""
 }

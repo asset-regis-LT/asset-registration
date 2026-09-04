@@ -31,5 +31,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Scrap"
     }
-  ]
+  ],
+  "pbsCanonical": "9.1.2",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Water Circulation",
+  "unitLabel": ""
 }

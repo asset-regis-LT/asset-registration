@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "3.3.2",
+  "subsistemCanonical": "Mesin Perkakas",
+  "namaAsetCanonical": "Mesin Milling",
+  "unitLabel": ""
 }

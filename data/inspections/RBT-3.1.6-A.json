@@ -19,5 +19,9 @@
       "catatan": "Ganti kapasitor"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "3.1.6",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Panel Kapasitor Bank",
+  "unitLabel": ""
 }

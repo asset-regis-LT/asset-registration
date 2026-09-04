@@ -40,5 +40,9 @@
       "catatan": "Perlu penambalan pada dinding-dinding yang bolong."
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.9",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Timbangan",
+  "unitLabel": ""
 }

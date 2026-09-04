@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Ganti aki"
     }
-  ]
+  ],
+  "pbsCanonical": "16.1.1",
+  "subsistemCanonical": "Genset dan Power House",
+  "namaAsetCanonical": "Panel Battery",
+  "unitLabel": ""
 }

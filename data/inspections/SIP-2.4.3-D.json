@@ -25,5 +25,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "2.4.3",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Burner – Flame Oven",
+  "unitLabel": "Superheater Tanur 2"
 }

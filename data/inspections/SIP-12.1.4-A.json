@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Kanal C mulai korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.4",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Area Bahan Bakar / Gedung HTS MS",
+  "unitLabel": "Bahanbakar"
 }

@@ -32,5 +32,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Ganti regulator udara"
     }
-  ]
+  ],
+  "pbsCanonical": "1.8.1",
+  "subsistemCanonical": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+  "namaAsetCanonical": "Pneumatic system",
+  "unitLabel": "Tanur A"
 }

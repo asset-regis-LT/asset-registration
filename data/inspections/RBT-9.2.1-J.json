@@ -19,5 +19,9 @@
       "catatan": "TBE"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.2.1",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "ID Fan",
+  "unitLabel": ""
 }

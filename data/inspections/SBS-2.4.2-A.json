@@ -26,5 +26,9 @@
       "catatan": "Rusak"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.4.2",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Electrical Burner – Crystallizer",
+  "unitLabel": "Superheater Ketel 1"
 }

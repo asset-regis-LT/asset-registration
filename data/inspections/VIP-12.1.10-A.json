@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Perbaikan dibeberapa section"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.10",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gudang Pasir",
+  "unitLabel": ""
 }

@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Burner tidak ada"
     }
-  ]
+  ],
+  "pbsCanonical": "2.4.1",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Electrical Burner – Refining",
+  "unitLabel": "Superheater Ketel 50 Ton 1"
 }

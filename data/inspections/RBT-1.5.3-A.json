@@ -31,5 +31,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Uji tahanan isolator"
     }
-  ]
+  ],
+  "pbsCanonical": "1.5.3",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Busbar / Bus Tube / Flexible Cable",
+  "unitLabel": ""
 }

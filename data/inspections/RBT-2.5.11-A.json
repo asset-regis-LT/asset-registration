@@ -52,5 +52,9 @@
       "keputusanTeknis": "Hold",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "2.5.11",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "Bag House Flame Oven",
+  "unitLabel": ""
 }

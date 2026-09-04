@@ -24,5 +24,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "1.6.1",
+  "subsistemCanonical": "Sistem Kontrol dan Instrumentasi",
+  "namaAsetCanonical": "Panel Consule Control",
+  "unitLabel": ""
 }

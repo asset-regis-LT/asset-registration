@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "1.2.6",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Stack / Cerobong",
+  "unitLabel": "Tanur B"
 }

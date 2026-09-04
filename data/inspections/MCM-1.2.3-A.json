@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "1.2.3",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Dust Collector",
+  "unitLabel": ""
 }

@@ -19,5 +19,9 @@
       "catatan": "Hipot test, uji relay"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "3.1.3",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Panel Kubikel dan DSI",
+  "unitLabel": ""
 }

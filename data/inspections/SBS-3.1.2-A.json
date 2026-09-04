@@ -19,5 +19,9 @@
       "catatan": "Scrap"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "3.1.2",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Genset",
+  "unitLabel": "1 Himoinsa 300kva"
 }

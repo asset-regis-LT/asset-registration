@@ -26,5 +26,9 @@
       "catatan": "korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "4.3.1",
+  "subsistemCanonical": "Sistem Flame Oven",
+  "namaAsetCanonical": "Tanur Flame Oven",
+  "unitLabel": "f.o Portable"
 }

@@ -38,5 +38,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Pengantian"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Blower Vacuum",
+  "unitLabel": ""
 }

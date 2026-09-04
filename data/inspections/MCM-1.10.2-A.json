@@ -17,5 +17,9 @@
       "keputusanTeknis": "Hold",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "1.10.2",
+  "subsistemCanonical": "Sistem Penanganan Logam dan Slag Cair",
+  "namaAsetCanonical": "Slag Caster",
+  "unitLabel": ""
 }

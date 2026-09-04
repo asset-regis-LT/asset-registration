@@ -19,5 +19,9 @@
       "catatan": "Maintenance service, Merger, ganti aki, dan uji beban"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.5.2",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Cubicle Sistem Daya Tanur",
+  "unitLabel": "Cubicle 20 kV Tanur B"
 }

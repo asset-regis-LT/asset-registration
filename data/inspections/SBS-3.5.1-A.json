@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "TBE"
     }
-  ]
+  ],
+  "pbsCanonical": "3.5.1",
+  "subsistemCanonical": "Peralatan Pemindah Material",
+  "namaAsetCanonical": "Forklift",
+  "unitLabel": ""
 }

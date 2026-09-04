@@ -40,5 +40,9 @@
       "catatan": "Perlu penggantian spandek dan canal C"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.8",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Rotary Kiln & Flame Oven",
+  "unitLabel": ""
 }

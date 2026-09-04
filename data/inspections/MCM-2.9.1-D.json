@@ -24,5 +24,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Perlu diganti, korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "2.9.1",
+  "subsistemCanonical": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAsetCanonical": "Mixer",
+  "unitLabel": ""
 }

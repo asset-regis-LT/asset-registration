@@ -38,5 +38,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Terlihat baik, perlu dites lebih lanjut, sambungan diberi pelumad"
     }
-  ]
+  ],
+  "pbsCanonical": "3.4.1",
+  "subsistemCanonical": "Sistem Bahan Bakar",
+  "namaAsetCanonical": "Pompa BBM",
+  "unitLabel": ""
 }

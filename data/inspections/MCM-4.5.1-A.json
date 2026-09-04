@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Ada beberapa kabel yang terputus, perlu dites lebih lanjut"
     }
-  ]
+  ],
+  "pbsCanonical": "4.5.1",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Electrical",
+  "unitLabel": ""
 }

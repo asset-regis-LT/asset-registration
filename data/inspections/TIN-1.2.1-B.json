@@ -46,5 +46,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "1.2.1",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Seattle Bawah Tanur",
+  "unitLabel": "Settle Box 1 B"
 }

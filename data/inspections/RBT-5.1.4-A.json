@@ -17,5 +17,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "kalibrasi"
     }
-  ]
+  ],
+  "pbsCanonical": "5.1.4",
+  "subsistemCanonical": "Lab. Analisis",
+  "namaAsetCanonical": "Timbangan Laboratorium",
+  "unitLabel": ""
 }

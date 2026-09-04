@@ -33,5 +33,9 @@
       "catatan": "perbaikan di beberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.7",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Office",
+  "unitLabel": ""
 }

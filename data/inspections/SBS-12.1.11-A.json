@@ -33,5 +33,9 @@
       "catatan": "pengantian dibeberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.11",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gudang Sparepart",
+  "unitLabel": "Balok"
 }

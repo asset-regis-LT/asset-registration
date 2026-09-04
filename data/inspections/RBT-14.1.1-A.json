@@ -19,5 +19,9 @@
       "catatan": "Minor repair"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "14.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Rumah Mainflue",
+  "unitLabel": ""
 }

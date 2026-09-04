@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "2.3.6",
+  "subsistemCanonical": "Sistem Casting dan Pembentukan Ingot",
+  "namaAsetCanonical": "Pot Casting / Holding Kettle",
+  "unitLabel": "50 Ton 2"
 }

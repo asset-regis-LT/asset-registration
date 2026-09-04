@@ -19,5 +19,9 @@
       "catatan": "Service is needed"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "8.1.2",
+  "subsistemCanonical": "Kompressor",
+  "namaAsetCanonical": "Distribution Board",
+  "unitLabel": ""
 }

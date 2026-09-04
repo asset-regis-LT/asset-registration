@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "TBE"
     }
-  ]
+  ],
+  "pbsCanonical": "3.3.6",
+  "subsistemCanonical": "Mesin Perkakas",
+  "namaAsetCanonical": "Mesin Potong",
+  "unitLabel": ""
 }

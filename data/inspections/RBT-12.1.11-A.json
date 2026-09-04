@@ -40,5 +40,9 @@
       "catatan": "Pengantian dibeberapa section dinding spandek"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.11",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gudang Sparepart",
+  "unitLabel": ""
 }

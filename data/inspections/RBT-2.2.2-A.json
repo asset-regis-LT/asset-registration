@@ -19,5 +19,9 @@
       "catatan": "Perlu pengujian LBH lanjut"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.2.2",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Motor Gearbox Crystallizer",
+  "unitLabel": ""
 }

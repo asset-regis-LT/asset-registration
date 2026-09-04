@@ -33,5 +33,9 @@
       "catatan": "rusak dibeberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.13",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Produksi",
+  "unitLabel": "2"
 }

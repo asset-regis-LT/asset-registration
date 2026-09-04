@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.4",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Panel Main Switch Board",
+  "unitLabel": "Change"
 }

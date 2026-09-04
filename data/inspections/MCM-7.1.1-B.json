@@ -17,5 +17,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "7.1.1",
+  "subsistemCanonical": "Gas Handling Tanur Reverb",
+  "namaAsetCanonical": "Skin Cooler - DCS Tanur Reverb",
+  "unitLabel": ""
 }

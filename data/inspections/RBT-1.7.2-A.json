@@ -17,5 +17,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "pengantian"
     }
-  ]
+  ],
+  "pbsCanonical": "1.7.2",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Water Box",
+  "unitLabel": ""
 }

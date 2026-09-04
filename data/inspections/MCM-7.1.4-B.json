@@ -17,5 +17,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "7.1.4",
+  "subsistemCanonical": "Gas Handling Tanur Reverb",
+  "namaAsetCanonical": "Cerobong - DCS Tanur Reverb",
+  "unitLabel": ""
 }

@@ -26,5 +26,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "4.2.2",
+  "subsistemCanonical": "Rotary Kiln",
+  "namaAsetCanonical": "Burner – Rotary Kiln",
+  "unitLabel": ""
 }

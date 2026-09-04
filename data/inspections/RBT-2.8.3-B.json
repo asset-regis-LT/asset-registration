@@ -89,5 +89,9 @@
       "catatan": "Service perbaikan instalasi power hoist"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.8.3",
+  "subsistemCanonical": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAsetCanonical": "Hoist Crane – Crystallizer",
+  "unitLabel": ""
 }

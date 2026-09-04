@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "1.5.2",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Cubicle Sistem Daya Tanur",
+  "unitLabel": "Panel Trafo A"
 }

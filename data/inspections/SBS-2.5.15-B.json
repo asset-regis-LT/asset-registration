@@ -19,5 +19,9 @@
       "catatan": "korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.5.15",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "Stack / Cerobong",
+  "unitLabel": ""
 }

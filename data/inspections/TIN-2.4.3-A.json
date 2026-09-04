@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak dan berkarat"
     }
-  ]
+  ],
+  "pbsCanonical": "2.4.3",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Burner – Flame Oven",
+  "unitLabel": "Superheater 1"
 }

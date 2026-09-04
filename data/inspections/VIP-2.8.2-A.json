@@ -25,5 +25,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "2.8.2",
+  "subsistemCanonical": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAsetCanonical": "Lantai Atas Refining",
+  "unitLabel": "Platform"
 }

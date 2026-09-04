@@ -18,5 +18,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "1.5.2",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Cubicle Sistem Daya Tanur",
+  "unitLabel": "Panel Acb 2"
 }

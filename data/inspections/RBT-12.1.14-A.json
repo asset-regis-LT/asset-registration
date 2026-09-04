@@ -40,5 +40,9 @@
       "catatan": "Cukup baik dan terawat"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.14",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Crystallizer",
+  "unitLabel": "Genset"
 }

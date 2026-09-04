@@ -33,5 +33,9 @@
       "catatan": "Perlu dilakukan perbaikan pada skeleton atap"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.7",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Office",
+  "unitLabel": ""
 }

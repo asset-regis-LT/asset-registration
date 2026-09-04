@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.2",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Genset",
+  "unitLabel": "Yanmar 1000kva 1"
 }

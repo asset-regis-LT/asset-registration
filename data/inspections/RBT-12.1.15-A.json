@@ -33,5 +33,9 @@
       "catatan": "Pergantian atap dan rangka yang bolong dan terlepas"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.15",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Ruang Pompa",
+  "unitLabel": ""
 }

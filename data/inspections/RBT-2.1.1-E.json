@@ -19,5 +19,9 @@
       "catatan": "Diperlukan pengujian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.1.1",
+  "subsistemCanonical": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAsetCanonical": "Ketel",
+  "unitLabel": ""
 }

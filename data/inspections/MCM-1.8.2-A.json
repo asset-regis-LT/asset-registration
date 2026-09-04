@@ -31,5 +31,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Perlu dites, bagian luar terdapat korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "1.8.2",
+  "subsistemCanonical": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+  "namaAsetCanonical": "Blower Tiup",
+  "unitLabel": ""
 }

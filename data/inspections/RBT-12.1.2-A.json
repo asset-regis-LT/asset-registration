@@ -40,5 +40,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.2",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Bangunan Crusher",
+  "unitLabel": ""
 }

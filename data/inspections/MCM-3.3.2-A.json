@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Korosi, tetapi masih bisa bergerak sesuai fungsi"
     }
-  ]
+  ],
+  "pbsCanonical": "3.3.2",
+  "subsistemCanonical": "Mesin Perkakas",
+  "namaAsetCanonical": "Mesin Milling",
+  "unitLabel": ""
 }

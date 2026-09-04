@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Dari kondisi luar, trafo masih dalam keadaan baik dan cukup bersih."
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.8",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Main Power Transformer",
+  "unitLabel": ""
 }

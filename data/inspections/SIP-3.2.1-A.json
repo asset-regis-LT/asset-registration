@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "3.2.1",
+  "subsistemCanonical": "Sistem Udara Bertekanan Pabrik",
+  "namaAsetCanonical": "Kompresor Listrik",
+  "unitLabel": ""
 }

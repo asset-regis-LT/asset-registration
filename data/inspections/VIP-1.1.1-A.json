@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Perlu dilakukan perbaikan"
     }
-  ]
+  ],
+  "pbsCanonical": "1.1.1",
+  "subsistemCanonical": "Struktur dan Lining Tanur",
+  "namaAsetCanonical": "Tanur",
+  "unitLabel": "A 18 Ton"
 }

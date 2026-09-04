@@ -39,5 +39,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "2.1.5",
+  "subsistemCanonical": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAsetCanonical": "Pompa Timah",
+  "unitLabel": ""
 }

@@ -19,5 +19,9 @@
       "catatan": "To be edited"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "3.6.1",
+  "subsistemCanonical": "Struktur Sipil",
+  "namaAsetCanonical": "Platform kerja",
+  "unitLabel": ""
 }

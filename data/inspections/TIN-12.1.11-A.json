@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "pengantian kanal C"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.11",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gudang Sparepart",
+  "unitLabel": "Balok"
 }

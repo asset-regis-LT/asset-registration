@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "PCB terawat, cable management rapih, perlu dites"
     }
-  ]
+  ],
+  "pbsCanonical": "2.7.1",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Electrical Refining",
+  "unitLabel": ""
 }

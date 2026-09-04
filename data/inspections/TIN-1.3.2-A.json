@@ -19,5 +19,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.3.2",
+  "subsistemCanonical": "Sistem Elektroda",
+  "namaAsetCanonical": "Electrode Holder dan Contact Shoe",
+  "unitLabel": ""
 }

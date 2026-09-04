@@ -67,5 +67,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "2.8.1",
+  "subsistemCanonical": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAsetCanonical": "Hoist Crane – Refining",
+  "unitLabel": "10 5 Ton 1"
 }

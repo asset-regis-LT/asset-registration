@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Pengantian sebagian besar"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.7",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Office",
+  "unitLabel": ""
 }

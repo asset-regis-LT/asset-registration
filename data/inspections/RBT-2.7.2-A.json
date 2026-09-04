@@ -26,5 +26,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.7.2",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Thermocouple Pot Refining",
+  "unitLabel": ""
 }

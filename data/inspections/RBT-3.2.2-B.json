@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "TBE"
     }
-  ]
+  ],
+  "pbsCanonical": "3.2.2",
+  "subsistemCanonical": "Sistem Udara Bertekanan Pabrik",
+  "namaAsetCanonical": "Tangki Kompresor",
+  "unitLabel": ""
 }

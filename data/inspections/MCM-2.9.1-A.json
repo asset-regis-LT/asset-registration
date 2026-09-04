@@ -24,5 +24,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Shaft korosi, perlu diganti"
     }
-  ]
+  ],
+  "pbsCanonical": "2.9.1",
+  "subsistemCanonical": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAsetCanonical": "Mixer",
+  "unitLabel": ""
 }

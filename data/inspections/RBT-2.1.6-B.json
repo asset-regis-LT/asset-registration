@@ -47,5 +47,9 @@
       "catatan": "perlu dilakukan coating"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.1.6",
+  "subsistemCanonical": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAsetCanonical": "Mixer / Agitator Pot Refining (motor, shaft, dan impeller)",
+  "unitLabel": ""
 }

@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "perbaikan dibeberapa section"
     }
-  ]
+  ],
+  "pbsCanonical": "11.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Pos Jaga / Area Genset",
+  "unitLabel": ""
 }

@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "pengantian dibeberapa section"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.8",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Rotary Kiln & Flame Oven",
+  "unitLabel": "Rotarykiln"
 }

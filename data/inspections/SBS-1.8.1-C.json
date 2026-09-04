@@ -19,5 +19,9 @@
       "catatan": "diperlukan pengujian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.8.1",
+  "subsistemCanonical": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+  "namaAsetCanonical": "Pneumatic system",
+  "unitLabel": "Tanur C"
 }

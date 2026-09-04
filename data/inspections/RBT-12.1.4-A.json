@@ -40,5 +40,9 @@
       "catatan": "Perlu beberapa bagian di beberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.4",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Area Bahan Bakar / Gedung HTS MS",
+  "unitLabel": ""
 }

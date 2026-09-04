@@ -25,5 +25,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "2.12.1",
+  "subsistemCanonical": "Sistem Flame Oven",
+  "namaAsetCanonical": "Tanur Flame Oven",
+  "unitLabel": ""
 }

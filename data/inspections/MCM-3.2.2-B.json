@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Sedikit berkarat, sambungan pipa masih bagus"
     }
-  ]
+  ],
+  "pbsCanonical": "3.2.2",
+  "subsistemCanonical": "Sistem Udara Bertekanan Pabrik",
+  "namaAsetCanonical": "Tangki Kompresor",
+  "unitLabel": ""
 }

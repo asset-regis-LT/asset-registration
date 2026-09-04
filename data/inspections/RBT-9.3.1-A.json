@@ -19,5 +19,9 @@
       "catatan": "Scrap"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.3.1",
+  "subsistemCanonical": "Kompresor dan Hydrant",
+  "namaAsetCanonical": "Jockey Pump",
+  "unitLabel": ""
 }

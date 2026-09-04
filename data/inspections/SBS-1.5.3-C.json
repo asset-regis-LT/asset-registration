@@ -33,5 +33,9 @@
       "catatan": "Tidak ada"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.5.3",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Busbar / Bus Tube / Flexible Cable",
+  "unitLabel": ""
 }

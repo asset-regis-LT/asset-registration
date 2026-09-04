@@ -25,5 +25,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Service"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.1",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Kubikel Incoming PLN",
+  "unitLabel": "1"
 }

@@ -40,5 +40,9 @@
       "catatan": "Perlu pengecetan ulang"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.12",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Laboratorium",
+  "unitLabel": ""
 }

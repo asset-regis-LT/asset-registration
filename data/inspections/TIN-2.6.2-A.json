@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "2.6.2",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Tower Tandon Air – Refining/Casting",
+  "unitLabel": "Cooling Tanur A"
 }

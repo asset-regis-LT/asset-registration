@@ -17,5 +17,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "7.1.2",
+  "subsistemCanonical": "Gas Handling Tanur Reverb",
+  "namaAsetCanonical": "Bag Filter - DCS Tanur Reverb",
+  "unitLabel": ""
 }

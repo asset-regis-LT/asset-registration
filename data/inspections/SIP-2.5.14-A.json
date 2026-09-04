@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "2.5.14",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "Hood dan Ducting Penangkap Fume",
+  "unitLabel": ""
 }

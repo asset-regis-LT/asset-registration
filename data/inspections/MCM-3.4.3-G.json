@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Berkarat, perlu dicek perpipaannya dan dites clogging"
     }
-  ]
+  ],
+  "pbsCanonical": "3.4.3",
+  "subsistemCanonical": "Sistem Bahan Bakar",
+  "namaAsetCanonical": "Tangki BBM",
+  "unitLabel": ""
 }

@@ -40,5 +40,9 @@
       "catatan": "Perlu dilakukan maintenance"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "4.4.1",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Seattle Bawah Tanur",
+  "unitLabel": ""
 }

@@ -24,5 +24,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu uji clogging, korosi minim"
     }
-  ]
+  ],
+  "pbsCanonical": "2.1.5",
+  "subsistemCanonical": "Sistem Refining Pot, Pengadukan, dan Transfer Timah",
+  "namaAsetCanonical": "Pompa Timah",
+  "unitLabel": ""
 }

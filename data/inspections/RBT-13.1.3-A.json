@@ -19,5 +19,9 @@
       "catatan": "Minor repair"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "13.1.3",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Workshop Tanur Listrik",
+  "unitLabel": ""
 }

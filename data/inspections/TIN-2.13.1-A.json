@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "-"
     }
-  ]
+  ],
+  "pbsCanonical": "2.13.1",
+  "subsistemCanonical": "Gudang dan Penimbangan Ingot",
+  "namaAsetCanonical": "Timbangan Duduk",
+  "unitLabel": ""
 }

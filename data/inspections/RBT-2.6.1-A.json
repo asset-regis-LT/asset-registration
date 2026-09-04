@@ -40,5 +40,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.6.1",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Pompa Air Pendingin Pot Casting",
+  "unitLabel": ""
 }

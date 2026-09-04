@@ -19,5 +19,9 @@
       "catatan": "Ganti"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.7",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Motor Pump Hydrant",
+  "unitLabel": ""
 }

@@ -19,5 +19,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.7.2",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Water Box",
+  "unitLabel": "Tanur B"
 }

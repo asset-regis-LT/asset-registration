@@ -19,5 +19,9 @@
       "catatan": "Bagus"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.5.2",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Cubicle Sistem Daya Tanur",
+  "unitLabel": "Switchgear 20kv C"
 }

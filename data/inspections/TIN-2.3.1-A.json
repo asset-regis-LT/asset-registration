@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Berkarat"
     }
-  ]
+  ],
+  "pbsCanonical": "2.3.1",
+  "subsistemCanonical": "Sistem Casting dan Pembentukan Ingot",
+  "namaAsetCanonical": "Wadah Cetak Ingot",
+  "unitLabel": "Cetakan"
 }

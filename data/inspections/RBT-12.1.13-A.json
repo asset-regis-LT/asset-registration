@@ -40,5 +40,9 @@
       "catatan": "Terdapat dinding yang bolong-bolong sekitar 1.612 m2 perlu diperbaiki"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.13",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Produksi",
+  "unitLabel": "Tanur"
 }

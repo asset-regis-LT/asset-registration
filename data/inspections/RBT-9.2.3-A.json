@@ -40,5 +40,9 @@
       "catatan": "Kondisi baik, cable management diperbaiki"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.2.3",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "Exhaust Fan",
+  "unitLabel": ""
 }

@@ -25,5 +25,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Sebagian komponen panel hilang"
     }
-  ]
+  ],
+  "pbsCanonical": "1.6.1",
+  "subsistemCanonical": "Sistem Kontrol dan Instrumentasi",
+  "namaAsetCanonical": "Panel Consule Control",
+  "unitLabel": "Tanur B"
 }

@@ -19,5 +19,9 @@
       "catatan": "Penggantian di beberapa bagian yang korosif"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.2.6",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Stack / Cerobong",
+  "unitLabel": ""
 }

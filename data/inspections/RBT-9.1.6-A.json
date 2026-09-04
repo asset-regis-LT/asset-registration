@@ -54,5 +54,9 @@
       "catatan": "perlu dilakukan pengujian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.6",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Motor Screw Hopper Elektroda Tanur",
+  "unitLabel": ""
 }

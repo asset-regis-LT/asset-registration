@@ -40,5 +40,9 @@
       "catatan": "Pengantian dinding spandek"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.10",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gudang Pasir",
+  "unitLabel": ""
 }

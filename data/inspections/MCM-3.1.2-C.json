@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu testing ulang (recommisioning), pembersihan, gaada kebocoran dari visual hanya kotor"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.2",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Genset",
+  "unitLabel": ""
 }

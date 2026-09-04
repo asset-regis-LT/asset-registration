@@ -19,5 +19,9 @@
       "catatan": "Minor repair"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "13.1.8",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Rumah Baghouse",
+  "unitLabel": ""
 }

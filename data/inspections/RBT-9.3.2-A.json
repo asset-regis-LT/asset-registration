@@ -19,5 +19,9 @@
       "catatan": "Maintenance service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.3.2",
+  "subsistemCanonical": "Kompresor dan Hydrant",
+  "namaAsetCanonical": "Mesin Compressor Sullair",
+  "unitLabel": ""
 }

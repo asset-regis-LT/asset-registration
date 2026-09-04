@@ -26,5 +26,9 @@
       "catatan": "Tidak center dan terkorosi sebagian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.2.1",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Pot Crystallizer",
+  "unitLabel": "Screw Atau Blitz"
 }

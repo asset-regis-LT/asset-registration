@@ -17,5 +17,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Perlu uji jalan, tergenang"
     }
-  ]
+  ],
+  "pbsCanonical": "3.7.1",
+  "subsistemCanonical": "Sistem Proteksi Kebakaran",
+  "namaAsetCanonical": "Pompa Hydrant / Fire Pump",
+  "unitLabel": ""
 }

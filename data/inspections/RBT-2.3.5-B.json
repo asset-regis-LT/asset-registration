@@ -33,5 +33,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.3.5",
+  "subsistemCanonical": "Sistem Casting dan Pembentukan Ingot",
+  "namaAsetCanonical": "Talang Casting",
+  "unitLabel": ""
 }

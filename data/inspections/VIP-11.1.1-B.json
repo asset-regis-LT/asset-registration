@@ -33,5 +33,9 @@
       "catatan": "perbaikan dibeberapa section"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "11.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Pos Jaga / Area Genset",
+  "unitLabel": "Trafo"
 }

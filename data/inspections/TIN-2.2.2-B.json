@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "N/A"
     }
-  ]
+  ],
+  "pbsCanonical": "2.2.2",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Motor Gearbox Crystallizer",
+  "unitLabel": ""
 }

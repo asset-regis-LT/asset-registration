@@ -24,5 +24,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "PCB terawat dengan baik, cable management bagus, ada bracket yang lepas, perlu uji lebih lanjut."
     }
-  ]
+  ],
+  "pbsCanonical": "3.2.1",
+  "subsistemCanonical": "Sistem Udara Bertekanan Pabrik",
+  "namaAsetCanonical": "Kompresor Listrik",
+  "unitLabel": ""
 }

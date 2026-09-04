@@ -19,5 +19,9 @@
       "catatan": "Merger dan uji beban"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.2.3",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Motor Gearbox Screw Crystallizer",
+  "unitLabel": ""
 }

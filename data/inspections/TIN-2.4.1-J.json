@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Ganti"
     }
-  ]
+  ],
+  "pbsCanonical": "2.4.1",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Electrical Burner – Refining",
+  "unitLabel": "Superheater Ketel 2"
 }

@@ -25,5 +25,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Ganti"
     }
-  ]
+  ],
+  "pbsCanonical": "1.3.1",
+  "subsistemCanonical": "Sistem Elektroda",
+  "namaAsetCanonical": "Motor Gearbox Stang Elektroda",
+  "unitLabel": "Motorgearbox 2 Tanur B"
 }

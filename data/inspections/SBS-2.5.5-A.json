@@ -33,5 +33,9 @@
       "catatan": "Bocor, perlu diganti"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.5.5",
+  "subsistemCanonical": "Sistem Gas Handling, Ventilasi, dan Dust Collection",
+  "namaAsetCanonical": "Bag House Refining",
+  "unitLabel": ""
 }

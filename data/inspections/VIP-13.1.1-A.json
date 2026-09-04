@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "diperlukan perbaikan"
     }
-  ]
+  ],
+  "pbsCanonical": "13.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Workshop Teknik",
+  "unitLabel": ""
 }

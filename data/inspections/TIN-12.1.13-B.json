@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.13",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Produksi",
+  "unitLabel": ""
 }

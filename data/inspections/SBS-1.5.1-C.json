@@ -19,5 +19,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.5.1",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Trafo Step Down Tanur",
+  "unitLabel": "800 Kva 400v 110v C"
 }

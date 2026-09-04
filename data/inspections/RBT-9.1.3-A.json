@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Uji tegangan tembus,, hipot test,"
     }
-  ]
+  ],
+  "pbsCanonical": "9.1.3",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Trafo Step Up 20 kV",
+  "unitLabel": "20kv"
 }

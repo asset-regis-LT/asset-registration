@@ -33,5 +33,9 @@
       "catatan": "Ganti"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.10.1",
+  "subsistemCanonical": "Persiapan Antrasit",
+  "namaAsetCanonical": "Mesin Crusher",
+  "unitLabel": ""
 }

@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "perbaikan dibeberapa section"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.14",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Crystallizer",
+  "unitLabel": ""
 }

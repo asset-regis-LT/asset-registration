@@ -33,5 +33,9 @@
       "catatan": "Pengantian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "11.1.2",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Area Peleburan / Tanur",
+  "unitLabel": ""
 }

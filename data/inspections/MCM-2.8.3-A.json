@@ -45,5 +45,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu uji jalan, visual terlihat baik"
     }
-  ]
+  ],
+  "pbsCanonical": "2.8.3",
+  "subsistemCanonical": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAsetCanonical": "Hoist Crane – Crystallizer",
+  "unitLabel": ""
 }

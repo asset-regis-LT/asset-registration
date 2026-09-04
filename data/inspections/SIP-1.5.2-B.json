@@ -18,5 +18,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "1.5.2",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Cubicle Sistem Daya Tanur",
+  "unitLabel": "Panel Acb Trafo B"
 }

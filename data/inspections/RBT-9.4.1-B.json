@@ -19,5 +19,9 @@
       "catatan": "Korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.4.1",
+  "subsistemCanonical": "Cooling System",
+  "namaAsetCanonical": "Water Instalasi",
+  "unitLabel": ""
 }

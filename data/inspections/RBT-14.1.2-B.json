@@ -19,5 +19,9 @@
       "catatan": "-"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "14.1.2",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Struktur Fixed Tanur",
+  "unitLabel": ""
 }

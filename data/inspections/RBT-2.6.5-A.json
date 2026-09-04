@@ -26,5 +26,9 @@
       "catatan": "Diperlukan maintenace"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.6.5",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+  "unitLabel": ""
 }

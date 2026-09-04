@@ -89,5 +89,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.8.7",
+  "subsistemCanonical": "Sistem Pengangkatan, Platform, dan Akses",
+  "namaAsetCanonical": "Hoist Crane – Gudang Ingot",
+  "unitLabel": ""
 }

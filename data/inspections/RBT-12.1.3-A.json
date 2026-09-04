@@ -40,5 +40,9 @@
       "catatan": "Pengantian canal C dibeberapa bagian"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "12.1.3",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Gedung Antrasit, Workshop, dan Gudang Pasir",
+  "unitLabel": ""
 }

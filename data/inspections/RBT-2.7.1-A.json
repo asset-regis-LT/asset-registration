@@ -19,5 +19,9 @@
       "catatan": ""
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.7.1",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Electrical Refining",
+  "unitLabel": ""
 }

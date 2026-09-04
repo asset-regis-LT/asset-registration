@@ -47,5 +47,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.9.1",
+  "subsistemCanonical": "Persiapan Komposisi / Bahan Tambahan",
+  "namaAsetCanonical": "Mixer",
+  "unitLabel": "2"
 }

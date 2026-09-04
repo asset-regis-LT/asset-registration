@@ -40,5 +40,9 @@
       "catatan": "Rusak"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.6.3",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Sirkulasi Air",
+  "unitLabel": ""
 }

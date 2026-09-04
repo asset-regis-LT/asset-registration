@@ -38,5 +38,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu testing, washing, gaada kapasitasnya berapa, 10 step"
     }
-  ]
+  ],
+  "pbsCanonical": "9.9.1",
+  "subsistemCanonical": "Panel Furnace Tegangan Rendah",
+  "namaAsetCanonical": "Panel Furnace Tegangan Rendah",
+  "unitLabel": ""
 }

@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Pengantian dibeberapa section"
     }
-  ]
+  ],
+  "pbsCanonical": "12.1.12",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Laboratorium",
+  "unitLabel": ""
 }

@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Visual terlihat baik, perlu uji elektrikal"
     }
-  ]
+  ],
+  "pbsCanonical": "2.7.3",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Electrical Crystallizer",
+  "unitLabel": ""
 }

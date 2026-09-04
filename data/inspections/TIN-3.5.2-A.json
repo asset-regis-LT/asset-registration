@@ -18,5 +18,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Scrap"
     }
-  ]
+  ],
+  "pbsCanonical": "3.5.2",
+  "subsistemCanonical": "Peralatan Pemindah Material",
+  "namaAsetCanonical": "Conveyor",
+  "unitLabel": ""
 }

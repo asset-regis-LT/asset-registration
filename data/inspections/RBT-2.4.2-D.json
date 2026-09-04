@@ -19,5 +19,9 @@
       "catatan": "Service dan uji beban"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.4.2",
+  "subsistemCanonical": "Sistem Pemanasan dan Burner",
+  "namaAsetCanonical": "Electrical Burner – Crystallizer",
+  "unitLabel": ""
 }

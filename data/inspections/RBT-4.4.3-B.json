@@ -47,5 +47,9 @@
       "catatan": "Skep korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "4.4.3",
+  "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
+  "namaAsetCanonical": "Dust Collector",
+  "unitLabel": ""
 }

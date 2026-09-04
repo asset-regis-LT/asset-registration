@@ -33,5 +33,9 @@
       "catatan": "mulai korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.1.1",
+  "subsistemCanonical": "Struktur dan Lining Tanur",
+  "namaAsetCanonical": "Tanur",
+  "unitLabel": "B 18 Ton"
 }

@@ -19,5 +19,9 @@
       "catatan": "Scrab"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.8",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Motor Gearbox",
+  "unitLabel": ""
 }

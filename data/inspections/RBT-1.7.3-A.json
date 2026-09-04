@@ -47,5 +47,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.7.3",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Pompa sirkulasi",
+  "unitLabel": ""
 }

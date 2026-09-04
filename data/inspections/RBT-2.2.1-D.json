@@ -26,5 +26,9 @@
       "catatan": "korosi sebagian besar"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.2.1",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Pot Crystallizer",
+  "unitLabel": "Screw Atau Blitz"
 }

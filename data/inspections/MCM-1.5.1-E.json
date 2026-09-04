@@ -31,5 +31,9 @@
       "keputusanTeknis": "Go",
       "catatan": "Proteksi ganda"
     }
-  ]
+  ],
+  "pbsCanonical": "1.5.1",
+  "subsistemCanonical": "Sistem Daya Tanur",
+  "namaAsetCanonical": "Trafo Step Down Tanur",
+  "unitLabel": ""
 }

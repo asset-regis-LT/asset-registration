@@ -17,5 +17,9 @@
       "keputusanTeknis": "Go",
       "catatan": "Minim korosi, sambungan terlihat bagus"
     }
-  ]
+  ],
+  "pbsCanonical": "3.4.3",
+  "subsistemCanonical": "Sistem Bahan Bakar",
+  "namaAsetCanonical": "Tangki BBM",
+  "unitLabel": ""
 }

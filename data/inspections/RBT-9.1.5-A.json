@@ -33,5 +33,9 @@
       "catatan": "Korosi"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.4",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Pneumatic System",
+  "unitLabel": "Pneumatic"
 }

@@ -26,5 +26,9 @@
       "catatan": "dalam perbaikan"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.1.1",
+  "subsistemCanonical": "Struktur dan Lining Tanur",
+  "namaAsetCanonical": "Tanur",
+  "unitLabel": "C 20 Ton"
 }

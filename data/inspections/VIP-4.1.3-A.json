@@ -32,5 +32,9 @@
       "keputusanTeknis": "No Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "4.1.3",
+  "subsistemCanonical": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+  "namaAsetCanonical": "Pelletizer",
+  "unitLabel": ""
 }

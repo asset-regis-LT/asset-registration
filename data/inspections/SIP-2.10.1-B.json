@@ -32,5 +32,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "2.10.1",
+  "subsistemCanonical": "Persiapan Antrasit",
+  "namaAsetCanonical": "Mesin Crusher",
+  "unitLabel": ""
 }

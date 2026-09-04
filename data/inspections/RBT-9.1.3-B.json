@@ -18,5 +18,9 @@
       "catatan": "Uji BDV, hipot test"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.3",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Trafo Step Up 20 kV",
+  "unitLabel": "20kv"
 }

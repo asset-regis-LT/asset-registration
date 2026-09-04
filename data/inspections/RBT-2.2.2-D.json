@@ -19,5 +19,9 @@
       "catatan": "diperlukan service menyeluruh"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "2.2.2",
+  "subsistemCanonical": "Sistem Crystallizer",
+  "namaAsetCanonical": "Motor Gearbox Crystallizer",
+  "unitLabel": ""
 }

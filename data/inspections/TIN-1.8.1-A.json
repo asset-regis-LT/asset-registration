@@ -32,5 +32,9 @@
       "keputusanTeknis": "Hold",
       "catatan": "Rusak"
     }
-  ]
+  ],
+  "pbsCanonical": "1.8.1",
+  "subsistemCanonical": "Sistem Udara Bertekanan dan Sirkulasi Udara",
+  "namaAsetCanonical": "Pneumatic system",
+  "unitLabel": "Tanur A"
 }

@@ -33,5 +33,9 @@
       "catatan": "To be edited"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "9.1.10",
+  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "namaAsetCanonical": "Diesel Pump",
+  "unitLabel": ""
 }

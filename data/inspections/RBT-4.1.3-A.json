@@ -47,5 +47,9 @@
       "catatan": "Service"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "4.1.3",
+  "subsistemCanonical": "Sistem Penerimaan, Penyimpanan, dan Pelletizing",
+  "namaAsetCanonical": "Pelletizer",
+  "unitLabel": ""
 }

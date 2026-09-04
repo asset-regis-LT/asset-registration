@@ -17,5 +17,9 @@
       "keputusanTeknis": "No Go",
       "catatan": "Kabel terkelupas dan tidak tersambung"
     }
-  ]
+  ],
+  "pbsCanonical": "2.7.1",
+  "subsistemCanonical": "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "namaAsetCanonical": "Panel Electrical Refining",
+  "unitLabel": ""
 }

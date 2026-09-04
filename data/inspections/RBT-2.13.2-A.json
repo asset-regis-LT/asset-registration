@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "2.13.2",
+  "subsistemCanonical": "Gudang dan Penimbangan Ingot",
+  "namaAsetCanonical": "Anak Timbangan",
+  "unitLabel": ""
 }

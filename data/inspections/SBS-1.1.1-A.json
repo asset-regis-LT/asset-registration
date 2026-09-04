@@ -26,5 +26,9 @@
       "catatan": "rusak"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "1.1.1",
+  "subsistemCanonical": "Struktur dan Lining Tanur",
+  "namaAsetCanonical": "Tanur",
+  "unitLabel": "A 15 Ton"
 }

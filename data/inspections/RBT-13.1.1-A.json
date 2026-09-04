@@ -19,5 +19,9 @@
       "catatan": "Minor Repair"
     }
   ],
-  "qrPrinted": true
+  "qrPrinted": true,
+  "pbsCanonical": "13.1.1",
+  "subsistemCanonical": "Bangunan",
+  "namaAsetCanonical": "Workshop Teknik",
+  "unitLabel": ""
 }

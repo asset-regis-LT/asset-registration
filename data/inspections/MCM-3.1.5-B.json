@@ -38,5 +38,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu penggantian. Bukan long lead item"
     }
-  ]
+  ],
+  "pbsCanonical": "3.1.5",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
+  "namaAsetCanonical": "Panel Sinkron Genset",
+  "unitLabel": ""
 }

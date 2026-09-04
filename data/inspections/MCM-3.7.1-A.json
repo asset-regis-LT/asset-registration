@@ -17,5 +17,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "Perlu dites jalan, beberapa bagian korosi"
     }
-  ]
+  ],
+  "pbsCanonical": "3.7.1",
+  "subsistemCanonical": "Sistem Proteksi Kebakaran",
+  "namaAsetCanonical": "Pompa Hydrant / Fire Pump",
+  "unitLabel": ""
 }

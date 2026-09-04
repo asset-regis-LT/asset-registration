@@ -17,5 +17,9 @@
       "keputusanTeknis": "Hold",
       "catatan": ""
     }
-  ]
+  ],
+  "pbsCanonical": "1.10.1",
+  "subsistemCanonical": "Sistem Penanganan Logam dan Slag Cair",
+  "namaAsetCanonical": "Prisma Pot",
+  "unitLabel": ""
 }

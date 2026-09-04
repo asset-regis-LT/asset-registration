@@ -31,5 +31,9 @@
       "keputusanTeknis": "Conditional Go",
       "catatan": "PCB terawat cukup baik, cable management dapat diperbaiki"
     }
-  ]
+  ],
+  "pbsCanonical": "2.6.5",
+  "subsistemCanonical": "Sistem Pendinginan Air",
+  "namaAsetCanonical": "Mesin Pompa Air Pendingin Crystallizer & Casting",
+  "unitLabel": ""
 }
