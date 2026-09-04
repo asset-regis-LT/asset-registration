@@ -222,11 +222,30 @@ Two non-obvious gotchas baked into this code:
 is sized for), one row per inspection including its PIC/Inspector. Rows are newest-first by `createdAt`
 (records without it, i.e. saved before that field existed, sort after all dated ones, tied among
 themselves by Tag No.) — the full sorted set is kept in `allRows`, separate from whatever subset
-`renderDataTableRows()` currently has on screen. Two dropdowns filter that subset client-side (no extra
-fetch): "Filter Nama Smelter" (`populateLokasiFilter()`, distinct `lokasi`) and "Filter Subsistem"
-(`populateSubsistemFilter()`, distinct `subsistem`). They **AND-combine** via the `filteredRows()` helper —
-a row shows only if it matches both — and every render path (both `change` handlers, initial load, post-edit
-re-render) goes through `renderDataTableRows(filteredRows())`.
+`renderDataTableRows()` currently has on screen. Three dropdowns filter that subset client-side (no extra
+fetch): "Filter Nama Smelter" (`populateLokasiFilter()`, distinct `lokasi`), "Filter Subsistem"
+(`populateSubsistemFilter()`, distinct `subsistem`), and "Filter Keputusan" (`decisionFilter`, the 4
+`GithubStore.KEPUTUSAN_OPTIONS` values, options built in JS so they can't drift from what `index.html`
+writes into `overallDecision`). All three **AND-combine** via the `filteredRows()` helper — a row shows
+only if it matches every set one. **The Keputusan filter only applies while a single smelter is selected**
+— `syncDecisionFilter()` disables and clears it whenever "Filter Nama Smelter" is "Semua Lokasi", and
+`filteredRows()` ignores its value in that state regardless.
+
+Above the table sits a **decision dashboard** (`renderDashboard()`, `#decisionDashboard`): 4 count tiles
+(Go / Conditional Go / Hold / No Go) tallied by `record.overallDecision`, plus a `"<n> aset · <m> tanpa
+keputusan"` caption so a blank `overallDecision` (older stubs) still reconciles against the row count. The
+tiles reflect **only the smelter + subsistem filters** (`dashboardRows()`, deliberately *not* the Keputusan
+filter — otherwise picking one decision would zero the other three tiles). While the Keputusan filter is
+enabled, clicking a tile sets it to that decision.
+
+Every render path (all three `change` handlers, initial load, post-edit re-render) goes through
+`refreshDataViews()` = `syncDecisionFilter()` + `renderDashboard(dashboardRows())` +
+`renderDataTableRows(filteredRows())`, except the Keputusan filter's own `change`, which re-renders just
+the table (the dashboard doesn't depend on it).
+
+On page open, if a token is already saved, `loadDataTable()` runs automatically (guarded by its own
+`loadDataBtn` disable) so the dashboard + table populate without clicking "Muat Data Tersimpan"; the button
+stays as the manual reload path. No token = no auto-load.
 
 Each row has a "QR Dicetak" checkbox (`qrPrinted`) plus three actions: **Edit** opens a modal covering
 everything about the record — Tag No., Nomor PBS/Subsistem/Lokasi, PIC/Tanggal, foto, and per-component
@@ -250,10 +269,10 @@ Lokasi all required non-empty).
   record whose `qrPrinted` is already checked triggers a `confirm()` warning that the old physical label
   will stop resolving — the admin can still proceed past it.
 
-Save re-renders through `populateLokasiFilter()` + `populateSubsistemFilter()` + `renderDataTableRows(filteredRows())` —
+Save re-renders through `populateLokasiFilter()` + `populateSubsistemFilter()` + `refreshDataViews()` —
 the same filter-aware path used everywhere else in this file — instead of patching individual table cells;
 needed now that Tag No./Subsistem/Lokasi can all change from this modal, and it resolves "row's lokasi/
-subsistem no longer matches the active filter" for free. **QR** re-generates and downloads that inspection's label from the cached record via
+subsistem no longer matches the active filter" (and the dashboard counts) for free. **QR** re-generates and downloads that inspection's label from the cached record via
 `GithubStore.generateLabelPNG()`, then auto-ticks "QR Dicetak" if it wasn't already (best-effort — a
 download isn't proof of an actual print — via the same `setQrPrinted()` the checkbox itself uses, which
 never blocks or fails the download on a write error). **Hapus** removes both the JSON and photo. Edit and
