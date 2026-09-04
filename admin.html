@@ -14,6 +14,10 @@
     --panel:#ffffff;
     --line:#d8d5cd;
     --accent:#c9622a;
+    --go:#2f7a3e;
+    --cgo:#b8860b;
+    --hold:#c9622a;
+    --nogo:#b23a2f;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   }
@@ -40,8 +44,24 @@
   .status.warn{background:#fff4e8;color:#8a5a1f;}
   .status.err{background:#f8e4e2;color:#9e3028;}
   .progress-log{margin-top:12px;font-family:var(--mono);font-size:12px;background:#14171a;color:#c8f0c8;padding:10px;border-radius:6px;max-height:180px;overflow:auto;white-space:pre-wrap;display:none;}
-  label[for="lokasiFilter"], label[for="subsistemFilter"]{margin-top:14px;}
-  #lokasiFilter, #subsistemFilter{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);}
+  label[for="lokasiFilter"], label[for="subsistemFilter"], label[for="decisionFilter"]{margin-top:14px;}
+  #lokasiFilter, #subsistemFilter, #decisionFilter{width:100%;padding:11px;font-size:15px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);}
+  #decisionFilter:disabled{opacity:0.5;cursor:not-allowed;background:var(--paper);}
+  #decisionDashboard{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .dash-tile{flex:1 1 calc(25% - 8px);min-width:118px;border:1px solid var(--line);border-left:4px solid var(--line);border-radius:4px;padding:10px 12px;background:#fff;}
+  .dash-tile.clickable{cursor:pointer;}
+  .dash-tile.clickable:hover{background:var(--paper);}
+  .dash-tile .dash-count{font-size:22px;font-weight:700;line-height:1.1;}
+  .dash-tile .dash-label{font-size:10px;text-transform:uppercase;letter-spacing:0.03em;color:#5a564c;margin-top:3px;}
+  .dash-tile.go{border-left-color:var(--go);}
+  .dash-tile.go .dash-count{color:var(--go);}
+  .dash-tile.cgo{border-left-color:var(--cgo);}
+  .dash-tile.cgo .dash-count{color:var(--cgo);}
+  .dash-tile.hold{border-left-color:var(--hold);}
+  .dash-tile.hold .dash-count{color:var(--hold);}
+  .dash-tile.nogo{border-left-color:var(--nogo);}
+  .dash-tile.nogo .dash-count{color:var(--nogo);}
+  .dash-note{flex-basis:100%;margin:6px 0 0;font-size:12px;color:#5a564c;}
   .table-scroll{overflow-x:auto;margin-top:12px;}
   table.data-table{width:100%;border-collapse:collapse;font-size:13px;}
   table.data-table th, table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;}
@@ -115,6 +135,11 @@
     <label for="subsistemFilter">Filter Subsistem</label>
     <select id="subsistemFilter" style="display:none;">
       <option value="">Semua Subsistem</option>
+    </select>
+    <div id="decisionDashboard" style="display:none;"></div>
+    <label for="decisionFilter">Filter Keputusan</label>
+    <select id="decisionFilter" style="display:none;" disabled>
+      <option value="">Semua Keputusan</option>
     </select>
     <div class="table-scroll">
       <table class="data-table" id="dataTable" style="display:none;">
@@ -466,12 +491,76 @@ function applyRecentEdits(record) {
 let allRows = [];
 const lokasiFilter = document.getElementById("lokasiFilter");
 const subsistemFilter = document.getElementById("subsistemFilter");
+const decisionFilter = document.getElementById("decisionFilter");
+const decisionDashboard = document.getElementById("decisionDashboard");
 
-// The rows that match BOTH the smelter and subsistem filters (either empty = no
-// constraint). Single source of truth for what renderDataTableRows() should show.
+// Decision options come from the shared constant so they can't drift from the
+// values index.html actually writes into overallDecision.
+decisionFilter.innerHTML = `<option value="">Semua Keputusan</option>` +
+  GithubStore.KEPUTUSAN_OPTIONS.map(k => `<option value="${escapeHtml(k.value)}">${escapeHtml(k.value)}</option>`).join("");
+
+// The rows that match BOTH the smelter and subsistem filters, AND the decision
+// filter — but the decision filter only applies once a single smelter is picked
+// (it's disabled otherwise). Empty value = no constraint. Single source of truth
+// for what renderDataTableRows() should show.
 function filteredRows() {
   const l = lokasiFilter.value, s = subsistemFilter.value;
+  const d = l ? decisionFilter.value : "";
+  return allRows.filter(r =>
+    (!l || r.lokasi === l) && (!s || r.subsistem === s) && (!d || r.overallDecision === d));
+}
+
+// Rows behind the dashboard tiles: smelter + subsistem filtered, but NOT the
+// decision filter — otherwise picking one decision would zero the other tiles.
+function dashboardRows() {
+  const l = lokasiFilter.value, s = subsistemFilter.value;
   return allRows.filter(r => (!l || r.lokasi === l) && (!s || r.subsistem === s));
+}
+
+// The decision filter only makes sense scoped to one smelter, so it's locked
+// (and reset) whenever the smelter filter is "Semua Lokasi", per the spec.
+function syncDecisionFilter() {
+  const enabled = !!lokasiFilter.value && allRows.length > 0;
+  decisionFilter.disabled = !enabled;
+  if (!enabled) decisionFilter.value = "";
+  decisionFilter.style.display = allRows.length ? "block" : "none";
+}
+
+// Tallies rows by overallDecision into the 4 canonical buckets. Records with a
+// blank overallDecision (older stubs) land in none of them and are surfaced in
+// the caption so the tile totals still reconcile against the row count.
+function renderDashboard(rows) {
+  const counts = {};
+  GithubStore.KEPUTUSAN_OPTIONS.forEach(k => { counts[k.value] = 0; });
+  let blank = 0;
+  rows.forEach(r => {
+    if (Object.prototype.hasOwnProperty.call(counts, r.overallDecision)) counts[r.overallDecision]++;
+    else blank++;
+  });
+  const clickable = !decisionFilter.disabled;
+  decisionDashboard.innerHTML = GithubStore.KEPUTUSAN_OPTIONS.map(k => `
+    <div class="dash-tile ${k.cls}${clickable ? " clickable" : ""}" data-decision="${escapeHtml(k.value)}">
+      <div class="dash-count">${counts[k.value]}</div>
+      <div class="dash-label">${escapeHtml(k.value)}</div>
+    </div>`).join("") +
+    `<p class="dash-note">${rows.length} aset${blank ? ` &middot; ${blank} tanpa keputusan` : ""}</p>`;
+  if (clickable) {
+    decisionDashboard.querySelectorAll(".dash-tile").forEach(tile => {
+      tile.addEventListener("click", () => {
+        decisionFilter.value = tile.dataset.decision;
+        renderDataTableRows(filteredRows());
+      });
+    });
+  }
+  decisionDashboard.style.display = allRows.length ? "flex" : "none";
+}
+
+// Every filter change / load / edit-save routes through here so the dashboard,
+// the decision filter's enabled state, and the table stay in lockstep.
+function refreshDataViews() {
+  syncDecisionFilter();
+  renderDashboard(dashboardRows());
+  renderDataTableRows(filteredRows());
 }
 
 // Persists the QR-printed flag: same read-sha/write-with-sha pattern as the
@@ -575,8 +664,9 @@ function populateSubsistemFilter() {
   subsistemFilter.style.display = values.length ? "block" : "none";
 }
 
-lokasiFilter.addEventListener("change", () => renderDataTableRows(filteredRows()));
-subsistemFilter.addEventListener("change", () => renderDataTableRows(filteredRows()));
+lokasiFilter.addEventListener("change", refreshDataViews);
+subsistemFilter.addEventListener("change", refreshDataViews);
+decisionFilter.addEventListener("change", () => renderDataTableRows(filteredRows()));
 
 async function loadDataTable() {
   dataListStatus.className = "status warn";
@@ -610,7 +700,7 @@ async function loadDataTable() {
 
     populateLokasiFilter();
     populateSubsistemFilter();
-    renderDataTableRows(filteredRows());
+    refreshDataViews();
     deleteAllBtn.disabled = !allRows.length;
   } catch (err) {
     dataListStatus.className = "status err";
@@ -691,6 +781,8 @@ async function deleteAllInspections() {
   dataTable.style.display = "none";
   lokasiFilter.style.display = "none";
   subsistemFilter.style.display = "none";
+  decisionFilter.style.display = "none";
+  decisionDashboard.style.display = "none";
   dataListStatus.className = failed ? "status err" : "status ok";
   dataListStatus.textContent = failed
     ? `${done} inspeksi terhapus, ${failed} gagal dihapus — muat ulang untuk melihat sisanya.`
@@ -949,7 +1041,7 @@ saveEditBtn.addEventListener("click", async () => {
     // so a renamed row re-keys itself with no manual DOM patch.
     populateLokasiFilter();
     populateSubsistemFilter();
-    renderDataTableRows(filteredRows());
+    refreshDataViews();
     editOverlay.classList.remove("open");
     dataListStatus.className = "status ok";
     dataListStatus.textContent = `Inspeksi ${newTagNo} berhasil diperbarui.`;
@@ -962,6 +1054,11 @@ saveEditBtn.addEventListener("click", async () => {
     saveEditBtn.textContent = "Simpan Perubahan";
   }
 });
+
+// Auto-load on open when a token is already saved, so the dashboard + table are
+// there without clicking "Muat Data Tersimpan". loadDataTable() disables its own
+// button while running, so an eager manual click can't double-run it.
+if (GithubStore.hasToken()) loadDataTable();
 </script>
 </body>
 </html>
