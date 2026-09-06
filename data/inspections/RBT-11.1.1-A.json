@@ -35,5 +35,6 @@
   "pbsCanonical": "8.1.1",
   "subsistemCanonical": "Bangunan",
   "namaAsetCanonical": "Pos Jaga / Area Genset",
-  "unitLabel": "Pos Jaga"
+  "unitLabel": "Pos Jaga",
+  "qrPrinted": true
 }
