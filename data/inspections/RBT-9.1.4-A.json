@@ -34,8 +34,8 @@
     }
   ],
   "qrPrinted": true,
-  "pbsCanonical": "9.1.4",
-  "subsistemCanonical": "Peralatan Penunjang (Registrasi Lapangan)",
+  "pbsCanonical": "3.2.5",
+  "subsistemCanonical": "Sistem Udara Bertekanan Pabrik",
   "namaAsetCanonical": "Pneumatic System",
-  "unitLabel": ""
+  "unitLabel": "Pneumatic"
 }

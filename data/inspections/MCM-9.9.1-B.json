@@ -32,8 +32,8 @@
       "catatan": "25 kVar per step"
     }
   ],
-  "pbsCanonical": "9.9.1",
-  "subsistemCanonical": "Panel Furnace Tegangan Rendah",
+  "pbsCanonical": "3.1.12",
+  "subsistemCanonical": "Sistem Kelistrikan Utama dan Daya Cadangan",
   "namaAsetCanonical": "Panel Furnace Tegangan Rendah",
-  "unitLabel": ""
+  "unitLabel": "Panel Furnace"
 }
