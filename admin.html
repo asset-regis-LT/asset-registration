@@ -338,6 +338,8 @@ const DISIPLIN_ELEKTRIKAL = new Set([
 const DISIPLIN_ELEC_KW = /\b(panel|cubicle|kubikel|kubical|trafo|transformer|inverter|genset|busbar|bus tube|kapasitor|capacitor|batter|battrey|grounding|petir|distribution board|switchgear|mcc|acb|incoming|feeder|sinkron|dsi|thermocouple|consul|console)\b/i;
 
 function disciplineOf(subsistem, nama) {
+  // civil / buildings are always Mekanikal, even if the name says "genset" etc.
+  if (subsistem === "Bangunan" || subsistem === "Struktur Sipil") return "Mekanikal";
   if (nama && DISIPLIN_ELEC_KW.test(nama)) return "Elektrikal";
   if (DISIPLIN_METALURGI.has(subsistem)) return "Metalurgi";
   if (DISIPLIN_ELEKTRIKAL.has(subsistem)) return "Elektrikal";
