@@ -318,6 +318,32 @@ function generateQrBase64(tagNo) {
   }
 }
 
+// Engineering-discipline bucket for the Excel export, from the canonical
+// subsistem + asset name. Metalurgi = furnace / process metallurgy equipment;
+// Elektrikal = anything electrical (panels, cubicles, transformers, drives,
+// control & instrumentation, genset); Mekanikal = everything else, incl. civil
+// buildings, gas handling, cooling, compressed air, material handling.
+const DISIPLIN_METALURGI = new Set([
+  "Struktur dan Lining Tanur", "Sistem Elektroda", "Sistem Tapping Logam dan Slag",
+  "Sistem Penanganan Logam dan Slag Cair",
+  "Sistem Refining Pot, Pengadukan, dan Transfer Timah", "Sistem Crystallizer",
+  "Sistem Casting dan Pembentukan Ingot", "Sistem Pemanasan dan Burner",
+  "Sistem Flame Oven", "Rotary Kiln"
+]);
+const DISIPLIN_ELEKTRIKAL = new Set([
+  "Sistem Daya Tanur", "Sistem Kontrol dan Instrumentasi",
+  "Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",
+  "Sistem Kelistrikan Utama dan Daya Cadangan", "Lab. Analisis"
+]);
+const DISIPLIN_ELEC_KW = /\b(panel|cubicle|kubikel|kubical|trafo|transformer|inverter|genset|busbar|bus tube|kapasitor|capacitor|batter|battrey|grounding|petir|distribution board|switchgear|mcc|acb|incoming|feeder|sinkron|dsi|thermocouple|consul|console)\b/i;
+
+function disciplineOf(subsistem, nama) {
+  if (nama && DISIPLIN_ELEC_KW.test(nama)) return "Elektrikal";
+  if (DISIPLIN_METALURGI.has(subsistem)) return "Metalurgi";
+  if (DISIPLIN_ELEKTRIKAL.has(subsistem)) return "Elektrikal";
+  return "Mekanikal";
+}
+
 exportBtn.addEventListener("click", async () => {
   progressLog.textContent = "";
   exportStatus.className = "status warn";
@@ -344,6 +370,7 @@ exportBtn.addEventListener("click", async () => {
       { header: "Nomor PBS", key: "nomorPBS", width: 12 },
       { header: "Subsistem", key: "subsistem", width: 18 },
       { header: "Nama Aset", key: "namaAset", width: 22 },
+      { header: "Disiplin", key: "disiplin", width: 12 },
       { header: "Unit", key: "unitLabel", width: 16 },
       { header: "Lokasi", key: "lokasi", width: 14 },
       { header: "PIC / Inspector", key: "picInspector", width: 18 },
@@ -405,6 +432,7 @@ exportBtn.addEventListener("click", async () => {
         nomorPBS: record.pbsCanonical || record.nomorPBS,
         subsistem: record.subsistemCanonical || record.subsistem,
         namaAset: record.namaAsetCanonical || record.namaAset,
+        disiplin: disciplineOf(record.subsistemCanonical || record.subsistem, record.namaAsetCanonical || record.namaAset),
         unitLabel: record.unitLabel || "",
         lokasi: record.lokasi,
         picInspector: record.picInspector,
@@ -417,11 +445,11 @@ exportBtn.addEventListener("click", async () => {
 
       if (photoBase64) {
         const imgId = workbook.addImage({ base64: `data:image/jpeg;base64,${photoBase64}`, extension: "jpeg" });
-        sheet.addImage(imgId, { tl: { col: 11, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(imgId, { tl: { col: 12, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
       if (qrBase64) {
         const qrId = workbook.addImage({ base64: `data:image/png;base64,${qrBase64}`, extension: "png" });
-        sheet.addImage(qrId, { tl: { col: 12, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(qrId, { tl: { col: 13, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
     });
 

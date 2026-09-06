@@ -308,6 +308,11 @@ logic.
 The Excel export reuses the same concurrency helper, and re-compresses each photo down to thumbnail size
 before embedding it — the sheet only ever displays it at 110x110px, so embedding the full ~1600px capture
 would make the exported file unnecessarily large at that row count. Its `Nomor PBS` / `Subsistem` /
-`Nama Aset` columns show the **canonical** values (`record.pbsCanonical || record.nomorPBS`, etc.) plus a
-`Unit` column from `unitLabel` — see "Canonical PBS fields" in the data model. The Tag No. column and the
-embedded photo/QR are unchanged; only the two `addImage` `col:` indices shifted (+1) for the new column.
+`Nama Aset` columns show the **canonical** values (`record.pbsCanonical || record.nomorPBS`, etc.); it also
+adds a `Unit` column (`unitLabel`) and a `Disiplin` column — Metalurgi / Elektrikal / Mekanikal, derived
+by `disciplineOf(subsistem, nama)` from the canonical subsistem plus an electrical-keyword check on the
+name (`panel|cubicle|trafo|inverter|genset|…`). "Mekanikal" is the default and includes civil buildings.
+The Tag No. column and the embedded photo/QR are unchanged; the two `addImage` `col:` indices track the
+added columns (Foto = 12, QR = 13). **openpyxl cannot round-trip the ExcelJS-embedded images** — never
+post-process an exported `.xlsx` with openpyxl (it silently drops every photo/QR); change the export code
+and re-export instead.
