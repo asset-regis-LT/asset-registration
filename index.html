@@ -425,6 +425,7 @@
   .result-actions .download-result{background:var(--ink);color:#fff;}
   .result-actions .download-qr{background:var(--accent);color:#fff;}
   .result-actions .back-form{flex:1 1 100%;order:3;background:#e4e1d8;color:var(--ink);}
+  .result-subnote{font-size:11px;color:#8a8578;font-weight:400;text-transform:none;letter-spacing:0;margin-top:4px;}
   @media(max-width:560px){.result-meta,.result-grid{grid-template-columns:1fr;}.result-meta .cell{border-right:none;}.result-field.full{grid-column:auto;}}
 </style>
 </head>
@@ -520,13 +521,15 @@
   <div id="resultCapture">
     <div class="result-header">
       <div class="comp-header">HASIL INSPEKSI TERSIMPAN</div>
-      <h2 id="resultAssetName" style="margin:12px 0 0;font-size:20px;"></h2>
+      <h2 id="resultAssetName" style="margin:12px 0 0;font-size:20px;font-family:var(--mono);"></h2>
+      <div id="resultTagPrev" class="result-subnote" hidden></div>
       <div id="resultDecision"></div>
     </div>
     <div class="result-meta">
+      <div class="cell"><label>Nama Aset</label><div id="resultAssetNameCell"></div></div>
       <div class="cell"><label>Nomor PBS</label><div id="resultPBS"></div></div>
       <div class="cell"><label>Subsistem</label><div id="resultSubsistem"></div></div>
-      <div class="cell"><label>Tag No. / Asset ID</label><div id="resultTag"></div></div>
+      <div class="cell"><label>Unit</label><div id="resultUnit"></div></div>
       <div class="cell"><label>Lokasi</label><div id="resultLocation"></div></div>
       <div class="cell"><label>PIC / Inspector</label><div id="resultInspector"></div></div>
       <div class="cell"><label>Tanggal Inspeksi</label><div id="resultDate"></div></div>
@@ -1145,10 +1148,36 @@ function renderInspectionResult(record, photoSrcOverride, context = "view") {
   document.getElementById("downloadQrBtn").style.display = isSaved ? "" : "none";
   document.getElementById("backToFormBtn").style.display = isSaved ? "" : "none";
 
-  document.getElementById("resultAssetName").textContent = record.namaAset || "";
-  document.getElementById("resultPBS").textContent = record.nomorPBS || "";
-  document.getElementById("resultSubsistem").textContent = record.subsistem || "";
-  document.getElementById("resultTag").textContent = record.tagNo || "";
+  // Heading = a computed canonical Tag No. (smelter + pbsCanonical + the real
+  // tag's suffix). The printed label / raw values are shown small, only when
+  // they differ. The real record.tagNo is unchanged and still resolves the QR;
+  // this is display-only. Records saved before the canonical backfill (or new
+  // ones from buildRecord) have no *Canonical fields — the `||` fallbacks then
+  // make canonTag === rawTag and every sub-note stays hidden.
+  const rawTag = record.tagNo || "";
+  const canonPbs = record.pbsCanonical || record.nomorPBS || "";
+  const tagSuffix = rawTag.split("-").pop();
+  const canonTag = (record.lokasi && canonPbs && tagSuffix)
+    ? `${smelterCode(record.lokasi)}-${pbsCode(canonPbs)}-${tagSuffix}`
+    : rawTag;
+  document.getElementById("resultAssetName").textContent = canonTag || rawTag;
+  const tagPrevEl = document.getElementById("resultTagPrev");
+  if (canonTag && canonTag !== rawTag) {
+    tagPrevEl.textContent = `Label tercetak: ${rawTag}`;
+    tagPrevEl.hidden = false;
+  } else {
+    tagPrevEl.hidden = true;
+  }
+
+  document.getElementById("resultAssetNameCell").textContent = record.namaAsetCanonical || record.namaAset || "";
+  if (record.pbsCanonical && record.pbsCanonical !== record.nomorPBS) {
+    document.getElementById("resultPBS").innerHTML =
+      `${escapeHtml(record.pbsCanonical)} <span class="result-subnote">(sebelumnya ${escapeHtml(record.nomorPBS || "")})</span>`;
+  } else {
+    document.getElementById("resultPBS").textContent = record.pbsCanonical || record.nomorPBS || "";
+  }
+  document.getElementById("resultSubsistem").textContent = record.subsistemCanonical || record.subsistem || "";
+  document.getElementById("resultUnit").textContent = record.unitLabel || "—";
   document.getElementById("resultLocation").textContent = record.lokasi || "";
   document.getElementById("resultInspector").textContent = record.picInspector || "";
   document.getElementById("resultDate").textContent = record.tanggalInspeksi || "";
@@ -1225,8 +1254,8 @@ document.getElementById("downloadResultBtn").addEventListener("click", async () 
   const canvas = await html2canvas(document.getElementById("resultCapture"), {
     backgroundColor: "#ffffff", scale: 2, useCORS: true
   });
-  const tag = (document.getElementById("resultTag").textContent || "asset")
-    .replace(/[^a-zA-Z0-9_-]+/g, "-");
+  const tag = (((lastRecord && lastRecord.tagNo) || "asset")
+    .replace(/[^a-zA-Z0-9_-]+/g, "-"));
   await GithubStore.saveOrShareImage(canvas.toDataURL("image/png"), `Hasil-Inspeksi-${tag}.png`, "image/png");
 });
 

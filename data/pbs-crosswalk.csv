@@ -45,6 +45,7 @@
 1.3.1,Motorgearbox Stang Elecroda 3 Tanur B,4,1.3.1,Sistem Elektroda,Motor Gearbox Stang Elektroda,Motorgearbox 3 Tanur B,
 1.3.1,Motorgearbox Stang Elecroda 3 Tanur C,1,1.3.1,Sistem Elektroda,Motor Gearbox Stang Elektroda,Motorgearbox 3 Tanur C,
 1.3.2,Electrode Holder dan Contact Shoe,11,1.3.2,Sistem Elektroda,Electrode Holder dan Contact Shoe,,
+9.1.6,Motor Screw Hopper Elektroda Tanur,5,1.3.3,Sistem Elektroda,Motor Screw Hopper Elektroda Tanur,,merged from 9.1.6
 1.4.1,Hoist Crane,15,1.4.1,Sistem Feeding / Charging,Hoist Crane,,
 1.4.1,Hoistcrane 2 Ton 3,1,1.4.1,Sistem Feeding / Charging,Hoist Crane,2 Ton 3,
 1.4.1,Hoistcrane 2.5 Ton 3.1,1,1.4.1,Sistem Feeding / Charging,Hoist Crane,2.5 Ton 3.1,
@@ -168,6 +169,15 @@
 2.5.15,Stack / Cerobong,1,2.5.15,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Stack / Cerobong,,
 2.5.15,Stack/Cerobong,6,2.5.15,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Stack / Cerobong,,
 2.5.16,Cyclone - Pemurnian,1,2.5.16,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Cyclone - Pemurnian,,
+9.2.1,ID Fan,21,2.5.17,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,,merged from 9.2.1
+9.2.2,ID Fan Tanur,5,2.5.17,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur,merged from 9.2.2
+9.2.2,ID Fan Tanur A,4,2.5.17,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur A,merged from 9.2.2
+9.2.2,ID Fan Tanur B,3,2.5.17,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur B,merged from 9.2.2
+9.2.2,ID Fan Tanur C,1,2.5.17,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur C,merged from 9.2.2
+9.2.3,Exhaust Fan,34,2.5.18,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,,merged from 9.2.3
+9.2.4,Exhaust Fan,8,2.5.18,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,,merged from 9.2.4
+9.2.3,Exhaust Fan Tanur A,1,2.5.18,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,Exhaust Fan Tanur A,merged from 9.2.3
+9.2.3,Exhaust Fan Tanur B,1,2.5.18,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,Exhaust Fan Tanur B,merged from 9.2.3
 2.6.1,Pompa Air Pendingin Pot Casting,1,2.6.1,Sistem Pendinginan Air,Pompa Air Pendingin Pot Casting,,
 12.1.5,Cooling Tower,3,2.6.2,Sistem Pendinginan Air,Tower Tandon Air – Refining/Casting,Cooling Tower,merged from 12.1.5
 2.6.2,Cooling Tower Tanur A,2,2.6.2,Sistem Pendinginan Air,Tower Tandon Air – Refining/Casting,Cooling Tanur A,
@@ -175,6 +185,10 @@
 2.6.2,Tower Tandon Air – Refining/Casting,1,2.6.2,Sistem Pendinginan Air,Tower Tandon Air – Refining/Casting,,
 2.6.3,Sirkulasi Air,1,2.6.3,Sistem Pendinginan Air,Sirkulasi Air,,
 2.6.5,Mesin Pompa Air Pendingin Crystallizer & Casting,2,2.6.5,Sistem Pendinginan Air,Mesin Pompa Air Pendingin Crystallizer & Casting,,
+9.4.1,Water Instalasi,2,2.6.6,Sistem Pendinginan Air,Water Instalasi,,merged from 9.4.1
+9.1.2,Cooling Water Circulation,1,2.6.7,Sistem Pendinginan Air,Water Circulation,Cooling Water Circulation,merged from 9.1.2
+9.1.2,Ruang Panel,1,2.6.7,Sistem Pendinginan Air,Water Circulation,Ruang Panel,merged from 9.1.2
+9.1.2,Water Circulation,4,2.6.7,Sistem Pendinginan Air,Water Circulation,,merged from 9.1.2
 2.7.1,Panel Electrical Refining,6,2.7.1,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Refining,,
 2.7.1,Panel Kontrol,2,2.7.1,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Refining,Kontrol,
 2.7.1,Panel Refining,1,2.7.1,"Sistem Kelistrikan, Kontrol, Instrumentasi, dan Interlock",Panel Electrical Refining,,
@@ -231,11 +245,20 @@
 3.1.8,Trafo 2000kva 2,1,3.1.8,Sistem Kelistrikan Utama dan Daya Cadangan,Main Power Transformer,Trafo 2000kva 2,
 3.1.8,Trafo PS 1000KVA,1,3.1.8,Sistem Kelistrikan Utama dan Daya Cadangan,Main Power Transformer,Trafo Ps 1000kva,
 3.1.8,Trafo PS 630Kva,1,3.1.8,Sistem Kelistrikan Utama dan Daya Cadangan,Main Power Transformer,Trafo Ps 630kva,
+16.1.1,Panel Battrey,2,3.1.11,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Battery,,merged from 16.1.1
+9.9.1,Panel Furnace,2,3.1.12,Sistem Kelistrikan Utama dan Daya Cadangan,Panel Furnace Tegangan Rendah,Panel Furnace,merged from 9.9.1
+8.1.2,Distribution Board,1,3.1.13,Sistem Kelistrikan Utama dan Daya Cadangan,Distribution Board,,merged from 8.1.2
+9.1.3,Trafo Step Up 20kv,2,3.1.14,Sistem Kelistrikan Utama dan Daya Cadangan,Trafo Step Up 20 kV,Trafo Step Up 20kv,merged from 9.1.3
+9.1.9,Ruang Trafo,1,3.1.15,Sistem Kelistrikan Utama dan Daya Cadangan,Ruang Trafo,,merged from 9.1.9
 3.2.1,Compressor Portable Refining,1,3.2.1,Sistem Udara Bertekanan Pabrik,Kompresor Listrik,Compressor Portable Refining,
 3.2.1,Compressor Portable Tanur 1,1,3.2.1,Sistem Udara Bertekanan Pabrik,Kompresor Listrik,Compressor Portable Tanur 1,
 3.2.1,Compressor Portable Tanur 2,1,3.2.1,Sistem Udara Bertekanan Pabrik,Kompresor Listrik,Compressor Portable Tanur 2,
 3.2.1,Kompresor Listrik,7,3.2.1,Sistem Udara Bertekanan Pabrik,Kompresor Listrik,,
 3.2.2,Tangki Kompresor,6,3.2.2,Sistem Udara Bertekanan Pabrik,Tangki Kompresor,,
+9.3.1,Jockey Pump,1,3.2.3,Sistem Udara Bertekanan Pabrik,Jockey Pump,,merged from 9.3.1
+9.3.2,Mesin Compressor Sullair,2,3.2.4,Sistem Udara Bertekanan Pabrik,Mesin Compressor Sullair,,merged from 9.3.2
+9.1.4,Pneumatic,1,3.2.5,Sistem Udara Bertekanan Pabrik,Pneumatic System,Pneumatic,merged from 9.1.4
+9.1.5,Pneumatic,1,3.2.5,Sistem Udara Bertekanan Pabrik,Pneumatic System,Pneumatic,merged from 9.1.5
 3.3.2,Mesin Milling,3,3.3.2,Mesin Perkakas,Mesin Milling,,
 3.3.6,Mesin Potong,1,3.3.6,Mesin Perkakas,Mesin Potong,,
 3.4.1,Pompa BBM,1,3.4.1,Sistem Bahan Bakar,Pompa BBM,,
@@ -244,9 +267,13 @@
 3.5.2,Conveyour,1,3.5.2,Peralatan Pemindah Material,Conveyor,,
 3.6.1,Platform kerja,2,3.6.1,Struktur Sipil,Platform kerja,,
 3.7.1,Pompa Hydrant / Fire Pump,2,3.7.1,Sistem Proteksi Kebakaran,Pompa Hydrant / Fire Pump,,
+9.1.1,Water,1,3.7.2,Sistem Proteksi Kebakaran,Water / Hydrant,Water,merged from 9.1.1
+9.1.7,Motor Pump,1,3.7.3,Sistem Proteksi Kebakaran,Motor Pump Hydrant,Motor Pump,merged from 9.1.7
+9.1.10,Diesel Pump,4,3.7.4,Sistem Proteksi Kebakaran,Diesel Pump,,merged from 9.1.10
 3.8.2,Alat Ukur Maintenance / Peralatan Kelistrikan Workshop,1,3.8.2,Perkakas dan Alat Ukur Workshop,Alat Ukur Maintenance / Peralatan Kelistrikan Workshop,,
 4.1.3,Pelletizer,5,4.1.3,"Sistem Penerimaan, Penyimpanan, dan Pelletizing",Pelletizer,,
 4.2.2,Burner – Rotary Kiln,1,4.2.2,Rotary Kiln,Burner – Rotary Kiln,,
+9.1.8,Motor Gearbox,1,4.2.3,Rotary Kiln,Motor Gearbox,,merged from 9.1.8
 4.3.1,F.O Portable,1,4.3.1,Sistem Flame Oven,Tanur Flame Oven,f.o Portable,
 4.3.1,F.O Portable 1,1,4.3.1,Sistem Flame Oven,Tanur Flame Oven,f.o Portable 1,
 4.3.1,F.O Portable 2,2,4.3.1,Sistem Flame Oven,Tanur Flame Oven,f.o Portable 2,
@@ -261,75 +288,48 @@
 7.1.2,Bag Filter - DCS Tanur Reverb,2,7.1.2,Gas Handling Tanur Reverb,Bag Filter - DCS Tanur Reverb,,
 7.1.3,ID Fan - DCS Tanur Reverb,2,7.1.3,Gas Handling Tanur Reverb,ID Fan - DCS Tanur Reverb,,
 7.1.4,Cerobong - DCS Tanur Reverb,2,7.1.4,Gas Handling Tanur Reverb,Cerobong - DCS Tanur Reverb,,
-8.1.2,Distribution Board,1,8.1.2,Kompressor,Distribution Board,,
-9.1.1,Water,1,9.1.1,Peralatan Penunjang (Registrasi Lapangan),Water / Hydrant,,
-9.1.2,Cooling Water Circulation,1,9.1.2,Peralatan Penunjang (Registrasi Lapangan),Water Circulation,Cooling,
-9.1.2,Ruang Panel,1,9.1.2,Peralatan Penunjang (Registrasi Lapangan),Water Circulation,Ruang Panel,
-9.1.2,Water Circulation,4,9.1.2,Peralatan Penunjang (Registrasi Lapangan),Water Circulation,,
-9.1.3,Trafo Step Up 20kv,2,9.1.3,Peralatan Penunjang (Registrasi Lapangan),Trafo Step Up 20 kV,20kv,
-9.1.4,Pneumatic,1,9.1.4,Peralatan Penunjang (Registrasi Lapangan),Pneumatic System,,
-9.1.5,Pneumatic,1,9.1.4,Peralatan Penunjang (Registrasi Lapangan),Pneumatic System,Pneumatic,merged from 9.1.5
-9.1.6,Motor Screw Hopper Elektroda Tanur,5,9.1.6,Peralatan Penunjang (Registrasi Lapangan),Motor Screw Hopper Elektroda Tanur,,
-9.1.7,Motor Pump,1,9.1.7,Peralatan Penunjang (Registrasi Lapangan),Motor Pump Hydrant,,
-9.1.8,Motor Gearbox,1,9.1.8,Peralatan Penunjang (Registrasi Lapangan),Motor Gearbox,,
-9.1.9,Ruang Trafo,1,9.1.9,Peralatan Penunjang (Registrasi Lapangan),Ruang Trafo,,
-9.1.10,Diesel Pump,4,9.1.10,Peralatan Penunjang (Registrasi Lapangan),Diesel Pump,,
-9.1.11,Gudang Kapur,1,9.1.11,Peralatan Penunjang (Registrasi Lapangan),Gudang Kapur,,
-9.1.13,Gudang LB3,1,9.1.13,Peralatan Penunjang (Registrasi Lapangan),Gudang LB3,,
-9.2.1,ID Fan,21,9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,,
-9.2.2,ID Fan Tanur,5,9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur,merged from 9.2.2
-9.2.2,ID Fan Tanur A,4,9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur A,merged from 9.2.2
-9.2.2,ID Fan Tanur B,3,9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur B,merged from 9.2.2
-9.2.2,ID Fan Tanur C,1,9.2.1,"Sistem Gas Handling, Ventilasi, dan Dust Collection",ID Fan,ID Fan Tanur C,merged from 9.2.2
-9.2.3,Exhaust Fan,34,9.2.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,,
-9.2.4,Exhaust Fan,8,9.2.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,,merged from 9.2.4
-9.2.3,Exhaust Fan Tanur A,1,9.2.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,Tanur A,
-9.2.3,Exhaust Fan Tanur B,1,9.2.3,"Sistem Gas Handling, Ventilasi, dan Dust Collection",Exhaust Fan,Tanur B,
-9.3.1,Jockey Pump,1,9.3.1,Kompresor dan Hydrant,Jockey Pump,,
-9.3.2,Mesin Compressor Sullair,2,9.3.2,Kompresor dan Hydrant,Mesin Compressor Sullair,,
-9.4.1,Water Instalasi,2,9.4.1,Cooling System,Water Instalasi,,
-9.9.1,Panel Furnace,2,9.9.1,Panel Furnace Tegangan Rendah,Panel Furnace Tegangan Rendah,,
-11.1.1,Area Genset/Trafo,1,11.1.1,Bangunan,Pos Jaga / Area Genset,Trafo,
-11.1.1,Pos Jaga,3,11.1.1,Bangunan,Pos Jaga / Area Genset,,
-11.1.2,Area Peleburan/Tanur,1,11.1.2,Bangunan,Area Peleburan / Tanur,,
-12.1.1,Blower Vacuum,1,12.1.1,Bangunan,Blower Vacuum,,
-12.1.2,Bangunan Crusher,1,12.1.2,Bangunan,Bangunan Crusher,,
-12.1.3,"Gedung Antrasit, Workshop, dan Gudang Pasir",2,12.1.3,Bangunan,"Gedung Antrasit, Workshop, dan Gudang Pasir",,
-9.1.12,Area Bahanbakar,1,12.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,Area Bahanbakar,merged from 9.1.12
-12.1.4,Area Bahanbakar,1,12.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,Bahanbakar,
-12.1.4,Gedung HTS MS,1,12.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,,
-12.1.5,Gedung Komposisi,1,12.1.5,Bangunan,Gedung Komposisi,,
-12.1.6,Gedung Musholla,1,12.1.6,Bangunan,Gedung Musholla,,
-12.1.7,Gedung Office,2,12.1.7,Bangunan,Gedung Office,,
-12.1.7,Office,3,12.1.7,Bangunan,Gedung Office,,
-12.1.8,Gedung Rotary Kiln & Flame Oven,1,12.1.8,Bangunan,Gedung Rotary Kiln & Flame Oven,,
-12.1.8,Gedung Rotarykiln,1,12.1.8,Bangunan,Gedung Rotary Kiln & Flame Oven,Rotarykiln,
-12.1.9,Gedung Timbangan,1,12.1.9,Bangunan,Gedung Timbangan,,
-12.1.10,Gudang Pasir,4,12.1.10,Bangunan,Gudang Pasir,,
-12.1.11,Gudang,1,12.1.11,Bangunan,Gudang Sparepart,,
-12.1.11,Gudang Balok,2,12.1.11,Bangunan,Gudang Sparepart,Balok,
-12.1.11,Gudang Sparepart,2,12.1.11,Bangunan,Gudang Sparepart,,
-12.1.12,Laboratorium,2,12.1.12,Bangunan,Laboratorium,,
-12.1.13,Gedung Pengolahan,1,12.1.13,Bangunan,Gedung Produksi,Pengolahan,
-12.1.13,Gedung Produksi,1,12.1.13,Bangunan,Gedung Produksi,,
-12.1.13,Gedung Produksi 1,1,12.1.13,Bangunan,Gedung Produksi,1,
-12.1.13,Gedung Produksi 2,1,12.1.13,Bangunan,Gedung Produksi,2,
-12.1.13,Gedung Produksi Refining,2,12.1.13,Bangunan,Gedung Produksi,Refining,
-12.1.13,Gedung Produksi Tanur,2,12.1.13,Bangunan,Gedung Produksi,Tanur,
-9.1.8,Gedung Crytalizer,1,12.1.14,Bangunan,Gedung Crystallizer,,merged from 9.1.8
-12.1.14,Gedung Crytalizer,1,12.1.14,Bangunan,Gedung Crystallizer,,
-12.1.14,Gedung Genset,2,12.1.14,Bangunan,Gedung Crystallizer,Genset,
-12.1.15,Gedung Ruang Pompa,1,12.1.15,Bangunan,Gedung Ruang Pompa,,
-13.1.1,Workshop,3,13.1.1,Bangunan,Workshop Teknik,,
-13.1.1,Workshop Teknik,1,13.1.1,Bangunan,Workshop Teknik,,
-13.1.2,Rumah Parkir Alat Berat,1,13.1.2,Bangunan,Rumah Parkir Alat Berat,,
-13.1.3,Workshop Tanur Listrik,1,13.1.3,Bangunan,Workshop Tanur Listrik,,
-13.1.4,Rumah Kompressor,1,13.1.4,Bangunan,Rumah Kompresor,Kompressor,
-13.1.5,Rumah Cooling System,1,13.1.5,Bangunan,Rumah Cooling System,,
-13.1.6,Workshop Listrik,1,13.1.6,Bangunan,Workshop Listrik,,
-13.1.8,Rumah Baghouse,3,13.1.8,Bangunan,Rumah Baghouse,,
-14.1.1,Rumah Mainflue,5,14.1.1,Bangunan,Rumah Mainflue,,
-14.1.2,Struktur Fixed Tanur,8,14.1.2,Bangunan,Struktur Fixed Tanur,,
-14.1.3,Struktur Fixed Pemurnian,2,14.1.3,Bangunan,Struktur Fixed Pemurnian,,
-14.1.4,Gedung Refining,1,14.1.4,Bangunan,Gedung Refining,,
-16.1.1,Panel Battrey,2,16.1.1,Genset dan Power House,Panel Battery,,
+11.1.1,Area Genset/Trafo,1,8.1.1,Bangunan,Pos Jaga / Area Genset,Area Genset/Trafo,merged from 11.1.1
+11.1.1,Pos Jaga,3,8.1.1,Bangunan,Pos Jaga / Area Genset,Pos Jaga,merged from 11.1.1
+11.1.2,Area Peleburan/Tanur,1,8.1.2,Bangunan,Area Peleburan / Tanur,Area Peleburan/Tanur,merged from 11.1.2
+12.1.1,Blower Vacuum,1,9.1.1,Bangunan,Blower Vacuum,,merged from 12.1.1
+12.1.2,Bangunan Crusher,1,9.1.2,Bangunan,Bangunan Crusher,,merged from 12.1.2
+12.1.3,"Gedung Antrasit, Workshop, dan Gudang Pasir",2,9.1.3,Bangunan,"Gedung Antrasit, Workshop, dan Gudang Pasir",,merged from 12.1.3
+9.1.12,Area Bahanbakar,1,9.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,Area Bahanbakar,merged from 9.1.12
+12.1.4,Area Bahanbakar,1,9.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,Area Bahanbakar,merged from 12.1.4
+12.1.4,Gedung HTS MS,1,9.1.4,Bangunan,Area Bahan Bakar / Gedung HTS MS,Gedung HTS MS,merged from 12.1.4
+12.1.5,Gedung Komposisi,1,9.1.5,Bangunan,Gedung Komposisi,,merged from 12.1.5
+12.1.6,Gedung Musholla,1,9.1.6,Bangunan,Gedung Musholla,,merged from 12.1.6
+12.1.7,Gedung Office,2,9.1.7,Bangunan,Gedung Office,,merged from 12.1.7
+12.1.7,Office,3,9.1.7,Bangunan,Gedung Office,Office,merged from 12.1.7
+12.1.8,Gedung Rotary Kiln & Flame Oven,1,9.1.8,Bangunan,Gedung Rotary Kiln & Flame Oven,,merged from 12.1.8
+12.1.8,Gedung Rotarykiln,1,9.1.8,Bangunan,Gedung Rotary Kiln & Flame Oven,Gedung Rotarykiln,merged from 12.1.8
+12.1.9,Gedung Timbangan,1,9.1.9,Bangunan,Gedung Timbangan,,merged from 12.1.9
+12.1.10,Gudang Pasir,4,9.1.10,Bangunan,Gudang Pasir,,merged from 12.1.10
+12.1.11,Gudang,1,9.1.11,Bangunan,Gudang Sparepart,Gudang,merged from 12.1.11
+12.1.11,Gudang Balok,2,9.1.11,Bangunan,Gudang Sparepart,Gudang Balok,merged from 12.1.11
+12.1.11,Gudang Sparepart,2,9.1.11,Bangunan,Gudang Sparepart,,merged from 12.1.11
+12.1.12,Laboratorium,2,9.1.12,Bangunan,Laboratorium,,merged from 12.1.12
+12.1.13,Gedung Pengolahan,1,9.1.13,Bangunan,Gedung Produksi,Gedung Pengolahan,merged from 12.1.13
+12.1.13,Gedung Produksi,1,9.1.13,Bangunan,Gedung Produksi,,merged from 12.1.13
+12.1.13,Gedung Produksi 1,1,9.1.13,Bangunan,Gedung Produksi,Gedung Produksi 1,merged from 12.1.13
+12.1.13,Gedung Produksi 2,1,9.1.13,Bangunan,Gedung Produksi,Gedung Produksi 2,merged from 12.1.13
+12.1.13,Gedung Produksi Refining,2,9.1.13,Bangunan,Gedung Produksi,Gedung Produksi Refining,merged from 12.1.13
+12.1.13,Gedung Produksi Tanur,2,9.1.13,Bangunan,Gedung Produksi,Gedung Produksi Tanur,merged from 12.1.13
+9.1.8,Gedung Crytalizer,1,9.1.14,Bangunan,Gedung Crystallizer,,merged from 9.1.8
+12.1.14,Gedung Crytalizer,1,9.1.14,Bangunan,Gedung Crystallizer,,merged from 12.1.14
+12.1.14,Gedung Genset,2,9.1.14,Bangunan,Gedung Crystallizer,Gedung Genset,merged from 12.1.14
+12.1.15,Gedung Ruang Pompa,1,9.1.15,Bangunan,Gedung Ruang Pompa,,merged from 12.1.15
+9.1.11,Gudang Kapur,1,9.1.16,Bangunan,Gudang Kapur,,merged from 9.1.11
+9.1.13,Gudang LB3,1,9.1.17,Bangunan,Gudang LB3,,merged from 9.1.13
+13.1.1,Workshop,3,10.1.1,Bangunan,Workshop Teknik,Workshop,merged from 13.1.1
+13.1.1,Workshop Teknik,1,10.1.1,Bangunan,Workshop Teknik,,merged from 13.1.1
+13.1.2,Rumah Parkir Alat Berat,1,10.1.2,Bangunan,Rumah Parkir Alat Berat,,merged from 13.1.2
+13.1.3,Workshop Tanur Listrik,1,10.1.3,Bangunan,Workshop Tanur Listrik,,merged from 13.1.3
+13.1.4,Rumah Kompressor,1,10.1.4,Bangunan,Rumah Kompresor,Rumah Kompressor,merged from 13.1.4
+13.1.5,Rumah Cooling System,1,10.1.5,Bangunan,Rumah Cooling System,,merged from 13.1.5
+13.1.6,Workshop Listrik,1,10.1.6,Bangunan,Workshop Listrik,,merged from 13.1.6
+13.1.8,Rumah Baghouse,3,10.1.8,Bangunan,Rumah Baghouse,,merged from 13.1.8
+14.1.1,Rumah Mainflue,5,11.1.1,Bangunan,Rumah Mainflue,,merged from 14.1.1
+14.1.2,Struktur Fixed Tanur,8,11.1.2,Bangunan,Struktur Fixed Tanur,,merged from 14.1.2
+14.1.3,Struktur Fixed Pemurnian,2,11.1.3,Bangunan,Struktur Fixed Pemurnian,,merged from 14.1.3
+14.1.4,Gedung Refining,1,11.1.4,Bangunan,Gedung Refining,,merged from 14.1.4

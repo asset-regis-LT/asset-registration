@@ -115,13 +115,18 @@ hard-refreshing).
   reference data an inspector picks from, not something the app writes to. **The same asset is replicated
   across all 6 smelters** — one row per smelter, same Nomor PBS/Subsistem/sub-components — that's what lets
   the picker offer a choice of smelters for one asset name. `lokasi` values follow `"Company Name
-  (ACRONYM)"`, since the acronym is what the Tag No. prefix is derived from. Nomor PBS is `SYSTEM.MID.LEAF`;
-  systems 1–16 exist (7–16 — gas handling, cooling, hydrant, genset, buildings — were folded in later from
-  field registrations). **Leaf numbers are NOT always contiguous and NOT safe to string-sort** (`1.10.1`
-  sorts before `1.2.1` lexically); nothing in the app sorts inspections by PBS, but keep this in mind if
-  adding anything that does. **Regenerated from `PBS_MASTER_CANONICAL.xlsx`** (the reviewed clean PBS tree,
-  4-column `Kode PBS | Level | Jenis | Komponen`) via `python3 scripts/import-pbs-master.py
-  PBS_MASTER_CANONICAL.xlsx` — edit the xlsx and re-run rather than hand-editing the JSON.
+  (ACRONYM)"`, since the acronym is what the Tag No. prefix is derived from. Nomor PBS is `SYSTEM.MID.LEAF`.
+  **The catalog now uses the canonical tree: systems 1–11** — the field-registration systems 7–16 were
+  renumbered into the real engineering subsystems (grab-bag `9.1` dispersed into Elektroda / Pendinginan
+  Air / Kelistrikan Utama / Udara Bertekanan / Proteksi Kebakaran / Rotary Kiln; `9.2` fans → `2.5.17/18`;
+  old systems 11–14 compacted to 8–11; DCS Tanur Reverb stays system 7). **Leaf numbers are still NOT
+  always contiguous and NOT safe to string-sort** (`1.10.1` sorts before `1.2.1` lexically); nothing in the
+  app sorts inspections by PBS, but keep this in mind if adding anything that does. **Regenerated from
+  `PBS_MASTER_CANONICAL.xlsx`** (the reviewed clean PBS tree, 4-column `Kode PBS | Level | Jenis |
+  Komponen`) via `python3 scripts/import-pbs-master.py PBS_MASTER_CANONICAL.xlsx` — edit the xlsx and
+  re-run rather than hand-editing the JSON. `PBS_MASTER_CANONICAL.xlsx` itself is produced by
+  `scripts/build-canonical-pbs.py` (systems 1–6 from `~/Downloads/PBS_MASTER_INPUT.xlsx` + the recorded
+  data + the `MERGE` / `MERGE_BY_NAME` / `POST_REMAP` / `SYS_COMPACT` tables in that script).
 - `data/pbs-subsistem.csv` — flat `nomorPBS,subsistem,namaAset` reference, one row per distinct catalog
   PBS, generated from `master-catalog.json`. Not read by the app; regenerate if the catalog changes.
 - `data/pbs-crosswalk.csv` — one row per distinct `(recorded nomorPBS, recorded namaAset)` seen in the
@@ -141,12 +146,16 @@ hard-refreshing).
   backfilled onto every existing record by `scripts/backfill-canonical-pbs.py` from `pbs-crosswalk.csv`.
   They carry the *cleaned* classification (wrong PBS branch fixed, duplicate codes merged, per-unit/typo
   name variants collapsed with the unit detail in `unitLabel`) while the raw `nomorPBS`/`subsistem`/
-  `namaAset` and the Tag No. are left untouched — so QR codes and file paths never move. The QR scan view
-  ignores these fields; the admin Excel export and `scripts/build-pbs-report.py` read them with a
+  `namaAset` and the Tag No. are left untouched — so QR codes and file paths never move. The admin Excel
+  export, `scripts/build-pbs-report.py`, **and the read-only scan result view** read these fields with a
   `pbsCanonical || nomorPBS` fallback (new inspections saved after the backfill don't have them, since
-  `index.html` doesn't write them — the fallback covers that). `scripts/build-pbs-report.py` emits
-  `PBS_STRUKTUR_CANONICAL.xlsx`, the tidy 3-level reporting list (one row per canonical PBS + a
-  `Jumlah Unit` count).
+  `index.html`'s `buildRecord()` doesn't write them — the fallback covers that). `scripts/build-pbs-report.py`
+  emits `PBS_STRUKTUR_CANONICAL.xlsx`, the tidy 3-level reporting list (one row per canonical PBS + a
+  `Jumlah Unit` count). **Scan view** (`renderInspectionResult`, `index.html`): the big heading is a
+  *computed* canonical Tag No. (`smelterCode(lokasi) + "-" + pbsCanonical + "-" + <suffix of the real
+  tag>`), with `Label tercetak: <real tagNo>` shown small only when it differs; `Nomor PBS` shows
+  `pbsCanonical (sebelumnya <nomorPBS>)` likewise. The real `record.tagNo` is never rebuilt — it still
+  resolves the QR — this is display only.
 - `data/inspections/photos/<tagNo>.jpg` — the one photo per inspection, resized/compressed client-side
   (`GithubStore.compressImage`, max ~1600px, JPEG quality ~0.7) before upload, since these accumulate in
   the repo indefinitely.

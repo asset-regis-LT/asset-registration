@@ -31,22 +31,45 @@ CROSSWALK_OUT = REPO / "data" / "pbs-crosswalk.csv"
 # ---------------------------------------------------------------- review knobs
 
 # Area/Sistem (Level-1) names for systems not in PBS_MASTER_INPUT.xlsx.
+# Post-renumber: 7 (DCS Tanur Reverb) stays; old 11/12/13/14 compact to 8/9/10/11.
 SYS_NAME = {
     "7":  "Gas Handling Tanur Reverberatory",
-    "8":  "Area Kompresor / Udara Bertekanan",
-    "9":  "Gas Handling dan Utilitas Penunjang (Registrasi Lapangan)",
-    "11": "Area dan Bangunan Umum",
-    "12": "Bangunan dan Gedung Pabrik",
-    "13": "Bangunan Workshop dan Rumah Peralatan",
-    "14": "Struktur dan Bangunan Tanur / Pemurnian",
-    "16": "Area Genset dan Power House",
+    "8":  "Area dan Bangunan Umum",                       # was 11
+    "9":  "Bangunan dan Gedung Pabrik",                   # was 12
+    "10": "Bangunan Workshop dan Rumah Peralatan",        # was 13
+    "11": "Struktur dan Bangunan Tanur / Pemurnian",      # was 14
 }
-# Sub-sistem (Level-2) name overrides for SYSTEM.MID groups that are a mixed bag
-# in the recorded data (else the dominant recorded subsistem is used).
+# Sub-sistem (Level-2) names for MIDs not in the master. The compacted building
+# systems are all "Bangunan".
 MID_NAME = {
-    "9.1": "Peralatan Penunjang (Registrasi Lapangan)",
-    "9.3": "Kompresor dan Hydrant",
+    "8.1":  "Bangunan",
+    "9.1":  "Bangunan",
+    "10.1": "Bangunan",
+    "11.1": "Bangunan",
 }
+
+# ------ renumber: disperse field systems 7-16 into 1-4, then compact top-level.
+# Applied AFTER the MERGE / MERGE_BY_NAME logic (keys are current canonical codes).
+POST_REMAP = {
+    "9.1.6": "1.3.3",                                     # Motor Screw Hopper Elektroda -> Sistem Elektroda
+    "9.2.1": "2.5.17", "9.2.3": "2.5.18",                 # ID/Exhaust Fan -> Sistem Gas Handling (sys 2)
+    "9.4.1": "2.6.6",  "9.1.2": "2.6.7",                  # Water Instalasi / Circulation -> Pendinginan Air
+    "16.1.1": "3.1.11", "9.9.1": "3.1.12", "8.1.2": "3.1.13",
+    "9.1.3": "3.1.14", "9.1.9": "3.1.15",                 # -> Kelistrikan Utama
+    "9.3.1": "3.2.3", "9.3.2": "3.2.4", "9.1.4": "3.2.5", # -> Udara Bertekanan Pabrik
+    "9.1.1": "3.7.2", "9.1.7": "3.7.3", "9.1.10": "3.7.4",# -> Proteksi Kebakaran
+    "9.1.8": "4.2.3",                                     # Motor Gearbox -> Rotary Kiln
+    "9.1.11": "9.1.16", "9.1.13": "9.1.17",               # warehouses -> compacted building sys (old 12 -> 9)
+}
+SYS_COMPACT = {"11": "8", "12": "9", "13": "10", "14": "11"}   # 8/9/16 emptied, 7 stays
+
+def remap(code):
+    if code in POST_REMAP:
+        return POST_REMAP[code]
+    s, _, rest = code.partition(".")
+    if s in SYS_COMPACT and rest:
+        return SYS_COMPACT[s] + "." + rest
+    return code
 # Whole-code merges: every record at the key PBS is reclassified to the value PBS.
 MERGE = {
     "1.3.3":  "1.5.2", "1.3.6": "1.5.2", "1.3.9": "1.5.2",
@@ -135,6 +158,11 @@ CANON_NAME = {
     "16.1.1": "Panel Battery",
 }
 
+# re-key the reviewer tables onto the post-renumber codes so lookups still hit
+CANON_NAME    = {remap(k): v for k, v in CANON_NAME.items()}
+NAME_OVERRIDE = {remap(k): v for k, v in NAME_OVERRIDE.items()}
+RESOLVED      = {remap(k) for k in RESOLVED}
+
 # typo folding is for MATCHING/units only - never rewrites a canonical name
 TYPOS = [
     (r"elecroda", "elektroda"), (r"hoistcrane", "hoist crane"),
@@ -211,11 +239,10 @@ for p in glob.glob(str(INSPECTIONS / "*.json")):
     mid_sub[mid][str(d.get("subsistem", "")).strip()] += 1
 
 def canonical_pbs(pbs, nama):
-    key = (pbs, norm(nama))
     for (mp, sub), tgt in MERGE_BY_NAME.items():
         if mp == pbs and sub in norm(nama):
-            return tgt
-    return MERGE.get(pbs, pbs)
+            return remap(tgt)
+    return remap(MERGE.get(pbs, pbs))
 
 def sub_name_for(mid):
     if mid in m_l2:
