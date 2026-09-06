@@ -181,6 +181,39 @@ know about these records:
   skipped, so a later hand-entry under one of the imported PBS will land as a new letter alongside the
   bulk rows, not a conflict.
 
+## Data-maintenance work not tied to the app code
+
+One-off cleanups and off-repo deliverables done against the recorded data. None of it changes how the
+app runs; recorded here so a later session knows the history.
+
+- **`data`-branch fix-up commits** (not app changes): `SBS-12.1.5-A` `lokasi` was the bare acronym `"SBS"`
+  → set to `"Sariwiguna Bina Sentosa (SBS)"`; the two `6.3.1` "Fertilizer" records (`SIP-6.3.1-A`,
+  `TIN-6.3.1-A`, + photos) were **deleted** as duplicates of `4.1.3` Pelletizer. Then two canonical-PBS
+  passes: the initial backfill of the 4 `*Canonical` fields on all 878 records, and a **renumber** pass
+  that rewrote `pbsCanonical`/`subsistemCanonical` on 187 records so the canonical tree is contiguous
+  systems 1–11 (field systems 7–16 dispersed into the real subsystems of 1–4 via the `POST_REMAP` /
+  `SYS_COMPACT` tables in `scripts/build-canonical-pbs.py`; DCS Tanur Reverb stays system 7). Raw
+  `nomorPBS`/`tagNo`/`fotoPath` never touched in any of these — QR labels unaffected.
+- **`data-audit.csv`** (repo root or `~/Downloads`, not committed) — a ~28-row inconsistency report:
+  unfinished/stub records, malformed Tag Nos., blank component rows, orphan photos, subsistem-vs-catalog
+  mismatches, the Cubicle `1.3.x`→`1.5` misfiling. Regenerate by re-running the ad-hoc audit if the data
+  drifts. Most rows are advisory, not bugs.
+- **`PBS_STRUKTUR_CANONICAL.xlsx`** (`~/Downloads`, regenerable via `scripts/build-pbs-report.py`) — the
+  tidy 3-level reporting list built from the backfilled canonical fields; one row per canonical PBS + a
+  `Jumlah Unit` count. Not part of the site.
+- **`~/Downloads/[03] PBS Master Smelter Rev4 (1).xlsx`** — an external stakeholder workbook (per-company
+  sheets, sub-components, PIC assignments). Its `PBS Master` and `PBS Master+Subkomponen` sheets and the 6
+  company sheets were re-synced to `PBS_MASTER_CANONICAL.xlsx` (systems 1–11, canonical names, Level
+  1/2/3 verified). **Known gap:** that workbook's `5.1.5 "Fasilitas Laboratorium"` exists in the company
+  sheets and was added to the Rev4 `PBS Master` sheet, but is **not** in `PBS_MASTER_CANONICAL.xlsx` / the
+  catalog — no inspection record uses it. Add it there too if it should be a real catalog asset.
+- **`~/Downloads/Export-Inspeksi-Aset-Disiplin.xlsx`** — a data-only (no photos/QR) copy of the admin
+  Excel export with the `Disiplin` column, built straight from the `data` branch. openpyxl **cannot**
+  round-trip the ExcelJS-embedded images, so a real photo/QR export can only come from admin.html.
+- The Rev4-workbook and one-off analysis scripts are throwaway (kept only in the session scratchpad); the
+  reusable pipeline (`build-canonical-pbs.py`, `backfill-canonical-pbs.py`, `build-pbs-report.py`,
+  `import-pbs-master.py`) is committed under `scripts/`.
+
 ## Picker flow and manual asset entry (index.html)
 
 Selecting an asset is a cascade, not a single search box: Nama Aset (custom-rendered suggestion dropdown,
