@@ -379,6 +379,7 @@ exportBtn.addEventListener("click", async () => {
       { header: "Tanggal Inspeksi", key: "tanggalInspeksi", width: 14 },
       { header: "Overall Decision", key: "overallDecision", width: 14 },
       { header: "Sub Komponen", key: "komponenRingkas", width: 40 },
+      { header: "Spesifikasi Teknis", key: "spesifikasiRingkas", width: 40 },
       { header: "Foto", key: "foto", width: 18 },
       { header: "QR Code", key: "qr", width: 18 }
     ];
@@ -421,6 +422,9 @@ exportBtn.addEventListener("click", async () => {
       const komponenRingkas = (record.komponen || [])
         .map(k => `${k.nama}: ${k.kondisiTeknis} / ${k.keputusanTeknis}${k.catatan ? " — " + k.catatan : ""}`)
         .join("\n");
+      const spesifikasiRingkas = (record.komponen || [])
+        .map(k => `${k.nama}: ${k.spesifikasiTeknis || "-"}`)
+        .join("\n");
 
       const rowIndex = sheet.rowCount + 1;
       sheet.addRow({
@@ -440,18 +444,19 @@ exportBtn.addEventListener("click", async () => {
         picInspector: record.picInspector,
         tanggalInspeksi: record.tanggalInspeksi,
         overallDecision: record.overallDecision,
-        komponenRingkas
+        komponenRingkas,
+        spesifikasiRingkas
       });
       sheet.getRow(rowIndex).alignment = { wrapText: true, vertical: "top" };
       sheet.getRow(rowIndex).height = 90;
 
       if (photoBase64) {
         const imgId = workbook.addImage({ base64: `data:image/jpeg;base64,${photoBase64}`, extension: "jpeg" });
-        sheet.addImage(imgId, { tl: { col: 12, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(imgId, { tl: { col: 13, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
       if (qrBase64) {
         const qrId = workbook.addImage({ base64: `data:image/png;base64,${qrBase64}`, extension: "png" });
-        sheet.addImage(qrId, { tl: { col: 13, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
+        sheet.addImage(qrId, { tl: { col: 14, row: rowIndex - 1 }, ext: { width: 110, height: 110 } });
       }
     });
 
