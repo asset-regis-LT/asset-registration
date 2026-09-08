@@ -15,21 +15,21 @@
       "spesifikasiTeknis": "1250kva 110v 6000a",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator elektroda"
+      "catatan": "Service dan megger isolator elektroda"
     },
     {
       "nama": "Busbar Stang Electroda 2",
       "spesifikasiTeknis": "1250kva 110v 6000a",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator elektroda"
+      "catatan": "Service dan megger isolator elektroda"
     },
     {
       "nama": "Busbar Stang Electroda 3",
       "spesifikasiTeknis": "1250kva 110v 6000a",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator stang elektroda"
+      "catatan": "Service dan megger isolator stang elektroda"
     }
   ],
   "pbsCanonical": "1.5.3",

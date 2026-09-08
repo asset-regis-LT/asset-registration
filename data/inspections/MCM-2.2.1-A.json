@@ -8,14 +8,42 @@
   "picInspector": "MSH",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.2.1-A.jpg",
-  "overallDecision": "No Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "xxx",
-      "spesifikasiTeknis": "xxx",
-      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "No Go",
-      "catatan": "xxx"
+      "nama": "Screw",
+      "spesifikasiTeknis": "Diameter screw 58 cm, Diameter shaft screw 20 cm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Chamber",
+      "spesifikasiTeknis": "Diameter dalam crystallizer 64 cm, Panjang crystallizer 6 m",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Motor",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "service"
+    },
+    {
+      "nama": "Gearbox",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "service"
+    },
+    {
+      "nama": "Pondasi",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
     }
   ],
   "pbsCanonical": "2.2.1",

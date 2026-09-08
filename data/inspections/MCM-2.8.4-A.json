@@ -13,20 +13,20 @@
     {
       "nama": "Crane",
       "spesifikasiTeknis": "N/A",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": "Korosi"
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Korosi, perlu dites jalan"
     },
     {
       "nama": "Motor",
-      "spesifikasiTeknis": "Korosi",
+      "spesifikasiTeknis": "N/A",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "Tidak bisa dicek karena jauh diatas"
     },
     {
       "nama": "Sistem elektrikal",
-      "spesifikasiTeknis": "Kabel etc",
+      "spesifikasiTeknis": "",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "kabel semrawut, tidak bisa di cek"

@@ -8,13 +8,34 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.2.5-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "s",
-      "spesifikasiTeknis": "s",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
+      "nama": "Motor",
+      "spesifikasiTeknis": "Bearing housing cast iron\nTebal plat cyclone 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Bearing Housing",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Cyclone",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Inverter Control Board",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
       "catatan": ""
     }
   ],

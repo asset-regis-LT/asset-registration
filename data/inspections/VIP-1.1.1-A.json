@@ -24,13 +24,6 @@
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Secara fisik baik, tetapi kondisi atap bocor sehingga berpotensi terkena air hujan"
-    },
-    {
-      "nama": "1.1.1.3 Bak Taping",
-      "spesifikasiTeknis": "Kombinasi plat dan bata",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": "Perlu dilakukan perbaikan"
     }
   ],
   "pbsCanonical": "1.1.1",

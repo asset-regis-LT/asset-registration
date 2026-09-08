@@ -8,14 +8,28 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.1.1-D.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "ketel",
-      "spesifikasiTeknis": "lebar",
-      "kondisiTeknis": "Repair (50 - 80%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Ketel",
+      "spesifikasiTeknis": "Diameter 2.4 m",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "Tutup Ketel",
+      "spesifikasiTeknis": "Kombinasi UNP dan plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "sudah mulai terkorosi"
+    },
+    {
+      "nama": "Burner",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
     }
   ],
   "pbsCanonical": "2.1.1",

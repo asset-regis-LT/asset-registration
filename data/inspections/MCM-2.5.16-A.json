@@ -8,14 +8,28 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.5.16-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "cyclone",
-      "spesifikasiTeknis": "xx",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Plat",
+      "spesifikasiTeknis": "Dimensi struktur cyclone 116 x 174 cm\nTiang H beam  150\nPlat 5 mm\nSkep plat 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Tiang",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Skep",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
     }
   ],
   "pbsCanonical": "2.5.16",

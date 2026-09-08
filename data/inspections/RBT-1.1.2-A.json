@@ -9,7 +9,7 @@
   "picInspector": "Maulana",
   "tanggalInspeksi": "2026-08-31",
   "fotoPath": "data/inspections/photos/RBT-1.1.2-A.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
       "nama": "Plat Tutup Tanur",
@@ -22,7 +22,7 @@
       "nama": "Cor Tutup Tanur",
       "spesifikasiTeknis": "Tebal cor 27 cm",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "Hold",
+      "keputusanTeknis": "No Go",
       "catatan": "terdapat patahan cor"
     }
   ],

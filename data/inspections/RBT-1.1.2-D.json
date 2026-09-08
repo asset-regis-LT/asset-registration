@@ -9,13 +9,20 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-09-01",
   "fotoPath": "data/inspections/photos/RBT-1.1.2-D.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "ss",
-      "spesifikasiTeknis": "ss",
-      "kondisiTeknis": "Repair (50 - 80%)",
-      "keputusanTeknis": "Conditional Go",
+      "nama": "Plat Tutup Tanur",
+      "spesifikasiTeknis": "Tebal plat 20 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Perlu dilakukan pengujian lebih lanjut"
+    },
+    {
+      "nama": "Cor Tutup Tanur",
+      "spesifikasiTeknis": "Tebal cor 27 cm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
       "catatan": ""
     }
   ],

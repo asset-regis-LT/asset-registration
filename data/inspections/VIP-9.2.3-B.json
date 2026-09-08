@@ -12,11 +12,32 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Exhaust Fan",
-      "spesifikasiTeknis": "12 inch",
+      "nama": "Motor",
+      "spesifikasiTeknis": "2,2kw 3phasa",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "Korosi"
+      "catatan": "Kondisi berkarat, penggantian"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "plat 1-3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Casing sudah korosif"
+    },
+    {
+      "nama": "Impeller",
+      "spesifikasiTeknis": "plat 1-3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Impeller korosif"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Kondisi baik, cable management diperbaiki"
     }
   ],
   "pbsCanonical": "2.5.18",

@@ -12,11 +12,11 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "tbe",
-      "spesifikasiTeknis": "tbe",
+      "nama": "Tapping Launder",
+      "spesifikasiTeknis": "Kombinasi baja dan bata",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": ""
+      "catatan": "korosi"
     }
   ],
   "pbsCanonical": "1.9.2",

@@ -8,14 +8,21 @@
   "picInspector": "MSH",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.3.6-A.jpg",
-  "overallDecision": "No Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "xxx",
-      "spesifikasiTeknis": "xxx",
-      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "No Go",
-      "catatan": "xxx"
+      "nama": "Tong",
+      "spesifikasiTeknis": "Plat 8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Heating system",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
     }
   ],
   "pbsCanonical": "2.3.6",

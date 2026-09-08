@@ -12,11 +12,81 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Crane",
+      "nama": "Hoist",
+      "spesifikasiTeknis": "SwL 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Wire Rope",
+      "spesifikasiTeknis": "Diameter 15 inch",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Hook Block",
       "spesifikasiTeknis": "5 ton",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "TBE"
+      "catatan": "Perlu dilakukan pengujian"
+    },
+    {
+      "nama": "Bridge Girder",
+      "spesifikasiTeknis": "12 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "Endtruck",
+      "spesifikasiTeknis": "5 ton",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Diperlukan pengujian"
+    },
+    {
+      "nama": "Runway Beam",
+      "spesifikasiTeknis": "30 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Diperlukan Pengujian"
+    },
+    {
+      "nama": "Runway Rail",
+      "spesifikasiTeknis": "30 meter",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Diperlukan pengajuan"
+    },
+    {
+      "nama": "Downshop Conductors",
+      "spesifikasiTeknis": "Power hoist",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Control Panel",
+      "spesifikasiTeknis": "Service",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Remote",
+      "spesifikasiTeknis": "Remote kabel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "Motor endtruck",
+      "spesifikasiTeknis": "2,2kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
     }
   ],
   "pbsCanonical": "1.4.1",

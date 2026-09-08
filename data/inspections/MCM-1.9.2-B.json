@@ -8,14 +8,14 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.9.2-B.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "b",
-      "spesifikasiTeknis": "n",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Tapping launder",
+      "spesifikasiTeknis": "Kombinasi plat dan bata api",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "sebagian besar plat terkorosi dan sebagian plat terdeformasi bentuknya"
     }
   ],
   "pbsCanonical": "1.9.2",

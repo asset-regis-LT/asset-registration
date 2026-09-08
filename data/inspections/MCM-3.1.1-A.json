@@ -19,16 +19,16 @@
     },
     {
       "nama": "Metering pembanding",
-      "spesifikasiTeknis": "-",
+      "spesifikasiTeknis": "",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": "Metering pembanding PLN sebaiknya ditambahkan"
     },
     {
       "nama": "Proteksi kubikel 20 KV",
-      "spesifikasiTeknis": "-",
+      "spesifikasiTeknis": "",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "Conditional Go",
+      "keputusanTeknis": "No Go",
       "catatan": "Tidak ada karena kubikel tidak dilengkapi circuit breaker"
     }
   ],

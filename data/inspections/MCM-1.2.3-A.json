@@ -8,14 +8,35 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.2.3-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "s",
-      "spesifikasiTeknis": "s",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
+      "nama": "Plat",
+      "spesifikasiTeknis": "5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
       "catatan": ""
+    },
+    {
+      "nama": "Tiang",
+      "spesifikasiTeknis": "IWF 120",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Atap",
+      "spesifikasiTeknis": "plat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Skep",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
     }
   ],
   "pbsCanonical": "1.2.3",

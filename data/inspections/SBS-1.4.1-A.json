@@ -12,49 +12,49 @@
   "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "1.6.1.1 Hoist",
+      "nama": "Hoist",
       "spesifikasiTeknis": "Dong yang 5ton",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Service"
     },
     {
-      "nama": "1.6.1.2 Wire Rope",
+      "nama": "Wire Rope",
       "spesifikasiTeknis": "Diameter 15 mm",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Diperlukan pengujian"
     },
     {
-      "nama": "1.6.1.3 Hook Block",
+      "nama": "Hook Block",
       "spesifikasiTeknis": "5 ton",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Diperlukan pengujian"
     },
     {
-      "nama": "1.6.1.4 Bridge Girder",
+      "nama": "Bridge Girder",
       "spesifikasiTeknis": "24 meter",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Diperlukan pengujian"
     },
     {
-      "nama": "1.6.1.5 Endtruck",
+      "nama": "Endtruck",
       "spesifikasiTeknis": "5 ton",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Diperlukan pengujian"
     },
     {
-      "nama": "1.6.1.6 Runway Beam",
+      "nama": "Runway Beam",
       "spesifikasiTeknis": "54 meter",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
       "catatan": "Diperlukan perbaikan"
     },
     {
-      "nama": "1.6.1.7 Runway Rail",
+      "nama": "Runway Rail",
       "spesifikasiTeknis": "54 meter",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",

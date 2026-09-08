@@ -9,13 +9,13 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-09-02",
   "fotoPath": "data/inspections/photos/VIP-1.9.2-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "tbe",
-      "spesifikasiTeknis": "tbe",
-      "kondisiTeknis": "Repair (50 - 80%)",
-      "keputusanTeknis": "Conditional Go",
+      "nama": "Tapping Launder",
+      "spesifikasiTeknis": "Kombinasi baja dan bata",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
       "catatan": ""
     }
   ],

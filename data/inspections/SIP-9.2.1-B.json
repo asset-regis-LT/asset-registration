@@ -12,11 +12,39 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Motor",
-      "spesifikasiTeknis": "TBE",
+      "nama": "Inverter Control Board",
+      "spesifikasiTeknis": "VFD kontrol 55kw",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "Motor Blower",
+      "spesifikasiTeknis": "45kw 3p",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "megger, running test"
+    },
+    {
+      "nama": "Bearing Housing",
+      "spesifikasiTeknis": "Coupling",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "TBE"
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "Cyclone",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "Impeller Sistem",
+      "spesifikasiTeknis": "Centryfugal fan",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
     }
   ],
   "pbsCanonical": "2.5.17",

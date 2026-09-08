@@ -8,14 +8,14 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.3.6-B.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "ketel cetak",
-      "spesifikasiTeknis": "diameter",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Pot",
+      "spesifikasiTeknis": "ketel cetak diameter 2m",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "diperlukan pengujian"
     }
   ],
   "pbsCanonical": "2.3.6",

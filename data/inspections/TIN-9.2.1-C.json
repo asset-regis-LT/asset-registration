@@ -12,11 +12,18 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Motor",
-      "spesifikasiTeknis": "N/A",
+      "nama": "1.5.6.1 Motor",
+      "spesifikasiTeknis": "Nd",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "TBE"
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "1.5.6.2 Cyclone",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
     }
   ],
   "pbsCanonical": "2.5.17",

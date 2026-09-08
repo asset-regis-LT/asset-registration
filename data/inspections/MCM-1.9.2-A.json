@@ -11,11 +11,11 @@
   "overallDecision": "Conditional Go",
   "komponen": [
     {
-      "nama": "e",
-      "spesifikasiTeknis": "r",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "nama": "Tapping launder",
+      "spesifikasiTeknis": "Kombinasi plat dan bata api",
+      "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "catatan": "beberapa plat terkorosi"
     }
   ],
   "pbsCanonical": "1.9.2",

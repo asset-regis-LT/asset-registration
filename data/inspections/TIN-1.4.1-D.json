@@ -12,11 +12,32 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Crane",
-      "spesifikasiTeknis": "5 ton",
+      "nama": "1.6.2.1 Hoist",
+      "spesifikasiTeknis": "SwL 5ton",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Service"
+    },
+    {
+      "nama": "1.6.2.2 Wire Rope",
+      "spesifikasiTeknis": "12mm",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "TBE"
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "1.6.2.3 Instalasi Power",
+      "spesifikasiTeknis": "Kabel Nyyhy 4 x2,5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Ganti"
+    },
+    {
+      "nama": "1.6.2.4 Remote",
+      "spesifikasiTeknis": "Remote kabel",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
     }
   ],
   "pbsCanonical": "1.4.1",

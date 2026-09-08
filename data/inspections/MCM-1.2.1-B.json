@@ -8,14 +8,35 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.2.1-B.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "s",
-      "spesifikasiTeknis": "a",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "nama": "Bata Api",
+      "spesifikasiTeknis": "SK 32-34",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "besi siku",
+      "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
       "catatan": ""
+    },
+    {
+      "nama": "Ducting",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Pintu",
+      "spesifikasiTeknis": "plat 3 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
     }
   ],
   "pbsCanonical": "1.2.1",

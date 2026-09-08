@@ -11,11 +11,11 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Ketel Pemurnian",
-      "spesifikasiTeknis": "xxx",
+      "nama": "Ketel",
+      "spesifikasiTeknis": "Diameter 2m",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "xxx"
+      "catatan": ""
     }
   ],
   "pbsCanonical": "2.1.1",

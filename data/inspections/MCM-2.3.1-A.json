@@ -11,9 +11,23 @@
   "overallDecision": "Conditional Go",
   "komponen": [
     {
-      "nama": "wadah cetak",
-      "spesifikasiTeknis": "ukuran..",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "nama": "Cetakan",
+      "spesifikasiTeknis": "Material wadah cetakan cast iron, dengan jumlah cetakan 11 ingot per 1 unit, dimensi ingot p x l x h = 51 x 13.5 x 8 cm",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Pondasi",
+      "spesifikasiTeknis": "besi UNP",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Instalasi pendingin",
+      "spesifikasiTeknis": "pipa sch",
+      "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
       "catatan": ""
     }

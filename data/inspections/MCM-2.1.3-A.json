@@ -8,14 +8,14 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.1.3-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "dudukan",
-      "spesifikasiTeknis": "panjang",
-      "kondisiTeknis": "Siap Operasi (100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Dudukan",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
     }
   ],
   "pbsCanonical": "2.1.3",

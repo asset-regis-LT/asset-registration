@@ -15,21 +15,21 @@
       "spesifikasiTeknis": "Busbar 200*16mm",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator stang elektroda"
+      "catatan": "Service dan megger isolator stang elektroda"
     },
     {
       "nama": "Busbar Stang Electroda 2",
       "spesifikasiTeknis": "Busbar 200*16mm",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator stang elektroda"
+      "catatan": "Service dan megger isolator stang elektroda"
     },
     {
       "nama": "Busbar Stang Electroda 3",
       "spesifikasiTeknis": "Busbar 200*16mm",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Service dan merger isolator stang elektroda"
+      "catatan": "Service dan megger isolator stang elektroda"
     }
   ],
   "pbsCanonical": "1.5.3",

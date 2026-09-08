@@ -8,14 +8,14 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.10.2-A.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "h",
-      "spesifikasiTeknis": "h",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": ""
+      "nama": "Plat",
+      "spesifikasiTeknis": "besi",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Sudah berkarat dan terdapat beberapa prisma pot yang bagiannya sudah patah"
     }
   ],
   "pbsCanonical": "1.10.2",

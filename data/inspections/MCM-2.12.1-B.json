@@ -11,11 +11,39 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Flame oven",
-      "spesifikasiTeknis": "N/A",
+      "nama": "Bata api",
+      "spesifikasiTeknis": "SK 34 - 38",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Lantai",
+      "spesifikasiTeknis": "SK 34 - 38",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": ""
+    },
+    {
+      "nama": "Plat dinding",
+      "spesifikasiTeknis": "tebal 8 - 12 mm",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "Korosif parah, beberapa bagian bolong"
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Konstruksi",
+      "spesifikasiTeknis": "besi UNP kombinasi siku, Dimensi Flame oven 271 x 271 cm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "Burner",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
     }
   ],
   "pbsCanonical": "2.12.1",

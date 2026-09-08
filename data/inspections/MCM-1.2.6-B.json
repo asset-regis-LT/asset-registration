@@ -8,14 +8,14 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.2.6-B.jpg",
-  "overallDecision": "Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "s",
-      "spesifikasiTeknis": "s",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Go",
-      "catatan": ""
+      "nama": "Cerobong",
+      "spesifikasiTeknis": "Plat 3-8 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "penggantian di beberapa section"
     }
   ],
   "pbsCanonical": "1.2.6",

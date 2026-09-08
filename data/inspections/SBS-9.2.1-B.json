@@ -12,11 +12,25 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "Motor",
-      "spesifikasiTeknis": "N/A",
+      "nama": "1.5.5.1 Motor Blower",
+      "spesifikasiTeknis": "Nd",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": "TBE"
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "1.5.5.2 Cylone",
+      "spesifikasiTeknis": "Plat baja",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.5.5.3 Inverter Kontrol",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Rusak, kabel hilang"
     }
   ],
   "pbsCanonical": "2.5.17",

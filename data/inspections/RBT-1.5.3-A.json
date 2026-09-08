@@ -15,14 +15,14 @@
       "spesifikasiTeknis": "1250kva 110v 6000a",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Uji merger isolator"
+      "catatan": "Uji megger isolator"
     },
     {
       "nama": "Busbar Stang Electroda 2",
       "spesifikasiTeknis": "1250kva 110v 6000a",
       "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
-      "catatan": "Merger Insulation test"
+      "catatan": "megger Insulation test"
     },
     {
       "nama": "Busbar Stang Electroda 3",

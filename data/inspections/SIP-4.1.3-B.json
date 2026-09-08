@@ -12,11 +12,18 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "tbe",
-      "spesifikasiTeknis": "tbe",
+      "nama": "Motorgearbox",
+      "spesifikasiTeknis": "Nd",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": ""
+      "catatan": "Rusak"
+    },
+    {
+      "nama": "Disk",
+      "spesifikasiTeknis": "Nd",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
     }
   ],
   "pbsCanonical": "4.1.3",

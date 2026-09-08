@@ -16,7 +16,7 @@
       "spesifikasiTeknis": "45kw",
       "kondisiTeknis": "Major Repair (20 - 50%)",
       "keputusanTeknis": "Hold",
-      "catatan": "Merger"
+      "catatan": "megger"
     },
     {
       "nama": "Bearing Housing",
@@ -36,7 +36,7 @@
       "nama": "Impeller Sistem",
       "spesifikasiTeknis": "blower hisap",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
-      "keputusanTeknis": "Hold",
+      "keputusanTeknis": "No Go",
       "catatan": "Korosi"
     },
     {

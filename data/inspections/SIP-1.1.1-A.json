@@ -24,6 +24,20 @@
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
       "catatan": ""
+    },
+    {
+      "nama": "1.1.1.3 Electrode Holder",
+      "spesifikasiTeknis": "Baja",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.1.1.4 Bak Taping",
+      "spesifikasiTeknis": "plat 5mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": ""
     }
   ],
   "pbsCanonical": "1.1.1",

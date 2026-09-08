@@ -26,11 +26,18 @@
       "catatan": ""
     },
     {
-      "nama": "1.1.1.3 Bak Taping",
-      "spesifikasiTeknis": "plat besi",
+      "nama": "1.1.3.3 Bak Taping",
+      "spesifikasiTeknis": "Plat besi",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": ""
+      "catatan": "korosi"
+    },
+    {
+      "nama": "1.1.3.4 Electrode holder",
+      "spesifikasiTeknis": "Baja",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "korosi & terdeformasi"
     }
   ],
   "pbsCanonical": "1.1.1",

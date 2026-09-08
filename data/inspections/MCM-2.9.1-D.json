@@ -13,8 +13,8 @@
     {
       "nama": "Motor",
       "spesifikasiTeknis": "4 HP",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
       "catatan": "Korosi minim, perlu uji jalan"
     },
     {

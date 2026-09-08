@@ -9,14 +9,35 @@
   "picInspector": "Ahmad Maulana",
   "tanggalInspeksi": "2026-08-25",
   "fotoPath": "data/inspections/photos/SBS-9.2.4-A.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "2.4.3.1 Casing",
-      "spesifikasiTeknis": "8 inch",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": "korosi"
+      "nama": "Motor",
+      "spesifikasiTeknis": "2,2kw 3phasa",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Kondisi berkarat, penggantian"
+    },
+    {
+      "nama": "Casing",
+      "spesifikasiTeknis": "plat 1-3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Casing sudah korosif"
+    },
+    {
+      "nama": "Impeller",
+      "spesifikasiTeknis": "plat 1-3mm",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Impeller korosif"
+    },
+    {
+      "nama": "Panel Kontrol",
+      "spesifikasiTeknis": "Panel kontaktor",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": "Kondisi baik, cable management diperbaiki"
     }
   ],
   "qrPrinted": true,

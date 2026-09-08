@@ -8,14 +8,35 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-2.5.6-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "id fan",
-      "spesifikasiTeknis": "kk",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Motor",
+      "spesifikasiTeknis": "Motor 30 kw 30",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Bearing housing",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Panel inverter",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "service"
+    },
+    {
+      "nama": "Pondasi",
+      "spesifikasiTeknis": "",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "Ganti"
     }
   ],
   "pbsCanonical": "2.5.6",

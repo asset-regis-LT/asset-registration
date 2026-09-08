@@ -8,12 +8,26 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.1.1-C.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "shell",
-      "spesifikasiTeknis": "ss",
-      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "nama": "Shell",
+      "spesifikasiTeknis": "Plat 15 mm.",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    },
+    {
+      "nama": "Refraktori",
+      "spesifikasiTeknis": "Bata SK 34-38",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "sedang dalam maintenance, tidak ada bata api"
+    },
+    {
+      "nama": "Plat Roof",
+      "spesifikasiTeknis": "Diameter tutup tanur 2.7 m, dengan diameter lubang elektroda 41 cm, diameter lubang material 37.5 cm dan diameter lubang gas buang 51 cm",
+      "kondisiTeknis": "Repair (50 - 80%)",
       "keputusanTeknis": "Conditional Go",
       "catatan": ""
     }

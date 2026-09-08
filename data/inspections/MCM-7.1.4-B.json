@@ -11,11 +11,11 @@
   "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "xx",
-      "spesifikasiTeknis": "xx",
+      "nama": "Cerobong",
+      "spesifikasiTeknis": "Plat 3-8 mm",
       "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
       "keputusanTeknis": "No Go",
-      "catatan": ""
+      "catatan": "Korosi"
     }
   ],
   "pbsCanonical": "7.1.4",

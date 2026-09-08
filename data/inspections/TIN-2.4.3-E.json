@@ -9,14 +9,21 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-09-02",
   "fotoPath": "data/inspections/photos/TIN-2.4.3-E.jpg",
-  "overallDecision": "Hold",
+  "overallDecision": "No Go",
   "komponen": [
     {
-      "nama": "TBE",
-      "spesifikasiTeknis": "TBE",
-      "kondisiTeknis": "Major Repair (20 - 50%)",
-      "keputusanTeknis": "Hold",
-      "catatan": ""
+      "nama": "6.1.5.1 Burner",
+      "spesifikasiTeknis": "ND",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Scrap"
+    },
+    {
+      "nama": "6.1.5.2 Instalasi Bahan Bakar",
+      "spesifikasiTeknis": "Hose fuel",
+      "kondisiTeknis": "Scrap / Tidak Ada (Hilang) (< 20%)",
+      "keputusanTeknis": "No Go",
+      "catatan": "Rusak"
     }
   ],
   "pbsCanonical": "2.4.3",

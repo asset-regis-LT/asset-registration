@@ -8,18 +8,18 @@
   "picInspector": "Lutfi",
   "tanggalInspeksi": "2026-08-29",
   "fotoPath": "data/inspections/photos/MCM-1.2.2-A.jpg",
-  "overallDecision": "Conditional Go",
+  "overallDecision": "Hold",
   "komponen": [
     {
-      "nama": "s",
-      "spesifikasiTeknis": "s",
-      "kondisiTeknis": "Repair (50 - 80%)",
-      "keputusanTeknis": "Conditional Go",
-      "catatan": ""
+      "nama": "Struktur",
+      "spesifikasiTeknis": "lat 5 mm",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "sebagian telah korosi"
     }
   ],
   "pbsCanonical": "1.2.2",
   "subsistemCanonical": "Sistem Penanganan Gas Buang dan Debu",
-  "namaAsetCanonical": "Seattle Atas Tanur",
+  "namaAsetCanonical": "Water Box",
   "unitLabel": ""
 }
