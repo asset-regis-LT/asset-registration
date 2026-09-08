@@ -9,13 +9,13 @@
   "picInspector": "",
   "tanggalInspeksi": "",
   "fotoPath": "data/inspections/photos/VIP-3.1.6-C.jpg",
-  "overallDecision": "",
+  "overallDecision": "Hold",
   "komponen": [
     {
       "nama": "7.1.10.1 Panel Kapasitor Bank 2",
       "spesifikasiTeknis": "",
-      "kondisiTeknis": "",
-      "keputusanTeknis": "",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
       "catatan": ""
     }
   ],
