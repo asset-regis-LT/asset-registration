@@ -1,0 +1,22 @@
+{
+  "tagNo": "MCM-10.1.1-A",
+  "inspectionId": "INS-20260922-MCM-10.1.1-A",
+  "createdAt": "2026-09-22T15:58:01.369Z",
+  "nomorPBS": "10.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Workshop Teknik",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-22",
+  "fotoPath": "data/inspections/photos/MCM-10.1.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Area workshop teknis",
+      "spesifikasiTeknis": "Lantai, dinding, atap",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
