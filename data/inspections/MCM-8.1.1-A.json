@@ -1,0 +1,22 @@
+{
+  "tagNo": "MCM-8.1.1-A",
+  "inspectionId": "INS-20260922-MCM-8.1.1-A",
+  "createdAt": "2026-09-22T16:00:12.229Z",
+  "nomorPBS": "8.1.1",
+  "subsistem": "Bangunan",
+  "namaAset": "Pos Jaga / Area Genset",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-22",
+  "fotoPath": "data/inspections/photos/MCM-8.1.1-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Area pos jaga",
+      "spesifikasiTeknis": "Lantai, dinding, atap",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
