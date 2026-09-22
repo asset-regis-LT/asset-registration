@@ -1,0 +1,22 @@
+{
+  "tagNo": "MCM-11.1.4-A",
+  "inspectionId": "INS-20260922-MCM-11.1.4-A",
+  "createdAt": "2026-09-22T16:02:19.382Z",
+  "nomorPBS": "11.1.4",
+  "subsistem": "Bangunan",
+  "namaAset": "Gedung Refining",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MSH",
+  "tanggalInspeksi": "2026-09-22",
+  "fotoPath": "data/inspections/photos/MCM-11.1.4-A.jpg",
+  "overallDecision": "Conditional Go",
+  "komponen": [
+    {
+      "nama": "Area gedung pemurnian",
+      "spesifikasiTeknis": "Lantai, dinding, atap",
+      "kondisiTeknis": "Minor Repair (80 - 100%)",
+      "keputusanTeknis": "Conditional Go",
+      "catatan": ""
+    }
+  ]
+}
