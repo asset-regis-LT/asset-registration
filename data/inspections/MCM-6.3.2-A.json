@@ -1,0 +1,22 @@
+{
+  "tagNo": "MCM-6.3.2-A",
+  "inspectionId": "INS-20261020-MCM-6.3.2-A",
+  "createdAt": "2026-10-20T08:03:34.416Z",
+  "nomorPBS": "6.3.2",
+  "subsistem": "Bangunan",
+  "namaAset": "Tempat Parkir",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-10-20",
+  "fotoPath": "data/inspections/photos/MCM-6.3.2-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai, Dinding/Tiang, Atap",
+      "spesifikasiTeknis": "Tipikal",
+      "kondisiTeknis": "Major Repair (20 - 50%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "-"
+    }
+  ]
+}
