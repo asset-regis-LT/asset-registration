@@ -1,0 +1,22 @@
+{
+  "tagNo": "MCM-9.1.17-A",
+  "inspectionId": "INS-20261020-MCM-9.1.17-A",
+  "createdAt": "2026-10-20T07:56:57.535Z",
+  "nomorPBS": "9.1.17",
+  "subsistem": "Bangunan",
+  "namaAset": "Gudang LB3",
+  "lokasi": "Menara Cipta Mulia (MCM)",
+  "picInspector": "MAU",
+  "tanggalInspeksi": "2026-10-20",
+  "fotoPath": "data/inspections/photos/MCM-9.1.17-A.jpg",
+  "overallDecision": "Hold",
+  "komponen": [
+    {
+      "nama": "Lantai, Dinding/Tiang, Atap",
+      "spesifikasiTeknis": "Tipikal",
+      "kondisiTeknis": "Repair (50 - 80%)",
+      "keputusanTeknis": "Hold",
+      "catatan": "-"
+    }
+  ]
+}
